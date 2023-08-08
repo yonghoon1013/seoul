@@ -1,0 +1,213 @@
+// let today = new Date(),
+//     year = today.getFullYear(),
+//     month = today.getMonth()+1,
+//     date = today.getDate(),
+//     dateP = today.getDate()+1,
+//     dateP2 = today.getDate()+2,
+//     week = ['일', '월', '화', '수', '목', '금', '토'][today.getDay()];
+
+
+
+const today = new Date(),
+    to = new Date(today),
+    to2 = new Date(today),
+    to3 = new Date(today);
+
+to.setFullYear(today.getFullYear());
+to.setMonth(today.getMonth()+1);
+to.setDate(today.getDate());
+to2.setDate(today.getDate()+1);
+to3.setDate(today.getDate()+2);
+
+
+
+const year = to.getFullYear();
+    month = to.getMonth(),
+    date = to.getDate(),
+    dateP = to2.getDate(),
+    dateP2 = to3.getDate(),
+    week = ['일', '월', '화', '수', '목', '금', '토'][today.getDay()],
+    week2 = ['일', '월', '화', '수', '목', '금', '토'][to2.getDay()],
+    week3 = ['일', '월', '화', '수', '목', '금', '토'][to3.getDay()];
+
+    console.log(`${month}월 ${dateP2}`);
+
+
+
+
+
+let weekInfo = `${month}월 ${date}일 (${week})`;
+let weekInfoP = `${month}월 ${dateP}일 (${week2})`;
+let weekInfoP2 = `${month}월 ${dateP2}일 (${week3})`;
+
+const td = document.querySelector('.today'),
+tomor1Day = document.querySelector('.high-row .tomorrow1.top'),
+tomor2Day = document.querySelector('.high-row .tomorrow2.top');
+
+td.innerText = weekInfo;
+tomor1Day.innerText = weekInfoP;
+tomor2Day.innerText = weekInfoP2;
+
+
+
+let day = `${year}${month.toString().padStart(2,"0")}${date.toString().padStart(2,"0")}`;
+
+let dayP = `${year}${month.toString().padStart(2,"0")}${dateP.toString().padStart(2,"0")}`;
+let dayP2 = `${year}${month.toString().padStart(2,"0")}${dateP2.toString().padStart(2,"0")}`;
+
+
+
+let hours = today.getHours();
+let hoursM = today.getHours()-1;
+let min = today.getMinutes();
+let sec = today.getSeconds();
+
+
+let ho = `${hoursM.toString().padStart(2,"0")}40`;
+let ho2 = `${hours.toString().padStart(2,"0")}00`;
+
+
+
+// 00시됐을때 오류발생함.
+fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=bXYJiC%2FIZu%2BuPKkZG0zN%2FDMCBKHjQb3VkKu%2FSWry5Cognwipp%2F33A80vX072IU9e1R%2FWFmWIO8B5Z1gFyyjUOw%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${day}&base_time=${ho}&nx=57&ny=127`)
+.then(res => { return res.json()})
+.then(data => {
+    //초단기실황
+    const tmp = document.querySelector('.tmp');    
+
+    // console.log(data);
+
+    let tmpInfo = data.response.body.items.item[3]; 
+    tmp.innerText = `${tmpInfo.obsrValue}℃`;
+})
+
+
+
+fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst?serviceKey=bXYJiC%2FIZu%2BuPKkZG0zN%2FDMCBKHjQb3VkKu%2FSWry5Cognwipp%2F33A80vX072IU9e1R%2FWFmWIO8B5Z1gFyyjUOw%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${day}&base_time=${ho}&nx=57&ny=127`)
+.then(res => { return res.json()})
+.then(data => {
+    //초단기예보
+
+    console.log(data);
+    const sky = document.querySelector('.sky'),
+    whetherImg = document.querySelector('.left > img');
+
+    data.response.body.items.item.forEach(function(v,k){
+        if(v.fcstTime == ho2 && v.category == "SKY"){
+            if(v.fcstValue == 4){
+                whetherImg.src = "./img/cloudy.png";
+                sky.innerText = "흐림";
+            } else if(v.fcstValue == 3){
+                whetherImg.src = "./img/sun-cloud.png";
+                sky.innerText = "구름많음";
+            } else{
+                whetherImg.src = "./img/sun.png";
+                sky.innerText = "맑음";
+            }
+    
+        }
+    })
+
+    data.response.body.items.item.forEach(function(v,k){
+        if(v.fcstTime == ho2 && v.category == "PTY"){
+
+            if(v.fcstValue == 1 || v.fcstValue == 2 || v.fcstValue == 5 || v.fcstValue == 6){
+                whetherImg.src = "./img/rain_ani.gif";
+                sky.innerText = "비";
+            } else if(v.fcstValue == 3 || v.fcstValue == 7){
+                whetherImg.src = "./img/snow.png";
+                sky.innerText = "눈";
+            }
+
+
+            // let num = 1;
+            // console.log(num);
+            // if(num == 1 || num == 2 || num == 5 || num == 6){
+            //     whetherImg.src = "./img/rain_ani.gif";
+            //     sky.innerText = "비";
+            // } else if(num == 3 || num == 7){
+            //     whetherImg.src = "./img/snow.png";
+            //     sky.innerText = "눈";
+            // }
+
+            
+    
+        }
+    })
+
+})
+
+function m(ho3){
+    if(hours >= 23){
+        ho3 = "2310";
+    } else if(hours >= 20){
+        ho3 = "2010"
+    } else if(hours >= 17){
+        ho3 = "1710"
+    } else if(hours >= 14){
+        ho3 = "1410"
+    } else if(hours >= 11){
+        ho3 = "1110"
+    }else if(hours >= 8){
+        ho3 = "0810"
+    } else if(hours >= 5){
+        ho3 = "0510"
+    } else if(hours >= 2){
+        ho3 = "0210"
+    }
+
+    fetch(`https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=bXYJiC%2FIZu%2BuPKkZG0zN%2FDMCBKHjQb3VkKu%2FSWry5Cognwipp%2F33A80vX072IU9e1R%2FWFmWIO8B5Z1gFyyjUOw%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${day}&base_time=${ho3}&nx=57&ny=127`)
+    .then(res => { return res.json()}) 
+    .then(data => {
+    //단기예보
+    console.log(data);
+    const tomor1High = document.querySelector('.tomorrow1 > .high'),
+            tomor1Row = document.querySelector('.tomorrow1 > .row'),
+            tomor2High = document.querySelector('.tomorrow2 > .high'),
+            tomor2Row = document.querySelector('.tomorrow2 > .row');
+            console.log(tomor2Row);
+            console.log(tomor2High);
+
+    data.response.body.items.item.forEach(function(v,k){
+        if(v.fcstDate == dayP && v.category == "TMX"){
+            tomor1High.innerText = `최고${v.fcstValue}`
+        }
+
+        if(v.fcstDate == dayP && v.category == "TMN"){
+            tomor1Row.innerText = `최저${v.fcstValue}`
+        }
+
+        if(v.fcstDate == dayP2 && v.category == "TMX"){
+            tomor2High.innerText = `최고${v.fcstValue}`
+        }
+
+        if(v.fcstDate == dayP2 && v.category == "TMN"){
+            tomor2Row.innerText = `최저${v.fcstValue}`
+        }
+    })
+
+})
+
+}
+
+m();
+
+
+
+let text = ['오늘','내일','모레'];
+
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (text[index]) + "</span>";
+      },
+    },
+  });
+
+
+
+
+
+
