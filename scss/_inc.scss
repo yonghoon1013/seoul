@@ -1,0 +1,172 @@
+//헤더
+#header{
+    // background-color: #447531;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding: 30px 0px 30px 0px;
+
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(55, 55, 55, 0.5) 100%);
+    .head{
+        width: 1280px;
+        margin: 0 auto;
+        @include flex(space-between,center);
+        .logo{
+            >a{
+                >img{
+
+                }
+            }
+        }
+        .header-nav{
+            width: 950px;
+            >ul{
+                @include flex(space-around,center);
+                >li{
+                    >a{
+                        color: white
+                    }
+                    .lang{
+                        @include flex();
+                        &::before{
+                            content: "";
+                            background-image: url("../img/lang.png");
+                            background-size: 16px;
+                            width: 16px;
+                            height: 16px;
+                            display: block;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//퀵메뉴
+.quick-box{
+    position: fixed;
+    top: 30%;
+    right: 40px;
+    transform: translateY(-30%);
+    z-index: 30;
+    .quick-nav{
+        >ul{
+            >li{
+                margin-bottom: 30%;
+                
+                >a{
+                    position: relative;
+                    width: 70px;
+                    height: 70px;
+                    display: block;
+                    background-color: white;
+                    border-radius: 50%;
+                    box-shadow: 0 5px 10px -5px #777;
+                    .quick-con{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        .aa{
+                            width: 45px;
+                            height: 40px;
+                            position: relative;
+                            >img{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                margin: auto;
+                            }
+                        }
+                        >.title{
+                            font-size: 12px;
+                            font-weight: bold;
+                            text-align: center;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//푸터
+#footer{
+    height: 220px;
+    background-color: #447531;
+    .footer-con{
+        @include flex(center,center);
+        padding-top: 60px;
+        >.left{
+            margin-right: 100px;
+            >img{
+                // width: 220px;
+                // height: 90px;
+                // object-fit: cover;
+            }
+        }
+        >.right{
+            line-height: 2;
+            .sns{
+                >ul{
+                    @include flex(flex-start,center);
+                    margin-bottom: 10px;
+                    >li{
+                        margin-right: 30px;
+                        >a{
+                            >img{
+
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-nav{
+                >ul{
+                    @include flex();
+                    >li{
+                        margin-right: 15px;
+                        color: white;
+                        padding-left: 10px;
+                        position: relative;
+                        font-size: 14px;
+                        &:nth-of-type(1){
+                            padding: 0px;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 15px;
+                            background: #d1d1d1;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                        }
+                        &:nth-of-type(1){
+                            &::before{
+                                display: none;
+                                padding: 0px;
+                            }
+                        }
+                    }
+                }
+
+                .footer-info{
+                    >p{
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+    }
+}

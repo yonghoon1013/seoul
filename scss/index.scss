@@ -1,0 +1,593 @@
+@import "_reset";
+@import "_mixin";
+@import "_inc";
+
+.main {
+
+    .mainSwiper {
+        width: 100%;
+        height: 700px;
+        >.swiper-wrapper {
+            position: relative;
+
+            >.swiper-slide {
+                position: relative;
+                height: 100%;
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    background-image: url("../img/bottom.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: bottom;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    bottom: 0%;
+                }
+
+                .plant-month {
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: translate(-20%, -50%);
+
+                    .text-box {
+                        position: relative;
+
+                        &::before {
+                            content: url('../img/quote-start.png');
+                            position: absolute;
+                            top: -20%;
+                            left: -20%;
+                            transform: translate(20%, 20%);
+                        }
+
+                        &::after {
+                            content: url('../img/quote-end.png');
+                            position: absolute;
+                            bottom: -20%;
+                            right: -15%;
+                            transform: translate(15%, 20%);
+                        }
+
+                        >span {
+                            color: white;
+                            display: block;
+                            text-align: end;
+                        }
+
+                        >.title {
+                            font-size: 46px;
+                            font-weight: bold;
+                        }
+
+                        >.name {
+                            margin: 20px 20px 15px 0;
+                            font-size: 56px;
+                            font-weight: bold;
+                        }
+
+                        .area {
+                            margin-right: 20px;
+                            font-size: 12px;
+                            color: rgba(255, 255, 255, 0.63);
+                        }
+                    }
+                }
+            }
+        }
+            .bottom-con {
+                width: 500px;
+                position: absolute;
+                bottom: 20%;
+                left: 15%;
+                transform: translate(-15%, -20%);
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                z-index: 10;
+                //날씨
+                .weather-box {
+                    text-align: center;
+                    font-size: 18px;
+
+                    .weather-con {
+                        display: flex;
+                        align-items: center;
+
+                        >.left {
+                            >img {
+                                display: block;
+                                width: 35px;
+                                height: 35px;
+                                margin-right: 10px;
+                                animation: up-down 1.5s infinite ease-in-out alternate;
+                            }
+
+                            // @keyframes up-down {
+                            //     0%{
+                            //         transform: translateY(5px);
+                            //     }
+
+                            //     100%{
+                            //         transform: translateY(0px);
+                            //     }
+                            // }
+                        }
+
+                        >.right {
+                            text-align: center;
+                            line-height: 1.5;
+
+                            .today {
+                                text-align: left;
+                                font-size: 16px;
+                                color: white;
+                            }
+
+                            .weather-text {
+                                font-size: 16px;
+
+                                >span {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .guide-box {
+                    >a {
+                        display: inline-block;
+                        color: white;
+                        margin-right: 40px;
+                        line-height: 1.5;
+                        position: relative;
+                        padding-left: 10px;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 15px;
+                            background: #d1d1d1;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                }
+            }
+    }
+
+    .use-info {
+        @include main-width() {
+            margin-bottom: 100px;
+        }
+
+        @include flex(space-between, center);
+
+        .title {
+            font-size: 24px !important;
+            color: #4E813B;
+        }
+
+        .location {
+            font-size: 14px;
+            margin: 20px 0px;
+        }
+
+        .price {
+            @include flex(space-between, center);
+
+            >.left {
+                margin-right: 70px;
+                position: relative;
+                padding-right: 40px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100px;
+                    background: #55A37C;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+
+                >p {}
+
+                >a {
+                    font-size: 14px;
+
+                    &::after {
+                        content: '>';
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            >.right {
+
+                .user-division {
+                    >span {
+                        display: inline-block;
+                        margin-right: 10px;
+                        padding: 10px 0px;
+
+                    }
+                }
+
+                .issue {
+                    font-size: 12px
+                }
+
+                >p {
+                    padding: 10px 0px;
+                }
+            }
+        }
+
+        .time {
+            @include flex(space-between, center);
+
+            >.left {
+                margin-right: 70px;
+                position: relative;
+                padding-right: 40px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 100px;
+                    background: #55A37C;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+
+                >p {
+                    font-size: 14px;
+                }
+            }
+
+            >.right {
+                @include flex();
+
+                .peacetime {
+                    margin-right: 70px;
+
+                    >p {
+                        padding: 10px 0px;
+
+                        &:nth-last-of-type(1) {
+                            color: #90BE45;
+                        }
+                    }
+                }
+
+                .winter-season {
+                    >p {
+                        padding: 10px 0px;
+
+                        &:nth-last-of-type(1) {
+                            color: #90BE45;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .news {
+        @include main-width() {
+            margin-bottom: 200px;
+        }
+
+        >h3 {
+            @include h3();
+        }
+
+        .news-con {
+            @include flex(space-between);
+            margin-bottom: 50px;
+
+            .exhibition-news {
+                >p {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #4E813B;
+                    margin-bottom: 15px;
+                }
+
+                .exhibition-con {
+                    >img {
+                        border-radius: 50px;
+                        width: 620px;
+                        height: 400px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .garden-news {
+                >p {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #4E813B;
+                    margin-bottom: 15px;
+                }
+
+                .pagination-box2 {
+                    position: relative;
+
+                    >.swiper-pagination {
+                        position: absolute;
+                        top: -40px;
+                        left: 250px;
+
+                        >.swiper-pagination-bullet {
+                            width: 15px;
+                            height: 15px;
+                            background: rgb(255, 255, 255);
+                            border: 2px #55A37C solid;
+                        }
+
+                        >.swiper-pagination-bullet-active {
+                            background: #55A37C;
+                        }
+                    }
+                }
+
+                .garden-slide {
+                    width: 620px;
+                    height: 100%;
+
+                    >.swiper-wrapper {
+                        >.swiper-slide {
+                            text-align: center;
+                            font-size: 18px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .garden-con {
+                                >img {
+                                    border-radius: 50px;
+                                    width: 620px;
+                                    height: 400px;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .notice-box {
+            @include flex(space-between);
+
+            .notice-con {
+                >p {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #4E813B;
+                    margin-bottom: 15px;
+                    position: relative;
+
+                    >a {
+                        font-size: 24px;
+                        color: #4E813B;
+                        position: absolute;
+                        right: 0;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 230px;
+                        height: 2px;
+                        background: #55A37C;
+                        top: 50%;
+                        margin-left: 40px;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                >ul {
+                    >li {
+                        width: 400px;
+                        @include flex(space-between, center);
+
+                        >.title {}
+
+                        >.time {
+
+                            font-size: 12px;
+                        }
+
+                        >span {
+                            line-height: 3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .course-box {
+        @include main-width() {
+            margin-bottom: 100px;
+        }
+
+        >h3 {
+            @include h3();
+        }
+
+        .course-nav {
+            >ul {
+                @include flex(space-around, center);
+
+                >li {
+                    >a {}
+                }
+            }
+        }
+
+        .course-con {
+            @include flex(space-between);
+
+            .course-map {
+                >img {}
+            }
+
+            .look-around {
+                >p {
+                    margin-bottom: 10px
+                }
+
+                .look-box {
+                    @include flex();
+
+                    .look-con {
+                        margin-right: 30px;
+                        position: relative;
+
+                        >img {
+                            border-radius: 20px;
+                        }
+
+                        &::after {
+                            content: '';
+                            background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0.00) 100%);
+                            width: 100%;
+                            height: 80px;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            border-radius: 0px 0px 20px 20px;
+                        }
+
+                        >div {
+                            width: 80px;
+                            height: 20px;
+                            border-radius: 50px;
+                            background-color: #C2D42E;
+                            position: absolute;
+                            left: 50%;
+                            bottom: -5%;
+                            transform: translate(-50%, 5%);
+                            text-align: center;
+                            z-index: 5;
+
+                            >span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .course-info {
+            text-align: center;
+            margin-top: 100px;
+            line-height: 1.5;
+        }
+    }
+
+    .experience-box {
+        @include main-width() {
+            margin-bottom: 100px;
+        }
+
+        >h3 {
+            @include h3();
+        }
+
+        .experience-list {
+            >ul {
+                @include flex(space-between);
+
+                >li {
+                    width: 400px;
+                    height: 450px;
+                    background-image: url('../img/experience-bg.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    border-radius: 50px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0.00) 100%);
+                        width: 100%;
+                        height: 230px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        border-radius: 0px 0px 20px 20px;
+                    }
+
+                    .experience-info {
+                        width: 350px;
+                        text-align: left;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 5%;
+                        transform: translate(-50%, -5%);
+                        z-index: 1;
+
+                        >.title {
+                            color: white;
+                            line-height: 1.5;
+                        }
+
+                        >.time {
+                            @include flex(space-between);
+
+                            >span {
+                                color: white;
+                                line-height: 1.5;
+                            }
+                        }
+
+                        .situation {
+                            @include flex(space-between);
+                            margin-top: 20px;
+
+                            >div {
+                                width: 80px;
+                                height: 20px;
+                                border-radius: 50px;
+                                background-color: #C2D42E;
+                                text-align: center;
+                                z-index: 5;
+
+                                >span {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
