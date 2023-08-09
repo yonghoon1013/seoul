@@ -92,13 +92,13 @@ function 출력함수(){
         data[1].response.body.items.item.forEach(function(v,k){
             if(v.fcstTime == ho2 && v.category == "SKY"){
                 if(v.fcstValue == 4){
-                    whetherImg.src = "./img/cloudy.png";
+                    whetherImg.src = "./img/cloud.svg";
                     sky.innerText = "흐림";
                 } else if(v.fcstValue == 3){
-                    whetherImg.src = "./img/sun-cloud.png";
+                    whetherImg.src = "./img/suncloud.svg";
                     sky.innerText = "구름많음";
                 } else{
-                    whetherImg.src = "./img/sun.png";
+                    whetherImg.src = "./img/sun.svg";
                     sky.innerText = "맑음";
                 }
             }
@@ -106,12 +106,12 @@ function 출력함수(){
     
         data[1].response.body.items.item.forEach(function(v,k){
             if(v.fcstTime == ho2 && v.category == "PTY"){
-    
+
                 if(v.fcstValue == 1 || v.fcstValue == 2 || v.fcstValue == 5 || v.fcstValue == 6){
-                    whetherImg.src = "./img/rain_ani.gif";
+                    whetherImg.src = "./img/raincloud.svg";
                     sky.innerText = "비";
                 } else if(v.fcstValue == 3 || v.fcstValue == 7){
-                    whetherImg.src = "./img/snow.png";
+                    whetherImg.src = "./img/snow.svg";
                     sky.innerText = "눈";
                 }
     
@@ -122,13 +122,13 @@ function 출력함수(){
         data[1].response.body.items.item.forEach(function(v,k){
             if(v.fcstTime == ho2 && v.category == "SKY"){
                 if(v.fcstValue == 4){
-                    whetherImg.src = "./img/cloudy.png";
+                    whetherImg.src = "./img/cloud.svg";
                     sky.innerText = "흐림";
                 } else if(v.fcstValue == 3){
-                    whetherImg.src = "./img/moon-cloud.png";
+                    whetherImg.src = "./img/moncloud.svg";
                     sky.innerText = "구름많음";
                 } else{
-                    whetherImg.src = "./img/moon.png";
+                    whetherImg.src = "./img/moon.svg";
                     sky.innerText = "맑음";
                 }
             }
@@ -138,10 +138,10 @@ function 출력함수(){
             if(v.fcstTime == ho2 && v.category == "PTY"){
     
                 if(v.fcstValue == 1 || v.fcstValue == 2 || v.fcstValue == 5 || v.fcstValue == 6){
-                    whetherImg.src = "./img/rain_ani.gif";
+                    whetherImg.src = "./img/raincloud.svg";
                     sky.innerText = "비";
                 } else if(v.fcstValue == 3 || v.fcstValue == 7){
-                    whetherImg.src = "./img/snow.png";
+                    whetherImg.src = "./img/snow.svg";
                     sky.innerText = "눈";
                 }
     
