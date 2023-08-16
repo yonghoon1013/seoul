@@ -1,34 +1,38 @@
 //헤더
-#header{
+#header {
     // background-color: #447531;
     position: fixed;
     width: 100%;
     z-index: 99;
     padding: 30px 0px 30px 0px;
-
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(55, 55, 55, 0.5) 100%);
-    .head{
+
+    .head {
         width: 1280px;
         margin: 0 auto;
-        @include flex(space-between,center);
-        .logo{
-            >a{
-                >img{
+        @include flex(space-between, center);
 
-                }
+        .logo {
+            >a {
+                >img {}
             }
         }
-        .header-nav{
+
+        .header-nav {
             width: 950px;
-            >ul{
-                @include flex(space-around,center);
-                >li{
-                    >a{
-                        color: white
+
+            >ul {
+                @include flex(space-around, center);
+
+                >li {
+                    >a {
+                        color: rgb(255, 255, 255)
                     }
-                    .lang{
+
+                    .lang {
                         @include flex();
-                        &::before{
+
+                        &::before {
                             content: "";
                             background-image: url("../img/lang.png");
                             background-size: 16px;
@@ -47,19 +51,20 @@
 
 
 //퀵메뉴
-.quick-box{
+.quick-box {
     position: fixed;
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
     z-index: 30;
-    .quick-nav{
-        >ul{
 
-            >li{
+    .quick-nav {
+        >ul {
+
+            >li {
                 margin-bottom: 30%;
-                
-                >a{
+
+                >a {
                     position: relative;
                     width: 70px;
                     height: 70px;
@@ -67,30 +72,107 @@
                     background-color: white;
                     border-radius: 50%;
                     box-shadow: 0 5px 10px -5px #777;
-                    .quick-con{
+                    border: 1px solid #90BC43;
+
+                    .quick-con {
+                        position: absolute;
+
+                        // 1,2번
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+
+                        >img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            margin: auto;
+                        }
+                    }
+
+
+                    .title {
+                        opacity: 0;
+                        width: 70px;
+                        height: 70px;
+                        background-color: #90BC43;
+                        border-radius: 50%;
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%,-50%);
-                        .aa{
-                            width: 45px;
-                            height: 40px;
-                            position: relative;
-                            >img{
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%,-50%);
-                                margin: auto;
-                            }
-                        }
-                        >.title{
-                            font-size: 12px;
-                            font-weight: bold;
-                            text-align: center;
+                        transform:translate(-50%, -50%);
+
+                        
+                        // // 2번
+                        // top: 150%;
+                        // left: 50%;
+                        // transition: 1s linear;
+                        // transform: translate(-50%, -50%);
+                        >span {
+                            color: white;
                             white-space: nowrap;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            text-align: center;
                         }
                     }
+
+                    &:hover {
+                        
+                        //요리조리
+                        animation: swing 1s ease;
+                        animation-iteration-count: 1;
+                        
+
+                        
+                        // 1번
+                        .quick-con{
+                            opacity: 0;
+                        }
+                        >.title{
+                            opacity: 1;
+                        }
+                        
+
+
+                        
+                        // // 2번
+                        // .quick-con{
+                        //     opacity: 0;
+                        // }
+                        // >.title{
+                        //     opacity: 1;
+                        //     top: 50%;
+                        // }
+
+
+                    }
+
+                    // 요리조리
+                    // @keyframes swing {
+                    //     15% {
+                    //     transform: translateX(5px);
+                    //     }
+                    //     30% {
+                    //     transform: translateX(-5px);
+                    //     }
+                    //     50% {
+                    //     transform: translateX(3px);
+                    //     }
+                    //     65% {
+                    //     transform: translateX(-3px);
+                    //     }
+                    //     80% {
+                    //     transform: translateX(2px);
+                    //     }
+                    //     100% {
+                    //     transform: translateX(0);
+                    //     }
+                    // }
                 }
             }
         }
@@ -99,49 +181,58 @@
 
 
 //푸터
-#footer{
+#footer {
     height: 220px;
     background-color: #447531;
-    .footer-con{
-        @include flex(center,center);
+
+    .footer-con {
+        @include flex(center, center);
         padding-top: 60px;
-        >.left{
+
+        >.left {
             margin-right: 100px;
-            >img{
+
+            >img {
                 // width: 220px;
                 // height: 90px;
                 // object-fit: cover;
             }
         }
-        >.right{
-            line-height: 2;
-            .sns{
-                >ul{
-                    @include flex(flex-start,center);
-                    margin-bottom: 10px;
-                    >li{
-                        margin-right: 30px;
-                        >a{
-                            >img{
 
-                            }
+        >.right {
+            line-height: 2;
+
+            .sns {
+                >ul {
+                    @include flex(flex-start, center);
+                    margin-bottom: 10px;
+
+                    >li {
+                        margin-right: 30px;
+
+                        >a {
+                            >img {}
                         }
                     }
                 }
             }
-            .footer-nav{
-                >ul{
+
+            .footer-nav {
+                >ul {
                     @include flex();
-                    >li{
+
+                    >li {
                         margin-right: 15px;
                         color: white;
                         padding-left: 10px;
                         position: relative;
                         font-size: 14px;
-                        &:nth-of-type(1){
+
+                        &:nth-of-type(1) {
                             padding: 0px;
                         }
-                        &::before{
+
+                        &::before {
                             content: "";
                             position: absolute;
                             width: 2px;
@@ -151,8 +242,9 @@
                             left: 0;
                             transform: translateY(-50%);
                         }
-                        &:nth-of-type(1){
-                            &::before{
+
+                        &:nth-of-type(1) {
+                            &::before {
                                 display: none;
                                 padding: 0px;
                             }
@@ -160,8 +252,8 @@
                     }
                 }
 
-                .footer-info{
-                    >p{
+                .footer-info {
+                    >p {
                         color: white;
                         font-size: 14px;
                     }

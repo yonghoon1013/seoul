@@ -1,0 +1,151 @@
+function experience() {
+	let programStoageNum = sessionStorage.getItem("click01");
+
+	fetch('./json/program.json')
+		.then(res => { return res.json() })
+		.then(data => {
+
+			const reserveCon01 = document.querySelector('.reserve-con01 > .left');
+			const reserveCon02 = document.querySelector('.reserve-con02 > .time-box');
+
+			reserveCon01.innerHTML = `
+			<p>체험프로그램</p>
+			<figure>
+				<img src="${data.items[programStoageNum].img}">
+				<figcaption>
+					<${data.items[programStoageNum].name}>
+				</figcaption>
+			</figure>
+			`
+
+
+			data.items[programStoageNum].turn.forEach(function (v, k) {
+				reserveCon02.innerHTML += `
+				<input id="t${k}" type="radio" name="turn" value='${v}'>
+				<label for="t${k}"><span>${v}</span></label>
+				`
+			})
+
+
+			qwe = document.querySelectorAll('.reserve-person-box .right');
+			const max = document.querySelector('.reserve-con04 > .title');
+			max.innerText = `
+			예약인원 최대(${data.items[programStoageNum].maxPeople}명)
+			`
+			qwe.forEach(function (v, k) {
+				let inputNum = 0;
+				const inputId = ["a", "b", "c"]
+
+				for (inputNum = 0; inputNum <= data.items[programStoageNum].maxPeople; inputNum++) {
+
+					v.innerHTML += `
+					<input id="${inputId[k]}${inputNum}" type="radio" name="${inputId[k]}" value='${inputNum}'>
+					<label for="${inputId[k]}${inputNum}"><span>${inputNum}</span></label>
+					`
+				}
+
+			})
+
+
+			const reserveBtn = document.querySelector('.reserve-btn-box > a');
+
+			reserveBtn.onclick = function () {
+				const repName = document.getElementById('name').value,
+					repBirth = document.getElementById('birthday').value,
+					repTel = document.getElementById('tel').value,
+					turnValue = document.querySelector('input[name="turn"]:checked'),
+					adultValue = document.querySelector('input[name="a"]:checked'),
+					teenValue = document.querySelector('input[name="b"]:checked'),
+					childValue = document.querySelector('input[name="c"]:checked'),
+					selDate = document.getElementById('birth').value;
+				const id = data.items[programStoageNum].id,
+					pgName = data.items[programStoageNum].name;
+				const terms = document.getElementById('terms-check');
+
+
+				if (!selDate) {
+					alert("날짜를 선택해주세요")
+				} else if (turnValue == null) {
+					alert("회차 선택해주세요");
+				} else if (!repName) {
+					alert("이름을 입력하세요");
+				} else if (!repBirth) {
+					alert("생년월일을 입력해주세요");
+				} else if (!repTel) {
+					alert("전화번호를 입력해주세요");
+				} else if (adultValue == null) {
+					alert("인원을 선택해주세요");
+				} else if (teenValue == null) {
+					alert("인원을 선택해주세요");
+				} else if (childValue == null) {
+					alert("인원을 선택해주세요");
+				} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
+					alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
+				}  else {
+					const pp = [];
+
+					pp.push(id, pgName, selDate, repName, repBirth, repTel, turnValue.value, adultValue.value, teenValue.value, childValue.value);
+
+					const pp2 = JSON.stringify(pp)
+
+					if (terms.checked) {
+						localStorage.setItem("reserveInfo", pp2)
+						window.location.href = './reserve-check.html';
+					} else {
+						alert("약관동의 누르세여")
+					}
+				}
+
+
+
+
+
+
+			}
+
+
+			// let date = data.items[programStoageNum].period;
+			// let start = new Date(date.split('~')[0]);
+			// let end = new Date(date.split('~')[1]);
+
+			// // sYear = start.getFullYear();
+			// // sMonth = start.getMonth()+1;
+			// // sDate = start.getDate();
+			// // eYear = end.getFullYear();
+			// // eMonth = end.getMonth()+1;
+			// // eDate = end.getDate();
+			// // var startDate = `${sYear}-${sMonth.toString().padStart(2,"0")}-${sDate.toString().padStart(2,"0")}`
+			// // var endDate = `${eYear}-${eMonth.toString().padStart(2,"0")}-${eDate.toString().padStart(2,"0")}`
+		})
+
+}
+
+var fp = flatpickr(document.getElementById("birth"), {
+	'monthSelectorType': 'static',
+	"locale": "ko",
+	"inline": true,
+	enable: [
+
+		//기간
+		{
+			from: "2023-08-01",
+			to: "2023-08-20"
+		},
+	],
+	dateFormat: "Y-m-d",
+	onChange: function (selectDates, dateStr, instance) {
+
+		let qwe = dateStr;
+
+
+	},
+});
+
+experience();
+
+
+
+
+
+
+

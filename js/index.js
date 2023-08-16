@@ -6,6 +6,7 @@ var swiper = new Swiper(".mainSwiper", {
         delay : 5000,
         disableOnInteraction: false,
     },
+
 });
 
 var swiper = new Swiper(".garden-slide", {

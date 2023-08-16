@@ -1,6 +1,6 @@
 @mixin main-width($w: 1280px, $p:0) {
     margin: 0 auto;
-    width: $w;
+    max-width: $w;
     padding: $p;
     @content;
 }
