@@ -179,7 +179,7 @@
                     }
                     .traffic-tab{
                         @include flex(space-between,center);
-                        margin-bottom: 60px;
+                        margin: 60px 0;
                         >li{
                             cursor: pointer;
                         }

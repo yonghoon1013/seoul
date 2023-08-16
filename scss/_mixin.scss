@@ -58,3 +58,17 @@
     left: 0;
     bottom: 0%;
 }
+
+@mixin tab() {
+    .tab {
+
+        .tabct>* {
+            display: none;
+
+            &.on {
+                display: block;
+            }
+        }
+
+    }
+}

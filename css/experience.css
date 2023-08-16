@@ -427,7 +427,7 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin: 60px 0;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li {
   cursor: pointer;
@@ -861,4 +861,4 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li.on {
   display: block;
-}
+}/*# sourceMappingURL=experience.css.map */
