@@ -4,3 +4,4 @@ $(function () {
     $("#header").load("inc.html .head, .quick-box");
     $("#footer").load("inc.html .footer-con");
 });
+
