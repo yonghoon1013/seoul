@@ -59,7 +59,7 @@
                         <script>
                             var container = document.getElementById('map');
                             var options = {
-                                center: new kakao.maps.LatLng(37.2681, 127.1088),
+                                center: new kakao.maps.LatLng(37.5695, 126.8351),
                                 level: 2
                             };
     
@@ -83,7 +83,7 @@
                             map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
     
                             // 마커가 표시될 위치입니다 
-                            var markerPosition = new kakao.maps.LatLng(37.2681, 127.1088);
+                            var markerPosition = new kakao.maps.LatLng(37.5695, 126.8351);
     
                             // 마커를 생성합니다
                             var marker = new kakao.maps.Marker({
@@ -94,7 +94,7 @@
                             marker.setMap(map);
     
                             // 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
-                            var iwContent = '<div style="padding:5px;">경기도박물관</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                            var iwContent = '<div style="padding:5px;">서울식물원</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
     
                             // 인포윈도우를 생성합니다
                             var infowindow = new kakao.maps.InfoWindow({
