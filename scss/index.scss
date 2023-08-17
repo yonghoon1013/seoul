@@ -1,6 +1,14 @@
 @import "_reset";
 @import "_mixin";
 @import "_inc";
+body{
+    background-image: url('../img/bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 60% contain;
+    background-position: bottom;
+    width: 100%;
+    height: 100%
+}
 
 .main {
 
@@ -30,7 +38,7 @@
                     top: 50%;
                     left: 20%;
                     transform: translate(-20%, -50%);
-
+                    overflow: hidden;
                     .text-box {
                         position: relative;
 
@@ -54,23 +62,34 @@
                             color: white;
                             display: block;
                             text-align: end;
+                            transform: translateY(330%);
+                            animation: text-up forwards 1s;
                         }
 
                         >.title {
                             font-size: 46px;
                             font-weight: bold;
+                            animation-delay: 0.5s;
                         }
 
                         >.name {
                             margin: 20px 20px 15px 0;
                             font-size: 56px;
                             font-weight: bold;
+                            animation-delay: 1s;
                         }
 
                         .area {
                             margin-right: 20px;
                             font-size: 12px;
                             color: rgba(255, 255, 255, 0.63);
+                            animation-delay: 1.5s;
+                        }
+
+                        @keyframes text-up {
+                            100%{
+                                transform: translateY(0%);
+                            }
                         }
                     }
                 }
@@ -100,8 +119,9 @@
                     >.left {
                         >img {
                             display: block;
-                            width: 35px;
-                            height: 35px;
+                            // width: 35px;
+                            // height: 35px;
+                            object-fit: cover;
                             margin-right: 10px;
                             animation: up-down 1.5s infinite ease-in-out alternate;
                         }
@@ -202,7 +222,9 @@
                     transform: translateY(-50%);
                 }
 
-                >p {}
+                >p {
+
+                }
 
                 >a {
                     font-size: 14px;
@@ -638,68 +660,73 @@
                         border-radius: 50px;
                         position: relative;
 
-                            >img {
+                            >a{
+                                display: block;
                                 width: 100%;
                                 height: 100%;
-                                object-fit: cover;
-                                border-radius: 50px;
-                            }
-
-                            &::after {
-                                content: '';
-                                background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0.00) 100%);
-                                width: 100%;
-                                height: 230px;
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                border-radius: 0px 0px 50px 50px;
-                            }
-
-                            .experience-info {
-                                width: 350px;
-                                text-align: left;
-                                position: absolute;
-                                left: 50%;
-                                bottom: 5%;
-                                transform: translate(-50%, -5%);
-                                z-index: 1;
-
-                                >.title {
-                                    font-size: 14px;
-                                    color: white;
-                                    line-height: 1.5;
+                                >img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 50px;
                                 }
-
-                                >.time {
-                                    @include flex(space-between);
-
-                                    >span {
-                                        font-size: 12px;
+    
+                                &::after {
+                                    content: '';
+                                    background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0.00) 100%);
+                                    width: 100%;
+                                    height: 230px;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    border-radius: 0px 0px 50px 50px;
+                                }
+    
+                                .experience-info {
+                                    width: 350px;
+                                    text-align: left;
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom: 5%;
+                                    transform: translate(-50%, -5%);
+                                    z-index: 1;
+    
+                                    >.title {
+                                        font-size: 14px;
                                         color: white;
                                         line-height: 1.5;
                                     }
-                                    >a{
-                                        font-size: 12px;
-                                        color: white;
-                                        line-height: 1.5;
-                                    }
-                                }
-
-                                .situation {
-                                    @include flex(space-between);
-                                    margin-top: 20px;
-
-                                    >div {
-                                        width: 100px;
-                                        height: 25px;
-                                        border-radius: 50px;
-                                        background-color: #C2D42E;
-                                        text-align: center;
-                                        z-index: 5;
-
+    
+                                    >.time {
+                                        @include flex(space-between);
+    
                                         >span {
                                             font-size: 12px;
+                                            color: white;
+                                            line-height: 1.5;
+                                        }
+                                        >span{
+                                            font-size: 12px;
+                                            color: white;
+                                            line-height: 1.5;
+                                        }
+                                    }
+    
+                                    .situation {
+                                        @include flex(space-between);
+                                        margin-top: 20px;
+    
+                                        >div {
+                                            width: 100px;
+                                            height: 25px;
+                                            border-radius: 50px;
+                                            background-color: #C2D42E;
+                                            text-align: center;
+                                            z-index: 5;
+    
+                                            >span {
+                                                font-size: 12px;
+                                            }
                                         }
                                     }
                                 }

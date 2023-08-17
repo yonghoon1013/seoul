@@ -98,7 +98,7 @@ table {
   align-items: center;
 }
 #header .head .header-nav > ul > li > a {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 #header .head .header-nav > ul > li .lang {
   display: flex;
@@ -133,6 +133,7 @@ table {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 5px 10px -5px #777;
+  border: 1px solid #90BC43;
 }
 .quick-box .quick-nav > ul > li > a .quick-con {
   position: absolute;
@@ -140,23 +141,42 @@ table {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.quick-box .quick-nav > ul > li > a .quick-con .aa {
-  width: 45px;
-  height: 40px;
-  position: relative;
-}
-.quick-box .quick-nav > ul > li > a .quick-con .aa > img {
+.quick-box .quick-nav > ul > li > a .quick-con > img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
 }
-.quick-box .quick-nav > ul > li > a .quick-con > .title {
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
+.quick-box .quick-nav > ul > li > a .title {
+  opacity: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #90BC43;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.quick-box .quick-nav > ul > li > a .title > span {
+  color: white;
   white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.quick-box .quick-nav > ul > li > a:hover {
+  animation: swing 1s ease;
+  animation-iteration-count: 1;
+}
+.quick-box .quick-nav > ul > li > a:hover .quick-con {
+  opacity: 0;
+}
+.quick-box .quick-nav > ul > li > a:hover > .title {
+  opacity: 1;
 }
 
 #footer {
@@ -218,6 +238,15 @@ table {
   font-size: 14px;
 }
 
+body {
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 60% contain;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+}
+
 .main .mainSwiper {
   width: 100%;
   height: 700px;
@@ -232,8 +261,7 @@ table {
 .main .mainSwiper > .swiper-wrapper > .swiper-slide > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide::after {
   position: absolute;
@@ -252,6 +280,7 @@ table {
   top: 50%;
   left: 20%;
   transform: translate(-20%, -50%);
+  overflow: hidden;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide .plant-month .text-box {
   position: relative;
@@ -274,20 +303,30 @@ table {
   color: white;
   display: block;
   text-align: end;
+  transform: translateY(330%);
+  animation: text-up forwards 1s;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide .plant-month .text-box > .title {
   font-size: 46px;
   font-weight: bold;
+  animation-delay: 0.5s;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide .plant-month .text-box > .name {
   margin: 20px 20px 15px 0;
   font-size: 56px;
   font-weight: bold;
+  animation-delay: 1s;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide .plant-month .text-box .area {
   margin-right: 20px;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.63);
+  animation-delay: 1.5s;
+}
+@keyframes text-up {
+  100% {
+    transform: translateY(0%);
+  }
 }
 .main .mainSwiper .bottom-con {
   width: 500px;
@@ -310,8 +349,7 @@ table {
 }
 .main .mainSwiper .bottom-con .weather-box .weather-con > .left > img {
   display: block;
-  width: 35px;
-  height: 35px;
+  object-fit: cover;
   margin-right: 10px;
   animation: up-down 1.5s infinite ease-in-out alternate;
 }
@@ -350,7 +388,7 @@ table {
 }
 .main .use-info {
   margin: 0 auto;
-  width: 1280px;
+  max-width: 1280px;
   padding: 0;
   margin-bottom: 200px;
   display: flex;
@@ -451,7 +489,7 @@ table {
 }
 .main .news {
   margin: 0 auto;
-  width: 1280px;
+  max-width: 1280px;
   padding: 0;
   margin-bottom: 200px;
 }
@@ -499,8 +537,7 @@ table {
 .main .news .news-con .exhibition-news .exhibition-con > a > img {
   width: 400px;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
   transition: 1.5s;
   border-radius: 25px;
@@ -556,8 +593,7 @@ table {
 .main .news .news-con .garden-news .garden-slide > .swiper-wrapper > .swiper-slide .garden-con > a > img {
   width: 400px;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 25px;
 }
 .main .news .notice-box > div {
@@ -639,7 +675,7 @@ table {
 }
 .main .course-box {
   margin: 0 auto;
-  width: 1280px;
+  max-width: 1280px;
   padding: 0;
   margin-bottom: 100px;
 }
@@ -757,7 +793,7 @@ table {
 }
 .main .experience-box {
   margin: 0 auto;
-  width: 1280px;
+  max-width: 1280px;
   padding: 0;
   margin-bottom: 100px;
 }
@@ -795,14 +831,18 @@ table {
   border-radius: 50px;
   position: relative;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > img {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a {
+  display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50px;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide::after {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a::after {
   content: "";
   background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0) 100%);
   width: 100%;
@@ -812,7 +852,7 @@ table {
   bottom: 0;
   border-radius: 0px 0px 50px 50px;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info {
   width: 350px;
   text-align: left;
   position: absolute;
@@ -821,33 +861,33 @@ table {
   transform: translate(-50%, -5%);
   z-index: 1;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info > .title {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .title {
   font-size: 14px;
   color: white;
   line-height: 1.5;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info > .time {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info > .time > span {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time > span {
   font-size: 12px;
   color: white;
   line-height: 1.5;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info > .time > a {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time > span {
   font-size: 12px;
   color: white;
   line-height: 1.5;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info .situation {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 20px;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info .situation > div {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > div {
   width: 100px;
   height: 25px;
   border-radius: 50px;
@@ -855,6 +895,6 @@ table {
   text-align: center;
   z-index: 5;
 }
-.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide .experience-info .situation > div > span {
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > div > span {
   font-size: 12px;
 }/*# sourceMappingURL=index.css.map */
