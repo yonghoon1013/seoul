@@ -1,32 +1,25 @@
-const reserveInfoValue = JSON.parse(localStorage.getItem("reserveInfo"));
-const tableBox = document.querySelector('.table-box');
+const info = JSON.parse(localStorage.getItem("result"));
 
-console.log(reserveInfoValue);
+const btn = document.querySelector('.reserve-btn-box > a');
 
-tableBox.innerHTML = `
-        <table>
-            <tbody>
-                <tr>
-                    <th class="th-top">체험명</th>
-                    <td class="td-top" colspan="3">${reserveInfoValue[1]}</td>
-                </tr>
-                <tr>
-                    <th>예약일</th>
-                    <td>${reserveInfoValue[2]}</td>
-                    <td colspan="2">${reserveInfoValue[6]}</td>
-                </tr>
-                <tr>
-                    <th>예약자 및 대표자 정보</th>
-                    <td>${reserveInfoValue[3]}</td>
-                    <td>${reserveInfoValue[4]}</td>
-                    <td>${reserveInfoValue[5]}</td>
-                </tr>
-                <tr>
-                    <th class="th-bottom">총 인원</th>
-                    <td>성인 ${reserveInfoValue[7]}명</td>
-                    <td>청소년 ${reserveInfoValue[8]}명</td>
-                    <td>유아 ${reserveInfoValue[9]}명</td>
-                </tr>
-            </tbody>
-        </table>
-`
+
+btn.onclick = function(){
+    let programStoageNum = parseInt(sessionStorage.getItem("click01"));
+    const checkName = document.getElementById('check-name').value,
+            checkTel = document.getElementById('check-tel').value;
+    
+    let a =false;
+
+    info.forEach(function(v,k){
+        if(programStoageNum+1 == v.id && checkName == v.repName && checkTel == v.repTel){
+            window.location.href = './reserve-check-page.html';
+            sessionStorage.setItem("check",JSON.stringify(v))
+            a = ture;
+        }
+    })
+
+    if(!a){
+        alert("예약된 내역이 존재하지 않습니다.");
+        return;
+    }
+}

@@ -248,17 +248,19 @@
                                     border-radius: 50%;
                                     cursor: pointer;
                                 }
+                                >p{
+                                    cursor: pointer;
+                                    padding-left: 40px;
+                                    >span{
+                                        color: #90BC43;
+                                    }
+                                }
                             }
                             >input:checked + label::before {
                                 background-color: #90BC43;
                                 border: 1px solid #90BC43;
                             }
-                            >p{
-                                padding-left: 40px;
-                                >span{
-                                    color: #90BC43;
-                                }
-                            }
+ 
                         }
                         .terms-text-box{
                             padding: 20px 0;

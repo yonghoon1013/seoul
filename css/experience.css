@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -474,30 +473,30 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
   content: "";
-  background: url("/StoryImg/오시는길이미지/i_bus_01.png") no-repeat;
+  background: url("/StoryImg/road_Img/i_bus_01.png") no-repeat;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
   content: "";
-  background: url("/StoryImg/오시는길이미지/i_bus_05.png") no-repeat;
+  background: url("/StoryImg/road_Img/i_bus_05.png") no-repeat;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
   content: "";
-  background: url("/StoryImg/오시는길이미지/i_bus_04.png") no-repeat;
+  background: url("/StoryImg/road_Img/i_bus_04.png") no-repeat;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
   content: "";
-  background: url("/StoryImg/오시는길이미지/i_bus_06.png") no-repeat;
+  background: url("/StoryImg/road_Img/i_bus_06.png") no-repeat;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
   content: "";
-  background: url("/StoryImg/오시는길이미지/i_bus_02.png") no-repeat;
+  background: url("/StoryImg/road_Img/i_bus_02.png") no-repeat;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
   margin-bottom: 0;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
   content: "";
-  background: url("/StoryImg/오시는길이미지/i_bus_03.png") no-repeat;
+  background: url("/StoryImg/road_Img/i_bus_03.png") no-repeat;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic2 .traffic_line {
   border: 1px solid #CBCBCB;

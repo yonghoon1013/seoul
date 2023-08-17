@@ -1,5 +1,7 @@
 function experience() {
 	let programStoageNum = sessionStorage.getItem("click01");
+	const info = JSON.parse(localStorage.getItem("result"));
+
 
 	fetch('./json/program.json')
 		.then(res => { return res.json() })
@@ -62,6 +64,16 @@ function experience() {
 					pgName = data.items[programStoageNum].name;
 				const terms = document.getElementById('terms-check');
 
+				let a = false;
+				info.forEach(function(v,k){
+					if(parseInt(programStoageNum)+1 == v.id && repTel == v.repTel){
+						alert("이미 존재하는 예약 내역이 있습니다.")
+						a = true;
+					}
+				})
+
+				if(a) return;
+
 
 				if (!selDate) {
 					alert("날짜를 선택해주세요")
@@ -81,16 +93,27 @@ function experience() {
 					alert("인원을 선택해주세요");
 				} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
 					alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
-				}  else {
-					const pp = [];
+				}else {
+					const pp = localStorage.result ? JSON.parse(localStorage.result) : [];
+				
+					pp.push({
+						id, 
+						pgName, 
+						selDate, 
+						repName, 
+						repBirth, 
+						repTel, 
+						turnValue:turnValue.value, 
+						adultValue:adultValue.value, 
+						teenValue:teenValue.value, 
+						childValue:childValue.value
+					});
 
-					pp.push(id, pgName, selDate, repName, repBirth, repTel, turnValue.value, adultValue.value, teenValue.value, childValue.value);
-
-					const pp2 = JSON.stringify(pp)
+				
 
 					if (terms.checked) {
-						localStorage.setItem("reserveInfo", pp2)
-						window.location.href = './reserve-check.html';
+						localStorage.setItem("result", JSON.stringify(pp))
+						window.location.href = './reserve-complete.html';
 					} else {
 						alert("약관동의 누르세여")
 					}
@@ -104,42 +127,39 @@ function experience() {
 			}
 
 
-			// let date = data.items[programStoageNum].period;
-			// let start = new Date(date.split('~')[0]);
-			// let end = new Date(date.split('~')[1]);
+			let date = data.items[programStoageNum].period;
+			let start = new Date(date.split('~')[0]);
+			let end = new Date(date.split('~')[1]);
 
-			// // sYear = start.getFullYear();
-			// // sMonth = start.getMonth()+1;
-			// // sDate = start.getDate();
-			// // eYear = end.getFullYear();
-			// // eMonth = end.getMonth()+1;
-			// // eDate = end.getDate();
-			// // var startDate = `${sYear}-${sMonth.toString().padStart(2,"0")}-${sDate.toString().padStart(2,"0")}`
-			// // var endDate = `${eYear}-${eMonth.toString().padStart(2,"0")}-${eDate.toString().padStart(2,"0")}`
+			sYear = start.getFullYear();
+			sMonth = start.getMonth()+1;
+			sDate = start.getDate();
+			eYear = end.getFullYear();
+			eMonth = end.getMonth()+1;
+			eDate = end.getDate();
+			var startDate = `${sYear}-${sMonth.toString().padStart(2,"0")}-${sDate.toString().padStart(2,"0")}`
+			var endDate = `${eYear}-${eMonth.toString().padStart(2,"0")}-${eDate.toString().padStart(2,"0")}`
+
+
+			var fp = flatpickr(document.getElementById("birth"),{
+				'monthSelectorType': 'static',
+				"locale": "ko",
+				"inline": true,
+				enable: [
+			
+					//기간
+					{
+						from: startDate,
+						to: endDate
+					},
+				],
+				dateFormat: "Y-m-d",
+			});
 		})
 
 }
 
-var fp = flatpickr(document.getElementById("birth"), {
-	'monthSelectorType': 'static',
-	"locale": "ko",
-	"inline": true,
-	enable: [
 
-		//기간
-		{
-			from: "2023-08-01",
-			to: "2023-08-20"
-		},
-	],
-	dateFormat: "Y-m-d",
-	onChange: function (selectDates, dateStr, instance) {
-
-		let qwe = dateStr;
-
-
-	},
-});
 
 experience();
 

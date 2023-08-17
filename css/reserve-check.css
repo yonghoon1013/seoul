@@ -268,12 +268,11 @@ table {
   height: 100%;
   left: 0;
   bottom: 0%;
-  z-index: 88;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 .main .indicator {
-  max-width: 1280px;
   margin: 0 auto;
+  max-width: 1280px;
+  padding: 0;
   margin-bottom: 100px;
 }
 .main .indicator > ul {
@@ -305,64 +304,70 @@ table {
   content: "";
   background: none;
 }
-.main .con {
+.main .check-box {
   margin: 0 auto;
   max-width: 1280px;
   padding: 0;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
-.main .con > .title {
+.main .check-box .check-con > .title {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
 }
-.main .con .table-box {
-  width: 950px;
-  margin: 0 auto;
-  border: 1px solid #90BC43;
+.main .check-box .input-box {
+  margin-bottom: 30px;
+}
+.main .check-box .input-box > form {
   border-radius: 10px;
+  border: 1px solid #90BC43;
+  width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.main .con .table-box > table {
-  width: 100%;
-  border-collapse: separate;
-}
-.main .con .table-box > table > tbody > tr > th {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  vertical-align: middle;
-  width: 20%;
+.main .check-box .input-box > form > .input-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
-  background-color: #90BC43;
+}
+.main .check-box .input-box > form > .input-con > p {
+  text-align: center;
+  line-height: 50px;
   color: white;
-  font-weight: normal;
-  padding-left: 30px;
+  width: 30%;
+  height: 100%;
+  background-color: #90BC43;
 }
-.main .con .table-box > table > tbody > tr .th-top {
-  border-radius: 10px 0px 0px 0px;
-  border-top: 1px solid #90BC43;
+.main .check-box .input-box > form > .input-con > input {
+  width: 70%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 20px;
 }
-.main .con .table-box > table > tbody > tr .th-bottom {
-  border-radius: 0px 0px 0px 10px;
+.main .check-box .input-box > form > .input-con:nth-of-type(1) {
+  border-bottom: 1px solid white;
+}
+.main .check-box .input-box > form > .input-con:nth-of-type(1) > input {
   border-bottom: 1px solid #90BC43;
 }
-.main .con .table-box > table > tbody > tr > td {
-  border-top: 1px solid #90BC43;
-  vertical-align: middle;
-  width: 20%;
-  padding-left: 30px;
+.main .reserve-btn-box {
+  margin-top: 100px;
+  text-align: center;
 }
-.main .con .table-box > table > tbody > tr .td-top {
-  border-top: none;
-}
-.main .con > a {
+.main .reserve-btn-box > a {
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
   width: 110px;
   height: 40px;
-  margin: 80px auto;
   line-height: 40px;
-  display: block;
-  text-align: center;
-  background-color: #90BC43;
   border-radius: 20px;
+  background-color: #90BC43;
+  border: none;
   color: white;
+  font-size: 20px;
+  font-weight: bold;
 }/*# sourceMappingURL=reserve-check.css.map */

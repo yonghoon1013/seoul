@@ -486,15 +486,16 @@ table {
   border-radius: 50%;
   cursor: pointer;
 }
+.main .reserve-box .reserve-con05 .terms-box .terms > label > p {
+  cursor: pointer;
+  padding-left: 40px;
+}
+.main .reserve-box .reserve-con05 .terms-box .terms > label > p > span {
+  color: #90BC43;
+}
 .main .reserve-box .reserve-con05 .terms-box .terms > input:checked + label::before {
   background-color: #90BC43;
   border: 1px solid #90BC43;
-}
-.main .reserve-box .reserve-con05 .terms-box .terms > p {
-  padding-left: 40px;
-}
-.main .reserve-box .reserve-con05 .terms-box .terms > p > span {
-  color: #90BC43;
 }
 .main .reserve-box .reserve-con05 .terms-box .terms-text-box {
   padding: 20px 0;
