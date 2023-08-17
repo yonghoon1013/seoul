@@ -97,8 +97,8 @@ function programClick() {
                 <a href="./reserve.html" class="reserve">
                     <span>예약하기</span>
                 </a>
-                <a href="#" class="reserve-check">
-                <span>예약하기</span>
+                <a href="./reserve-check.html" class="reserve-check">
+                <span>예약확인</span>
             </a>
             </div>
         </div>

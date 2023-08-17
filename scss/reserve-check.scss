@@ -4,6 +4,7 @@
 
 
 .main{
+
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -18,26 +19,15 @@
             z-index: 99;
         }
         &::after{
-            position: absolute;
-            content: '';
-            background-image: url("../img/bottom.png");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: bottom;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            bottom: 0%;
-            z-index: 88;
-            background-color: rgba(0, 0, 0, 0.3);
+            @include bg();
         }
     }
     
     
     .indicator{
-        max-width: 1280px;
-        margin: 0 auto;
-        margin-bottom: 100px;
+        @include main-width(){
+            margin-bottom: 100px
+        };
         >ul{
             @include flex(flex-start,center);
             >li{
@@ -67,71 +57,74 @@
         }
     }
 
-    .con{
-        @include main-width(){
-            margin-bottom: 50px
-        };
-        >.title{
-            @include flex(center,center);
-            margin-bottom: 50px;
-        }
+    .check-box{
+        @include main-width();
+        margin-bottom: 100px;
+        .check-con{
+            >.title{
+                @include flex(center,center);
+                margin-bottom: 50px;
+                >img{
 
-        .table-box{
-            width: 950px;
-            margin: 0 auto;
-            border: 1px solid #90BC43;
-            border-radius: 10px;
-            >table{
-                width: 100%;
-                border-collapse: separate;
-                >tbody{
-                    >tr{
+                }
+                >p{
 
-                        >th{             
-                            border-top: 1px solid white;            
-                            border-bottom: 1px solid white;            
-                            vertical-align: middle;
-                            width: 20%;
-                            height: 50px;
-                            background-color: #90BC43;
-                            color: white;
-                            font-weight: normal;
-                            padding-left: 30px;
-                        }
-                        .th-top{
-                            border-radius: 10px 0px 0px 0px;
-                            border-top: 1px solid #90BC43;
-                        }
-                        .th-bottom{
-                            border-radius: 0px 0px 0px 10px;
-                            border-bottom: 1px solid #90BC43;
-                        }
-                        >td{
-                            border-top: 1px solid #90BC43;
-                            vertical-align: middle;
-                            width: 20%;
-                            padding-left: 30px;
-                        }
-                        .td-top{
-                            border-top: none;
-                        }
-                    }
                 }
             }
         }
 
-        >a{
-            width: 110px;
-            height: 40px;
-            margin: 80px auto;
-            line-height: 40px;
-            display: block;
-            text-align: center;
-            background-color: #90BC43;
-            border-radius: 20px;
-            color: white;
+        .input-box{
+            margin-bottom: 30px;
+            >form{
+                border-radius: 10px;
+                border: 1px solid #90BC43;
+                width: 500px;
+                margin: 0 auto;
+                overflow: hidden;
+                >.input-con{
+                    @include flex(center,center);
+                    height: 50px;
+                    >p{
+                        text-align: center;
+                        line-height: 50px;
+                        color: white;
+                        width: 30%;
+                        height: 100%;
+                        background-color: #90BC43;
+                    }
+                    >input{
+                        width: 70%;
+                        height: 100%;
+                        border: none;
+                        outline: none;
+                        padding-left: 20px;
+                    }
+                    &:nth-of-type(1){
+                        border-bottom: 1px solid white;
+                        >input{
+                            border-bottom: 1px solid #90BC43;
+                        }
+                    }
+                }
+            } 
         }
     }
-
-
+    .reserve-btn-box{
+        margin-top: 100px;
+        text-align: center;
+        >a{
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+            width: 110px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            background-color: #90BC43;
+            border: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }   
 }
