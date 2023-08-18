@@ -64,64 +64,108 @@ function experience() {
 					pgName = data.items[programStoageNum].name;
 				const terms = document.getElementById('terms-check');
 
-				let a = false;
-				info.forEach(function(v,k){
-					if(parseInt(programStoageNum)+1 == v.id && repTel == v.repTel){
-						alert("이미 존재하는 예약 내역이 있습니다.")
-						a = true;
+
+				if(info == null){
+					if (!selDate) {
+						alert("날짜를 선택해주세요")
+					} else if (turnValue == null) {
+						alert("회차 선택해주세요");
+					} else if (!repName) {
+						alert("이름을 입력하세요");
+					} else if (!repBirth) {
+						alert("생년월일을 입력해주세요");
+					} else if (!repTel) {
+						alert("전화번호를 입력해주세요");
+					} else if (adultValue == null) {
+						alert("인원을 선택해주세요");
+					} else if (teenValue == null) {
+						alert("인원을 선택해주세요");
+					} else if (childValue == null) {
+						alert("인원을 선택해주세요");
+					} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
+						alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
+					}else {
+						const pp = localStorage.result ? JSON.parse(localStorage.result) : [];
+					
+						pp.push({
+							id, 
+							pgName, 
+							selDate, 
+							repName, 
+							repBirth, 
+							repTel, 
+							turnValue:turnValue.value, 
+							adultValue:adultValue.value, 
+							teenValue:teenValue.value, 
+							childValue:childValue.value
+						});
+	
+					
+	
+						if (terms.checked) {
+							localStorage.setItem("result", JSON.stringify(pp))
+							window.location.href = './reserve-complete.html';
+						} else {
+							alert("약관동의 누르세여")
+						}
 					}
-				})
+				}else{
+					let a = false;
+					info.forEach(function(v,k){
+						if(parseInt(programStoageNum)+1 == v.id && repTel == v.repTel){
+							alert("이미 존재하는 예약 내역이 있습니다.")
+							a = true;
+						}
+					})
+	
+					if(a) return;
 
-				if(a) return;
 
-
-				if (!selDate) {
-					alert("날짜를 선택해주세요")
-				} else if (turnValue == null) {
-					alert("회차 선택해주세요");
-				} else if (!repName) {
-					alert("이름을 입력하세요");
-				} else if (!repBirth) {
-					alert("생년월일을 입력해주세요");
-				} else if (!repTel) {
-					alert("전화번호를 입력해주세요");
-				} else if (adultValue == null) {
-					alert("인원을 선택해주세요");
-				} else if (teenValue == null) {
-					alert("인원을 선택해주세요");
-				} else if (childValue == null) {
-					alert("인원을 선택해주세요");
-				} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
-					alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
-				}else {
-					const pp = localStorage.result ? JSON.parse(localStorage.result) : [];
-				
-					pp.push({
-						id, 
-						pgName, 
-						selDate, 
-						repName, 
-						repBirth, 
-						repTel, 
-						turnValue:turnValue.value, 
-						adultValue:adultValue.value, 
-						teenValue:teenValue.value, 
-						childValue:childValue.value
-					});
-
-				
-
-					if (terms.checked) {
-						localStorage.setItem("result", JSON.stringify(pp))
-						window.location.href = './reserve-complete.html';
-					} else {
-						alert("약관동의 누르세여")
+					if (!selDate) {
+						alert("날짜를 선택해주세요")
+					} else if (turnValue == null) {
+						alert("회차 선택해주세요");
+					} else if (!repName) {
+						alert("이름을 입력하세요");
+					} else if (!repBirth) {
+						alert("생년월일을 입력해주세요");
+					} else if (!repTel) {
+						alert("전화번호를 입력해주세요");
+					} else if (adultValue == null) {
+						alert("인원을 선택해주세요");
+					} else if (teenValue == null) {
+						alert("인원을 선택해주세요");
+					} else if (childValue == null) {
+						alert("인원을 선택해주세요");
+					} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
+						alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
+					}else {
+						const pp = localStorage.result ? JSON.parse(localStorage.result) : [];
+					
+						pp.push({
+							id, 
+							pgName, 
+							selDate, 
+							repName, 
+							repBirth, 
+							repTel, 
+							turnValue:turnValue.value, 
+							adultValue:adultValue.value, 
+							teenValue:teenValue.value, 
+							childValue:childValue.value
+						});
+	
+					
+	
+						if (terms.checked) {
+							localStorage.setItem("result", JSON.stringify(pp))
+							window.location.href = './reserve-complete.html';
+						} else {
+							alert("약관동의 누르세여")
+						}
 					}
+
 				}
-
-
-
-
 
 
 			}
