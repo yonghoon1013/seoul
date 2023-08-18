@@ -238,7 +238,7 @@ table {
   font-size: 14px;
 }
 
-main .bg {
+.bg {
   position: relative;
   background-image: url("../img/bg111.png");
   background-repeat: no-repeat;
@@ -247,7 +247,7 @@ main .bg {
   width: 100%;
   height: 400px;
 }
-main .bg > h2 {
+.bg > h2 {
   color: white;
   position: absolute;
   font-size: 32px;
@@ -257,7 +257,7 @@ main .bg > h2 {
   transform: translate(-50%, -50%);
   z-index: 99;
 }
-main .bg::after {
+.bg::after {
   position: absolute;
   content: "";
   background-image: url("../img/bottom.png");
@@ -271,23 +271,24 @@ main .bg::after {
   z-index: 88;
   background-color: rgba(0, 0, 0, 0.3);
 }
-main .indicator {
-  width: 1280px;
+
+.indicator {
+  max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
-main .indicator > ul {
+.indicator > ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-main .indicator > ul > li {
+.indicator > ul > li {
   font-size: 14px;
   padding-right: 20px;
   margin-right: 10px;
   position: relative;
 }
-main .indicator > ul > li::after {
+.indicator > ul > li::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -298,99 +299,101 @@ main .indicator > ul > li::after {
   height: 12px;
   margin-left: 10px;
 }
-main .indicator > ul > li:nth-last-of-type(1) {
-  color: #90bc43;
+.indicator > ul > li:nth-last-of-type(1) {
+  color: #90BC43;
 }
-main .indicator > ul > li:nth-last-of-type(1)::after {
+.indicator > ul > li:nth-last-of-type(1)::after {
   content: "";
   background: none;
 }
-main .content {
+
+.space {
+  max-width: 1280px;
   margin: 0 auto;
-  max-width: 850px;
-  padding: 0;
-  /*     padding: 0 240px; */
-  text-align: center;
-  margin-bottom: 100px;
 }
-main .content h2 {
-  color: #447531;
+.space .sub-f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.space .sub-f p {
   font-size: 32px;
-  margin-bottom: 60px;
+  margin-bottom: 37px;
 }
-main .content figure {
-  /*       margin: 0 auto;
-  padding: 0 10%; */
+.space .haha {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #ededed;
+  padding-bottom: 27px;
 }
-main .content figure p {
-  width: 840px;
-  height: 360px;
-  margin: 0 auto;
+.space .haha .state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #90BC43;
+  width: 93px;
+  height: 42px;
+  border-radius: 50px;
 }
-main .content figure p img {
-  width: 100%;
-  height: 100%;
+.space .haha .state p {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+.space .haha .name {
+  margin-left: 30px;
+}
+.space .haha .name p {
+  font-size: 24px;
+}
+.space .ttt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 101px;
+}
+.space .ttt .im {
+  width: 410px;
+  height: 400px;
+}
+.space .ttt .im img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-main .content figure figcaption {
   width: 100%;
-  /*         margin: 0 auto; */
-  margin-top: 54px;
+  height: 100%;
+  border-radius: 50px;
 }
-main .content figure figcaption ul {
-  width: 100%;
+.space .ttt .tdt {
+  margin-left: 118.66px;
+}
+.space .ttt .tdt table {
+  white-space: nowrap;
+}
+.space .ttt .tdt table td {
+  padding: 22px 0;
+}
+.space .ttt .tdt table td:nth-of-type(1) {
+  font-weight: bold;
+}
+.space .ttt .tdt table td:nth-of-type(2n) {
+  padding-left: 114px;
+}
+.space .statee {
   display: flex;
-  justify-content: space-between;
-}
-main .content figure figcaption ul li {
-  width: 50%;
-  text-align: start;
-}
-main .content figure figcaption ul li span {
-  font-weight: 500;
-  padding-right: 2%;
-  color: #4e803b;
-}
-main .content figure figcaption ul:nth-of-type(1) {
-  margin-bottom: 16px;
-}
-main .content hr {
-  width: 840px;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.5);
-  margin: 40px 0 40px;
-}
-main .content .txt {
-  /*       padding: 0 100px; */
-  width: 100%;
-  text-align: left;
-  margin: 0;
-  margin-bottom: 200px;
-}
-main .content .txt li {
-  width: 100%;
-}
-main .content .txt li p {
-  color: #5b5e5f;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-  line-height: 1.5em;
-}
-main .content .btn_list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-main .content .btn_list a {
-  border-radius: 10px;
-  background: #90be45;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(1200px);
+  background-color: #90BC43;
   width: 70px;
   height: 40px;
-  line-height: 40px;
-  display: block;
-  color: #fff;
-  text-align: center;
+  border-radius: 10px;
+  margin: 93px 0 87px 0;
+}
+.space .statee p > a {
   font-size: 16px;
-  font-weight: 500;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }

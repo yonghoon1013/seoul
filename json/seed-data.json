@@ -11,10 +11,10 @@
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
             "level" : "N",
-            "ground" : ["","양지에서 키우세요"],
-            "tmp" : ["","15~20도"],
-            "deep" : ["","2cm아래에 심어주세요"],
-            "topsoil" : ["","원예용 상토에 심으세요."]           
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
         },
         {
             "ID" : 31150,
@@ -26,7 +26,11 @@
             "bloomingSeason" : "5 ~ 7월",
             "bearingSeason" : "8 ~ 9월",
             "rental" : "Y",
-            "level" : "상"   
+            "level" : "상",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 23564,
@@ -38,7 +42,12 @@
             "bloomingSeason" : "4월",
             "bearingSeason" : "6 ~ 7월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 27456,
@@ -50,7 +59,12 @@
             "bloomingSeason" : "4 ~ 5월",
             "bearingSeason" : "6 ~ 7월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 36228,
@@ -62,7 +76,12 @@
             "bloomingSeason" : "6 ~ 9월",
             "bearingSeason" : "8 ~ 11월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 24393,
@@ -74,7 +93,12 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 11110,
@@ -86,7 +110,11 @@
             "bloomingSeason" : "6 ~ 10월",
             "bearingSeason" : "8 ~ 11월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID": 24387,
@@ -98,7 +126,12 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "8 ~ 9월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 23049,
@@ -110,7 +143,12 @@
             "bloomingSeason" : "8 ~ 9월",
             "bearingSeason" : "9 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 30949,
@@ -122,7 +160,12 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 25170,
@@ -134,7 +177,12 @@
             "bloomingSeason" : "6 ~ 8월",
             "bearingSeason" : "7 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 30001,
@@ -146,7 +194,12 @@
             "bloomingSeason" : "5 ~ 7월",
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 27510,
@@ -158,7 +211,12 @@
             "bloomingSeason" : "8월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 30125,
@@ -170,7 +228,12 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "7 ~ 9월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 11111,
@@ -182,7 +245,11 @@
             "bloomingSeason" : "4 ~ 6월",
             "bearingSeason" : "6 ~ 8월",
             "rental" : "Y",
-            "level" : "중"   
+            "level" : "중",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 26956,
@@ -194,7 +261,12 @@
             "bloomingSeason" : "7 ~ 10월",
             "bearingSeason" : "9 ~ 11월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 11112,
@@ -206,7 +278,11 @@
             "bloomingSeason" : "5 ~ 7월",
             "bearingSeason" : "6 ~ 8월",
             "rental" : "Y",
-            "level" : "상"   
+            "level" : "상",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 31159,
@@ -218,7 +294,11 @@
             "bloomingSeason" : "5 ~ 6월",
             "bearingSeason" : "8 ~ 9월",
             "rental" : "Y",
-            "level" : "상"   
+            "level" : "상",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 27516,
@@ -230,7 +310,12 @@
             "bloomingSeason" : "4 ~ 6월",
             "bearingSeason" : "6 ~ 7월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 11113,
@@ -242,7 +327,11 @@
             "bloomingSeason" : "6 ~ 8월",
             "bearingSeason" : "9 ~ 10월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 11114,
@@ -254,7 +343,11 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "Y",
-            "level" : "상"   
+            "level" : "상",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 11115,
@@ -266,7 +359,12 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID": 11116,
@@ -278,7 +376,12 @@
             "bloomingSeason" : "6 ~ 9월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 24058,
@@ -290,7 +393,12 @@
             "bloomingSeason" : "6월",
             "bearingSeason" : "7월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 22924,
@@ -302,7 +410,11 @@
             "bloomingSeason" : "4 ~ 5월",
             "bearingSeason" : "5 ~ 6월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 27086,
@@ -314,7 +426,12 @@
             "bloomingSeason" : "5 ~ 8월",
             "bearingSeason" : "7 ~ 9월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp05.png","20도 ~ 25도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 11117,
@@ -326,7 +443,11 @@
             "bloomingSeason" : "7월",
             "bearingSeason" : "8월",
             "rental" : "Y",
-            "level" : "중"   
+            "level" : "중",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 41996,
@@ -338,7 +459,12 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "9 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 31500,
@@ -350,7 +476,12 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "6 ~ 8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 24677,
@@ -362,7 +493,12 @@
             "bloomingSeason" : "4 ~ 6월",
             "bearingSeason" : "6월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 31230,
@@ -374,7 +510,12 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "9 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 32477,
@@ -386,7 +527,11 @@
             "bloomingSeason" : "6 ~ 8월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 30173,
@@ -398,7 +543,12 @@
             "bloomingSeason" : "5 ~ 6월",
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 30209,
@@ -410,7 +560,12 @@
             "bloomingSeason" : "7월",
             "bearingSeason" : "8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 31658,
@@ -422,7 +577,11 @@
             "bloomingSeason" : "5월",
             "bearingSeason" : "9 ~ 10월",
             "rental" : "Y",
-            "level" : "상"   
+            "level" : "상",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 28499,            
@@ -434,7 +593,11 @@
             "bloomingSeason" : "5 ~ 10월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 41578,
@@ -446,7 +609,11 @@
             "bloomingSeason" : "6 ~ 10월",
             "bearingSeason" : "10 ~ 11월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 41389,
@@ -458,7 +625,12 @@
             "bloomingSeason" : "6 ~ 9월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 27024,
@@ -470,7 +642,12 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 42024,
@@ -482,7 +659,11 @@
             "bloomingSeason" : "5 ~ 7월",
             "bearingSeason" : "6 ~ 8월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 28867,
@@ -494,7 +675,11 @@
             "bloomingSeason" : "7 ~ 9월",
             "bearingSeason" : "9 ~ 10월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp04.png","18도 ~ 23도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 11118,
@@ -506,7 +691,11 @@
             "bloomingSeason" : "6 ~ 8월",
             "bearingSeason" : "8 ~ 9월",
             "rental" : "Y",
-            "level" : "중"   
+            "level" : "중",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 31550,
@@ -518,7 +707,12 @@
             "bloomingSeason" : "7 ~ 9월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 31559,
@@ -530,7 +724,11 @@
             "bloomingSeason" : "6 ~ 7월",
             "bearingSeason" : "7 ~ 8월",
             "rental" : "N",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 25090,
@@ -542,7 +740,12 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "9 ~ 11월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 27061,
@@ -554,7 +757,12 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "8 ~ 9월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         },
         {
             "ID" : 31560,
@@ -566,7 +774,11 @@
             "bloomingSeason" : "7 ~ 8월",
             "bearingSeason" : "9 ~ 11월",
             "rental" : "Y",
-            "level" : "상"   
+            "level" : "상",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp02.png","10도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 38193,
@@ -578,7 +790,11 @@
             "bloomingSeason" : "5월 / 9월",
             "bearingSeason" : "6월 / 10월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp01.png","20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 32650,
@@ -590,7 +806,11 @@
             "bloomingSeason" : "6 ~ 10월",
             "bearingSeason" : "8 ~ 11월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp03.png","25도 ~ 30도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 11119,
@@ -602,7 +822,11 @@
             "bloomingSeason" : "7 ~ 9월",
             "bearingSeason" : "8 ~ 10월",
             "rental" : "Y",
-            "level" : "하"   
+            "level" : "하",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp06.png","15도 ~ 20도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]     
         },
         {
             "ID" : 41735,
@@ -614,7 +838,12 @@
             "bloomingSeason" : "5 ~ 6월 / 8 ~ 9월",
             "bearingSeason" : "6 ~ 8월 / 10월",
             "rental" : "N",
-            "level" : "N"   
+            "level" : "N",
+            "ground" : ["./img/ground.png","양지에서 키우세요"],
+            "tmp" : ["./img/tmp03.png","25도 ~ 30도"],
+            "deep" : ["./img/deep.png","2cm아래에 심어주세요"],
+            "topsoil" : ["./img/topsoil.png","원예용 상토에 심으세요."]  
+              
         }
     ]
 }
