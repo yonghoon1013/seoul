@@ -3,6 +3,7 @@
         {
             "id": "l1",
             "name": "에어팟",
+            "img" : "./img/l1.jpg",
             "place": "방문자센터",
             "acquisitionDate": "2023. 06. 28",
             "state": "보관중",
@@ -14,6 +15,7 @@
         {
             "id": "l2",
             "name": "모자",
+            "img" : "./img/l2.jpg",
             "place": "주제정원",
             "acquisitionDate": "2023. 06. 24",
             "state": "보관중",
@@ -25,6 +27,7 @@
         {
             "id": "l3",
             "name": "안경",
+            "img" : "./img/l3.jpg",
             "place": "호수원 산책로",
             "acquisitionDate": "2023. 06. 23",
             "state": "보관중",
@@ -36,6 +39,7 @@
         {
             "id": "l4",
             "name": "지갑",
+            "img" : "./img/l4.jpg",
             "place": "주제정원",
             "acquisitionDate": "2023. 06. 20",
             "state": "보관중",
@@ -47,6 +51,7 @@
         {
             "id": "l5",
             "name": "스마트워치",
+            "img" : "./img/l5.jpg",
             "place": "온실",
             "acquisitionDate": "2023. 06. 19",
             "state": "보관중",
@@ -57,7 +62,8 @@
         },
         {
             "id": "l6",
-            "name": "전자담배",
+            "name": "스카프",
+            "img" : "./img/l6.jpg",
             "place": "방문자센터 화장실",
             "acquisitionDate": "2023. 06. 10",
             "state": "보관중",
@@ -68,7 +74,8 @@
         },
         {
             "id": "l7",
-            "name": "보조배터리",
+            "name": "스마트워치",
+            "img" : "./img/l7.jpg",
             "place": "주제정원",
             "acquisitionDate": "2023. 05. 29",
             "state": "보관중",
@@ -80,6 +87,7 @@
         {
             "id": "l8",
             "name": "가디건",
+            "img" : "./img/l8.jpg",
             "place": "온실",
             "acquisitionDate": "2023. 05. 24",
             "state": "보관중",
@@ -91,6 +99,7 @@
         {
             "id": "l9",
             "name": "안경",
+            "img" : "./img/l9.jpg",
             "place": "방문자센터 화장실",
             "acquisitionDate": "2023. 05. 23",
             "state": "보관중",
@@ -102,6 +111,7 @@
         {
             "id": "l10",
             "name": "모자",
+            "img" : "./img/l10.jpg",
             "place": "온실",
             "acquisitionDate": "2023. 05. 16",
             "state": "보관중",
@@ -112,7 +122,8 @@
         },
         {
             "id": "l11",
-            "name": "안경",
+            "name": "셀카봉",
+            "img" : "./img/l11.jpg",
             "place": "기프트샵",
             "acquisitionDate": "2023. 05. 11",
             "state": "보관중",
@@ -123,7 +134,8 @@
         },
         {
             "id": "l12",
-            "name": "모자",
+            "name": "아파트 출입키",
+            "img" : "./img/l12.jpg",
             "place": "씨앗도서관",
             "acquisitionDate": "2023. 05. 10",
             "state": "보관중",

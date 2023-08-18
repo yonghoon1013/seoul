@@ -44,7 +44,7 @@ fetch('./json/flower.json')
 
     itemClick.forEach(function(v,k){
         v.onclick = function(){
-            sessionStorage.setItem("click02",k)
+            sessionStorage.setItem("click",k)
         }
     })
 

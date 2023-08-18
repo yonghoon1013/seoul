@@ -1,5 +1,5 @@
 function experience() {
-	let programStoageNum = sessionStorage.getItem("click01");
+	let programStoageNum = sessionStorage.getItem("click");
 	const info = JSON.parse(localStorage.getItem("result"));
 
 
