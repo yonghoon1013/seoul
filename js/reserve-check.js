@@ -4,7 +4,7 @@ const btn = document.querySelector('.reserve-btn-box > a');
 
 
 btn.onclick = function(){
-    let programStoageNum = parseInt(sessionStorage.getItem("click01"));
+    let programStoageNum = parseInt(sessionStorage.getItem("click"));
     const checkName = document.getElementById('check-name').value,
             checkTel = document.getElementById('check-tel').value;
     

@@ -1,5 +1,5 @@
 function programClick() {
-    let programStoageNum = sessionStorage.getItem("click01");
+    let programStoageNum = sessionStorage.getItem("click");
 
     fetch('./json/program.json')
         .then(res => { return res.json() })

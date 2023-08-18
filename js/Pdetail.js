@@ -1,11 +1,10 @@
-let plantStoageNum = sessionStorage.getItem("click02");
+let plantStoageNum = sessionStorage.getItem("click");
 
 fetch('./json/flower.json')
 .then(res => { return res.json() })
 .then(data => {
 
     const plantDetailCon = document.querySelector('.content');
-
     plantDetailCon.innerHTML = `
     <h2>${data.items[plantStoageNum].name}</h2>
     <figure>

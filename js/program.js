@@ -196,7 +196,7 @@ fetch('./json/program.json')
 
         itemClick.forEach(function(v,k){
             v.onclick = function(){
-                sessionStorage.setItem("click01",k)
+                sessionStorage.setItem("click",k)
             }
         })
 
