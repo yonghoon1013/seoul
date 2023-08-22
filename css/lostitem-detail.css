@@ -487,7 +487,8 @@ table {
     width: 80%;
   }
   .space .ttt .im img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 80vw;
     height: 20vh;
     border-radius: 50px;
@@ -646,7 +647,8 @@ table {
   }
   .space .ttt .im img {
     margin: 0 auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 55vw;
     height: 24vh;
     border-radius: 50px;
@@ -805,7 +807,8 @@ table {
     height: 400px;
   }
   .space .ttt .im img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 50px;
@@ -964,7 +967,8 @@ table {
     height: 400px;
   }
   .space .ttt .im img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 50px;

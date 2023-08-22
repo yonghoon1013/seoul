@@ -370,7 +370,7 @@ table {
 }
 .bg {
   position: relative;
-  background-image: url("../StoryImg/botanical-garden-g68d9c33f3_1920_2.png");
+  background-image: url("../StoryImg/castle-4336616_1920.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -403,7 +403,7 @@ table {
 }
 
 .indicator {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
@@ -438,38 +438,40 @@ table {
 }
 
 @media (max-width: 480px) {
-  .bg {
+  main {
+    min-width: 380px;
+  }
+  main .bg {
     height: 200px;
   }
-  .indicator {
+  main .indicator {
     padding: 0 20px;
   }
-  main {
+  main .intro {
     margin: 0 auto;
     max-width: none;
     padding: 0 20px;
-    min-width: 380px;
   }
   main .intro .intro_content {
     margin-bottom: 100px;
   }
   main .intro .intro_content .whole .ex_top {
-    display: flex;
+    display: block;
     justify-content: left;
     align-items: start;
   }
   main .intro .intro_content .whole .ex_top .ex_left {
-    margin-right: 40px;
+    width: 100%;
+    max-height: 390px;
+    overflow: hidden;
   }
   main .intro .intro_content .whole .ex_top .ex_left img {
-    max-width: 290px;
     width: 100%;
   }
   main .intro .intro_content .whole .ex_top .ex_right {
+    margin-top: 20px;
+    width: 100%;
     height: 100%;
-  }
-  main .intro .intro_content .whole .ex_top .ex_right .ex_right_top {
-    width: 325px;
   }
   main .intro .intro_content .whole .ex_top .ex_right .ex_right_top h1 {
     font-family: "Noto Sans KR", sans-serif;
@@ -489,7 +491,8 @@ table {
     display: block;
     font-size: 14px;
     font-family: "Noto Sans KR", sans-serif;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    line-height: 1.5;
   }
   main .intro .intro_content .whole .ex_top .ex_right .ex_right_top .detail .detail_p p span {
     color: #4E813B;
@@ -504,24 +507,22 @@ table {
     width: 200px;
   }
   main .intro .intro_content .whole .ex_top .ex_right > hr {
-    display: none;
-    margin: 40px 0;
+    margin: 20px 0;
     background: #EDEDED;
     height: 1px;
     border: 0;
   }
   main .intro .intro_content .whole .ex_top .ex_right .ex_right_bottom {
-    display: none;
     align-items: center;
     font-family: "Noto Sans KR", sans-serif;
     color: #5B5E5F;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: -1px;
   }
   main .intro .intro_content .whole > hr {
-    margin: 60px 0;
+    margin: 20px 0;
     background: #A8A8A8;
     height: 1px;
     border: 0;
@@ -534,15 +535,37 @@ table {
     max-width: 800px;
     margin: 0 auto;
   }
+  main .intro .intro_content .whole .backList {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+  main .intro .intro_content .whole .backList .btn_list {
+    margin-top: 100px;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    background: #90be45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .intro .intro_content .whole .backList .btn_list p {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
-  .bg {
+  main .bg {
     height: 200px;
   }
-  .indicator {
+  main .indicator {
     padding: 0 20px;
   }
-  main {
+  main .intro {
     margin: 0 auto;
     max-width: 1320px;
     padding: 0 20px;
@@ -559,14 +582,13 @@ table {
     margin-right: 40px;
   }
   main .intro .intro_content .whole .ex_top .ex_left img {
+    min-width: 110px;
     max-width: 290px;
     width: 100%;
   }
   main .intro .intro_content .whole .ex_top .ex_right {
+    width: 100%;
     height: 100%;
-  }
-  main .intro .intro_content .whole .ex_top .ex_right .ex_right_top {
-    width: 325px;
   }
   main .intro .intro_content .whole .ex_top .ex_right .ex_right_top h1 {
     font-family: "Noto Sans KR", sans-serif;
@@ -586,7 +608,8 @@ table {
     display: block;
     font-size: 14px;
     font-family: "Noto Sans KR", sans-serif;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    line-height: 1.5;
   }
   main .intro .intro_content .whole .ex_top .ex_right .ex_right_top .detail .detail_p p span {
     color: #4E813B;
@@ -601,14 +624,13 @@ table {
     width: 200px;
   }
   main .intro .intro_content .whole .ex_top .ex_right > hr {
-    display: none;
+    width: 100%;
     margin: 40px 0;
     background: #EDEDED;
     height: 1px;
     border: 0;
   }
   main .intro .intro_content .whole .ex_top .ex_right .ex_right_bottom {
-    display: none;
     align-items: center;
     font-family: "Noto Sans KR", sans-serif;
     color: #5B5E5F;
@@ -631,12 +653,34 @@ table {
     max-width: 800px;
     margin: 0 auto;
   }
+  main .intro .intro_content .whole .backList {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+  main .intro .intro_content .whole .backList .btn_list {
+    margin-top: 100px;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    background: #90be45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .intro .intro_content .whole .backList .btn_list p {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 @media (min-width: 1024px) {
-  .indicator {
+  main .indicator {
     padding: 0 20px;
   }
-  main {
+  main .intro {
     margin: 0 auto;
     max-width: 1320px;
     padding: 0 20px;
@@ -718,5 +762,27 @@ table {
   main .intro .intro_content .whole .ex_bottom .event_con img {
     width: 800px;
     margin: 0 auto;
+  }
+  main .intro .intro_content .whole .backList {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+  main .intro .intro_content .whole .backList .btn_list {
+    margin-top: 100px;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    background: #90be45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .intro .intro_content .whole .backList .btn_list p {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
   }
 }/*# sourceMappingURL=Exhibit-detail.css.map */

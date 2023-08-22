@@ -533,7 +533,8 @@ table {
   }
   .nnn .sspace img {
     margin: 0 auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 20px;
     width: 75%;
     height: 75%;
@@ -764,7 +765,8 @@ table {
   }
   .nnn .sspace img {
     margin: 0 auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 20px;
     width: 75%;
     height: 75%;
@@ -996,7 +998,8 @@ table {
   }
   .nnn .sspace img {
     margin: 0 auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 20px;
     width: 75%;
     height: 75%;
@@ -1228,7 +1231,8 @@ table {
   }
   .nnn .sspace img {
     margin: 0 auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 20px;
     width: 75%;
     height: 75%;

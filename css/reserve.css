@@ -454,7 +454,8 @@ table {
 .main .reserve-box .reserve-con01 .left > figure > img {
   width: 420px;
   height: 260px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 .main .reserve-box .reserve-con01 .left > figure > figcaption {
@@ -473,7 +474,6 @@ table {
 }
 .main .reserve-box .reserve-con01 .right .col-6 .flatpickr-calendar {
   width: 100%;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .main .reserve-box .reserve-con01 .right .col-6 .flatpickr-calendar .flatpickr-rContainer {
@@ -821,7 +821,8 @@ table {
   .main .reserve-box .reserve-con01 .left > figure > img {
     width: 100%;
     height: 380px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 10px;
   }
   .main .reserve-box .reserve-con01 .left > figure > figcaption {
@@ -841,7 +842,6 @@ table {
   }
   .main .reserve-box .reserve-con01 .right .col-6 .flatpickr-calendar {
     width: 100%;
-    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .main .reserve-box .reserve-con01 .right .col-6 .flatpickr-calendar .flatpickr-rContainer {
@@ -1484,7 +1484,8 @@ table {
   .main .reserve-box .reserve-con01 .left > figure > img {
     width: 100%;
     height: 260px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 10px;
   }
   .main .reserve-box .reserve-con01 .left > figure > figcaption {
@@ -1504,7 +1505,6 @@ table {
   }
   .main .reserve-box .reserve-con01 .right .col-6 .flatpickr-calendar {
     width: 100%;
-    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .main .reserve-box .reserve-con01 .right .col-6 .flatpickr-calendar .flatpickr-rContainer {
