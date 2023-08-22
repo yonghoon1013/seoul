@@ -1,3 +1,15 @@
+$('.caution-box li').on('click',function(){
+    if(!$(this).hasClass('on')){
+        $('.caution-box li')
+        .removeClass('on')
+        .find('.content').stop().slideUp();
+    }
+
+    $(this)
+    .toggleClass('on')
+    .find('.content').stop().slideToggle();
+})
+
 var map ;
 function experience(){
     const experienceTab = document.querySelectorAll('.experience-tab > li'),
@@ -54,7 +66,7 @@ experience();
 function kakaoMap(){
     
     var container = document.getElementById('map');
-    console.log(container)
+
     var options = {
         center: new kakao.maps.LatLng(37.5695, 126.8351),
         level: 2
@@ -110,8 +122,10 @@ function kakaoMap(){
         infowindow.close();
     });
 
-  
 
   
 }
 kakaoMap()
+
+
+
