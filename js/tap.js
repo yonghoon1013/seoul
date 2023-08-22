@@ -45,4 +45,7 @@ eltabnav.forEach((v, k) => {
 
 })
 
+// 크게 감싸는거
+// tab
+//nav
 

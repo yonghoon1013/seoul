@@ -16,17 +16,16 @@ elS2.forEach(function (ele, key) {
         num = key;
     }
 });
-
-
+var searchBox = [];
 
 fetch('./json/flower.json')
-.then(res => { return res.json() })
-.then(data => {
+    .then(res => { return res.json() })
+    .then(data => {
 
-    data.items.forEach(function (obj, k) {
-        const allPlant = document.querySelector('.all-plant');
+        data.items.forEach(function (obj, k) {
+            const allPlant = document.querySelector('.all-plant');
 
-        allPlant.innerHTML += `
+            allPlant.innerHTML += `
         <li class="sspace">
         <a href="./Pdetail.html">
             <img src="${obj.img}">
@@ -37,18 +36,35 @@ fetch('./json/flower.json')
         </a>
     </li>
         `
+        })
+
+        const itemClick = document.querySelectorAll('.all-plant > li > a');
+
+        itemClick.forEach(function (v, k) {
+            v.onclick = function () {
+                sessionStorage.setItem("click", k)
+            }
+        })
+
     })
 
 
-    const itemClick = document.querySelectorAll('.all-plant > li > a');
+//검색...?.......?
+function gg(e) {
+    const itemList = document.querySelectorAll('.all-plant > li'),
+        plantName = document.querySelectorAll('.all-plant > li .ab p:nth-of-type(1)');
+    plantName.forEach(function (v, k) {
+        searchBox.push(v.innerText);
+        let res = searchBox.find(v => v == e.value);
 
-    itemClick.forEach(function(v,k){
-        v.onclick = function(){
-            sessionStorage.setItem("click",k)
+
+        if (res == v.innerText) {
+            itemList[k].style.display = 'flex';
+        } else if (res == undefined) {
+            itemList[k].style.display = 'flex';
+        } else {
+            itemList[k].style.display = 'none';
         }
     })
 
-})
-
-
-
+}

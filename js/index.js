@@ -117,7 +117,7 @@ fetch('./json/program.json')
     })
 
     const itemClick = document.querySelectorAll('.experSwiper  li > a');
-    console.log(itemClick);
+
     itemClick.forEach(function(v,k){
         v.onclick = function(){
             sessionStorage.setItem("click",k)

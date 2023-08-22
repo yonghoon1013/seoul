@@ -75,10 +75,11 @@
 
         .input-box{
             margin-bottom: 30px;
+            padding: 0px 30px;
             >form{
                 border-radius: 10px;
                 border: 1px solid #90BC43;
-                width: 500px;
+                max-width: 500px;
                 margin: 0 auto;
                 overflow: hidden;
                 >.input-con{
@@ -128,3 +129,9 @@
         }
     }   
 }
+
+
+@import "_t-reserve-check";
+@import "_t-inc";
+@import "_m-reserve-check";
+@import "_m-inc";
