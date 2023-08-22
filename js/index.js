@@ -6,6 +6,7 @@ var swiper = new Swiper(".mainSwiper", {
         delay : 5000,
         disableOnInteraction: false,
     },
+
 });
 
 var swiper = new Swiper(".garden-slide", {
@@ -72,6 +73,58 @@ function course(){
 
 notice();
 course();
+
+
+fetch('./json/program.json')
+.then(res => { return res.json() })
+.then(data => {
+
+    let num = 0;
+    const mainPg = []
+
+    for(num ; num < 6; num++){
+        mainPg.push(data.items[num])
+    }
+    mainPg.forEach(function(obj,k){
+        const mainPgSlide = document.querySelector('.experSwiper > .swiper-wrapper');
+        mainPgSlide.innerHTML += `
+        <li class="swiper-slide">
+        <a href="./experience.html">
+            <img src="${obj.img}">
+            <div class="experience-info">
+                <p class="title">
+                    ${obj.name}
+                </p>
+                <P class="time">
+                    <span>${obj.period}</span>
+                    <span>더보기</span>
+                </P>
+                <div class="situation">
+                    <div>
+                        <span>${obj.area}</span>
+                    </div>
+                    <div>
+                        <span>${obj.target}</span>
+                    </div>
+                    <div>
+                        <span>접수중</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+        `
+    })
+
+    const itemClick = document.querySelectorAll('.experSwiper  li > a');
+
+    itemClick.forEach(function(v,k){
+        v.onclick = function(){
+            sessionStorage.setItem("click",k)
+        }
+    })
+
+})
 
 
 
