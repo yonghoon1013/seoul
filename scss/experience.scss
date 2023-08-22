@@ -10,7 +10,6 @@
         background-repeat: no-repeat;
         background-position: top;
         background-size: 100% 100%;
-    
         width: 100%;
         height: 400px;
         >h2{
@@ -169,7 +168,63 @@
                 }
                 .experience-con{
                     >img{
+                        width: 100%;
                         margin: auto;
+                        margin-bottom: 200px;
+                    }
+                    .caution-box{
+                        >ul{
+                            >li{
+                                >.title{
+                                    position: relative;
+                                    padding: 30px 0px;
+                                    border-top:  2px solid #90BC43;
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+                                    padding-left: 150px;
+                                    cursor: pointer;
+                                    &::before{
+                                        content: '※';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50px;
+                                        transform: translateY(-50%);
+                                    }
+                                    &::after{
+                                        content: '';
+                                        background-image: url('../img/icon_accordion_open.svg');
+                                        background-size: 100% 100%;
+                                        width: 15px;
+                                        height: 15px;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 10px;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                                >.content{
+                                    display: none;
+                                    padding: 30px 0px;
+                                    padding-left: 150px;
+                                    line-height: 2;
+                                }
+                            }
+                            >li.on{
+                                >.title{
+                                    &::after{
+                                        content: '';
+                                        background-image: url('../img/icon_accordion_open.svg');
+
+                                        background-size: 100% 100%;
+                                        width: 15px;
+                                        height: 15px;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 10px;
+                                        transform: translateY(-50%) rotate(180deg);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 .map-con{
@@ -654,3 +709,8 @@
         }
     }
 }
+
+@import "_t-experience";
+@import "_t-inc";
+@import "_m-experience";
+@import "_m-inc";

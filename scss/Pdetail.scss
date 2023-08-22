@@ -34,9 +34,9 @@ main {
 
   //////////////////
   .indicator {
-    width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
+    @include main-width(){
+      margin-bottom: 100px
+  };
     > ul {
       @include flex(flex-start, center);
       > li {
@@ -153,3 +153,7 @@ main {
     }
   }
 }
+
+
+@import "_m-Pdetail";
+@import "_m-inc";
