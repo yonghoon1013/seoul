@@ -83,20 +83,6 @@ table {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
   }
-  #header:hover {
-    background: none;
-    background-color: white;
-  }
-  #header:hover a {
-    color: #58585A !important;
-  }
-  #header:hover .logo {
-    background-color: #447531;
-  }
-  #header:hover .lang::before {
-    content: "";
-    background-image: url("../img/lang-black.png");
-  }
   #header .head {
     max-width: 1280px;
     margin: 0 auto;
@@ -247,6 +233,21 @@ table {
     font-size: 16px;
     font-weight: normal;
     color: white;
+  }
+  #header:hover {
+    background: none;
+    background-color: white;
+  }
+  #header:hover a {
+    color: #58585A !important;
+  }
+  #header:hover .logo {
+    background-color: #447531;
+  }
+  #header:hover .lang::before {
+    content: "";
+    background-image: url("../img/lang-black.png");
+    background-color: #447531;
   }
   #header.active {
     transform: translateY(-100%);
@@ -1983,4 +1984,4 @@ table {
   #footer .footer-con > .right .sns > ul > li {
     margin-right: 30px;
   }
-}
+}/*# sourceMappingURL=reserve.css.map */
