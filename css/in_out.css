@@ -83,20 +83,6 @@ table {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
   }
-  #header:hover {
-    background: none;
-    background-color: white;
-  }
-  #header:hover a {
-    color: #58585A !important;
-  }
-  #header:hover .logo {
-    background-color: #447531;
-  }
-  #header:hover .lang::before {
-    content: "";
-    background-image: url("../img/lang-black.png");
-  }
   #header .head {
     max-width: 1280px;
     margin: 0 auto;
@@ -111,6 +97,10 @@ table {
   }
   #header .head .logo > a {
     display: block;
+  }
+  #header .head .logo > a::after {
+    display: block;
+    content: url("../img/logo.png");
   }
   #header .head .header-nav {
     position: relative;
@@ -248,6 +238,25 @@ table {
     font-weight: normal;
     color: white;
   }
+  #header:hover {
+    background: none;
+    background-color: white;
+  }
+  #header:hover a {
+    color: #58585A !important;
+  }
+  #header:hover .logo > a {
+    display: block;
+  }
+  #header:hover .logo > a::after {
+    display: block;
+    content: url("../img/logo-color.png");
+  }
+  #header:hover .lang::before {
+    content: "";
+    background-image: url("../img/lang-black.png");
+    background-color: #447531;
+  }
   #header.active {
     transform: translateY(-100%);
   }
@@ -256,7 +265,7 @@ table {
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
-    z-index: 30;
+    z-index: 99;
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
@@ -1273,20 +1282,6 @@ table {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
   }
-  #header:hover {
-    background: none;
-    background-color: white;
-  }
-  #header:hover a {
-    color: #58585A !important;
-  }
-  #header:hover .logo {
-    background-color: #447531;
-  }
-  #header:hover .lang::before {
-    content: "";
-    background-image: url("../img/lang-black.png");
-  }
   #header .head {
     max-width: 1280px;
     margin: 0 auto;
@@ -1301,6 +1296,10 @@ table {
   }
   #header .head .logo > a {
     display: block;
+  }
+  #header .head .logo > a::after {
+    display: block;
+    content: url("../img/logo.png");
   }
   #header .head .header-nav {
     position: relative;
@@ -1438,6 +1437,25 @@ table {
     font-weight: normal;
     color: white;
   }
+  #header:hover {
+    background: none;
+    background-color: white;
+  }
+  #header:hover a {
+    color: #58585A !important;
+  }
+  #header:hover .logo > a {
+    display: block;
+  }
+  #header:hover .logo > a::after {
+    display: block;
+    content: url("../img/logo-color.png");
+  }
+  #header:hover .lang::before {
+    content: "";
+    background-image: url("../img/lang-black.png");
+    background-color: #447531;
+  }
   #header.active {
     transform: translateY(-100%);
   }
@@ -1446,7 +1464,7 @@ table {
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
-    z-index: 30;
+    z-index: 99;
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
@@ -2383,4 +2401,4 @@ table {
   #footer .footer-con > .right .sns > ul > li {
     margin-right: 30px;
   }
-}
+}/*# sourceMappingURL=in_out.css.map */
