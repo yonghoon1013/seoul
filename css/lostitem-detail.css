@@ -688,7 +688,7 @@ table {
 @media (min-width: 1024px) {
   .bg {
     position: relative;
-    background-image: url("./img/bg111.png");
+    background-image: url("../img/bg111.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 100%;
@@ -708,7 +708,7 @@ table {
   .bg::after {
     position: absolute;
     content: "";
-    background-image: url("./img/bottom.png");
+    background-image: url("../img/bottom.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
@@ -740,7 +740,7 @@ table {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("./img/icon.png");
+    background-image: url("../img/icon.png");
     background-size: 100% 100%;
     width: 8px;
     height: 12px;
