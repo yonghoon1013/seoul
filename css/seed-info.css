@@ -457,8 +457,7 @@ table {
   }
   .text p span {
     color: #58585A;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     margin: 0 50px;
   }
   .text p.on span {
@@ -922,7 +921,6 @@ table {
   .text p span {
     color: #58585A;
     font-size: 20px;
-    font-weight: bold;
   }
   .text p.on span {
     color: #4E813B;
@@ -1154,7 +1152,6 @@ table {
   .text p span {
     color: #58585A;
     font-size: 20px;
-    font-weight: bold;
   }
   .text p.on span {
     color: #4E813B;
@@ -1162,11 +1159,11 @@ table {
   .text p.on span::after {
     content: "";
     position: absolute;
-    width: 40%;
+    width: 100%;
     height: 3px;
     background: #4E813B;
     bottom: -15px;
-    left: 30.5%;
+    left: 4%;
   }
   .inout {
     display: flex;

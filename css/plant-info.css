@@ -457,8 +457,7 @@ table {
   }
   .text p span {
     color: #58585A;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     margin: 0 50px;
   }
   .text p.on span {
@@ -653,8 +652,7 @@ table {
   }
   .text p span {
     color: #58585A;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     margin: 0 50px;
   }
   .text p.on span {
@@ -850,7 +848,6 @@ table {
   .text p span {
     color: #58585A;
     font-size: 20px;
-    font-weight: bold;
     margin: 0 30px;
   }
   .text p.on span {
