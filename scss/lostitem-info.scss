@@ -2,7 +2,7 @@
 @import "_mixin";
 @import "_inc";
 
-@media(min-width:1280px) {
+@media(min-width:1024px) {
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -83,8 +83,8 @@
         align-items: center;
 
         p {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
+
         }
     }
 
@@ -151,15 +151,16 @@
     .nnn {
         max-width: 1325px;
         margin: 0 auto;
+        gap:4%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-            width: 20%;
-            height: 250px;
-            margin: 15.5px 20.5px;
+            width: 22%;
+            aspect-ratio: 1;
+            margin-bottom: 50px;
             position: relative;
 
             a {
@@ -230,7 +231,7 @@
     //갤러리
 }
 
-@media(min-width:481px) and (max-width:1279px) {
+@media(min-width:481px) and (max-width:1023px) {
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -311,8 +312,7 @@
         align-items: center;
 
         p {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
         }
     }
 
@@ -379,16 +379,19 @@
     //검색
     .nnn {
         max-width: 1325px;
+        gap: 6%;
         margin: 0 auto;
+        padding-left: 6%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-            width: 40%;
+            width: 44%;
+            margin-bottom: 40px;
             aspect-ratio: 1;
-            margin: 10px 15px;
+            
             position: relative;
 
             a {
@@ -540,8 +543,7 @@
         align-items: center;
 
         p {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
         }
     }
 
@@ -583,7 +585,7 @@
         justify-content: center;
         align-items: center;
         margin: 76px auto;
-
+        padding-right: 20px;
         input {
             margin-left: 20px;
             border-radius: 10px;
@@ -687,3 +689,5 @@
 
     //갤러리
 }
+@import "t-inc";
+@import "m-inc";

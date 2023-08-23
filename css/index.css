@@ -102,6 +102,9 @@ table {
     display: block;
     content: url("../img/logo.png");
   }
+  #header .head .logo > a > img {
+    display: none;
+  }
   #header .head .header-nav {
     position: relative;
     display: flex;

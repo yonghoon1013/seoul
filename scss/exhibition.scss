@@ -2,7 +2,7 @@
 @import "_mixin";
 @import "_inc";
 
-@media(min-width:1280px){
+@media(min-width:1024px){
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -74,22 +74,22 @@
         align-items: center;
         margin-bottom: 95px;
         p{
-            font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     //부제목
     
     .nnn{
         max-width: 1325px;
+        gap: 4%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
        li{
-        margin: 0 20.5px;
-        width: 20%;
+        
+        width: 22%;
         .ssspace{
             width: 100%;
             display: flex;
@@ -163,7 +163,7 @@
         }
       }
 }
-@media(min-width:481px) and (max-width:1279px){
+@media(min-width:481px) and (max-width:1023px){
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -235,8 +235,7 @@
         align-items: center;
         margin-bottom: 95px;
         p{
-            font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     //부제목
@@ -245,12 +244,14 @@
         max-width: 1325px;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 6%;
+        padding-left: 6%;
         flex-wrap: wrap;
         list-style-type: none;
        li{
-        margin: 0 20.5px;
-        width: 40%;
+        
+        width: 44%;
         .ssspace{
             width: 100%;
             display: flex;
@@ -396,8 +397,7 @@
         align-items: center;
         margin-bottom: 95px;
         p{
-            font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     //부제목
@@ -486,3 +486,5 @@
       }
 }
 
+@import "t-inc";
+@import "m-inc";
