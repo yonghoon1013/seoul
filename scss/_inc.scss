@@ -18,11 +18,15 @@
             .logo {
                 display: block;
                 padding: 30px 0;
-
                 >a {
                     display: block;
-
-                    >img {}
+                    &::after{
+                        display: block;
+                        content: url('../img/logo.png');
+                    }
+                    >img{
+                        display: none;
+                    }
                 }
             }
 
@@ -199,7 +203,13 @@
             }
 
             .logo {
-                background-color: #447531;
+                >a {
+                    display: block;
+                    &::after{
+                        display: block;
+                        content: url('../img/logo-color.png');
+                    }
+                }
             }
 
             .lang {
@@ -226,7 +236,7 @@
         top: 30%;
         right: 40px;
         transform: translateY(-30%);
-        z-index: 30;
+        z-index: 99;
 
         .quick-nav {
             >ul {

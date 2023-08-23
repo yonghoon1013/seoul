@@ -98,6 +98,13 @@ table {
   #header .head .logo > a {
     display: block;
   }
+  #header .head .logo > a::after {
+    display: block;
+    content: url("../img/logo.png");
+  }
+  #header .head .logo > a > img {
+    display: none;
+  }
   #header .head .header-nav {
     position: relative;
     display: flex;
@@ -241,8 +248,12 @@ table {
   #header:hover a {
     color: #58585A !important;
   }
-  #header:hover .logo {
-    background-color: #447531;
+  #header:hover .logo > a {
+    display: block;
+  }
+  #header:hover .logo > a::after {
+    display: block;
+    content: url("../img/logo-color.png");
   }
   #header:hover .lang::before {
     content: "";
@@ -257,7 +268,7 @@ table {
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
-    z-index: 30;
+    z-index: 99;
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
