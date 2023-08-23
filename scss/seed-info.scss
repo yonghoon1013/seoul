@@ -2,7 +2,11 @@
 @import "_mixin";
 @import "_inc";
 
+<<<<<<< HEAD
+@media(min-width:1024px) {
+=======
 @media(min-width:1280px) {
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -154,16 +158,30 @@
 
     .nnn {
         max-width: 1325px;
+<<<<<<< HEAD
+        
+        gap: 4%;
+        margin: 0 auto;
+        display: none;
+        justify-content: flex-start;
+=======
         margin: 0 auto;
         display: none;
         justify-content: center;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
+<<<<<<< HEAD
+            width: 22%;
+            aspect-ratio: 1;
+            margin-bottom: 50px;
+=======
             width: 20%;
             aspect-ratio: 1;
             margin: 15.5px 20.5px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             position: relative;
             border: 1px solid #e4e4e7;
             border-radius: 20px;
@@ -275,6 +293,10 @@
     //갤러리
 }
 
+<<<<<<< HEAD
+
+@media(min-width:481px) and (max-width:1023px) {
+=======
 @media(min-width:760px) and (max-width:1279px) {
     .bg {
         position: relative;
@@ -549,6 +571,7 @@
 }
 
 @media(min-width:481px) and (max-width:760px) {
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -664,7 +687,11 @@
         justify-content: center;
         align-items: center;
         margin: 65px auto;
+<<<<<<< HEAD
+        padding: 0 20px;
+=======
 
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         #selectCategory {
             margin-right: 14px;
             width: 80px;
@@ -679,7 +706,11 @@
 
         input:nth-of-type(1) {
             margin-right: 13.5px;
+<<<<<<< HEAD
+            width: 300px;
+=======
             width: 400px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             height: 35px;
             text-align: center;
         }
@@ -701,16 +732,30 @@
 
     .nnn {
         max-width: 1325px;
+<<<<<<< HEAD
+        gap: 6%;
+        margin: 0 auto;
+        padding-left: 6%;
+        display: none;
+        justify-content: flex-start;
+=======
         margin: 0 auto;
         display: none;
         justify-content: center;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
+<<<<<<< HEAD
+            width: 44%;
+            aspect-ratio: 1;
+            margin-bottom: 40px; 
+=======
             width: 40%;
             aspect-ratio: 1;
             margin: 15.5px 20.5px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             position: relative;
             border: 1px solid #e4e4e7;
             border-radius: 20px;
@@ -938,7 +983,11 @@
         justify-content: center;
         align-items: center;
         margin: 65px auto;
+<<<<<<< HEAD
+        padding: 0 20px;
+=======
 
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         #selectCategory {
             margin-right: 14px;
             width: 80px;
@@ -953,7 +1002,11 @@
 
         input:nth-of-type(1) {
             margin-right: 13.5px;
+<<<<<<< HEAD
+            width: 200px;
+=======
             width: 400px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             height: 35px;
             text-align: center;
         }
@@ -1094,4 +1147,10 @@
     }
 
     //갤러리
+<<<<<<< HEAD
 }
+@import "t-inc";
+@import "m-inc";
+=======
+}
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b

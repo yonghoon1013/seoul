@@ -2,7 +2,11 @@
 @import "_mixin";
 @import "_inc";
 
+<<<<<<< HEAD
+@media(min-width:1024px){
+=======
 @media(min-width:1280px){
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -214,6 +218,22 @@
                         color: white;
                     }
                 }
+<<<<<<< HEAD
+                .state.a{
+                    background-color: #F0A12A;
+                }
+                .state.b{
+                    background-color: #55A57D;
+                }
+                .state.c{
+                    background-color: #5581a5;
+                }
+                .state.d{
+                    background-color: #d0d321;
+                }
+             
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             }
     
             .nth1{
@@ -231,7 +251,12 @@
     }
      //리스트 공지사항
 }
+<<<<<<< HEAD
+
+@media(min-width:481px) and (max-width:1023px){
+=======
 @media(min-width:761px) and (max-width:1279px){
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -336,6 +361,10 @@
         justify-content: center;
         align-items: center;
         margin: 65px auto;
+<<<<<<< HEAD
+        padding: 0 20px;
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         #selectCategory{
             margin-right: 14px;
             width: 80px;
@@ -348,7 +377,11 @@
         }
         input:nth-of-type(1){
             margin-right: 13.5px;
+<<<<<<< HEAD
+            width: 300px;
+=======
             width: 400px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             height: 35px;
             text-align: left;
         }
@@ -364,13 +397,22 @@
       // 검색
       .line{
         display: flex;
+<<<<<<< HEAD
+        justify-content: center;
+        flex-wrap: wrap;
+=======
         justify-content: flex-start;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         margin: 0 auto;
         border-bottom: 2px solid #ededed;
         max-width: 1280px;
         div{
             cursor: pointer;
+<<<<<<< HEAD
+            padding:25px 13%;
+=======
             padding:25px 30px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             p{
                 font-size: 18px;
             }
@@ -409,18 +451,58 @@
                 text-align: center;
                 margin: 20px auto;
             }
+<<<<<<< HEAD
+            div:nth-of-type(1){
+                display: none;
+            }
+            div:nth-of-type(3){
+                width: 28%;
+            }
+            div:nth-of-type(4){
+                display: none;
+            }
+            .nth1{
+                width: 72%;
+=======
             .nth1{
                 width: 640px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             }
            
         }
         li{
             border-top: 1px solid #EDEDED;
             border-bottom: 1px solid #EDEDED;
+<<<<<<< HEAD
+            width: 100%;
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             a{
             display: flex;
             align-items: center;
             div{
+<<<<<<< HEAD
+                text-align: center;
+                margin: 20px 5px;
+            }
+            div:nth-of-type(1){
+                display: none;
+            }
+            div:nth-of-type(3){
+                width: 28%;
+            }
+            div:nth-of-type(4){
+                display: none;
+            }
+            .nth2{
+                width: 72%;
+                display: flex;
+                white-space: nowrap;
+                align-items: center;
+                
+                .state{
+                    flex-shrink: 0;
+=======
                 width: 214px;
                 text-align: center;
                 margin: 20px auto;
@@ -432,20 +514,45 @@
                 overflow: hidden;
                 white-space: nowrap;
                 .state{
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
                     background-color: #90BC43;
                     width: 70px; height: 27px;
                     border-radius: 50px;  
                     display: flex;
                     justify-content: center;
                     align-items: center;
+<<<<<<< HEAD
+                    margin-right: 15px;
+                    p{
+=======
                     margin-right: 25px;
                     p{
                         
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
                         margin: 0;
                         font-size: 16px;
                         color: white;
                     }
                 }
+<<<<<<< HEAD
+                .state.a{
+                    background-color: #F0A12A;
+                }
+                .state.b{
+                    background-color: #55A57D;
+                }
+                .state.c{
+                    background-color: #5581a5;
+                }
+                .state.d{
+                    background-color: #d0d321;
+                }
+                p{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             }
     
             .nth1{
@@ -569,6 +676,10 @@
         justify-content: center;
         align-items: center;
         margin: 65px auto;
+<<<<<<< HEAD
+        padding: 0 20px;
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         #selectCategory{
             margin-right: 14px;
             width: 80px;
@@ -581,7 +692,11 @@
         }
         input:nth-of-type(1){
             margin-right: 13.5px;
+<<<<<<< HEAD
+            width: 200px;
+=======
             width: 400px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             height: 35px;
             text-align: left;
         }
@@ -646,11 +761,21 @@
             div:nth-of-type(1){
                 display: none;
             }
+<<<<<<< HEAD
+            div:nth-of-type(3){
+                width: 28%;
+            }
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             div:nth-of-type(4){
                 display: none;
             }
             .nth1{
+<<<<<<< HEAD
+                width: 72%;
+=======
                 width: 640px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             }
            
         }
@@ -668,10 +793,23 @@
             div:nth-of-type(1){
                 display: none;
             }
+<<<<<<< HEAD
+            div:nth-of-type(3){
+                width: 28%;
+            }
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             div:nth-of-type(4){
                 display: none;
             }
             .nth2{
+<<<<<<< HEAD
+                width: 72%;
+                display: flex;
+                white-space: nowrap;
+                align-items: center;
+                
+=======
                 width: 100%;
                 display: flex;
                 white-space: nowrap;
@@ -923,6 +1061,7 @@
                 white-space: nowrap;
                 align-items: center;
                 overflow: hidden;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
                 .state{
                     flex-shrink: 0;
                     background-color: #90BC43;
@@ -938,6 +1077,25 @@
                         color: white;
                     }
                 }
+<<<<<<< HEAD
+                .state.a{
+                    background-color: #F0A12A;
+                }
+                .state.b{
+                    background-color: #55A57D;
+                }
+                .state.c{
+                    background-color: #5581a5;
+                }
+                .state.d{
+                    background-color: #d0d321;
+                }
+                p{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             }
     
             .nth1{
@@ -955,3 +1113,9 @@
     }
      //리스트 공지사항
 }
+<<<<<<< HEAD
+
+@import "t-inc";
+@import "m-inc";
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b

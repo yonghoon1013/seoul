@@ -2,7 +2,11 @@
 @import "_mixin";
 @import "_inc";
 
+<<<<<<< HEAD
+@media (min-width:1024px){
+=======
 @media (min-width:1280px){
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -148,7 +152,11 @@
             .qna_list{
                 display: flex;
                 justify-content: center;
+<<<<<<< HEAD
+                width: 1280px;
+=======
                 width: 1024px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
                 ul{
                     width: 100%;
                     list-style-type: none;
@@ -218,7 +226,11 @@
             
     // 아코디언
 }
+<<<<<<< HEAD
+@media (min-width:481px) and (max-width:1023px){
+=======
 @media (min-width:761px) and (max-width:1279px){
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -325,6 +337,10 @@
         justify-content: center;
         align-items: center;
         margin: 65px 0;
+<<<<<<< HEAD
+        padding: 0 20px;
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         #selectCategory{
             margin-right: 14px;
             width: 80px;
@@ -337,7 +353,11 @@
         }
         input:nth-of-type(1){
             margin-right: 13.5px;
+<<<<<<< HEAD
+            width: 300px;
+=======
             width: 400px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             height: 35px;
             text-align: center;
         }
@@ -355,6 +375,10 @@
         display: flex;
         justify-content: center;
         .qna_back{
+<<<<<<< HEAD
+            width: 100%;
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
                  p{
                 font-size: 22px;
                 margin-bottom: 20px;
@@ -364,7 +388,11 @@
             .qna_list{
                 display: flex;
                 justify-content: center;
+<<<<<<< HEAD
+                
+=======
                 width: 761px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
                 ul{
                     width: 100%;
                     list-style-type: none;
@@ -434,7 +462,11 @@
             
     // 아코디언
 }
+<<<<<<< HEAD
+@media (max-width:480px){
+=======
 @media (min-width:320px) and (max-width:760px){
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -541,6 +573,10 @@
         justify-content: center;
         align-items: center;
         margin: 65px 0;
+<<<<<<< HEAD
+        padding: 0 20px;
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         #selectCategory{
             margin-right: 14px;
             width: 80px;
@@ -553,7 +589,11 @@
         }
         input:nth-of-type(1){
             margin-right: 13.5px;
+<<<<<<< HEAD
+            width: 200px;
+=======
             width: 400px;
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             height: 35px;
             text-align: center;
         }
@@ -651,5 +691,10 @@
             
     // 아코디언
 }
+<<<<<<< HEAD
+@import "t-inc";
+@import "m-inc";
+=======
+>>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
 
 
