@@ -467,16 +467,18 @@ table {
     margin: 36px auto;
     line-height: 25px;
   }
-  .box .inner button {
-    cursor: pointer;
+  .box .inner a {
+    display: block;
+    margin: 0 auto;
     width: 180px;
     height: 54px;
     border-radius: 10px;
     border: none;
     background-color: #90BC43;
   }
-  .box .inner button p {
+  .box .inner a p {
     color: white;
+    padding-top: 13px;
   }
   .inout {
     display: flex;
@@ -656,16 +658,18 @@ table {
     margin: 36px auto;
     line-height: 25px;
   }
-  .box .inner button {
-    cursor: pointer;
+  .box .inner a {
+    display: block;
+    margin: 0 auto;
     width: 180px;
     height: 54px;
     border-radius: 10px;
     border: none;
     background-color: #90BC43;
   }
-  .box .inner button p {
+  .box .inner a p {
     color: white;
+    padding-top: 13px;
   }
   .inout {
     display: flex;
@@ -845,16 +849,18 @@ table {
     margin: 36px auto;
     line-height: 25px;
   }
-  .box .inner button {
-    cursor: pointer;
+  .box .inner a {
+    display: block;
+    margin: 0 auto;
     width: 180px;
     height: 54px;
     border-radius: 10px;
     border: none;
     background-color: #90BC43;
   }
-  .box .inner button p {
+  .box .inner a p {
     color: white;
+    padding-top: 13px;
   }
   .inout {
     display: flex;

@@ -49,11 +49,12 @@ fetch('./json/lostItem.json')
             </tr>
         </table>
     </div>
+    <div class="statee">
+    <a href="./lostitem-info.html"><p>목록</p></a>
+    </div>
 </div>
 
-<div class="statee">
-    <p><a href="./lostitem-info.html">목록</a></p>
-</div>
+
     `
 
 })
