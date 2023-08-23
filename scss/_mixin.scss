@@ -1,6 +1,6 @@
-@mixin main-width($w: 1280px, $p:0) {
+@mixin main-width($w: 1320px, $p:0 20px) {
     margin: 0 auto;
-    width: $w;
+    max-width: $w;
     padding: $p;
     @content;
 }
@@ -58,3 +58,18 @@
     left: 0;
     bottom: 0%;
 }
+
+@mixin tab() {
+    .tab {
+
+        .tabct>* {
+            display: none;
+
+            &.on {
+                display: block;
+            }
+        }
+
+    }
+}
+

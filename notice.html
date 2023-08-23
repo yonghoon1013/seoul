@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="./js/inc.js"></script>
+    <script defer src="./js/notice.js"></script>
+    <link rel="stylesheet" href="./css/notice.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="bg">
+            <h2>식물원 이야기</h2>
+        </div>
+    
+            <div class="indicator">
+                <ul>
+                    <li>
+                        식물원 이야기
+                    </li>
+                    <li>
+                        공지사항
+                    </li>
+                </ul>            
+            </div>
+
+            <div class="sub-f">
+                <p>공지사항</p>
+            </div>
+        
+            <div class="inout">
+
+                <select id="selectCategory" name="searchCondition">
+                    <option value="all">전체</option>
+                    <option value="title">제목</option>
+                    <option value="content">내용</option>
+                </select>
+    
+                <input type="text" placeholder="입력하세요">
+                <input type="submit" value="검색">
+            </div>
+
+            <div class="line">
+                <div>
+                    <p>전체</p>
+                </div>
+                <div>
+                    <p>공지</p>
+                </div>
+                <div>
+                    <p>교육</p>
+                </div>
+                <div>
+                    <p>행사</p>
+                </div>
+                <div>
+                    <p>채용</p>
+                </div>
+                <div>
+                    <p>입찰</p>
+                </div>
+            </div>
+            <div>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <p>번호</p>
+                        </div>
+                        <div class="nth1">
+                            <p>제목</p>
+                        </div>
+                        <div>
+                            <p>등록일</p>
+                        </div>
+                        <div>
+                            <p>조회수</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>10</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 23. (수) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.22</p>
+                            </div>
+                            <div>
+                                <p>44</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>9</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 22. (수) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.21</p>
+                            </div>
+                            <div>
+                                <p>95</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>8</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>식물문화센터 실내조경 공사 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.21</p>
+                            </div>
+                            <div>
+                                <p>67</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>7</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state b">
+                                    <p>행사</p>
+                                </span>
+                                <p>2023 서울식물원 <빛이 깨울 때,> 내부 전시 관람 제한 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.17</p>
+                            </div>
+                            <div>
+                                <p>1152</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>6</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state a">
+                                    <p>채용</p>
+                                </span>
+                                <p>서울식물원 공무직(시설청소원) 채용시험 공고</p>
+                            </div>
+                            <div>
+                                <p>2023.08.13</p>
+                            </div>
+                            <div>
+                                <p>436</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>5</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 11. (금) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.10</p>
+                            </div>
+                            <div>
+                                <p>740</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>4</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 10. (목) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.09</p>
+                            </div>
+                            <div>
+                                <p>349</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>3</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p> 서울식물원 온실 주제정원 전시 "식물여행"</p>
+                            </div>
+                            <div>
+                                <p>2023.08.04</p>
+                            </div>
+                            <div>
+                                <p>926</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>2</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state c">
+                                    <p>입찰</p>
+                                </span>
+                                <p>[사전규격공개] 2023년 서울식물원 매검표 운영 관리용역</p>
+                            </div>
+                            <div>
+                                <p>2022.12.06</p>
+                            </div>
+                            <div>
+                                <p>1018</p>
+                            </div>
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>1</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state d">
+                                    <p>교육</p>
+                                </span>
+                                <p>[어린이아틀리에/8월] 하와이무궁화 콜라쥬 영상 업로드</p>
+                            </div>
+                            <div>
+                                <p>2021.08.12</p>
+                            </div>
+                            <div>
+                                <p>2136</p>
+                            </div>
+                        </a>    
+                    </li>
+                    
+                </ul>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <p>번호</p>
+                        </div>
+                        <div class="nth1">
+                            <p>제목</p>
+                        </div>
+                        <div>
+                            <p>등록일</p>
+                        </div>
+                        <div>
+                            <p>조회수</p>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>6</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 23. (수) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.22</p>
+                            </div>
+                            <div>
+                                <p>44</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>5</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 22. (수) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.21</p>
+                            </div>
+                            <div>
+                                <p>95</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>4</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>식물문화센터 실내조경 공사 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.21</p>
+                            </div>
+                            <div>
+                                <p>67</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>3</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 11. (금) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.10</p>
+                            </div>
+                            <div>
+                                <p>740</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>2</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p>8. 10. (목) 서울식물원 물놀이터 운영(휴장) 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.09</p>
+                            </div>
+                            <div>
+                                <p>349</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>1</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state">
+                                    <p>공지</p>
+                                </span>
+                                <p> 서울식물원 온실 주제정원 전시 "식물여행"</p>
+                            </div>
+                            <div>
+                                <p>2023.08.04</p>
+                            </div>
+                            <div>
+                                <p>926</p>
+                            </div>
+                        </a>
+                    </li>
+                   
+                    
+                </ul>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <p>번호</p>
+                        </div>
+                        <div class="nth1">
+                            <p>제목</p>
+                        </div>
+                        <div>
+                            <p>등록일</p>
+                        </div>
+                        <div>
+                            <p>조회수</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>1</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state d">
+                                    <p>교육</p>
+                                </span>
+                                <p>[어린이아틀리에/8월] 하와이무궁화 콜라쥬 영상 업로드</p>
+                            </div>
+                            <div>
+                                <p>2021.08.12</p>
+                            </div>
+                            <div>
+                                <p>2136</p>
+                            </div>
+                        </a>    
+                    </li>
+                    
+                </ul>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <p>번호</p>
+                        </div>
+                        <div class="nth1">
+                            <p>제목</p>
+                        </div>
+                        <div>
+                            <p>등록일</p>
+                        </div>
+                        <div>
+                            <p>조회수</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>1</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state b">
+                                    <p>행사</p>
+                                </span>
+                                <p>2023 서울식물원 <빛이 깨울 때,> 내부 전시 관람 제한 안내</p>
+                            </div>
+                            <div>
+                                <p>2023.08.17</p>
+                            </div>
+                            <div>
+                                <p>1152</p>
+                            </div>
+                        </a>
+                    </li>
+                   
+                    
+                </ul>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <p>번호</p>
+                        </div>
+                        <div class="nth1">
+                            <p>제목</p>
+                        </div>
+                        <div>
+                            <p>등록일</p>
+                        </div>
+                        <div>
+                            <p>조회수</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>1</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state a">
+                                    <p>채용</p>
+                                </span>
+                                <p>서울식물원 공무직(시설청소원) 채용시험 공고</p>
+                            </div>
+                            <div>
+                                <p>2023.08.13</p>
+                            </div>
+                            <div>
+                                <p>436</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <ul class="flex">
+                    <li>
+                        <div>
+                            <p>번호</p>
+                        </div>
+                        <div class="nth1">
+                            <p>제목</p>
+                        </div>
+                        <div>
+                            <p>등록일</p>
+                        </div>
+                        <div>
+                            <p>조회수</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./notice-detail.html">
+                            <div>
+                                <p>1</p>
+                            </div>
+                            <div class="nth2">
+                                <span class="state c">
+                                    <p>입찰</p>
+                                </span>
+                                <p>[사전규격공개] 2023년 서울식물원 매검표 운영 관리용역</p>
+                            </div>
+                            <div>
+                                <p>2022.12.06</p>
+                            </div>
+                            <div>
+                                <p>1018</p>
+                            </div>
+                        </a>    
+                    </li>
+                </ul>
+            </div>
+
+            
+
+        <div class="next">
+            <button>이전</button>
+            <button class="on">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>다음</button>
+        </div>
+        
+    </main>
+</body>
+</html>

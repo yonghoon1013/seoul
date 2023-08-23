@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="./js/inc.js"></script>
+    <script defer src="./js/seed-info.js"></script>
+    <link rel="stylesheet" href="./css/seed-info.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="bg">
+            <h2>씨앗도서관</h2>
+        </div>
+
+        <div class="indicator">
+            <ul>
+                <li>
+                    씨앗도서관
+                </li>
+                <li>
+                    씨앗 도감
+                </li>
+            </ul>
+        </div>
+        <div>
+            <div class="text">
+                <p>
+                    <span>전체</span>
+                </p>
+                <p>
+                    <span>봄</span>
+                </p>
+                <p>
+                    <span>여름</span>
+                </p>
+                <p>
+                    <span>가을</span>
+                </p>
+                <p>
+                    <span>겨울</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="inout">
+
+                <select id="selectCategory" name="searchCondition">
+                    <option value="all">전체</option>
+                    <option value="title">제목</option>
+                    <option value="content">내용</option>
+                </select>
+
+                <input type="text" placeholder="입력하세요">
+                <input type="submit" value="검색">
+            </div>
+
+            <ul class="nnn all-seed">
+
+                <!-- <li class="sspace">
+                    <a href="#">
+                        <img src="./img/2AA929B5D16C4D8E93A6E59A8A2C467A_resize.png">
+                        <div class="ab">
+                            <div class="haha">
+                                <p>대출가능</p>
+                            </div>
+                            <p>고수</p>
+                            <p>Coriandrum sativum</p>
+                            <div class="center">
+                                <span>상</span>
+                                <span class="on">중</span>
+                                <span>하</span>
+                            </div>
+                        </div>
+                    </a>
+                </li> -->
+
+            </ul>
+
+            <ul class="nnn spring-seed"></ul>
+
+            <ul class="nnn summer-seed"></ul>
+
+            <ul class="nnn autumn-seed"></ul>
+
+            <ul class="nnn winter-seed"></ul>
+
+        </div>
+        <div class="next">
+            <button>이전</button>
+            <button class="on">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>다음</button>
+        </div>
+
+    </main>
+</body>
+
+</html>
