@@ -76,6 +76,7 @@
                             height: 260px;
                             object-fit: cover;
                             border-radius: 10px;
+                            margin-bottom: 30px;
                         }
                         >figcaption{
                             text-align: center;
@@ -131,7 +132,7 @@
                             margin-bottom: 50px;
                         }
                         .time-box{
-                            @include flex(center){
+                            @include flex(flex-start){
                                 flex-wrap: wrap;
                             };
                             >input{
@@ -188,7 +189,7 @@
                                     @include flex(flex-start,center);
                                     padding: 10px 0px;
                                     >.left{
-                                        width: 100%;
+                                        width: 50%;
                                         margin-right: 20px;
                                         >p{
 
