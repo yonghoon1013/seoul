@@ -2,11 +2,7 @@
 @import "_mixin";
 @import "_inc";
 
-<<<<<<< HEAD
 @media(min-width:1024px) {
-=======
-@media(min-width:1280px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -153,27 +149,16 @@
     .nnn {
         max-width: 1325px;
         margin: 0 auto;
-<<<<<<< HEAD
         gap:4%;
         display: flex;
         justify-content: flex-start;
-=======
-        display: flex;
-        justify-content: center;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-<<<<<<< HEAD
             width: 22%;
             aspect-ratio: 1;
             margin-bottom: 50px;
-=======
-            width: 20%;
-            height: 250px;
-            margin: 15.5px 20.5px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             position: relative;
 
             a {
@@ -244,11 +229,7 @@
     //갤러리
 }
 
-<<<<<<< HEAD
 @media(min-width:481px) and (max-width:1023px) {
-=======
-@media(min-width:481px) and (max-width:1279px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -396,31 +377,19 @@
     //검색
     .nnn {
         max-width: 1325px;
-<<<<<<< HEAD
         gap: 6%;
         margin: 0 auto;
         padding-left: 6%;
         display: flex;
         justify-content: flex-start;
-=======
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-<<<<<<< HEAD
             width: 44%;
             margin-bottom: 40px;
             aspect-ratio: 1;
             
-=======
-            width: 40%;
-            aspect-ratio: 1;
-            margin: 10px 15px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
             position: relative;
 
             a {
@@ -613,11 +582,7 @@
         justify-content: center;
         align-items: center;
         margin: 76px auto;
-<<<<<<< HEAD
         padding-right: 20px;
-=======
-
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
         input {
             margin-left: 20px;
             border-radius: 10px;
@@ -720,10 +685,6 @@
     }
 
     //갤러리
-<<<<<<< HEAD
 }
 @import "t-inc";
 @import "m-inc";
-=======
-}
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b

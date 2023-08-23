@@ -369,11 +369,7 @@ table {
     margin-right: 30px;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 1024px) {
-=======
-@media (min-width: 1280px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -587,7 +583,6 @@ table {
     font-size: 16px;
     color: white;
   }
-<<<<<<< HEAD
   .flex li a .nth2 .state.a {
     background-color: #F0A12A;
   }
@@ -600,8 +595,6 @@ table {
   .flex li a .nth2 .state.d {
     background-color: #d0d321;
   }
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .flex li a .nth1 {
     width: 640px;
     display: flex;
@@ -611,11 +604,7 @@ table {
     display: block;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 481px) and (max-width: 1023px) {
-=======
-@media (min-width: 761px) and (max-width: 1279px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -720,10 +709,7 @@ table {
     justify-content: center;
     align-items: center;
     margin: 65px auto;
-<<<<<<< HEAD
     padding: 0 20px;
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .inout #selectCategory {
     margin-right: 14px;
@@ -737,11 +723,7 @@ table {
   }
   .inout input:nth-of-type(1) {
     margin-right: 13.5px;
-<<<<<<< HEAD
     width: 300px;
-=======
-    width: 400px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     height: 35px;
     text-align: left;
   }
@@ -755,23 +737,15 @@ table {
   }
   .line {
     display: flex;
-<<<<<<< HEAD
     justify-content: center;
     flex-wrap: wrap;
-=======
-    justify-content: flex-start;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     margin: 0 auto;
     border-bottom: 2px solid #ededed;
     max-width: 1280px;
   }
   .line div {
     cursor: pointer;
-<<<<<<< HEAD
     padding: 25px 13%;
-=======
-    padding: 25px 30px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .line div p {
     font-size: 18px;
@@ -810,7 +784,6 @@ table {
     text-align: center;
     margin: 20px auto;
   }
-<<<<<<< HEAD
   .flex li:nth-of-type(1) div:nth-of-type(1) {
     display: none;
   }
@@ -822,25 +795,17 @@ table {
   }
   .flex li:nth-of-type(1) .nth1 {
     width: 72%;
-=======
-  .flex li:nth-of-type(1) .nth1 {
-    width: 640px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .flex li {
     border-top: 1px solid #EDEDED;
     border-bottom: 1px solid #EDEDED;
-<<<<<<< HEAD
     width: 100%;
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .flex li a {
     display: flex;
     align-items: center;
   }
   .flex li a div {
-<<<<<<< HEAD
     text-align: center;
     margin: 20px 5px;
   }
@@ -861,20 +826,6 @@ table {
   }
   .flex li a .nth2 .state {
     flex-shrink: 0;
-=======
-    width: 214px;
-    text-align: center;
-    margin: 20px auto;
-  }
-  .flex li a .nth2 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .flex li a .nth2 .state {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     background-color: #90BC43;
     width: 70px;
     height: 27px;
@@ -882,18 +833,13 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     margin-right: 15px;
-=======
-    margin-right: 25px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .flex li a .nth2 .state p {
     margin: 0;
     font-size: 16px;
     color: white;
   }
-<<<<<<< HEAD
   .flex li a .nth2 .state.a {
     background-color: #F0A12A;
   }
@@ -910,8 +856,6 @@ table {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .flex li a .nth1 {
     width: 640px;
     display: flex;
@@ -1026,10 +970,7 @@ table {
     justify-content: center;
     align-items: center;
     margin: 65px auto;
-<<<<<<< HEAD
     padding: 0 20px;
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .inout #selectCategory {
     margin-right: 14px;
@@ -1043,11 +984,7 @@ table {
   }
   .inout input:nth-of-type(1) {
     margin-right: 13.5px;
-<<<<<<< HEAD
     width: 200px;
-=======
-    width: 400px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     height: 35px;
     text-align: left;
   }
@@ -1111,21 +1048,14 @@ table {
   .flex li:nth-of-type(1) div:nth-of-type(1) {
     display: none;
   }
-<<<<<<< HEAD
   .flex li:nth-of-type(1) div:nth-of-type(3) {
     width: 28%;
   }
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .flex li:nth-of-type(1) div:nth-of-type(4) {
     display: none;
   }
   .flex li:nth-of-type(1) .nth1 {
-<<<<<<< HEAD
     width: 72%;
-=======
-    width: 640px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .flex li {
     border-top: 1px solid #EDEDED;
@@ -1143,28 +1073,17 @@ table {
   .flex li a div:nth-of-type(1) {
     display: none;
   }
-<<<<<<< HEAD
   .flex li a div:nth-of-type(3) {
     width: 28%;
   }
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .flex li a div:nth-of-type(4) {
     display: none;
   }
   .flex li a .nth2 {
-<<<<<<< HEAD
     width: 72%;
     display: flex;
     white-space: nowrap;
     align-items: center;
-=======
-    width: 100%;
-    display: flex;
-    white-space: nowrap;
-    align-items: center;
-    overflow: hidden;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .flex li a .nth2 .state {
     flex-shrink: 0;
@@ -1182,7 +1101,6 @@ table {
     font-size: 16px;
     color: white;
   }
-<<<<<<< HEAD
   .flex li a .nth2 .state.a {
     background-color: #F0A12A;
   }
@@ -1199,8 +1117,6 @@ table {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .flex li a .nth1 {
     width: 640px;
     display: flex;
@@ -1210,7 +1126,6 @@ table {
     display: block;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
     position: fixed;
@@ -1749,106 +1664,10 @@ table {
     line-height: 2;
   }
   #footer .footer-con > .right .footer-nav > ul {
-=======
-@media (min-width: 481px) and (max-width: 760px) {
-  .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-  }
-  .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-  .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .indicator > ul > li {
-    font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
-  }
-  .next {
-    margin: 50px 0 105px 0;
-    display: flex;
-    justify-content: center;
-  }
-  .next button {
-    cursor: pointer;
-    background-color: transparent;
-    color: #58585A;
-    font-size: 16px;
-    font-weight: bold;
-    width: 30px;
-    height: 30px;
-    border: none;
-    margin: 0 5px;
-  }
-  .next button:first-of-type, .next :last-of-type {
-    width: 45px;
-  }
-  .next button.on {
-    border-radius: 10px;
-    background-color: #90BC43;
-    color: white;
-  }
-  .sub-f {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     display: flex;
     justify-content: center;
     align-items: center;
   }
-<<<<<<< HEAD
   #footer .footer-con > .right .footer-nav > ul > li {
     margin-right: 15px;
     color: white;
@@ -1888,148 +1707,3 @@ table {
     margin-right: 30px;
   }
 }
-=======
-  .sub-f p {
-    font-size: 32px;
-  }
-  .inout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 65px auto;
-  }
-  .inout #selectCategory {
-    margin-right: 14px;
-    width: 80px;
-    height: 35px;
-    border-radius: 5px;
-    border: 2px solid #58585A;
-  }
-  .inout input {
-    border-radius: 5px;
-  }
-  .inout input:nth-of-type(1) {
-    margin-right: 13.5px;
-    width: 400px;
-    height: 35px;
-    text-align: left;
-  }
-  .inout input:nth-of-type(2) {
-    cursor: pointer;
-    background-color: #90BC43;
-    color: white;
-    width: 60px;
-    height: 35px;
-    border: none;
-  }
-  .line {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    border-bottom: 2px solid #ededed;
-    max-width: 1280px;
-  }
-  .line div {
-    cursor: pointer;
-    padding: 25px 13%;
-  }
-  .line div p {
-    font-size: 18px;
-  }
-  .line div.on {
-    position: relative;
-  }
-  .line div.on p {
-    color: #4E813B;
-  }
-  .line div.on p::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #4E813B;
-  }
-  .flex {
-    display: none;
-    max-width: 1280px;
-    margin: 0 auto;
-    color: #58585A;
-  }
-  .flex li:nth-of-type(1) {
-    display: flex;
-    border-top: none;
-    border-bottom: 1px solid #58585A;
-  }
-  .flex li:nth-of-type(1) p {
-    color: #4E813B;
-  }
-  .flex li:nth-of-type(1) div {
-    width: 214px;
-    text-align: center;
-    margin: 20px auto;
-  }
-  .flex li:nth-of-type(1) div:nth-of-type(1) {
-    display: none;
-  }
-  .flex li:nth-of-type(1) div:nth-of-type(4) {
-    display: none;
-  }
-  .flex li:nth-of-type(1) .nth1 {
-    width: 640px;
-  }
-  .flex li {
-    border-top: 1px solid #EDEDED;
-    border-bottom: 1px solid #EDEDED;
-    width: 100%;
-  }
-  .flex li a {
-    display: flex;
-    align-items: center;
-  }
-  .flex li a div {
-    text-align: center;
-    margin: 20px auto;
-  }
-  .flex li a div:nth-of-type(1) {
-    display: none;
-  }
-  .flex li a div:nth-of-type(4) {
-    display: none;
-  }
-  .flex li a .nth2 {
-    margin-left: 20px;
-    width: 100%;
-    display: flex;
-    white-space: nowrap;
-    align-items: center;
-    overflow: hidden;
-  }
-  .flex li a .nth2 .state {
-    flex-shrink: 0;
-    background-color: #90BC43;
-    width: 70px;
-    height: 27px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-  }
-  .flex li a .nth2 .state p {
-    margin: 0;
-    font-size: 16px;
-    color: white;
-  }
-  .flex li a .nth1 {
-    width: 640px;
-    display: flex;
-    justify-content: center;
-  }
-  .flex.on {
-    display: block;
-  }
-}/*# sourceMappingURL=notice.css.map */
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b

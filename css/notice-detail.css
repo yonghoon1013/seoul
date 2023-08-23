@@ -369,11 +369,7 @@ table {
     margin-right: 30px;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 1024px) {
-=======
-@media (min-width: 1280px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -546,11 +542,7 @@ table {
     font-weight: bold;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 481px) and (max-width: 1023px) {
-=======
-@media (min-width: 761px) and (max-width: 1279px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -657,191 +649,10 @@ table {
   .ananann .flex .nth1 div {
     width: 100%;
     display: flex;
-<<<<<<< HEAD
     align-items: center;
   }
   .ananann .flex .nth1 div p {
     padding: 25px;
-=======
-  }
-  .ananann .flex .nth1 div p {
-    padding: 25px;
-  }
-  .ananann .flex .nth1 div img {
-    padding: 25px;
-  }
-  .ananann .flex .nth1 div .ntt {
-    color: #A8A8A8;
-    position: absolute;
-    width: 15% !important;
-    right: 0;
-  }
-  .ananann .flex .nth1 div .kk {
-    width: 60%;
-    overflow: hidden;
-  }
-  .ananann .flex .nth1 div .kk .grey {
-    white-space: nowrap;
-    color: #A8A8A8;
-  }
-  .ananann .flex .nth1 div .rotate {
-    transform: rotate(180deg);
-  }
-  .ananann .flex .nth2 div {
-    margin: 25px 0;
-  }
-  .ananann .flex .nth2 div img {
-    width: 60%;
-    margin: 25px 0;
-  }
-  .ananann .flex .nth2 div p {
-    margin: 25px 0;
-    text-align: left;
-    width: 100%;
-    line-height: 1.5;
-  }
-  .ananann .flex .nth2 div:last-of-type {
-    margin-top: 90px;
-    margin-bottom: 70px;
-  }
-  .ananann .flex .nth2 div:last-of-type img {
-    width: 150px;
-    margin: 0 auto;
-  }
-  .ananann .statee {
-    position: absolute;
-    right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #90BC43;
-    width: 110px;
-    height: 45px;
-    border-radius: 5px;
-    margin: 26px 0 83px 0;
-  }
-  .ananann .statee p {
-    margin: 0;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-  }
-}
-@media (min-width: 481px) and (max-width: 760px) {
-  .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-  }
-  .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-  .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .indicator > ul > li {
-    font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
-  }
-  .sub-f {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .sub-f p {
-    font-size: 32px;
-    margin-bottom: 65px;
-  }
-  .ananann {
-    max-width: 1280px;
-    margin: 0 auto 100px auto;
-    position: relative;
-  }
-  .ananann .flex {
-    width: 100%;
-    color: #58585A;
-  }
-  .ananann .flex li:nth-of-type(1) {
-    background-color: #ededed;
-    border-top: 2px solid #4E813B;
-    border-bottom: 1px solid #d9d9d9;
-  }
-  .ananann .flex li:nth-of-type(1) p {
-    font-size: 20px;
-  }
-  .ananann .flex li {
-    border-top: 1px solid #EDEDED;
-    border-bottom: 1px solid #EDEDED;
-  }
-  .ananann .flex li div {
-    text-align: center;
-  }
-  .ananann .flex .nth1 {
-    position: relative;
-  }
-  .ananann .flex .nth1 div {
-    width: 100%;
-    display: flex;
-  }
-  .ananann .flex .nth1 div p {
-    display: flex;
-    align-items: center;
-    padding: 25px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     white-space: nowrap;
   }
   .ananann .flex .nth1 div img {
@@ -855,7 +666,6 @@ table {
     display: none;
   }
   .ananann .flex .nth1 div .kk {
-<<<<<<< HEAD
     width: 70%;
   }
   .ananann .flex .nth1 div .kk .grey {
@@ -864,12 +674,6 @@ table {
     text-overflow: ellipsis;
     width: 100%;
     overflow: hidden;
-=======
-    width: 100%;
-    overflow: hidden;
-  }
-  .ananann .flex .nth1 div .kk .grey {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     color: #A8A8A8;
   }
   .ananann .flex .nth1 div .rotate {
@@ -1022,7 +826,6 @@ table {
     position: relative;
   }
   .ananann .flex .nth1 div {
-<<<<<<< HEAD
     display: flex;
     align-items: center;
   }
@@ -1036,18 +839,6 @@ table {
   .ananann .flex .nth1 div p {
     padding: 15px;
     white-space: nowrap;
-=======
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-  }
-  .ananann .flex .nth1 div p {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .ananann .flex .nth1 div img {
     padding: 25px;
@@ -1060,7 +851,6 @@ table {
     display: none;
   }
   .ananann .flex .nth1 div .kk {
-<<<<<<< HEAD
     width: 50%;
   }
   .ananann .flex .nth1 div .kk .grey {
@@ -1069,12 +859,6 @@ table {
     text-overflow: ellipsis;
     overflow: hidden;
     width: 100%;
-=======
-    width: 100%;
-    overflow: hidden;
-  }
-  .ananann .flex .nth1 div .kk .grey {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     color: #A8A8A8;
   }
   .ananann .flex .nth1 div .rotate {
@@ -1121,7 +905,6 @@ table {
     text-align: center;
     font-weight: bold;
   }
-<<<<<<< HEAD
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
@@ -1704,6 +1487,3 @@ table {
     margin-right: 30px;
   }
 }
-=======
-}/*# sourceMappingURL=notice-detail.css.map */
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
