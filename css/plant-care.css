@@ -369,11 +369,7 @@ table {
     margin-right: 30px;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 1024px) {
-=======
-@media (min-width: 1280px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -515,11 +511,7 @@ table {
   .dada_qna .qna_back .qna_list {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     width: 1280px;
-=======
-    width: 1024px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .dada_qna .qna_back .qna_list ul {
     width: 100%;
@@ -574,11 +566,7 @@ table {
     transform: rotate(180deg);
   }
 }
-<<<<<<< HEAD
 @media (min-width: 481px) and (max-width: 1023px) {
-=======
-@media (min-width: 761px) and (max-width: 1279px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -683,10 +671,7 @@ table {
     justify-content: center;
     align-items: center;
     margin: 65px 0;
-<<<<<<< HEAD
     padding: 0 20px;
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .inout #selectCategory {
     margin-right: 14px;
@@ -700,11 +685,7 @@ table {
   }
   .inout input:nth-of-type(1) {
     margin-right: 13.5px;
-<<<<<<< HEAD
     width: 300px;
-=======
-    width: 400px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     height: 35px;
     text-align: center;
   }
@@ -720,12 +701,9 @@ table {
     display: flex;
     justify-content: center;
   }
-<<<<<<< HEAD
   .dada_qna .qna_back {
     width: 100%;
   }
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .dada_qna .qna_back p {
     font-size: 22px;
     margin-bottom: 20px;
@@ -734,10 +712,6 @@ table {
   .dada_qna .qna_back .qna_list {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-=======
-    width: 761px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .dada_qna .qna_back .qna_list ul {
     width: 100%;
@@ -792,11 +766,7 @@ table {
     transform: rotate(180deg);
   }
 }
-<<<<<<< HEAD
 @media (max-width: 480px) {
-=======
-@media (min-width: 320px) and (max-width: 760px) {
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -901,10 +871,7 @@ table {
     justify-content: center;
     align-items: center;
     margin: 65px 0;
-<<<<<<< HEAD
     padding: 0 20px;
-=======
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
   }
   .inout #selectCategory {
     margin-right: 14px;
@@ -918,11 +885,7 @@ table {
   }
   .inout input:nth-of-type(1) {
     margin-right: 13.5px;
-<<<<<<< HEAD
     width: 200px;
-=======
-    width: 400px;
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
     height: 35px;
     text-align: center;
   }
@@ -1002,7 +965,6 @@ table {
   .dada_qna .qna_back .qna_list ul li.active button img {
     transform: rotate(180deg);
   }
-<<<<<<< HEAD
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
@@ -1585,6 +1547,3 @@ table {
     margin-right: 30px;
   }
 }
-=======
-}/*# sourceMappingURL=plant-care.css.map */
->>>>>>> 7ad9357a814a58fd264cb162d7ff5eaa2417d73b
