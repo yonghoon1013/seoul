@@ -75,7 +75,7 @@ table {
   font-family: NotoSans-Bold;
   src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   #header {
     position: fixed;
     width: 100%;
@@ -120,15 +120,17 @@ table {
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: stretch;
     width: 950px;
   }
   #header .head .header-nav > ul > li {
     width: 20%;
     padding: 20px;
+    transition: 0.5s;
+    background-color: rgba(144, 188, 67, 0);
   }
   #header .head .header-nav > ul > li:hover {
-    background-color: #90BC43;
+    background-color: rgb(144, 188, 67);
   }
   #header .head .header-nav > ul > li:hover a {
     color: white !important;
@@ -714,7 +716,7 @@ table {
     font-weight: bold;
   }
 }
-@media (min-width: 481px) and (max-width: 760px) {
+@media (min-width: 481px) and (max-width: 1023px) {
   #header {
     position: fixed;
     width: 100%;

@@ -1,4 +1,4 @@
-@media(min-width:1280px) {
+@media(min-width:1024px) {
 
     //헤더
     #header {
@@ -52,13 +52,15 @@
                 justify-content: space-between;
 
                 >ul {
-                    @include flex(space-around, flex-start);
+                    @include flex(space-around, stretch);
                     width: 950px;
                     >li {
                         width: 20%;
                         padding: 20px;
+                        transition:0.5s;
+                        background-color: rgba(144, 188, 67,0);
                         &:hover {
-                            background-color: #90BC43;
+                            background-color: rgba(144, 188, 67,1);
                             a {
                                 color: white !important;
                             }
