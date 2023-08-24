@@ -54,22 +54,11 @@ let num = 0;
 
 
     $('#header').mouseenter(function(){
-        $('.sub-head').stop().slideDown(500);
+        $('.sub-head').stop().slideDown();
     })
     $('#header').mouseleave(function(){
-        $('.sub-head').stop().slideUp(500);
+        $('.sub-head').stop().slideToggle();
     })
-
-
-
-
-
-
-
-
-
-
-
 
     const head = document.getElementById('header');
 

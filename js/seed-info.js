@@ -45,6 +45,7 @@ fetch('./json/seed-data.json')
                         <div class="ab">
 
                             <p>${obj.name}</p>
+                            <p>${obj.sciName}</p>
                             <div class="center">
                                 <span>상</span>
                                 <span class="on">중</span>
@@ -79,6 +80,7 @@ fetch('./json/seed-data.json')
                         <img src="${obj.mainImg}">
                         <div class="ab">
                             <p>${obj.name}</p>
+                            <p>${obj.sciName}</p>
                             <div class="center">
                                 <span>상</span>
                                 <span class="on">중</span>
@@ -100,6 +102,7 @@ fetch('./json/seed-data.json')
                             <img src="${obj.mainImg}">
                             <div class="ab">
                                 <p>${obj.name}</p>
+                                <p>${obj.sciName}</p>
                                 <div class="center">
                                     <span>상</span>
                                     <span class="on">중</span>
@@ -121,6 +124,7 @@ fetch('./json/seed-data.json')
                                 <img src="${obj.mainImg}">
                                 <div class="ab">
                                     <p>${obj.name}</p>
+                                    <p>${obj.sciName}</p>
                                     <div class="center">
                                         <span>상</span>
                                         <span class="on">중</span>
@@ -142,6 +146,7 @@ fetch('./json/seed-data.json')
                                     <img src="${obj.mainImg}">
                                     <div class="ab">
                                         <p>${obj.name}</p>
+                                        <p>${obj.sciName}</p>
                                         <div class="center">
                                             <span>상</span>
                                             <span class="on">중</span>
