@@ -212,6 +212,22 @@
         display: flex;
         justify-content: center;
 
+        .numbox{
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+                >span{
+                    text-align: center;
+                    display:inline-block;
+                    width: 30px;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -222,10 +238,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -461,7 +478,7 @@
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -697,7 +714,7 @@
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 

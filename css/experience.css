@@ -76,13 +76,27 @@ table {
   font-family: NotoSans-Bold;
   src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   #header {
     position: fixed;
     width: 100%;
     z-index: 101;
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
+  }
+  #header:hover {
+    background: none;
+    background-color: white;
+  }
+  #header:hover a {
+    color: #58585A !important;
+  }
+  #header:hover .logo {
+    background-color: #447531;
+  }
+  #header:hover .lang::before {
+    content: "";
+    background-image: url("../img/lang-black.png");
   }
   #header .head {
     max-width: 1280px;
@@ -99,10 +113,6 @@ table {
   #header .head .logo > a {
     display: block;
   }
-  #header .head .logo > a::after {
-    display: block;
-    content: url("../img/logo.png");
-  }
   #header .head .header-nav {
     position: relative;
     display: flex;
@@ -111,17 +121,15 @@ table {
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: flex-start;
     width: 950px;
   }
   #header .head .header-nav > ul > li {
     width: 20%;
     padding: 20px;
-    transition: 0.5s;
-    background-color: rgba(144, 188, 67, 0);
   }
   #header .head .header-nav > ul > li:hover {
-    background-color: rgb(144, 188, 67);
+    background-color: #90BC43;
   }
   #header .head .header-nav > ul > li:hover a {
     color: white !important;
@@ -239,25 +247,6 @@ table {
     font-weight: normal;
     color: white;
   }
-  #header:hover {
-    background: none;
-    background-color: white;
-  }
-  #header:hover a {
-    color: #58585A !important;
-  }
-  #header:hover .logo > a {
-    display: block;
-  }
-  #header:hover .logo > a::after {
-    display: block;
-    content: url("../img/logo-color.png");
-  }
-  #header:hover .lang::before {
-    content: "";
-    background-image: url("../img/lang-black.png");
-    background-color: #447531;
-  }
   #header.active {
     transform: translateY(-100%);
   }
@@ -266,7 +255,7 @@ table {
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
-    z-index: 99;
+    z-index: 30;
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
@@ -1125,7 +1114,7 @@ table {
   font-family: NotoSans-Bold;
   src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
 }
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 760px) {
   .main .bg {
     position: relative;
     background-image: url("../img/bg111.png");
@@ -1799,7 +1788,7 @@ table {
     display: block;
   }
 }
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 760px) {
   #header {
     position: fixed;
     width: 100%;
