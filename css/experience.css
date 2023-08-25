@@ -62,7 +62,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {
@@ -283,8 +283,8 @@ table {
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     display: block;
     background-color: white;
     border-radius: 50%;
@@ -306,8 +306,8 @@ table {
   }
   .quick-box .quick-nav > ul > li > a .title {
     opacity: 0;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: #90BC43;
     border-radius: 50%;
     position: absolute;
@@ -469,7 +469,7 @@ table {
 .main .experience-detail .experience-box .experience-info-box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 100px;
 }
 .main .experience-detail .experience-box .experience-info-box > .left {
@@ -572,6 +572,9 @@ table {
 .main .experience-detail .experience-con-box .experience-con-tab > li.on {
   display: block;
 }
+.main .experience-detail .experience-con-box .experience-con-tab .experience-con .ll > img {
+  margin: 0 auto;
+}
 .main .experience-detail .experience-con-box .experience-con-tab .experience-con > img {
   width: 100%;
   margin: auto;
@@ -624,22 +627,22 @@ table {
   text-align: center;
   margin-bottom: 40px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab {
   width: 552px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 75px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li {
   font-size: 20px;
   cursor: pointer;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li.on {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li.on {
   color: #4E813B;
   font-size: 24px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav span {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab span {
   color: #CBCBCB;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li {
@@ -1132,7 +1135,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {
@@ -1381,18 +1384,18 @@ table {
     text-align: center;
     margin-bottom: 40px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab {
     width: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 75px 0;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li {
     font-size: 18px;
     cursor: pointer;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li.on {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li.on {
     color: #4E813B;
     font-size: 20px;
   }
@@ -2181,7 +2184,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {
@@ -2430,18 +2433,18 @@ table {
     text-align: center;
     margin-bottom: 40px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab {
     width: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 75px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li {
     font-size: 18px;
     cursor: pointer;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li.on {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li.on {
     color: #4E813B;
     font-size: 20px;
   }

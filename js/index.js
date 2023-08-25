@@ -35,7 +35,10 @@ function mainSlide(){
                 const txt = v.querySelector('.name').innerText;
                 for(let k2 in data.items){
                     if(txt == data.items[k2].name){
-                        sessionStorage.setItem("click", k2)
+                        sessionStorage.setItem("click", k2);
+                        break;
+                    }else{
+                        e.preventDefault();
                     }
 
                 }
