@@ -2,7 +2,7 @@
 @import "_mixin";
 @import "_inc";
 
-@media(min-width:1280px) {
+@media(min-width:1024px) {
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -118,11 +118,11 @@
         margin: 65px auto;
 
         #selectCategory {
-            margin-right: 14px;
+            margin-right: 10px;
             width: 80px;
             height: 35px;
             border-radius: 5px;
-            border: 2px solid #58585A
+            border: 1px solid #8e8e8f;
         }
 
         input {
@@ -130,7 +130,8 @@
         }
 
         input:nth-of-type(1) {
-            margin-right: 13.5px;
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
             width: 400px;
             height: 35px;
             text-align: center;
@@ -149,17 +150,18 @@
 
     //검색
     .nnn {
-        max-width: 1325px;
+        max-width: 1280px;
         margin: 0 auto;
         display: none;
-        justify-content: center;
+        gap: 4%;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-            width: 20%;
-            height: 250px;
-            margin: 15.5px 20.5px;
+            width: 22%;
+            aspect-ratio: 1;
+            margin-bottom: 50px;
             position: relative;
             border-radius: 20px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(14, 13, 13, 0.5) 100%);
@@ -238,7 +240,7 @@
 
 }
 
-@media(min-width:481px) and (max-width:1279px) {
+@media(min-width:481px) and (max-width:1023px) {
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -352,13 +354,13 @@
         justify-content: center;
         align-items: center;
         margin: 65px auto;
-
+        padding: 0 20px;
         #selectCategory {
-            margin-right: 14px;
+            margin-right: 10px;
             width: 80px;
             height: 35px;
             border-radius: 5px;
-            border: 2px solid #58585A
+            border: 1px solid #8e8e8f;
         }
 
         input {
@@ -366,8 +368,9 @@
         }
 
         input:nth-of-type(1) {
-            margin-right: 13.5px;
-            width: 400px;
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
+            width: 300px;
             height: 35px;
             text-align: center;
 
@@ -385,17 +388,18 @@
 
     //검색
     .nnn {
-        max-width: 1325px;
         margin: 0 auto;
+        padding-left: 6%;
         display: none;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 6%;
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-            width: 40%;
+            width: 44%;
             aspect-ratio: 1;
-            margin: 15.5px 20.5px;
+            margin-bottom: 40px;
             position: relative;
             border-radius: 20px;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(14, 13, 13, 0.5) 100%);
@@ -588,13 +592,13 @@
         justify-content: center;
         align-items: center;
         margin: 65px auto;
-
+        padding: 0 20px;
         #selectCategory {
-            margin-right: 14px;
+            margin-right: 10px;
             width: 80px;
             height: 35px;
             border-radius: 5px;
-            border: 2px solid #58585A
+            border: 1px solid #8e8e8f;
         }
 
         input {
@@ -602,8 +606,9 @@
         }
 
         input:nth-of-type(1) {
-            margin-right: 13.5px;
-            width: 400px;
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
+            width: 200px;
             height: 35px;
             text-align: center;
 
@@ -621,7 +626,6 @@
 
     //검색
     .nnn {
-        max-width: 1325px;
         margin: 0 auto;
         display: none;
         justify-content: center;
@@ -709,3 +713,5 @@
     }
 
 }
+@import "t-inc";
+@import "m-inc";

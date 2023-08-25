@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+  min-width: 380px;
   line-height: 1;
 }
 
@@ -83,6 +84,20 @@ table {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
   }
+  #header:hover {
+    background: none;
+    background-color: white;
+  }
+  #header:hover a {
+    color: #58585A !important;
+  }
+  #header:hover .logo {
+    background-color: #447531;
+  }
+  #header:hover .lang::before {
+    content: "";
+    background-image: url("../img/lang-black.png");
+  }
   #header .head {
     max-width: 1280px;
     margin: 0 auto;
@@ -97,10 +112,6 @@ table {
   }
   #header .head .logo > a {
     display: block;
-  }
-  #header .head .logo > a::after {
-    display: block;
-    content: url("../img/logo.png");
   }
   #header .head .header-nav {
     position: relative;
@@ -238,25 +249,6 @@ table {
     font-weight: normal;
     color: white;
   }
-  #header:hover {
-    background: none;
-    background-color: white;
-  }
-  #header:hover a {
-    color: #58585A !important;
-  }
-  #header:hover .logo > a {
-    display: block;
-  }
-  #header:hover .logo > a::after {
-    display: block;
-    content: url("../img/logo-color.png");
-  }
-  #header:hover .lang::before {
-    content: "";
-    background-image: url("../img/lang-black.png");
-    background-color: #447531;
-  }
   #header.active {
     transform: translateY(-100%);
   }
@@ -265,7 +257,7 @@ table {
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
-    z-index: 99;
+    z-index: 30;
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
@@ -381,7 +373,7 @@ table {
 @media (max-width: 480px) {
   .bg {
     position: relative;
-    background-image: url("./img/bg111.png");
+    background-image: url("../img/bg111.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 100%;
@@ -401,7 +393,7 @@ table {
   .bg::after {
     position: absolute;
     content: "";
-    background-image: url("./img/bottom.png");
+    background-image: url("../img/bottom.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
@@ -433,7 +425,7 @@ table {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url("./img/icon.png");
+    background-image: url("../img/icon.png");
     background-size: 100% 100%;
     width: 8px;
     height: 12px;
@@ -457,12 +449,13 @@ table {
   }
   .space .sub-f p {
     font-size: 32px;
-    margin-bottom: 37px;
+    margin-bottom: 50px;
   }
   .space .haha {
     display: flex;
     align-items: center;
     border-bottom: 3px solid #ededed;
+    padding-left: 10px;
     padding-bottom: 27px;
   }
   .space .haha .state {
@@ -498,6 +491,7 @@ table {
     width: 80%;
   }
   .space .ttt .im img {
+    margin: 0 auto;
     object-fit: cover;
     width: 80vw;
     aspect-ratio: 1;
@@ -615,12 +609,13 @@ table {
   }
   .space .sub-f p {
     font-size: 32px;
-    margin-bottom: 37px;
+    margin-bottom: 50px;
   }
   .space .haha {
     display: flex;
     align-items: center;
     border-bottom: 3px solid #ededed;
+    padding-left: 10px;
     padding-bottom: 27px;
   }
   .space .haha .state {

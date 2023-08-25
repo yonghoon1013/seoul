@@ -5,7 +5,7 @@
 @media(max-width:480px){
     .bg{
         position: relative;
-        background-image: url("./img/bg111.png");
+        background-image: url("../img/bg111.png");
         background-repeat: no-repeat;
         background-position: top;
         background-size: 100% 100%;
@@ -19,7 +19,7 @@
         &::after{
             position: absolute;
             content: '';
-            background-image: url("./img/bottom.png");
+            background-image: url("../img/bottom.png");
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: bottom;
@@ -51,7 +51,7 @@
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    background-image: url("./img/icon.png");
+                    background-image: url("../img/icon.png");
                     background-size: 100% 100%;
                     width: 8px;
                     height: 12px;
@@ -78,7 +78,7 @@
             align-items: center;
             p{
                 font-size: 32px;
-                margin-bottom: 37px;
+                margin-bottom: 50px;
             }
         }
         //부제목
@@ -87,6 +87,7 @@
             display: flex;
             align-items: center;
             border-bottom: 3px solid #ededed;
+            padding-left: 10px;
             padding-bottom: 27px;
             .state{
                 display: flex;
@@ -120,6 +121,7 @@
             .im{
                 width: 80%; 
                 img{
+                    margin: 0 auto;
                     object-fit: cover;
                     width: 80vw; 
                     aspect-ratio: 1;
@@ -253,7 +255,7 @@
             align-items: center;
             p{
                 font-size: 32px;
-                margin-bottom: 37px;
+                margin-bottom: 50px;
             }
         }
         //부제목
@@ -262,6 +264,7 @@
             display: flex;
             align-items: center;
             border-bottom: 3px solid #ededed;
+            padding-left: 10px;
             padding-bottom: 27px;
             .state{
                 display: flex;
@@ -508,3 +511,4 @@
 }
 @import "t-inc";
 @import "m-inc";
+
