@@ -7,7 +7,7 @@
 
 .bg {
     position: relative;
-    background-image: url("../StoryImg/castle-4336616_1920.jpg");
+    background-image: url("../StoryImg/botanical-garden-g68d9c33f3_1920_2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -35,7 +35,7 @@
   }
 //////////////////
 .indicator{
-    max-width: 1320px;
+    max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 80px;
     >ul{
@@ -70,180 +70,12 @@
 
 // -------------------------------480-----------------------------------
 @media(max-width:480px){
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
     main{
-        .bg{height: 200px;}
-        .indicator{padding: 0 20px;}
+        @include main-width($w:none, $p:0 20px);
         min-width: 380px;
-        .intro{
-                @include main-width($w:none, $p:0 20px);
-                .intro_content{
-                    margin-bottom: 100px;
-                    .whole{
-                        .ex_top{
-                            display: block;
-                            justify-content: left;
-                            align-items: start;
-                            .ex_left{
-                                width: 100%;
-                                max-height: 390px;
-                                overflow: hidden;
-                                img{
-                                    width: 100%;
-                                }
-                            }
-                            .ex_right{
-                                margin-top: 20px;
-                                width: 100%;
-                                height: 100%;
-                                .ex_right_top{
-                                    h1{
-                                        font-family: 'Noto Sans KR', sans-serif;
-                                        color: #5B5E5F;
-                                        font-size: 20px;
-                                        font-weight: 600;
-                                        margin-bottom: 10px;
-                                    }
-                                    h2{
-                                        font-family: 'Noto Sans KR', sans-serif;
-                                        color: rgba(204, 204, 204, 0.80);
-                                        font-size: 14px;
-                                        font-weight: 700;
-                                        margin-bottom: 40px;
-                                    }
-                                    .detail{
-                                        .detail_p{
-                                            p{
-                                                display: block;
-                                                font-size: 14px;
-                                                font-family: 'Noto Sans KR', sans-serif;
-                                                margin-bottom: 10px;
-                                                line-height: 1.5;
-                                                span{
-                                                    color: #4E813B;
-                                                    font-size: 14px;
-                                                    font-family: 'Noto Sans KR', sans-serif;
-                                                    font-weight: 500;
-                                                }
-                                            }
-                                            p:nth-of-type(1),p:nth-of-type(4){
-                                                width: 220px;
-                                            }
-                                            p:nth-of-type(2),p:nth-of-type(5){
-                                                width: 200px;
-                                            }
-                                        }
-                                    }
-                                }
-                                >hr{
-                                    margin: 20px 0;
-                                    background: #EDEDED;
-                                    height:1px;
-                                    border:0;
-                                }
-                                .ex_right_bottom{
-                                    align-items: center;
-                                    font-family: 'Noto Sans KR', sans-serif;
-                                    color: #5B5E5F;
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    line-height: 1.7;
-                                    letter-spacing: -1px;
-                                }
-                            }
-                        }
-                        >hr{
-                            margin: 20px 0;
-                            background: #A8A8A8;
-                            height:1px;
-                            border:0;
-                        }
-                        .ex_bottom{
-                            padding: 10px 0;
-                            .event_con{
-                                img{
-                                    width: 100%;
-                                    max-width: 800px;
-                                    margin: 0 auto;
-                                }
-                            }
-                        }
-                        .exDeImg{
-                            >hr{
-                                margin: 60px 0;
-                                background: #EDEDED;
-                                height:1px;
-                                border:0;
-                            }
-                            >p{
-                                margin-bottom: 20px;
-                                font-family: 'Noto Sans KR', sans-serif;
-                                font-size: 18px;
-                                color: #4E813B;
-                                font-weight: 500;
-                            }
-                            .exDeImgWhole{
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                >a{
-                                    display: inline-block;
-                                    width: 30%;
-                                    >img{
-                                        display: inline-block;
-                                        max-width: auto;
-                                        width: 100%;
-                                        cursor: pointer;
-                                    }
-                                }
-                            }
-                        }
-                        .popup {
-                            position: fixed;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.6);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            display: none;
-                        }
-                        .backList{
-                            width: 100%;
-                            display: flex;
-                            justify-content: right;
-                            .btn_list {
-                                margin-top: 100px;
-                                width: 70px;
-                                height: 40px;
-                                border-radius: 10px;
-                                background: #90be45;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                p{
-                                  display: block;
-                                  color: #fff;
-                                  text-align: center;
-                                  font-size: 16px;
-                                  font-weight: 500;
-                                }
-                              }
-                        }
-                    }
-                }
-            }
-        }
-}
-
-// ----------------------------481~760-----------------------------------
-@media (min-width:481px) and (max-width:1023px){
-    main{
-        .bg{height: 200px;}
-        .indicator{padding: 0 20px;}
-        .intro{
-                @include main-width($p:0 20px);
+            .intro{
                 .intro_content{
                     margin-bottom: 100px;
                     .whole{
@@ -253,16 +85,15 @@
                             align-items: start;
                             .ex_left{
                                 img{
-                                    min-width: 110px;
                                     max-width: 290px;
                                     width: 100%;
                                 }
                                 margin-right: 40px;
                             }
                             .ex_right{
-                                width: 100%;
                                 height: 100%;
                                 .ex_right_top{
+                                    width: 325px;
                                     h1{
                                         font-family: 'Noto Sans KR', sans-serif;
                                         color: #5B5E5F;
@@ -283,8 +114,7 @@
                                                 display: block;
                                                 font-size: 14px;
                                                 font-family: 'Noto Sans KR', sans-serif;
-                                                margin-bottom: 10px;
-                                                line-height: 1.5;
+                                                margin-bottom: 15px;
                                                 span{
                                                     color: #4E813B;
                                                     font-size: 14px;
@@ -302,17 +132,18 @@
                                     }
                                 }
                                 >hr{
-                                    width: 100%;
+                                    display: none;
                                     margin: 40px 0;
                                     background: #EDEDED;
                                     height:1px;
                                     border:0;
                                 }
                                 .ex_right_bottom{
+                                    display: none;
                                     align-items: center;
                                     font-family: 'Noto Sans KR', sans-serif;
                                     color: #5B5E5F;
-                                    font-size: 14px;
+                                    font-size: 16px;
                                     font-weight: 400;
                                     line-height: 1.7;
                                     letter-spacing: -1px;
@@ -335,69 +166,108 @@
                                 }
                             }
                         }
-                        .exDeImg{
-                            >hr{
-                                margin: 60px 0;
-                                background: #EDEDED;
-                                height:1px;
-                                border:0;
+                    }
+                }
+            }
+        }
+}
+
+// ----------------------------481~760-----------------------------------
+@media (min-width:481px) and (max-width:1023px){
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
+    main{
+        @include main-width($p:0 20px);
+            .intro{
+                .intro_content{
+                    margin-bottom: 100px;
+                    .whole{
+                        .ex_top{
+                            display: flex;
+                            justify-content: left;
+                            align-items: start;
+                            .ex_left{
+                                img{
+                                    max-width: 290px;
+                                    width: 100%;
+                                }
+                                margin-right: 40px;
                             }
-                            >p{
-                                margin-bottom: 20px;
-                                font-family: 'Noto Sans KR', sans-serif;
-                                font-size: 18px;
-                                color: #4E813B;
-                                font-weight: 500;
-                            }
-                            .exDeImgWhole{
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                >a{
-                                    display: inline-block;
-                                    width: 30%;
-                                    >img{
-                                        display: inline-block;
-                                        max-width: auto;
-                                        width: 100%;
-                                        cursor: pointer;
+                            .ex_right{
+                                height: 100%;
+                                .ex_right_top{
+                                    width: 325px;
+                                    h1{
+                                        font-family: 'Noto Sans KR', sans-serif;
+                                        color: #5B5E5F;
+                                        font-size: 20px;
+                                        font-weight: 600;
+                                        margin-bottom: 10px;
+                                    }
+                                    h2{
+                                        font-family: 'Noto Sans KR', sans-serif;
+                                        color: rgba(204, 204, 204, 0.80);
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        margin-bottom: 40px;
+                                    }
+                                    .detail{
+                                        .detail_p{
+                                            p{
+                                                display: block;
+                                                font-size: 14px;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                margin-bottom: 15px;
+                                                span{
+                                                    color: #4E813B;
+                                                    font-size: 14px;
+                                                    font-family: 'Noto Sans KR', sans-serif;
+                                                    font-weight: 500;
+                                                }
+                                            }
+                                            p:nth-of-type(1),p:nth-of-type(4){
+                                                width: 220px;
+                                            }
+                                            p:nth-of-type(2),p:nth-of-type(5){
+                                                width: 200px;
+                                            }
+                                        }
                                     }
                                 }
+                                >hr{
+                                    display: none;
+                                    margin: 40px 0;
+                                    background: #EDEDED;
+                                    height:1px;
+                                    border:0;
+                                }
+                                .ex_right_bottom{
+                                    display: none;
+                                    align-items: center;
+                                    font-family: 'Noto Sans KR', sans-serif;
+                                    color: #5B5E5F;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 1.7;
+                                    letter-spacing: -1px;
+                                }
                             }
                         }
-                        .popup {
-                            position: fixed;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.6);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            display: none;
+                        >hr{
+                            margin: 60px 0;
+                            background: #A8A8A8;
+                            height:1px;
+                            border:0;
                         }
-                        .backList{
-                            width: 100%;
-                            display: flex;
-                            justify-content: right;
-                            .btn_list {
-                                margin-top: 100px;
-                                width: 70px;
-                                height: 40px;
-                                border-radius: 10px;
-                                background: #90be45;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                p{
-                                  display: block;
-                                  color: #fff;
-                                  text-align: center;
-                                  font-size: 16px;
-                                  font-weight: 500;
+                        .ex_bottom{
+                            padding: 10px 0;
+                            .event_con{
+                                img{
+                                    width: 100%;
+                                    max-width: 800px;
+                                    margin: 0 auto;
                                 }
-                              }
+                            }
                         }
                     }
                 }
@@ -408,10 +278,10 @@
 
 // ----------------------------1024-----------------------------------
 @media (min-width:1024px){
+    .indicator{padding: 0 20px;}
     main{
-        .indicator{padding: 0 20px;}
-        .intro{
-                @include main-width();
+        @include main-width();
+            .intro{
                 .intro_content{
                     margin-bottom: 100px;
                     .whole{
@@ -498,79 +368,8 @@
                                 }
                             }
                         }
-                        .exDeImg{
-                            >hr{
-                                margin: 60px 0;
-                                background: #EDEDED;
-                                height:1px;
-                                border:0;
-                            }
-                            >p{
-                                margin-bottom: 20px;
-                                font-family: 'Noto Sans KR', sans-serif;
-                                font-size: 18px;
-                                color: #4E813B;
-                                font-weight: 500;
-                            }
-                            .exDeImgWhole{
-                                >a{
-                                    >img{
-                                        display: inline-block;
-                                        max-width: 200px;
-                                        width: 100%;
-                                        cursor: pointer;
-                                        margin-right: 20px;
-                                    }
-                                }
-                            }
-                        }
-                        .popup {
-                            position: fixed;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100vh;
-                            background-color: rgba(0, 0, 0, 0.6);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            display: none;
-
-                            >img{
-                                width: 400px;
-                                object-fit: cover;
-                            }
-                        }
-                        .backList{
-                            width: 100%;
-                            display: flex;
-                            justify-content: right;
-                            .btn_list {
-                                margin-top: 100px;
-                                width: 70px;
-                                height: 40px;
-                                border-radius: 10px;
-                                background: #90be45;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                p{
-                                  display: block;
-                                  color: #fff;
-                                  text-align: center;
-                                  font-size: 16px;
-                                  font-weight: 500;
-                                }
-                              }
-                        }
                     }
                 }
             }
         }
 }
-
-
-
-//-----------------------------------------------------------------
-@import "_t-inc";
-@import "_m-inc";

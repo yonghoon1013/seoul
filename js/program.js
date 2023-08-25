@@ -63,6 +63,7 @@ fetch('./json/program.json')
                 var deadline = "접수중";
             } else{
                 var deadline = "예약마감"
+
             }
 
             if(obj.price.length > 3){
@@ -75,7 +76,7 @@ fetch('./json/program.json')
             allPg.innerHTML += `
         <li>
         <a href="./experience.html">
-            <div class="sspace">    
+            <div class="sspace ${deadline == "예약마감" ? "on" : ""}">    
                 <img src="${obj.img}">
                 <div class="ab">
                     <p>예 약 마 감</p>
@@ -105,7 +106,7 @@ fetch('./json/program.json')
             teenPg.innerHTML += `
             <li>
             <a href="./experience.html">
-                <div class="sspace">    
+            <div class="sspace ${deadline == "예약마감" ? "on" : ""}">    
                     <img src="${obj.img}">
                     <div class="ab">
                         <p>예 약 마 감</p>
@@ -134,7 +135,7 @@ fetch('./json/program.json')
             familyPg.innerHTML += `
             <li>
             <a href="./experience.html">
-                <div class="sspace">    
+            <div class="sspace ${deadline == "예약마감" ? "on" : ""}">    
                     <img src="${obj.img}">
                     <div class="ab">
                         <p>예 약 마 감</p>
@@ -163,7 +164,7 @@ fetch('./json/program.json')
             adultPg.innerHTML += `
             <li>
             <a href="./experience.html">
-                <div class="sspace">    
+            <div class="sspace ${deadline == "예약마감" ? "on" : ""}">    
                     <img src="${obj.img}">
                     <div class="ab">
                         <p>예 약 마 감</p>
