@@ -1646,8 +1646,7 @@ main .tabct::after {
     width: 100%;
   }
   main .tab .content2 article ul li figure img {
-    -o-object-fit: none;
-       object-fit: none;
+    object-fit: none;
   }
   main .tab .content2 #qq {
     border-radius: 20px;
@@ -2084,8 +2083,7 @@ main .tabct::after {
     width: 100%;
   }
   main .tab .content2 article ul li figure img {
-    -o-object-fit: none;
-       object-fit: none;
+    object-fit: none;
   }
   main .tab .content2 #qq {
     border-radius: 20px;

@@ -898,8 +898,7 @@ table {
   }
   main .intro .intro_content .whole .popup > img {
     width: 400px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .intro .intro_content .whole .backList {
     width: 100%;
