@@ -35,9 +35,10 @@ fetch('./json/seed-data.json')
                 var seedRental = "대출가능"
             }
 
+
             allSeed.innerHTML += `
                 <li class="sspace">
-                <div class="haha">
+                <div class="haha ${seedRental == "불가능" ? 'on' : ""}">
                 <p>${seedRental}</p>
             </div>
                     <a href="./Sdetail.html">
@@ -45,11 +46,10 @@ fetch('./json/seed-data.json')
                         <div class="ab">
 
                             <p>${obj.name}</p>
-                            <p>${obj.sciName}</p>
                             <div class="center">
-                                <span>상</span>
-                                <span class="on">중</span>
-                                <span>하</span>
+                                <span class = "${obj.level == "상" ? "on" : ""}">상</span>
+                                <span class = "${obj.level == "중" ? "on" : ""}">중</span>
+                                <span class = "${obj.level == "하" ? "on" : ""}">하</span>
                             </div>
                         </div>
                     </a>
@@ -73,18 +73,17 @@ fetch('./json/seed-data.json')
                 case "spring":
                     springSeed.innerHTML += `
                     <li class="sspace">
-                    <div class="haha">
+                    <div class="haha ${seedRental == "불가능" ? 'on' : ""}">
                     <p>${seedRental}</p>
                 </div>
                     <a href="./Sdetail.html">
                         <img src="${obj.mainImg}">
                         <div class="ab">
                             <p>${obj.name}</p>
-                            <p>${obj.sciName}</p>
                             <div class="center">
-                                <span>상</span>
-                                <span class="on">중</span>
-                                <span>하</span>
+                            <span class = "${obj.level == "상" ? "on" : ""}">상</span>
+                            <span class = "${obj.level == "중" ? "on" : ""}">중</span>
+                            <span class = "${obj.level == "하" ? "on" : ""}">하</span>
                             </div>
                         </div>
                     </a>
@@ -95,18 +94,18 @@ fetch('./json/seed-data.json')
                 case "summer":
                     summerSeed.innerHTML += `
                         <li class="sspace">
-                        <div class="haha">
+                        <div class="haha ${seedRental == "불가능" ? 'on' : ""}">
                         <p>${seedRental}</p>
                     </div>
                         <a href="./Sdetail.html">
                             <img src="${obj.mainImg}">
                             <div class="ab">
                                 <p>${obj.name}</p>
-                                <p>${obj.sciName}</p>
+
                                 <div class="center">
-                                    <span>상</span>
-                                    <span class="on">중</span>
-                                    <span>하</span>
+                                <span class = "${obj.level == "상" ? "on" : ""}">상</span>
+                                <span class = "${obj.level == "중" ? "on" : ""}">중</span>
+                                <span class = "${obj.level == "하" ? "on" : ""}">하</span>
                                 </div>
                             </div>
                         </a>
@@ -117,18 +116,17 @@ fetch('./json/seed-data.json')
                 case "autumn":
                     autumnSeed.innerHTML += `
                             <li class="sspace">
-                            <div class="haha">
+                            <div class="haha ${seedRental == "불가능" ? 'on' : ""}">
                             <p>${seedRental}</p>
                         </div>
                             <a href="./Sdetail.html">
                                 <img src="${obj.mainImg}">
                                 <div class="ab">
                                     <p>${obj.name}</p>
-                                    <p>${obj.sciName}</p>
                                     <div class="center">
-                                        <span>상</span>
-                                        <span class="on">중</span>
-                                        <span>하</span>
+                                    <span class = "${obj.level == "상" ? "on" : ""}">상</span>
+                                    <span class = "${obj.level == "중" ? "on" : ""}">중</span>
+                                    <span class = "${obj.level == "하" ? "on" : ""}">하</span>
                                     </div>
                                 </div>
                             </a>
@@ -139,18 +137,17 @@ fetch('./json/seed-data.json')
                 case "winter":
                     winterSeed.innerHTML += `
                                 <li class="sspace">
-                                <div class="haha">
+                                <div class="haha ${seedRental == "불가능" ? 'on' : ""}">
                                 <p>${seedRental}</p>
                             </div>
                                 <a href="./Sdetail.html">
                                     <img src="${obj.mainImg}">
                                     <div class="ab">
                                         <p>${obj.name}</p>
-                                        <p>${obj.sciName}</p>
                                         <div class="center">
-                                            <span>상</span>
-                                            <span class="on">중</span>
-                                            <span>하</span>
+                                        <span class = "${obj.level == "상" ? "on" : ""}">상</span>
+                                        <span class = "${obj.level == "중" ? "on" : ""}">중</span>
+                                        <span class = "${obj.level == "하" ? "on" : ""}">하</span>
                                         </div>
                                     </div>
                                 </a>
@@ -172,7 +169,6 @@ fetch('./json/seed-data.json')
 
 
         itemClick.forEach(function (v, k) {
-            console.log(v);
             v.onclick = function () {
                 sessionStorage.setItem("click", k)
             }
