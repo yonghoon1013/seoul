@@ -42,16 +42,29 @@ fetch('./json/program.json')
     .then(res => { return res.json() }) // 한줄일땐 (),{]생략가능 근데 {}쓸땐 return시켜줘야함 안쓰면 필없
     .then(data => {
 
+        let a
+        let b
+
+        data.items.sort((a,b)=>{
+            if(a.end > b.end) return -1;
+            if(a.end < b.end) return 1;
+            return 0;
+        });
+
+
+
         data.items.forEach(function (obj, k) {
             let date = obj.period;
-            let start = new Date(date.split('~')[0]);
-            let end = new Date(date.split('~')[1]);
+            let date_arr = date.split('~');
+            let start = new Date(date_arr[0]);
+            let end = new Date(date_arr[1]);
             
             const allPg = document.querySelector('.all-program'),
-                    teenPg = document.querySelector('.teen-program'),
-                    familyPg = document.querySelector('.family-program'),
-                    adultPg = document.querySelector('.adult-program');
+            teenPg = document.querySelector('.teen-program'),
+            familyPg = document.querySelector('.family-program'),
+            adultPg = document.querySelector('.adult-program');
 
+            
             let i,t ='';
 
             for(i in obj.target){
@@ -189,9 +202,9 @@ fetch('./json/program.json')
         </li>
             `
         }
-
-
+        
         })
+       
 
         const itemClick = document.querySelectorAll('.all-program > li > a');
 
@@ -200,6 +213,8 @@ fetch('./json/program.json')
                 sessionStorage.setItem("click",k)
             }
         })
+
+      
 
     })
 

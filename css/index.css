@@ -61,7 +61,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {
@@ -282,8 +282,8 @@ table {
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     display: block;
     background-color: white;
     border-radius: 50%;
@@ -305,8 +305,8 @@ table {
   }
   .quick-box .quick-nav > ul > li > a .title {
     opacity: 0;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: #90BC43;
     border-radius: 50%;
     position: absolute;
@@ -433,7 +433,9 @@ body {
   overflow: hidden;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide > a .plant-month .text-box {
+  width: 330px;
   position: relative;
+  text-align: end;
 }
 .main .mainSwiper > .swiper-wrapper > .swiper-slide > a .plant-month .text-box::before {
   content: url("../img/quote-start.png");
@@ -486,7 +488,7 @@ body {
   transform: translate(-15%, -20%);
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   z-index: 10;
 }
 .main .mainSwiper .bottom-con .weather-box {
@@ -1076,7 +1078,7 @@ body {
   content: "";
   background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0) 100%);
   width: 100%;
-  height: 230px;
+  height: 300px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1084,7 +1086,7 @@ body {
 }
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info {
   width: 100%;
-  padding: 0 3%;
+  padding: 0 5%;
   text-align: left;
   position: absolute;
   left: 50%;
@@ -1093,6 +1095,7 @@ body {
   z-index: 1;
 }
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .title {
+  padding: 3px 0;
   font-size: 14px;
   color: white;
   line-height: 1.5;
@@ -1101,6 +1104,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 3px 0;
 }
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time > span {
   font-size: 12px;
@@ -1108,7 +1112,7 @@ body {
   line-height: 1.5;
 }
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time > span {
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   line-height: 1.5;
 }
@@ -1119,8 +1123,8 @@ body {
   margin-top: 20px;
 }
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > div {
-  width: 100px;
-  height: 25px;
+  width: 110px;
+  height: 30px;
   border-radius: 50px;
   background-color: #C2D42E;
   text-align: center;
@@ -1132,7 +1136,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -1198,7 +1202,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {
@@ -2464,7 +2468,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {

@@ -61,7 +61,7 @@ table {
   src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
 }
 @font-face {
-  font-family: NotoSansKR-Medium;
+  font-family: NotoSansKR-Regular;
   src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
 }
 @font-face {
@@ -282,8 +282,8 @@ table {
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     display: block;
     background-color: white;
     border-radius: 50%;
@@ -305,8 +305,8 @@ table {
   }
   .quick-box .quick-nav > ul > li > a .title {
     opacity: 0;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background-color: #90BC43;
     border-radius: 50%;
     position: absolute;
@@ -763,7 +763,7 @@ main::after {
     width: 100%;
     height: 100%;
   }
-  main .content article .swiper-slide {
+  main .content article .swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -772,8 +772,12 @@ main::after {
     height: 100%;
     object-fit: cover;
   }
-  main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
-    color: #4E813B;
+  main .content article .swiper .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+  }
+  main .content article .swiper .swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-bullet-active, #90bc43);
   }
   main .content .tab #tab_wrap {
     width: 100%;
@@ -993,7 +997,7 @@ main::after {
     width: 100%;
     height: 100%;
   }
-  main .content article .swiper-slide {
+  main .content article .swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1002,8 +1006,12 @@ main::after {
     height: 100%;
     object-fit: cover;
   }
-  main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
-    color: #4E813B;
+  main .content article .swiper .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+  }
+  main .content article .swiper .swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-bullet-active, #90bc43);
   }
   main .content .tab #info {
     line-height: 1.5;
@@ -1230,7 +1238,7 @@ main::after {
     width: 100%;
     height: 100%;
   }
-  main .content article .swiper-slide {
+  main .content article .swiper .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1239,8 +1247,12 @@ main::after {
     height: 100%;
     object-fit: cover;
   }
-  main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
-    color: #4E813B;
+  main .content article .swiper .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+  }
+  main .content article .swiper .swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-bullet-active, #90bc43);
   }
   main .content .tab #info {
     line-height: 1.5;

@@ -206,18 +206,27 @@
         display: flex;
         justify-content: center;
 
-        .numbox{
+        .numbox {
             max-width: 150px;
             overflow: hidden;
             display: flex;
             align-items: center;
+
             .number {
                 flex-shrink: 0;
                 transition: 0.5s;
-                >span{
+
+                >span {
                     text-align: center;
-                    display:inline-block;
+                    display: inline-block;
                     width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
                 }
             }
         }
@@ -454,18 +463,27 @@
         display: flex;
         justify-content: center;
 
-        .numbox{
+        .numbox {
             max-width: 150px;
             overflow: hidden;
             display: flex;
             align-items: center;
+
             .number {
                 flex-shrink: 0;
                 transition: 0.5s;
-                >span{
+
+                >span {
                     text-align: center;
-                    display:inline-block;
+                    display: inline-block;
                     width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
                 }
             }
         }
@@ -700,18 +718,27 @@
         display: flex;
         justify-content: center;
 
-        .numbox{
+        .numbox {
             max-width: 150px;
             overflow: hidden;
             display: flex;
             align-items: center;
+
             .number {
                 flex-shrink: 0;
                 transition: 0.5s;
-                >span{
+
+                >span {
                     text-align: center;
-                    display:inline-block;
+                    display: inline-block;
                     width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
                 }
             }
         }
