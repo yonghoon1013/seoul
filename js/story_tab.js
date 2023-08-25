@@ -13,14 +13,14 @@ let num=0;
 let numm = 0;
 
 subNav.forEach(function(v,k){
-    // StoryIndicator.innerText = '인사말';
+    StoryIndicator.innerText = '인사말';
     subNav[0].classList.add('active');
     subCon[0].classList.add('active');
 
 
     v.onclick = function(){
         
-        // StoryIndicator.innerText = v.innerText;
+        StoryIndicator.innerText = v.innerText;
         subNav[num].classList.remove('active');
         this.classList.add('active');
 

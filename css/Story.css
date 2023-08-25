@@ -85,6 +85,20 @@ table {
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
   }
+  #header:hover {
+    background: none;
+    background-color: white;
+  }
+  #header:hover a {
+    color: #58585A !important;
+  }
+  #header:hover .logo {
+    background-color: #447531;
+  }
+  #header:hover .lang::before {
+    content: "";
+    background-image: url("../img/lang-black.png");
+  }
   #header .head {
     max-width: 1280px;
     margin: 0 auto;
@@ -95,17 +109,10 @@ table {
   }
   #header .head .logo {
     display: block;
-    padding: 30px;
+    padding: 30px 0;
   }
   #header .head .logo > a {
     display: block;
-  }
-  #header .head .logo > a::after {
-    display: block;
-    content: url("../img/logo.png");
-  }
-  #header .head .logo > a > img {
-    display: none;
   }
   #header .head .header-nav {
     position: relative;
@@ -119,11 +126,8 @@ table {
     width: 950px;
   }
   #header .head .header-nav > ul > li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 20%;
-    padding: 45px 20px 20px 20px;
+    padding: 20px;
     transition: 0.5s;
     background-color: rgba(144, 188, 67, 0);
   }
@@ -134,9 +138,9 @@ table {
     color: white !important;
   }
   #header .head .header-nav > ul > li > a {
-    width: 100%;
     text-align: center;
     display: block;
+    padding-top: 30px;
     color: rgb(255, 255, 255);
   }
   #header .head .header-nav > ul > li > .sub-head {
@@ -152,23 +156,20 @@ table {
   #header .head .header-nav > ul > li > .sub-head > li > a:hover {
     text-decoration: underline;
   }
-  #header .head .header-nav .lang-box .lang {
+  #header .head .header-nav > .lang-box {
+    padding: 50px 0 0 50px;
+  }
+  #header .head .header-nav > .lang-box .lang {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    align-items: center;
-    color: #fff;
-    padding: 45px;
   }
-  #header .head .header-nav .lang-box .lang::before {
+  #header .head .header-nav > .lang-box .lang::before {
     content: "";
     background-image: url("../img/lang.png");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 16px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    width: 16px;
+    height: 16px;
     display: block;
     margin-right: 10px;
   }
@@ -249,25 +250,6 @@ table {
     font-weight: normal;
     color: white;
   }
-  #header:hover {
-    background: none;
-    background-color: white;
-  }
-  #header:hover a {
-    color: #58585A !important;
-  }
-  #header:hover .logo > a {
-    display: block;
-  }
-  #header:hover .logo > a::after {
-    display: block;
-    content: url("../img/logo-color.png");
-  }
-  #header:hover .lang::before {
-    content: "";
-    background-image: url("../img/lang-black.png");
-    background-color: #447531;
-  }
   #header.active {
     transform: translateY(-100%);
   }
@@ -276,7 +258,7 @@ table {
     top: 30%;
     right: 40px;
     transform: translateY(-30%);
-    z-index: 99;
+    z-index: 30;
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
@@ -389,6 +371,296 @@ table {
     margin-right: 30px;
   }
 }
+@media (max-width: 480px) {
+  #header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: none;
+    background-color: white;
+    padding: 0 20px;
+  }
+  #header .head {
+    max-width: 480px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header .head .logo {
+    background-color: #90BC43;
+  }
+  #header .head .header-nav {
+    display: none;
+    width: 950px;
+  }
+  #header .head .header-nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #header .head .header-nav > ul > li > a {
+    color: rgb(255, 255, 255);
+  }
+  #header .head .header-nav > ul > li .lang {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  #header .head .header-nav > ul > li .lang::before {
+    content: "";
+    background-image: url("../img/lang.png");
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-right: 10px;
+  }
+  #header .head .hammenu {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: none;
+    z-index: 12;
+    cursor: pointer;
+  }
+  #header .head .hammenu .ham {
+    width: 20px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #header .head .hammenu .ham span {
+    transition: all 0.2s linear;
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: black;
+  }
+  #header .head .hammenu .ham span:nth-of-type(1) {
+    top: 0%;
+  }
+  #header .head .hammenu .ham span:nth-of-type(2) {
+    top: 50%;
+  }
+  #header .head .hammenu .ham span:nth-of-type(3) {
+    top: 100%;
+  }
+  #header .head .ham-drop-box {
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 50px;
+    bottom: 0;
+    overflow: auto;
+    position: fixed;
+    background-color: #fff;
+    padding: 10px 20px;
+  }
+  #header .head .ham-drop-box .logo {
+    display: none;
+    background-color: white;
+    text-align: left;
+    height: 50px;
+    padding: 0 0 0 20px;
+  }
+  #header .head .ham-drop-box .logo a img {
+    display: none;
+  }
+  #header .head .ham-drop-box .ham-drop {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 0;
+  }
+  #header .head .ham-drop-box .ham-drop > li {
+    width: 100%;
+    line-height: 2;
+  }
+  #header .head .ham-drop-box .ham-drop > li > a {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: black;
+    position: relative;
+    padding: 18px 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  #header .head .ham-drop-box .ham-drop > li > a::after {
+    content: "";
+    background-image: url("../img/icon-angle_down_black.svg");
+    width: 20px;
+    height: 20px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+  #header .head .ham-drop-box .ham-drop > li > .on {
+    color: #90BC43;
+  }
+  #header .head .ham-drop-box .ham-drop > li > .on::after {
+    content: "";
+    background-image: url("../img/icon-angle_down_black.svg");
+    transform: translateY(-50%) rotate(180deg);
+  }
+  #header .head .ham-drop-box .ham-drop > li ul {
+    display: none;
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 10px 30px;
+  }
+  #header .head .ham-drop-box .ham-drop > li ul li {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  #header .head .ham-drop-box .ham-drop > li ul li a {
+    padding: 15px 0px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+  }
+  .quick-box {
+    display: none;
+    position: fixed;
+    top: 30%;
+    right: 40px;
+    transform: translateY(-30%);
+    z-index: 30;
+  }
+  .quick-box .quick-nav > ul > li {
+    margin-bottom: 30%;
+  }
+  .quick-box .quick-nav > ul > li > a {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px -5px #777;
+    border: 1px solid #90BC43;
+  }
+  .quick-box .quick-nav > ul > li > a .quick-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .quick-box .quick-nav > ul > li > a .quick-con > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+  }
+  .quick-box .quick-nav > ul > li > a .title {
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #90BC43;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .quick-box .quick-nav > ul > li > a .title > span {
+    color: white;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .quick-box .quick-nav > ul > li > a:hover {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+  }
+  .quick-box .quick-nav > ul > li > a:hover .quick-con {
+    opacity: 0;
+  }
+  .quick-box .quick-nav > ul > li > a:hover > .title {
+    opacity: 1;
+  }
+  #footer {
+    height: 220px;
+    background-color: #447531;
+  }
+  #footer .footer-con {
+    display: block;
+    padding-top: 20px;
+  }
+  #footer .footer-con > .left {
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #footer .footer-con > .left > img {
+    width: 100%;
+  }
+  #footer .footer-con > .right {
+    line-height: 2;
+  }
+  #footer .footer-con > .right .footer-nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #footer .footer-con > .right .footer-nav > ul > li {
+    margin-right: 15px;
+    color: white;
+    padding-left: 10px;
+    position: relative;
+    font-size: 14px;
+  }
+  #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
+    padding: 0px;
+  }
+  #footer .footer-con > .right .footer-nav > ul > li::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: #d1d1d1;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1)::before {
+    display: none;
+    padding: 0px;
+  }
+  #footer .footer-con > .right .footer-nav .footer-info > p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+  }
+  #footer .footer-con > .right .sns > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #footer .footer-con > .right .sns > ul > li {
+    margin-right: 30px;
+  }
+}
 .bg {
   position: relative;
   background-image: url("../StoryImg/botanical-garden-g68d9c33f3_1920_2.png");
@@ -424,7 +696,7 @@ table {
 }
 
 .indicator {
-  max-width: 1320px;
+  max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
@@ -459,35 +731,33 @@ table {
 }
 
 @media (max-width: 480px) {
-  main {
-    min-width: 380px;
-  }
-  main .bg {
+  .bg {
     height: 200px;
   }
-  main .indicator {
+  .indicator {
     padding: 0 20px;
   }
-  main .story_con {
+  main {
     margin: 0 auto;
     max-width: none;
     padding: 0 20px;
+    min-width: 380px;
   }
-  main .story_con .intro_top {
+  main .intro_top {
     width: 100%;
     padding: 0;
   }
-  main .story_con .intro_top .sub_nav {
+  main .intro_top .sub_nav {
     margin-bottom: 100px;
   }
-  main .story_con .intro_top .sub_nav ul {
+  main .intro_top .sub_nav ul {
     margin: 0 auto;
     width: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro_top .sub_nav ul li {
+  main .intro_top .sub_nav ul li {
     list-style: none;
     color: #58585A;
     cursor: pointer;
@@ -495,38 +765,39 @@ table {
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro_top .sub_nav ul li.active {
+  main .intro_top .sub_nav ul li.active {
     color: #4E813B;
   }
-  main .story_con .intro_top .sub_nav ul li.active::after {
+  main .intro_top .sub_nav ul li.active::after {
     content: "";
     display: block;
     margin-top: 6px;
     width: 100%;
     height: 2px;
     background-color: #4E813B;
+    border-radius: 50%;
   }
-  main .story_con .intro .intro_content {
+  main .intro .intro_content {
     display: none;
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro1 {
+  main .intro .intro_content .intro1 {
     padding-bottom: 150px;
     background: url("../StoryImg/intro_Img/bg_greetings.png") no-repeat bottom right;
     background-size: auto 150px;
   }
-  main .story_con .intro .intro_content .intro1 .wel {
+  main .intro .intro_content .intro1 .wel {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #58585A;
     margin-bottom: 33px;
   }
-  main .story_con .intro .intro_content .intro1 .wel span {
+  main .intro .intro_content .intro1 .wel span {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
     color: #4E813B;
   }
-  main .story_con .intro .intro_content .intro1 p {
+  main .intro .intro_content .intro1 p {
     color: #58585A;
     text-align: justify;
     font-size: 14px;
@@ -536,23 +807,23 @@ table {
     letter-spacing: -0.8px;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom {
+  main .intro .intro_content .intro1 .intro_bottom {
     width: 100%;
     text-align: right;
     margin: 16px 0;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom span {
+  main .intro .intro_content .intro1 .intro_bottom span {
     vertical-align: top;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
     font-size: 14px;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom .intro_ssain {
+  main .intro .intro_content .intro1 .intro_bottom .intro_ssain {
     margin-left: 9px;
     width: 130px;
     display: inline;
   }
-  main .story_con .intro .intro_content .intro2 .sub_title {
+  main .intro .intro_content .intro2 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -562,36 +833,36 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content {
+  main .intro .intro_content .intro2 .mission_content {
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul {
+  main .intro .intro_content .intro2 .mission_content ul {
     overflow: hidden;
     display: block;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li {
+  main .intro .intro_content .intro2 .mission_content ul li {
     padding: 10px;
     width: 50%;
     float: left;
     vertical-align: top;
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li img {
+  main .intro .intro_content .intro2 .mission_content ul li img {
     display: block;
     width: 70px;
     height: 70px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p {
+  main .intro .intro_content .intro2 .mission_content ul li p {
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     font-style: normal;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(1) {
+  main .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(1) {
     margin-top: 10px;
     color: #4E813B;
     font-size: 20px;
@@ -599,23 +870,23 @@ table {
     letter-spacing: -1.4px;
     margin: 19px 0 13px 0;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(2) {
+  main .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(2) {
     color: #58585A;
     font-size: 14px;
     font-weight: 350;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content {
+  main .intro .intro_content .intro2 .bision_content {
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul {
+  main .intro .intro_content .intro2 .bision_content ul {
     position: relative;
     display: block;
     justify-content: space-between;
     align-items: center;
     padding: 0;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li {
+  main .intro .intro_content .intro2 .bision_content ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -623,53 +894,53 @@ table {
     height: 310px;
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
     width: 50%;
     height: 310px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
     width: 50%;
     height: 310px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
     width: 50%;
     height: 310px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
     background: url("../StoryImg/Bisun_Img/lawn-mower-g53d33278b_1920_1.png") no-repeat rgba(0, 0, 0, 0.28);
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
     background: url("../StoryImg/Bisun_Img/wild-geese-ge6987b61d_1920_1.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
     background: url("../StoryImg/Bisun_Img/garden-gad35ad0c5_1920_1.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th {
     width: 50%;
     height: 310px;
     position: relative;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p {
     position: relative;
     z-index: 10;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     font-weight: 700;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(1) {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -684,14 +955,14 @@ table {
     line-height: normal;
     letter-spacing: -1px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(2) {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(2) {
     margin-top: 10px;
     color: #58585A;
     font-size: 24px;
     line-height: normal;
     letter-spacing: -1.4px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(3) {
     display: block;
     margin-top: 13px;
     color: #58585A;
@@ -702,35 +973,35 @@ table {
     line-height: normal;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1) {
     background: none;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2) {
     background: none;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3) {
     background: none;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:hover {
+  main .intro .intro_content .intro2 .bision_content ul li:hover {
     width: 100%;
     transition: all 0.3s ease 0s;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .rule_explan {
+  main .intro .intro_content .intro2 .rule_explan {
     margin: -7px 0 45px 0;
     text-align: center;
     font-family: "Noto Sans KR", sans-serif;
@@ -741,20 +1012,20 @@ table {
     max-width: 1100px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content {
+  main .intro .intro_content .intro2 .rule_content {
     display: block;
     align-items: center;
     max-width: 1100px;
     margin: 52px auto 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left {
+  main .intro .intro_content .intro2 .rule_content .rule_left {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 510px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left p {
+  main .intro .intro_content .intro2 .rule_content .rule_left p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -772,13 +1043,13 @@ table {
     letter-spacing: -1.2px;
     margin: 0 0 52px 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .rule_content .rule_left p:nth-of-type(3) {
     margin-bottom: 52px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content {
     margin: 0 0 45px 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > p {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > p {
     line-height: normal;
     font-family: "Noto Sans KR", sans-serif;
     margin-bottom: 13px;
@@ -788,11 +1059,11 @@ table {
     font-weight: 400;
     letter-spacing: -1.4px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -802,7 +1073,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li::before {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -811,10 +1082,10 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content:nth-of-type(4) {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content:nth-of-type(4) {
     margin: 0 0 0 0;
   }
-  main .story_con .intro .intro_content .intro3 .sub_title {
+  main .intro .intro_content .intro3 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -824,24 +1095,24 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content {
+  main .intro .intro_content .intro3 .bi_content {
     width: 100%;
     display: block;
     align-items: top;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left {
+  main .intro .intro_content .intro3 .bi_content .bi_left {
     margin-right: 20px;
     position: relative;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .explan {
+  main .intro .intro_content .intro3 .bi_content .bi_left .explan {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
     font-weight: 350;
     line-height: 1.5;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down {
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -849,7 +1120,7 @@ table {
     bottom: 0;
     left: 0;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -865,41 +1136,41 @@ table {
     line-height: normal;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div a {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div a {
     color: white;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(1) {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(1) {
     margin-right: 11px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(2) {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(2) {
     width: 176px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_right {
+  main .intro .intro_content .intro3 .bi_content .bi_right {
     display: none;
     margin-top: 20px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_right img {
+  main .intro .intro_content .intro3 .bi_content .bi_right img {
     width: 200px;
     height: 187px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_line {
+  main .intro .intro_content .intro3 .bi_line {
     border: 1px solid #CBCBCB;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom {
+  main .intro .intro_content .intro3 .bi_bottom {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div {
+  main .intro .intro_content .intro3 .bi_bottom > div {
     width: 30%;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div img {
+  main .intro .intro_content .intro3 .bi_bottom > div img {
     width: 100%;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div p {
+  main .intro .intro_content .intro3 .bi_bottom > div p {
     margin-top: 20px;
     transform: translateY(-30px);
     text-align: center;
@@ -908,7 +1179,7 @@ table {
     font-weight: 300;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .sub_title {
+  main .intro .intro_content .intro4 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -918,46 +1189,46 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro4 .road_map {
+  main .intro .intro_content .intro4 .road_map {
     width: 100%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav {
+  main .intro .intro_content .intro4 .traffic_nav {
     margin-top: 75px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul {
+  main .intro .intro_content .intro4 .traffic_nav ul {
     width: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul span {
+  main .intro .intro_content .intro4 .traffic_nav ul span {
     color: #CBCBCB;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li {
+  main .intro .intro_content .intro4 .traffic_nav ul li {
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li a {
+  main .intro .intro_content .intro4 .traffic_nav ul li a {
     cursor: pointer;
     color: #58585A;
     font-size: 18px;
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li.active a {
+  main .intro .intro_content .intro4 .traffic_nav ul li.active a {
     color: #4E813B;
     font-size: 20px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de {
+  main .intro .intro_content .intro4 .traffic .traffic_de {
     display: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos {
     margin-bottom: 55px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > h2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > h2 {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
@@ -966,7 +1237,7 @@ table {
     line-height: normal;
     margin-bottom: 18px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -977,7 +1248,7 @@ table {
     line-height: normal;
     margin-bottom: 9px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p::before {
     content: "";
     display: inline-block;
     background-size: cover;
@@ -985,43 +1256,43 @@ table {
     height: 21px;
     margin-right: 11px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_01.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_05.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_04.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_06.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_02.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
     margin-bottom: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_03.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos {
     display: flex;
     align-items: center;
     margin-bottom: 14px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1031,10 +1302,10 @@ table {
     line-height: normal;
     margin: 0 10px 0 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p:nth-of-type(1) {
     color: #AA9872;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1048,33 +1319,33 @@ table {
     font-weight: 400;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
     color: #8B50A4;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) span {
     background-color: #8B50A4;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) span {
     background-color: #8CADCB;
     width: 45px;
     height: 24px;
     border-radius: 23px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) p:nth-of-type(1) {
     display: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos {
     margin-bottom: 60px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation {
     display: flex;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation span {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
@@ -1082,7 +1353,7 @@ table {
     line-height: normal;
     margin-right: 14px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation h2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation h2 {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
@@ -1090,11 +1361,11 @@ table {
     line-height: normal;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1104,7 +1375,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -1113,17 +1384,17 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -1132,7 +1403,7 @@ table {
     line-height: normal;
     margin-right: 15px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div p {
     display: inline-flex;
     align-items: center;
     color: #58585A;
@@ -1142,15 +1413,15 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box {
     height: 104px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1168,31 +1439,31 @@ table {
     line-height: normal;
     padding: 0 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
     width: 8%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(2) {
     width: 21.3%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(3) {
     width: 14%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(4) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(4) {
     width: 35%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(5) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(5) {
     width: 22%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul:nth-of-type(2) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul:nth-of-type(2) li {
     height: 64px;
     background-color: #fff;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
     margin-bottom: 60px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1202,7 +1473,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -1211,10 +1482,10 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -1224,7 +1495,7 @@ table {
     margin-right: 15px;
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di p {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -1235,7 +1506,7 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di a {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di a {
     color: #4E813B;
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
@@ -1243,16 +1514,16 @@ table {
     margin-top: 5px;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 {
     height: 835px;
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1270,19 +1541,19 @@ table {
     line-height: normal;
     padding: 0 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
     width: 16%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(2) {
     width: 25%;
     margin-right: -2px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul li:nth-of-type(3) {
     width: 59.2%;
     text-align: left;
     justify-content: left;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
     display: flex;
@@ -1290,20 +1561,20 @@ table {
     justify-content: center;
     text-align: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(5) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(5) li {
     margin-bottom: -2px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -1312,7 +1583,7 @@ table {
     line-height: normal;
     margin-right: 15px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div p {
     display: inline-flex;
     align-items: center;
     color: #58585A;
@@ -1322,15 +1593,15 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box {
     height: 245px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li {
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -1348,30 +1619,30 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(1) {
     width: 8%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(2) {
     width: 21.3%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(3) {
     width: 14%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(4) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(4) {
     width: 35%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(5) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(5) {
     width: 22%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul:nth-of-type(1) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1381,7 +1652,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -1390,7 +1661,7 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > div a {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > div a {
     color: #4E813B;
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
@@ -1398,40 +1669,40 @@ table {
     margin-top: 5px;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de.active {
+  main .intro .intro_content .intro4 .traffic .traffic_de.active {
     display: block;
   }
-  main .story_con .intro .intro_content.active {
+  main .intro .intro_content.active {
     display: block;
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
-  main .bg {
+  .bg {
     height: 200px;
   }
-  main .indicator {
+  .indicator {
     padding: 0 20px;
   }
-  main .story_con {
+  main {
     margin: 0 auto;
     max-width: 1320px;
     padding: 0 20px;
   }
-  main .story_con .intro_top {
+  main .intro_top {
     width: 100%;
     padding: 0;
   }
-  main .story_con .intro_top .sub_nav {
+  main .intro_top .sub_nav {
     margin-bottom: 100px;
   }
-  main .story_con .intro_top .sub_nav ul {
+  main .intro_top .sub_nav ul {
     margin: 0 auto;
     width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro_top .sub_nav ul li {
+  main .intro_top .sub_nav ul li {
     list-style: none;
     color: #58585A;
     cursor: pointer;
@@ -1439,38 +1710,39 @@ table {
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro_top .sub_nav ul li.active {
+  main .intro_top .sub_nav ul li.active {
     color: #4E813B;
   }
-  main .story_con .intro_top .sub_nav ul li.active::after {
+  main .intro_top .sub_nav ul li.active::after {
     content: "";
     display: block;
     margin-top: 6px;
     width: 100%;
     height: 2px;
     background-color: #4E813B;
+    border-radius: 50%;
   }
-  main .story_con .intro .intro_content {
+  main .intro .intro_content {
     display: none;
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro1 {
+  main .intro .intro_content .intro1 {
     padding-bottom: 150px;
     background: url("../StoryImg/intro_Img/bg_greetings.png") no-repeat bottom right;
     background-size: auto 150px;
   }
-  main .story_con .intro .intro_content .intro1 .wel {
+  main .intro .intro_content .intro1 .wel {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #58585A;
     margin-bottom: 33px;
   }
-  main .story_con .intro .intro_content .intro1 .wel span {
+  main .intro .intro_content .intro1 .wel span {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
     color: #4E813B;
   }
-  main .story_con .intro .intro_content .intro1 p {
+  main .intro .intro_content .intro1 p {
     color: #58585A;
     text-align: justify;
     font-size: 14px;
@@ -1480,23 +1752,23 @@ table {
     letter-spacing: -0.8px;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom {
+  main .intro .intro_content .intro1 .intro_bottom {
     width: 100%;
     text-align: right;
     margin: 16px 0;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom span {
+  main .intro .intro_content .intro1 .intro_bottom span {
     vertical-align: top;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
     font-size: 14px;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom .intro_ssain {
+  main .intro .intro_content .intro1 .intro_bottom .intro_ssain {
     margin-left: 9px;
     width: 130px;
     display: inline;
   }
-  main .story_con .intro .intro_content .intro2 .sub_title {
+  main .intro .intro_content .intro2 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -1506,36 +1778,36 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content {
+  main .intro .intro_content .intro2 .mission_content {
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul {
+  main .intro .intro_content .intro2 .mission_content ul {
     overflow: hidden;
     display: block;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li {
+  main .intro .intro_content .intro2 .mission_content ul li {
     padding: 20px;
     width: 50%;
     float: left;
     vertical-align: top;
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li img {
+  main .intro .intro_content .intro2 .mission_content ul li img {
     display: block;
     width: 70px;
     height: 70px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p {
+  main .intro .intro_content .intro2 .mission_content ul li p {
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     font-style: normal;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(1) {
+  main .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(1) {
     margin-top: 10px;
     color: #4E813B;
     font-size: 24px;
@@ -1543,23 +1815,23 @@ table {
     letter-spacing: -1.4px;
     margin: 19px 0 13px 0;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(2) {
+  main .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(2) {
     color: #58585A;
     font-size: 14px;
     font-weight: 350;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content {
+  main .intro .intro_content .intro2 .bision_content {
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul {
+  main .intro .intro_content .intro2 .bision_content ul {
     position: relative;
     display: block;
     justify-content: space-between;
     align-items: center;
     padding: 0;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li {
+  main .intro .intro_content .intro2 .bision_content ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1567,53 +1839,53 @@ table {
     height: 310px;
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
     width: 50%;
     height: 310px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
     width: 50%;
     height: 310px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
     width: 50%;
     height: 310px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left1 {
     background: url("../StoryImg/Bisun_Img/lawn-mower-g53d33278b_1920_1.png") no-repeat rgba(0, 0, 0, 0.28);
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left2 {
     background: url("../StoryImg/Bisun_Img/wild-geese-ge6987b61d_1920_1.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_res_left3 {
     background: url("../StoryImg/Bisun_Img/garden-gad35ad0c5_1920_1.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th {
     width: 50%;
     height: 310px;
     position: relative;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p {
     position: relative;
     z-index: 10;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     font-weight: 700;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(1) {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1628,14 +1900,14 @@ table {
     line-height: normal;
     letter-spacing: -1px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(2) {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(2) {
     margin-top: 10px;
     color: #58585A;
     font-size: 24px;
     line-height: normal;
     letter-spacing: -1.4px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li .bi_th > div p:nth-of-type(3) {
     display: block;
     margin-top: 13px;
     color: #58585A;
@@ -1646,35 +1918,35 @@ table {
     line-height: normal;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1) {
     background: none;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2) {
     background: none;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3) {
     background: none;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:hover {
+  main .intro .intro_content .intro2 .bision_content ul li:hover {
     width: 100%;
     transition: all 0.3s ease 0s;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .rule_explan {
+  main .intro .intro_content .intro2 .rule_explan {
     margin: -7px 0 45px 0;
     text-align: center;
     font-family: "Noto Sans KR", sans-serif;
@@ -1685,20 +1957,20 @@ table {
     max-width: 1100px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content {
+  main .intro .intro_content .intro2 .rule_content {
     display: block;
     align-items: center;
     max-width: 1100px;
     margin: 52px auto 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left {
+  main .intro .intro_content .intro2 .rule_content .rule_left {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 510px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left p {
+  main .intro .intro_content .intro2 .rule_content .rule_left p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1716,13 +1988,13 @@ table {
     letter-spacing: -1.2px;
     margin: 0 0 52px 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .rule_content .rule_left p:nth-of-type(3) {
     margin-bottom: 52px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content {
     margin: 0 0 45px 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > p {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > p {
     line-height: normal;
     font-family: "Noto Sans KR", sans-serif;
     margin-bottom: 13px;
@@ -1732,11 +2004,11 @@ table {
     font-weight: 400;
     letter-spacing: -1.4px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1746,7 +2018,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li::before {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -1755,10 +2027,10 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content:nth-of-type(4) {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content:nth-of-type(4) {
     margin: 0 0 0 0;
   }
-  main .story_con .intro .intro_content .intro3 .sub_title {
+  main .intro .intro_content .intro3 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -1768,24 +2040,24 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content {
+  main .intro .intro_content .intro3 .bi_content {
     width: 100%;
     display: block;
     align-items: top;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left {
+  main .intro .intro_content .intro3 .bi_content .bi_left {
     margin-right: 20px;
     position: relative;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .explan {
+  main .intro .intro_content .intro3 .bi_content .bi_left .explan {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
     font-weight: 350;
     line-height: 1.5;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down {
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -1793,7 +2065,7 @@ table {
     bottom: 0;
     left: 0;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1809,41 +2081,41 @@ table {
     line-height: normal;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div a {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div a {
     color: white;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 300;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(1) {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(1) {
     margin-right: 11px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(2) {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(2) {
     width: 176px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_right {
+  main .intro .intro_content .intro3 .bi_content .bi_right {
     display: none;
     margin-top: 20px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_right img {
+  main .intro .intro_content .intro3 .bi_content .bi_right img {
     width: 200px;
     height: 187px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_line {
+  main .intro .intro_content .intro3 .bi_line {
     border: 1px solid #CBCBCB;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom {
+  main .intro .intro_content .intro3 .bi_bottom {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div {
+  main .intro .intro_content .intro3 .bi_bottom > div {
     width: 30%;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div img {
+  main .intro .intro_content .intro3 .bi_bottom > div img {
     width: 100%;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div p {
+  main .intro .intro_content .intro3 .bi_bottom > div p {
     margin-top: 20px;
     transform: translateY(-30px);
     text-align: center;
@@ -1852,7 +2124,7 @@ table {
     font-weight: 300;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .sub_title {
+  main .intro .intro_content .intro4 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -1862,46 +2134,46 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro4 .road_map {
+  main .intro .intro_content .intro4 .road_map {
     width: 100%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav {
+  main .intro .intro_content .intro4 .traffic_nav {
     margin-top: 75px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul {
+  main .intro .intro_content .intro4 .traffic_nav ul {
     width: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul span {
+  main .intro .intro_content .intro4 .traffic_nav ul span {
     color: #CBCBCB;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li {
+  main .intro .intro_content .intro4 .traffic_nav ul li {
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li a {
+  main .intro .intro_content .intro4 .traffic_nav ul li a {
     cursor: pointer;
     color: #58585A;
     font-size: 18px;
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li.active a {
+  main .intro .intro_content .intro4 .traffic_nav ul li.active a {
     color: #4E813B;
     font-size: 20px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de {
+  main .intro .intro_content .intro4 .traffic .traffic_de {
     display: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos {
     margin-bottom: 55px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > h2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > h2 {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
@@ -1910,7 +2182,7 @@ table {
     line-height: normal;
     margin-bottom: 18px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1921,7 +2193,7 @@ table {
     line-height: normal;
     margin-bottom: 9px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p::before {
     content: "";
     display: inline-block;
     background-size: cover;
@@ -1929,43 +2201,43 @@ table {
     height: 21px;
     margin-right: 11px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_01.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_05.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_04.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_06.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_02.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
     margin-bottom: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_03.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos {
     display: flex;
     align-items: center;
     margin-bottom: 14px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -1975,10 +2247,10 @@ table {
     line-height: normal;
     margin: 0 10px 0 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p:nth-of-type(1) {
     color: #AA9872;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1992,33 +2264,33 @@ table {
     font-weight: 400;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
     color: #8B50A4;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) span {
     background-color: #8B50A4;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) span {
     background-color: #8CADCB;
     width: 45px;
     height: 24px;
     border-radius: 23px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) p:nth-of-type(1) {
     display: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos {
     margin-bottom: 60px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation {
     display: flex;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation span {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
@@ -2026,7 +2298,7 @@ table {
     line-height: normal;
     margin-right: 14px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation h2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation h2 {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
@@ -2034,11 +2306,11 @@ table {
     line-height: normal;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2048,7 +2320,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -2057,17 +2329,17 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -2076,7 +2348,7 @@ table {
     line-height: normal;
     margin-right: 15px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div p {
     display: inline-flex;
     align-items: center;
     color: #58585A;
@@ -2086,15 +2358,15 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box {
     height: 104px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2112,31 +2384,31 @@ table {
     line-height: normal;
     padding: 0 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
     width: 8%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(2) {
     width: 21.3%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(3) {
     width: 14%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(4) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(4) {
     width: 35%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(5) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(5) {
     width: 22%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul:nth-of-type(2) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul:nth-of-type(2) li {
     height: 64px;
     background-color: #fff;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
     margin-bottom: 60px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2146,7 +2418,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -2155,10 +2427,10 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -2168,7 +2440,7 @@ table {
     margin-right: 15px;
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di p {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -2179,7 +2451,7 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di a {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di a {
     color: #4E813B;
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
@@ -2187,16 +2459,16 @@ table {
     margin-top: 5px;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 {
     height: 835px;
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2214,19 +2486,19 @@ table {
     line-height: normal;
     padding: 0 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
     width: 16%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(2) {
     width: 25%;
     margin-right: -2px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul li:nth-of-type(3) {
     width: 59.2%;
     text-align: left;
     justify-content: left;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
     display: flex;
@@ -2234,20 +2506,20 @@ table {
     justify-content: center;
     text-align: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(5) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(5) li {
     margin-bottom: -2px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -2256,7 +2528,7 @@ table {
     line-height: normal;
     margin-right: 15px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div p {
     display: inline-flex;
     align-items: center;
     color: #58585A;
@@ -2266,15 +2538,15 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box {
     height: 245px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li {
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -2292,30 +2564,30 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(1) {
     width: 8%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(2) {
     width: 21.3%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(3) {
     width: 14%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(4) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(4) {
     width: 35%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(5) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(5) {
     width: 22%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul:nth-of-type(1) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2325,7 +2597,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -2334,7 +2606,7 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > div a {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > div a {
     color: #4E813B;
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
@@ -2342,37 +2614,37 @@ table {
     margin-top: 5px;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de.active {
+  main .intro .intro_content .intro4 .traffic .traffic_de.active {
     display: block;
   }
-  main .story_con .intro .intro_content.active {
+  main .intro .intro_content.active {
     display: block;
   }
 }
 @media (min-width: 1024px) {
-  main .indicator {
+  .indicator {
     padding: 0 20px;
   }
-  main .story_con {
+  main {
     margin: 0 auto;
     max-width: 1320px;
     padding: 0 20px;
   }
-  main .story_con .intro_top {
+  main .intro_top {
     width: 100%;
     padding: 0;
   }
-  main .story_con .intro_top .sub_nav {
+  main .intro_top .sub_nav {
     margin-bottom: 100px;
   }
-  main .story_con .intro_top .sub_nav ul {
+  main .intro_top .sub_nav ul {
     margin: 0 auto;
     width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro_top .sub_nav ul li {
+  main .intro_top .sub_nav ul li {
     list-style: none;
     color: #58585A;
     cursor: pointer;
@@ -2380,39 +2652,40 @@ table {
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro_top .sub_nav ul li.active::after {
+  main .intro_top .sub_nav ul li.active::after {
     content: "";
     display: block;
     margin-top: 6px;
     width: 100%;
     height: 2px;
     background-color: #4E813B;
+    border-radius: 50%;
   }
-  main .story_con .intro_top .sub_nav ul li.active {
+  main .intro_top .sub_nav ul li.active {
     color: #4E813B;
   }
-  main .story_con .intro .intro_content {
+  main .intro .intro_content {
     display: none;
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro1 {
+  main .intro .intro_content .intro1 {
     width: 100%;
     height: 895px;
     background: url("../StoryImg/intro_Img/bg_greetings.png") no-repeat bottom right;
     background-size: 456px;
   }
-  main .story_con .intro .intro_content .intro1 .wel {
+  main .intro .intro_content .intro1 .wel {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
     color: #58585A;
     margin-bottom: 33px;
   }
-  main .story_con .intro .intro_content .intro1 .wel span {
+  main .intro .intro_content .intro1 .wel span {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 24px;
     color: #4E813B;
   }
-  main .story_con .intro .intro_content .intro1 p {
+  main .intro .intro_content .intro1 p {
     color: #58585A;
     text-align: justify;
     font-size: 16px;
@@ -2422,22 +2695,22 @@ table {
     letter-spacing: -0.8px;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom {
+  main .intro .intro_content .intro1 .intro_bottom {
     width: 100%;
     text-align: right;
     margin-top: 16px;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom span {
+  main .intro .intro_content .intro1 .intro_bottom span {
     vertical-align: top;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
   }
-  main .story_con .intro .intro_content .intro1 .intro_bottom .intro_ssain {
+  main .intro .intro_content .intro1 .intro_bottom .intro_ssain {
     margin-left: 9px;
     width: 190px;
     display: inline;
   }
-  main .story_con .intro .intro_content .intro2 .sub_title {
+  main .intro .intro_content .intro2 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -2447,67 +2720,67 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content {
+  main .intro .intro_content .intro2 .mission_content {
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul {
+  main .intro .intro_content .intro2 .mission_content ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li {
+  main .intro .intro_content .intro2 .mission_content ul li {
     vertical-align: top;
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li img {
+  main .intro .intro_content .intro2 .mission_content ul li img {
     display: block;
     width: 70px;
     height: 70px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p {
+  main .intro .intro_content .intro2 .mission_content ul li p {
     margin: 0;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     font-style: normal;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(1) {
+  main .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(1) {
     color: #4E813B;
     font-size: 28px;
     font-weight: 400;
     letter-spacing: -1.4px;
     margin: 19px 0 13px 0;
   }
-  main .story_con .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(2) {
+  main .intro .intro_content .intro2 .mission_content ul li p:nth-of-type(2) {
     color: #58585A;
     font-size: 16px;
     font-weight: 350;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content {
+  main .intro .intro_content .intro2 .bision_content {
     margin-bottom: 100px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul {
+  main .intro .intro_content .intro2 .bision_content ul {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li {
+  main .intro .intro_content .intro2 .bision_content ul li {
     width: 100%;
     height: 532px;
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li p {
+  main .intro .intro_content .intro2 .bision_content ul li p {
     position: relative;
     z-index: 10;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     font-weight: 700;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li p:nth-of-type(1) {
+  main .intro .intro_content .intro2 .bision_content ul li p:nth-of-type(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2521,14 +2794,14 @@ table {
     line-height: normal;
     letter-spacing: -1px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li p:nth-of-type(2) {
+  main .intro .intro_content .intro2 .bision_content ul li p:nth-of-type(2) {
     margin-top: 10px;
     color: #FFF;
     font-size: 28px;
     line-height: normal;
     letter-spacing: -1.4px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li p:nth-of-type(3) {
     display: none;
     margin-top: 13px;
     color: #FFF;
@@ -2539,35 +2812,35 @@ table {
     line-height: normal;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1) {
     background: url("../StoryImg/Bisun_Img/lawn-mower-g53d33278b_1920_1.png") no-repeat rgba(0, 0, 0, 0.28);
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2) {
     background: url("../StoryImg/Bisun_Img/wild-geese-ge6987b61d_1920_1.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3) {
     background: url("../StoryImg/Bisun_Img/garden-gad35ad0c5_1920_1.png") no-repeat;
     background-size: cover;
     background-position: center;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:hover {
+  main .intro .intro_content .intro2 .bision_content ul li:hover {
     width: 200%;
     transition: all 0.3s ease 0s;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(1):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(2):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3):hover p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .bision_content ul li:nth-of-type(3):hover p:nth-of-type(3) {
     display: block;
   }
-  main .story_con .intro .intro_content .intro2 .rule_explan {
+  main .intro .intro_content .intro2 .rule_explan {
     margin: -7px 0 45px 0;
     text-align: center;
     font-family: "Noto Sans KR", sans-serif;
@@ -2578,13 +2851,13 @@ table {
     max-width: 1100px;
     margin: 0 auto;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content {
+  main .intro .intro_content .intro2 .rule_content {
     display: flex;
     align-items: center;
     max-width: 1100px;
     margin: 52px auto 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left p {
+  main .intro .intro_content .intro2 .rule_content .rule_left p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2602,13 +2875,13 @@ table {
     letter-spacing: -1.2px;
     margin: 0 0 52px 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_left p:nth-of-type(3) {
+  main .intro .intro_content .intro2 .rule_content .rule_left p:nth-of-type(3) {
     margin-bottom: 0;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content {
     margin: 0 0 58px 110px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > p {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > p {
     line-height: normal;
     font-family: "Noto Sans KR", sans-serif;
     margin-bottom: 13px;
@@ -2618,11 +2891,11 @@ table {
     font-weight: 400;
     letter-spacing: -1.4px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2632,7 +2905,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li::before {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -2641,10 +2914,10 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content:nth-of-type(4) {
+  main .intro .intro_content .intro2 .rule_content .rule_right .rule_right_content:nth-of-type(4) {
     margin: 0 0 0 110px;
   }
-  main .story_con .intro .intro_content .intro3 .sub_title {
+  main .intro .intro_content .intro3 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -2654,32 +2927,32 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content {
+  main .intro .intro_content .intro3 .bi_content {
     display: flex;
     align-items: top;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left {
+  main .intro .intro_content .intro3 .bi_content .bi_left {
     margin-right: 110px;
     width: 860px;
     height: 187px;
     position: relative;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .explan {
+  main .intro .intro_content .intro3 .bi_content .bi_left .explan {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     font-weight: 350;
     line-height: 1.5;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down {
     display: flex;
     align-items: center;
     position: absolute;
     bottom: 0;
     left: 0;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2695,34 +2968,34 @@ table {
     line-height: normal;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div a {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div a {
     color: white;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 400;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(1) {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(1) {
     margin-right: 11px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(2) {
+  main .intro .intro_content .intro3 .bi_content .bi_left .down > div:nth-of-type(2) {
     width: 176px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_content .bi_right img {
+  main .intro .intro_content .intro3 .bi_content .bi_right img {
     width: 200px;
     height: 187px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_line {
+  main .intro .intro_content .intro3 .bi_line {
     border: 1px solid #CBCBCB;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom {
+  main .intro .intro_content .intro3 .bi_bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div img {
+  main .intro .intro_content .intro3 .bi_bottom > div img {
     width: 400px;
     height: 373px;
   }
-  main .story_con .intro .intro_content .intro3 .bi_bottom > div p {
+  main .intro .intro_content .intro3 .bi_bottom > div p {
     margin: 0;
     transform: translateY(-30px);
     text-align: center;
@@ -2731,7 +3004,7 @@ table {
     font-weight: 300;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .sub_title {
+  main .intro .intro_content .intro4 .sub_title {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -2741,46 +3014,46 @@ table {
     line-height: normal;
     margin-bottom: 45px;
   }
-  main .story_con .intro .intro_content .intro4 .road_map {
+  main .intro .intro_content .intro4 .road_map {
     width: 100%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav {
+  main .intro .intro_content .intro4 .traffic_nav {
     margin-top: 75px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul {
+  main .intro .intro_content .intro4 .traffic_nav ul {
     width: 552px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul span {
+  main .intro .intro_content .intro4 .traffic_nav ul span {
     color: #CBCBCB;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li {
+  main .intro .intro_content .intro4 .traffic_nav ul li {
     list-style: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li a {
+  main .intro .intro_content .intro4 .traffic_nav ul li a {
     cursor: pointer;
     color: #58585A;
     font-size: 20px;
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro4 .traffic_nav ul li.active a {
+  main .intro .intro_content .intro4 .traffic_nav ul li.active a {
     color: #4E813B;
     font-size: 24px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de {
+  main .intro .intro_content .intro4 .traffic .traffic_de {
     display: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos {
     margin-bottom: 55px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > h2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > h2 {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
@@ -2789,7 +3062,7 @@ table {
     line-height: normal;
     margin-bottom: 18px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2800,7 +3073,7 @@ table {
     line-height: normal;
     margin-bottom: 9px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p::before {
     content: "";
     display: inline-block;
     background-size: cover;
@@ -2808,43 +3081,43 @@ table {
     height: 21px;
     margin-right: 11px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(1)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_01.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(2)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_05.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(3)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_04.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(4)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_06.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos > p:nth-of-type(5)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_02.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-last-of-type(1) {
     margin-bottom: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic1 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(3)::before {
     content: "";
     background: url("../StoryImg/road_Img/i_bus_03.png") no-repeat;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos {
     display: flex;
     align-items: center;
     margin-bottom: 14px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2854,10 +3127,10 @@ table {
     line-height: normal;
     margin: 0 10px 0 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos p:nth-of-type(1) {
     color: #AA9872;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2871,33 +3144,33 @@ table {
     font-weight: 500;
     font-family: "Noto Sans KR", sans-serif;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
     color: #8B50A4;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(3) span {
     background-color: #8B50A4;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) span {
     background-color: #8CADCB;
     width: 45px;
     height: 24px;
     border-radius: 23px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) p:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic2 .traffic_content .traffic_pos:nth-of-type(4) p:nth-of-type(1) {
     display: none;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos {
     margin-bottom: 60px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation {
     display: flex;
     align-items: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation span {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation span {
     color: #000;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
@@ -2905,7 +3178,7 @@ table {
     line-height: normal;
     margin-right: 14px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation h2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos .navgation h2 {
     color: #58585A;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
@@ -2913,11 +3186,11 @@ table {
     line-height: normal;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -2927,7 +3200,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic3 .traffic_content .traffic_pos > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -2936,17 +3209,17 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -2955,7 +3228,7 @@ table {
     line-height: normal;
     margin-right: 15px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .traffic_pos > div p {
     display: inline-flex;
     align-items: center;
     color: #58585A;
@@ -2965,15 +3238,15 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box {
     height: 104px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2990,31 +3263,31 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
     width: 8%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(2) {
     width: 21.3%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(3) {
     width: 14%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(4) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(4) {
     width: 35%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(5) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul > li:nth-of-type(5) {
     width: 22%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul:nth-of-type(2) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box > ul:nth-of-type(2) li {
     height: 64px;
     background-color: #fff;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
     margin-bottom: 60px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -3024,7 +3297,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -3033,10 +3306,10 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -3046,7 +3319,7 @@ table {
     margin-right: 15px;
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di p {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -3057,7 +3330,7 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di a {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .di a {
     color: #4E813B;
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
@@ -3065,16 +3338,16 @@ table {
     margin-top: 5px;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 {
     height: 664px;
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3091,20 +3364,20 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
     width: 16%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul > li:nth-of-type(2) {
     width: 25%;
     margin-right: -2px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul li:nth-of-type(3) {
     width: 59.2%;
     text-align: left;
     justify-content: left;
     padding: 0 20px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
     display: flex;
@@ -3112,20 +3385,20 @@ table {
     justify-content: center;
     text-align: center;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(5) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic4 .traffic_content .box2 > ul:nth-of-type(5) li {
     margin-bottom: -2px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_line {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_line {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div {
     margin-bottom: 5px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div h3 {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
     color: #000;
@@ -3134,7 +3407,7 @@ table {
     line-height: normal;
     margin-right: 15px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div p {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .traffic_pos > div p {
     display: inline-flex;
     align-items: center;
     color: #58585A;
@@ -3144,15 +3417,15 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box {
     height: 228px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3169,30 +3442,30 @@ table {
     font-weight: 350;
     line-height: normal;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(1) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(1) {
     width: 8%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(2) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(2) {
     width: 21.3%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(3) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(3) {
     width: 14%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(4) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(4) {
     width: 35%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(5) {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul li:nth-of-type(5) {
     width: 22%;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul:nth-of-type(1) li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content .box ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
@@ -3202,7 +3475,7 @@ table {
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li::before {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -3211,7 +3484,7 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > div a {
+  main .intro .intro_content .intro4 .traffic .traffic_de .traffic5 .traffic_content > div a {
     color: #4E813B;
     display: inline-block;
     font-family: "Noto Sans KR", sans-serif;
@@ -3219,593 +3492,10 @@ table {
     margin-top: 5px;
     margin-right: 10px;
   }
-  main .story_con .intro .intro_content .intro4 .traffic .traffic_de.active {
+  main .intro .intro_content .intro4 .traffic .traffic_de.active {
     display: block;
   }
-  main .story_con .intro .intro_content.active {
+  main .intro .intro_content.active {
     display: block;
   }
 }
-@media (min-width: 481px) and (max-width: 1023px) {
-  #header {
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    background: none;
-    background-color: white;
-    padding: 20px 20px;
-  }
-  #header .head {
-    max-width: 760px;
-    height: 50px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #header .head .logo > a > img {
-    width: 80%;
-  }
-  #header .head .header-nav {
-    display: none;
-    width: 950px;
-  }
-  #header .head .header-nav > ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  #header .head .header-nav > ul > li > a {
-    color: rgb(255, 255, 255);
-  }
-  #header .head .header-nav > ul > li .lang {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
-  #header .head .header-nav > ul > li .lang::before {
-    content: "";
-    background-image: url("../img/lang.png");
-    background-size: 16px;
-    width: 16px;
-    height: 16px;
-    display: block;
-    margin-right: 10px;
-  }
-  #header .head .hammenu {
-    position: relative;
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: none;
-    z-index: 12;
-    cursor: pointer;
-  }
-  #header .head .hammenu .ham {
-    width: 20px;
-    height: 14px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #header .head .hammenu .ham span {
-    transition: all 0.2s linear;
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    display: block;
-    background-color: black;
-  }
-  #header .head .hammenu .ham span:nth-of-type(1) {
-    top: 0%;
-  }
-  #header .head .hammenu .ham span:nth-of-type(2) {
-    top: 50%;
-  }
-  #header .head .hammenu .ham span:nth-of-type(3) {
-    top: 100%;
-  }
-  #header .head .ham-drop-box {
-    display: none;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 70px;
-    bottom: 0;
-    overflow: auto;
-    position: fixed;
-    background-color: #fff;
-    padding: 10px 20px;
-  }
-  #header .head .ham-drop-box .logo {
-    display: none;
-    background-color: white;
-    text-align: left;
-    height: 50px;
-    padding: 0 0 0 20px;
-  }
-  #header .head .ham-drop-box .logo a img {
-    display: none;
-  }
-  #header .head .ham-drop-box .ham-drop {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    padding: 0;
-  }
-  #header .head .ham-drop-box .ham-drop > li {
-    width: 100%;
-    line-height: 2;
-  }
-  #header .head .ham-drop-box .ham-drop > li > a {
-    text-align: left;
-    height: 54px;
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0px;
-    color: black;
-    position: relative;
-    padding: 18px 10px;
-    border-bottom: 1px solid #f0f0f0;
-  }
-  #header .head .ham-drop-box .ham-drop > li > a::after {
-    content: "";
-    background-image: url("../img/icon-angle_down_black.svg");
-    width: 20px;
-    height: 20px;
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 18px;
-    transform: translateY(-50%);
-    transition: 0.3s;
-  }
-  #header .head .ham-drop-box .ham-drop > li > .on {
-    color: #90BC43;
-  }
-  #header .head .ham-drop-box .ham-drop > li > .on::after {
-    content: "";
-    background-image: url("../img/icon-angle_down_black.svg");
-    transform: translateY(-50%) rotate(180deg);
-  }
-  #header .head .ham-drop-box .ham-drop > li ul {
-    display: none;
-    background-color: #f8f9fa;
-    width: 100%;
-    padding: 10px 30px;
-  }
-  #header .head .ham-drop-box .ham-drop > li ul li {
-    text-align: left;
-    margin-bottom: 0;
-    padding: 10px 0px;
-  }
-  #header .head .ham-drop-box .ham-drop > li ul li a {
-    display: block;
-    margin-bottom: 0;
-    font-size: 16px;
-    font-weight: normal;
-    color: black;
-  }
-  .quick-box {
-    display: none;
-    position: fixed;
-    top: 30%;
-    right: 40px;
-    transform: translateY(-30%);
-    z-index: 30;
-  }
-  .quick-box .quick-nav > ul > li {
-    margin-bottom: 30%;
-  }
-  .quick-box .quick-nav > ul > li > a {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    display: block;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
-  }
-  .quick-box .quick-nav > ul > li > a .quick-con {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .quick-box .quick-nav > ul > li > a .quick-con > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-  }
-  .quick-box .quick-nav > ul > li > a .title {
-    opacity: 0;
-    width: 70px;
-    height: 70px;
-    background-color: #90BC43;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .quick-box .quick-nav > ul > li > a .title > span {
-    color: white;
-    white-space: nowrap;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .quick-box .quick-nav > ul > li > a:hover {
-    animation: swing 1s ease;
-    animation-iteration-count: 1;
-  }
-  .quick-box .quick-nav > ul > li > a:hover .quick-con {
-    opacity: 0;
-  }
-  .quick-box .quick-nav > ul > li > a:hover > .title {
-    opacity: 1;
-  }
-  #footer {
-    height: 220px;
-    background-color: #447531;
-  }
-  #footer .footer-con {
-    display: block;
-    padding-top: 20px;
-  }
-  #footer .footer-con > .left {
-    width: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  #footer .footer-con > .left > img {
-    width: 100%;
-  }
-  #footer .footer-con > .right {
-    line-height: 2;
-  }
-  #footer .footer-con > .right .footer-nav > ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #footer .footer-con > .right .footer-nav > ul > li {
-    margin-right: 15px;
-    color: white;
-    padding-left: 10px;
-    position: relative;
-    font-size: 14px;
-  }
-  #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
-    padding: 0px;
-  }
-  #footer .footer-con > .right .footer-nav > ul > li::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 15px;
-    background: #d1d1d1;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1)::before {
-    display: none;
-    padding: 0px;
-  }
-  #footer .footer-con > .right .footer-nav .footer-info > p {
-    text-align: center;
-    color: white;
-    font-size: 14px;
-  }
-  #footer .footer-con > .right .sns > ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  #footer .footer-con > .right .sns > ul > li {
-    margin-right: 30px;
-  }
-}
-@media (max-width: 480px) {
-  #header {
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    background: none;
-    background-color: white;
-    padding: 10px 20px;
-  }
-  #header .head {
-    max-width: 480px;
-    height: 50px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #header .head .logo > a > img {
-    width: 70%;
-  }
-  #header .head .header-nav {
-    display: none;
-    width: 950px;
-  }
-  #header .head .header-nav > ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  #header .head .header-nav > ul > li > a {
-    color: rgb(255, 255, 255);
-  }
-  #header .head .header-nav > ul > li .lang {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-  }
-  #header .head .header-nav > ul > li .lang::before {
-    content: "";
-    background-image: url("../img/lang.png");
-    background-size: 16px;
-    width: 16px;
-    height: 16px;
-    display: block;
-    margin-right: 10px;
-  }
-  #header .head .hammenu {
-    position: relative;
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: none;
-    z-index: 12;
-    cursor: pointer;
-  }
-  #header .head .hammenu .ham {
-    width: 20px;
-    height: 14px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #header .head .hammenu .ham span {
-    transition: all 0.2s linear;
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    display: block;
-    background-color: black;
-  }
-  #header .head .hammenu .ham span:nth-of-type(1) {
-    top: 0%;
-  }
-  #header .head .hammenu .ham span:nth-of-type(2) {
-    top: 50%;
-  }
-  #header .head .hammenu .ham span:nth-of-type(3) {
-    top: 100%;
-  }
-  #header .head .ham-drop-box {
-    display: none;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 60px;
-    bottom: 0;
-    overflow: auto;
-    position: fixed;
-    background-color: #fff;
-    padding: 10px 20px;
-  }
-  #header .head .ham-drop-box .logo {
-    display: none;
-    background-color: white;
-    text-align: left;
-    height: 50px;
-    padding: 0 0 0 20px;
-  }
-  #header .head .ham-drop-box .logo a img {
-    display: none;
-  }
-  #header .head .ham-drop-box .ham-drop {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    padding: 0;
-  }
-  #header .head .ham-drop-box .ham-drop > li {
-    width: 100%;
-    line-height: 2;
-  }
-  #header .head .ham-drop-box .ham-drop > li > a {
-    display: block;
-    text-align: left;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 0px;
-    color: black;
-    position: relative;
-    padding: 18px 10px;
-    border-bottom: 1px solid #f0f0f0;
-  }
-  #header .head .ham-drop-box .ham-drop > li > a::after {
-    content: "";
-    background-image: url("../img/icon-angle_down_black.svg");
-    width: 20px;
-    height: 20px;
-    background-size: 12px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 18px;
-    transform: translateY(-50%);
-    transition: 0.3s;
-  }
-  #header .head .ham-drop-box .ham-drop > li > .on {
-    color: #90BC43;
-  }
-  #header .head .ham-drop-box .ham-drop > li > .on::after {
-    content: "";
-    background-image: url("../img/icon-angle_down_black.svg");
-    transform: translateY(-50%) rotate(180deg);
-  }
-  #header .head .ham-drop-box .ham-drop > li ul {
-    display: none;
-    background-color: #f8f9fa;
-    width: 100%;
-    padding: 10px 30px;
-  }
-  #header .head .ham-drop-box .ham-drop > li ul li {
-    text-align: left;
-    margin-bottom: 0;
-    padding: 5px 0px;
-  }
-  #header .head .ham-drop-box .ham-drop > li ul li a {
-    display: block;
-    margin-bottom: 0;
-    font-size: 16px;
-    font-weight: normal;
-    color: black;
-  }
-  .quick-box {
-    display: none;
-    position: fixed;
-    top: 30%;
-    right: 40px;
-    transform: translateY(-30%);
-    z-index: 30;
-  }
-  .quick-box .quick-nav > ul > li {
-    margin-bottom: 30%;
-  }
-  .quick-box .quick-nav > ul > li > a {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    display: block;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
-  }
-  .quick-box .quick-nav > ul > li > a .quick-con {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .quick-box .quick-nav > ul > li > a .quick-con > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-  }
-  .quick-box .quick-nav > ul > li > a .title {
-    opacity: 0;
-    width: 70px;
-    height: 70px;
-    background-color: #90BC43;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .quick-box .quick-nav > ul > li > a .title > span {
-    color: white;
-    white-space: nowrap;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .quick-box .quick-nav > ul > li > a:hover {
-    animation: swing 1s ease;
-    animation-iteration-count: 1;
-  }
-  .quick-box .quick-nav > ul > li > a:hover .quick-con {
-    opacity: 0;
-  }
-  .quick-box .quick-nav > ul > li > a:hover > .title {
-    opacity: 1;
-  }
-  #footer {
-    height: 220px;
-    background-color: #447531;
-  }
-  #footer .footer-con {
-    display: block;
-    padding-top: 20px;
-  }
-  #footer .footer-con > .left {
-    width: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  #footer .footer-con > .left > img {
-    width: 100%;
-  }
-  #footer .footer-con > .right {
-    line-height: 2;
-  }
-  #footer .footer-con > .right .footer-nav > ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #footer .footer-con > .right .footer-nav > ul > li {
-    margin-right: 15px;
-    color: white;
-    padding-left: 10px;
-    position: relative;
-    font-size: 14px;
-  }
-  #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
-    padding: 0px;
-  }
-  #footer .footer-con > .right .footer-nav > ul > li::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 15px;
-    background: #d1d1d1;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1)::before {
-    display: none;
-    padding: 0px;
-  }
-  #footer .footer-con > .right .footer-nav .footer-info > p {
-    text-align: center;
-    color: white;
-    font-size: 14px;
-  }
-  #footer .footer-con > .right .sns > ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  #footer .footer-con > .right .sns > ul > li {
-    margin-right: 30px;
-  }
-}/*# sourceMappingURL=Story.css.map */
