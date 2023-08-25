@@ -510,8 +510,7 @@ table {
   }
   .space .ttt .im img {
     margin: 0 auto;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 80vw;
     aspect-ratio: 1;
     border-radius: 50px;
@@ -671,8 +670,7 @@ table {
     height: 400px;
   }
   .space .ttt .im img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     aspect-ratio: 1;
     border-radius: 50px;
@@ -830,8 +828,7 @@ table {
     height: 400px;
   }
   .space .ttt .im img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     aspect-ratio: 1;
     border-radius: 50px;

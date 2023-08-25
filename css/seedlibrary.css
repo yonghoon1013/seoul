@@ -539,8 +539,7 @@ main .content article .swiper-slide {
   display: block;
   width: 80%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
   color: #4E813B;
@@ -771,8 +770,7 @@ main::after {
     display: block;
     width: 80%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
     color: #4E813B;
@@ -1002,8 +1000,7 @@ main::after {
     display: block;
     width: 80%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
     color: #4E813B;
@@ -1240,8 +1237,7 @@ main::after {
     display: block;
     width: 80%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .content article .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
     color: #4E813B;
