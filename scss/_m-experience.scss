@@ -60,7 +60,7 @@
             @include main-width(){
                 margin-bottom: 100px
             };
-            padding: 0px 30px;
+            padding: 0px 20px;
             >p{
                 text-align: center;
                 margin-bottom: 50px;
@@ -81,6 +81,7 @@
     
                     >.right{
                         width: 100%;
+                        margin: 50px auto;
                         >.title{
                             font-size: 18px;
                             color: #4E813B;
@@ -101,9 +102,10 @@
                                 width: 100%;
                                 >dl{
                                     @include flex();
+                                    align-items: center;
                                     line-height: 3;
                                     >dt{                    
-                                        font-size: 12px;
+                                        font-size: 14px;
                                         color: #4E813B;
                                         &::after{
                                             content: ':';
@@ -111,7 +113,7 @@
                                         }
                                     }
                                     >dd{
-                                        font-size: 12px;
+                                        font-size: 14px;
                                     }
                                 }
                             }
@@ -120,15 +122,16 @@
                 }
                 .reservation-btn-box{
                     @include flex(flex-end,center);
+                    flex-direction: column;
                     >a{
                         display: block;
-                        margin-left: 10px;
-                        width: 60px;
-                        height: 25px;
-                        border-radius: 20px;
+                        margin: 10px auto;
+                        width: 100%;
+                        height: 45px;
+                        border-radius: 10px;
                         border: 1px solid #90BC43;
                         >span{
-                            font-size: 12px;
+                            font-size: 14px;
                             width: 100%;
                             height: 100%;
                             @include flex(center,center);
@@ -180,8 +183,7 @@
                                     >.title{
                                         position: relative;
                                         padding: 30px 0px;
-                                        border-top:  2px solid #90BC43;
-                                        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+                                        border-bottom:  2px solid #90BC43;
                                         padding-left: 150px;
                                         cursor: pointer;
                                         &::before{
@@ -205,8 +207,9 @@
                                     }
                                     >.content{
                                         display: none;
+                                        word-break: break-all;
                                         padding: 30px 0px;
-                                        padding-left: 150px;
+                                        padding-left: 10px;
                                         line-height: 2;
                                     }
                                 }
@@ -234,15 +237,17 @@
                             text-align: center;
                             margin-bottom: 40px;
                         }
-                        .traffic-tab{
-                            @include flex(space-between,center);
-                            margin: 60px 0;
+                        .traffic-nav{
+                            width: auto;
+                            @include flex(space-evenly,center);
+                            margin-top: 75px;
                             >li{
+                                font-size: 18px;
                                 cursor: pointer;
                             }
                             >li.on{
                                 color: #4E813B;
-                                font-size: 24px;
+                                font-size: 20px;
                             }
                         }
     

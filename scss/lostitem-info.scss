@@ -2,7 +2,7 @@
 @import "_mixin";
 @import "_inc";
 
-@media(min-width:1280px) {
+@media(min-width:1024px) {
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -83,8 +83,8 @@
         align-items: center;
 
         p {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
+
         }
     }
 
@@ -101,9 +101,10 @@
             margin: 36px auto;
             line-height: 25px;
 
-            button {
-                cursor: pointer;
-                width: 180px;
+            a {
+                display: block;
+                margin: 0 auto ;                
+                width: 200px;
                 height: 54px;
                 border-radius: 10px;
                 border: none;
@@ -111,6 +112,7 @@
 
                 p {
                     color: white;
+                    padding-top: 13px;
                 }
 
             }
@@ -125,11 +127,12 @@
         margin: 76px auto;
 
         input {
-            margin-left: 20px;
+            margin-left: 10px;
             border-radius: 10px;
         }
 
         input:nth-of-type(1) {
+            border: 1px solid #8e8e8f;
             width: 310px;
             height: 39px;
             text-align: center;
@@ -147,17 +150,18 @@
 
     //검색
     .nnn {
-        max-width: 1325px;
+        max-width: 1280px;
         margin: 0 auto;
+        gap:4%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-            width: 20%;
-            height: 250px;
-            margin: 15.5px 20.5px;
+            width: 22%;
+            aspect-ratio: 1;
+            margin-bottom: 50px;
             position: relative;
 
             a {
@@ -228,7 +232,7 @@
     //갤러리
 }
 
-@media(min-width:481px) and (max-width:1279px) {
+@media(min-width:481px) and (max-width:1023px) {
     .bg {
         position: relative;
         background-image: url("../img/bg111.png");
@@ -309,8 +313,7 @@
         align-items: center;
 
         p {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
         }
     }
 
@@ -327,18 +330,19 @@
             padding: 50px;
             margin: 36px auto;
             line-height: 25px;
-
-            button {
-                cursor: pointer;
-                width: 180px;
+            word-break: keep-all;
+            a {
+                display: block;
+                margin: 0 auto;
+                width: 200px;
                 height: 54px;
                 border-radius: 10px;
                 border: none;
                 background-color: #90BC43;
 
                 p {
-
                     color: white;
+                    padding-top: 13px;
                 }
 
             }
@@ -375,17 +379,19 @@
 
     //검색
     .nnn {
-        max-width: 1325px;
+        gap: 6%;
         margin: 0 auto;
+        padding-left: 6%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
 
         .sspace {
-            width: 40%;
+            width: 44%;
+            margin-bottom: 40px;
             aspect-ratio: 1;
-            margin: 10px 15px;
+            
             position: relative;
 
             a {
@@ -537,8 +543,7 @@
         align-items: center;
 
         p {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 20px;
         }
     }
 
@@ -550,24 +555,30 @@
         width: 90%;
         border: 3px solid #90BC43;
         border-radius: 20px;
-
         .inner {
             padding: 20px;
             margin: 36px auto;
             line-height: 25px;
-
-            button {
-                cursor: pointer;
-                width: 180px;
+            word-break: keep-all;
+            p{
+                font-size: 14px;
+            }
+           
+            a {
+                display: block;
+                margin: 0 auto;
+                width: 200px;
                 height: 54px;
                 border-radius: 10px;
                 border: none;
                 background-color: #90BC43;
 
                 p {
+                    
                     color: white;
+                    padding-top: 13px;
+                   
                 }
-
             }
         }
     }
@@ -578,7 +589,7 @@
         justify-content: center;
         align-items: center;
         margin: 76px auto;
-
+        padding-right: 20px;
         input {
             margin-left: 20px;
             border-radius: 10px;
@@ -602,7 +613,6 @@
 
     //검색
     .nnn {
-        max-width: 1325px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -682,3 +692,5 @@
 
     //갤러리
 }
+@import "t-inc";
+@import "m-inc";

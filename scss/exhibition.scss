@@ -2,7 +2,7 @@
 @import "_mixin";
 @import "_inc";
 
-@media(min-width:1280px){
+@media(min-width:1024px){
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -74,37 +74,40 @@
         align-items: center;
         margin-bottom: 95px;
         p{
-            font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     //부제목
     
     .nnn{
-        max-width: 1325px;
+        max-width: 1280px;
+        gap: 4%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
         list-style-type: none;
        li{
-        margin: 0 20.5px;
-        width: 20%;
+        
+        width: 22%;
         .ssspace{
             width: 100%;
             display: flex;
             flex-direction: column;
             margin-bottom: 31px;
             span{
+                color: rgb(40, 40, 40);
+                border-radius: 100px;
+                font-weight: bold;
                 margin:13px 0;
                 background-color: #C2D42E;
                 width: 70px; height: 25px;
-                border-radius: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
             p{
+               
                 color: #58585A;
                 line-height: 1.5;
                 font-weight: bold;
@@ -122,7 +125,9 @@
             span{
                 background-color: #F0A12A;
                 color: white;
-            }
+                width: 80px;
+                height: 28px;
+            }      
         }
         .sspace{
             width: 100%;
@@ -133,6 +138,28 @@
                 border-radius: 20px;
                 width:100%; height: 100%;
             }
+        }
+        .sspace.on{
+            .ab {
+                z-index: 2;
+                position: absolute;
+                bottom: 45%;
+                width: 100%;
+                text-align: center;
+                line-height: 1.5;
+
+                p {
+                    color: white;
+                }
+            }
+              &::after{
+                         content:'';
+                         position:absolute;
+                         bottom: 0; left: 0;
+                         width: 100%; height: 100%;
+                         border-radius: 20px;
+                         background: rgba(0, 0, 0, 0.5);
+                 }
         }
        }
        
@@ -163,7 +190,7 @@
         }
       }
 }
-@media(min-width:481px) and (max-width:1279px){
+@media(min-width:481px) and (max-width:1023px){
     .bg{
         position: relative;
         background-image: url("../img/bg111.png");
@@ -235,37 +262,40 @@
         align-items: center;
         margin-bottom: 95px;
         p{
-            font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     //부제목
     
     .nnn{
-        max-width: 1325px;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 6%;
+        padding-left: 6%;
         flex-wrap: wrap;
         list-style-type: none;
        li{
-        margin: 0 20.5px;
-        width: 40%;
+        
+        width: 44%;
         .ssspace{
             width: 100%;
             display: flex;
             flex-direction: column;
             margin-bottom: 31px;
             span{
+                color: rgb(40, 40, 40);
+                border-radius: 100px;
+                font-weight: bold;
                 margin:13px 0;
                 background-color: #C2D42E;
                 width: 70px; height: 25px;
-                border-radius: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
             p{
+                word-break: keep-all;
                 color: #58585A;
                 line-height: 1.5;
                 font-weight: bold;
@@ -283,6 +313,8 @@
             span{
                 background-color: #F0A12A;
                 color: white;
+                width: 80px;
+                height: 28px;
             }
         }
         .sspace{
@@ -294,6 +326,28 @@
                 border-radius: 20px;
                 width:100%; height: 100%;
             }
+        }
+        .sspace.on{
+            .ab {
+                z-index: 2;
+                position: absolute;
+                bottom: 45%;
+                width: 100%;
+                text-align: center;
+                line-height: 1.5;
+
+                p {
+                    color: white;
+                }
+            }
+              &::after{
+                         content:'';
+                         position:absolute;
+                         bottom: 0; left: 0;
+                         width: 100%; height: 100%;
+                         border-radius: 20px;
+                         background: rgba(0, 0, 0, 0.5);
+                 }
         }
        }
        
@@ -396,14 +450,12 @@
         align-items: center;
         margin-bottom: 95px;
         p{
-            font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
         }
     }
     //부제목
     
     .nnn{
-        max-width: 1325px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -418,10 +470,12 @@
             flex-direction: column;
             margin-bottom: 31px;
             span{
+                color: rgb(40, 40, 40);
+                border-radius: 100px;
+                font-weight: bold;
                 margin:13px 0;
                 background-color: #C2D42E;
                 width: 70px; height: 25px;
-                border-radius: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -444,6 +498,8 @@
             span{
                 background-color: #F0A12A;
                 color: white;
+                width: 80px;
+                height: 28px;
             }
         }
         .sspace{
@@ -455,6 +511,28 @@
                 border-radius: 20px;
                 width:100%; height: 100%;
             }
+        }
+        .sspace.on{
+            .ab {
+                z-index: 2;
+                position: absolute;
+                bottom: 45%;
+                width: 100%;
+                text-align: center;
+                line-height: 1.5;
+
+                p {
+                    color: white;
+                }
+            }
+              &::after{
+                         content:'';
+                         position:absolute;
+                         bottom: 0; left: 0;
+                         width: 100%; height: 100%;
+                         border-radius: 20px;
+                         background: rgba(0, 0, 0, 0.5);
+                 }
         }
        }
        
@@ -486,3 +564,5 @@
       }
 }
 
+@import "t-inc";
+@import "m-inc";

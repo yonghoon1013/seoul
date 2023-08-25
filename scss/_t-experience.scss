@@ -1,7 +1,7 @@
 @import "_reset";
 @import "_mixin";
 
-@media (min-width:481px) and (max-width:760px){
+@media (min-width:481px) and (max-width:1023px){
 
     .main{
 
@@ -58,7 +58,7 @@
     
         .experience-detail{
             @include main-width(){
-                margin-bottom: 100px
+                margin-bottom: 120px
             };
             padding: 0px 30px;
             >p{
@@ -73,23 +73,23 @@
                         width: 100%;
     
                         >img{
+                            margin: 0 auto;
                             border-radius: 10px;
-                            width: 100%;
+                            width: 80%;
     
                         }
                     }
     
                     >.right{
-                        width: 100%;
+                        max-width: 80%;
+                        margin: 50px auto;
                         >.title{
-                            font-size: 18px;
+                            font-size: 20px;
                             color: #4E813B;
                             margin: 25px 0;
                         }
                         >ul{
-                            @include flex(){
-                                flex-wrap: wrap;
-                            };
+                          
                             .a{
                                 width: 100%;
                             }
@@ -100,21 +100,22 @@
                                 width: 100%;
                             }
                             >li{
-                                width: 50%;
+                                width: 100%;
                                 >dl{
                                     @include flex();
+                                    align-items: center;
                                     line-height: 3;
                                     >dt{                    
-                                        font-size: 12px;
+                                        font-size: 16px;
                                         color: #4E813B;
                                         &::after{
                                             content: ':';
                                             padding: 0px 10px;
                                         }
                                     }
-                                    >dd{
-                                        font-size: 12px;
-                                    }
+                                    dd{
+                                        font-size: 14px;
+                                    } 
                                 }
                             }
                         }
@@ -122,15 +123,16 @@
                 }
                 .reservation-btn-box{
                     @include flex(flex-end,center);
+                    flex-direction: column;
                     >a{
                         display: block;
-                        margin-left: 10px;
-                        width: 60px;
-                        height: 25px;
-                        border-radius: 20px;
+                        margin: 10px auto;
+                        width: 100%;
+                        height: 45px;
+                        border-radius: 10px;
                         border: 1px solid #90BC43;
                         >span{
-                            font-size: 12px;
+                            font-size: 16px;
                             width: 100%;
                             height: 100%;
                             @include flex(center,center);
@@ -156,9 +158,10 @@
                         width: 50%;
                         padding-bottom: 10px;
                         border-bottom: 2px solid #EDEDED;
-                        margin-bottom: 50px;
+                        margin-bottom: 100px;
                     }
                     >li.on{
+                        font-size: 18px;
                         border-bottom: 2px solid #4E813B;
                     }
                 }
@@ -182,8 +185,7 @@
                                     >.title{
                                         position: relative;
                                         padding: 30px 0px;
-                                        border-top:  2px solid #90BC43;
-                                        border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+                                        border-bottom:  2px solid #90BC43;
                                         padding-left: 150px;
                                         cursor: pointer;
                                         &::before{
@@ -206,13 +208,16 @@
                                         }
                                     }
                                     >.content{
+                                        word-break: keep-all;
                                         display: none;
                                         padding: 30px 0px;
-                                        padding-left: 150px;
+                                        padding-left: 50px;
                                         line-height: 2;
                                     }
                                 }
+                            
                                 >li.on{
+                      
                                     >.title{
                                         &::after{
                                             content: '';
@@ -233,18 +238,21 @@
                     }
                     .map-con{
                         >p{
+                            font-size: 28px;
                             text-align: center;
                             margin-bottom: 40px;
                         }
-                        .traffic-tab{
-                            @include flex(space-between,center);
-                            margin: 60px 0;
+                        .traffic-nav{
+                            width: auto;
+                            @include flex(space-evenly,center);
+                            margin-top: 75px 0;
                             >li{
+                                font-size: 18px;
                                 cursor: pointer;
                             }
                             >li.on{
                                 color: #4E813B;
-                                font-size: 24px;
+                                font-size: 20px;
                             }
                         }
     
@@ -261,7 +269,7 @@
                                             margin-bottom: 55px;
                                             >h2{
                                                 color: #58585A;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-style: normal;
                                                 font-weight: bold;
                                                 line-height: normal;
@@ -271,7 +279,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-style: normal;
                                                 font-weight: 350;
                                                 line-height: normal;
@@ -329,7 +337,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-weight: 350;
                                                 line-height: normal;
                                                 margin: 0 10px 0 0;
@@ -346,7 +354,7 @@
                                                 color: white;
                                                 border-radius: 50%;
                                                 margin-right: 10px;
-                                                font-size: 14px;
+                                                font-size: 12px;
                                                 font-weight: 500;
                                                 line-height: normal;
                                             }
@@ -382,7 +390,7 @@
                                                 span{
                                                     color: #000;
     
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-weight: 400;
                                                     line-height: normal;
                                                     margin-right: 14px;
@@ -390,7 +398,7 @@
                                                 h2{
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-weight: 350;
                                                     line-height: normal;
                                                     margin: 0;
@@ -404,7 +412,7 @@
                                                     align-items: center;
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-weight: 350;
                                                     line-height: 1.7;
                                                     letter-spacing: -0.8px;
@@ -436,7 +444,7 @@
                                                     display: inline-block;
     
                                                     color: #000;
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-weight: 500;
                                                     line-height: normal;
                                                     margin-right: 15px;
@@ -446,7 +454,7 @@
                                                     align-items: center;
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-style: normal;
                                                     font-weight: 350;
                                                     line-height: normal;
@@ -472,7 +480,7 @@
                                                     background-color: #d9d9d9;
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 10px;
                                                     font-weight: 350;
                                                     line-height: normal;
                     
@@ -506,7 +514,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-weight: 350;
                                                 line-height: 1.7;
                                                 letter-spacing: -0.8px;
@@ -525,7 +533,7 @@
                                             h3{
                                                 display: inline-block;
                                                 color: #000;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-weight: 500;
                                                 line-height: normal;
                                                 margin-right: 15px;
@@ -536,7 +544,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-style: normal;
                                                 font-weight: 350;
                                                 line-height: normal;
@@ -544,7 +552,7 @@
                                             a{
                                                 color: #4E813B;
                                                 display: inline-block;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 margin-top: 5px;
                                                 margin-right: 10px;
                                             }
@@ -569,7 +577,7 @@
                                                     background-color: white;
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 10px;
                                                     font-weight: 350;
                                                     line-height: normal;
                     
@@ -609,15 +617,23 @@
                                         margin: 30px 0;
                                     }
                                     .traffic_content{
+                                        div{
+                                            a{
+                                                font-size: 14px;
+                                            }
+                                        }
+
+                                       
                                         .traffic_pos{
                                             margin-bottom: 30px;
+
                                             >div{
                                                 margin-bottom: 5px;
                                                 h3{
                                                     display: inline-block;
     
                                                     color: #000;
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-weight: 500;
                                                     line-height: normal;
                                                     margin-right: 15px;
@@ -627,13 +643,14 @@
                                                     align-items: center;
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 14px;
                                                     font-style: normal;
                                                     font-weight: 350;
                                                     line-height: normal;
                                                 }
-                                            }
+                                                                                           
                                         }
+                                        
                                         .box{
                                             height: 228px;
                                             ul{
@@ -653,7 +670,7 @@
                                                     background-color: #fff;
                                                     color: #58585A;
     
-                                                    font-size: 16px;
+                                                    font-size: 10px;
                                                     font-weight: 350;
                                                     line-height: normal;
                     
@@ -686,7 +703,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
-                                                font-size: 16px;
+                                                font-size: 14px;
                                                 font-weight: 350;
                                                 line-height: 1.7;
                                                 letter-spacing: -0.8px;
@@ -713,6 +730,7 @@
             }
         }
     }
-
-
 }
+}
+
+

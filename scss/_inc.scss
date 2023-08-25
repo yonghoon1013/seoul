@@ -1,4 +1,4 @@
-@media(min-width:1280px) {
+@media(min-width:1024px) {
 
     //헤더
     #header {
@@ -9,26 +9,6 @@
         background: linear-gradient(360deg, rgba(0, 0, 0, 0.00) 0.01%, rgba(55, 55, 55, 0.5) 100%);
         transition: 0.5s;
 
-        &:hover {
-            background: none;
-            background-color: white;
-
-            a {
-                color: #58585A !important;
-            }
-
-            .logo {
-                background-color: #447531;
-            }
-
-            .lang {
-                &::before {
-                    content: "";
-                    background-image: url("../img/lang-black.png");
-                }
-            }
-        }
-
         .head {
             max-width: 1280px;
             margin: 0 auto;
@@ -37,12 +17,16 @@
 
             .logo {
                 display: block;
-                padding: 30px 0;
-
+                padding: 30px;
                 >a {
                     display: block;
-
-                    >img {}
+                    &::after{
+                        display: block;
+                        content: url('../img/logo.png');
+                    }
+                    >img{
+                        display: none;
+                    }
                 }
             }
 
@@ -52,22 +36,27 @@
                 justify-content: space-between;
 
                 >ul {
-                    @include flex(space-around, flex-start);
+                    @include flex(space-around, stretch);
                     width: 950px;
                     >li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         width: 20%;
-                        padding: 20px;
+                        padding: 45px 20px 20px 20px;
+                        transition:0.5s;
+                        background-color: rgba(144, 188, 67,0);
                         &:hover {
-                            background-color: #90BC43;
+                            background-color: rgba(144, 188, 67,1);
                             a {
                                 color: white !important;
                             }
                         }
 
                         >a {
+                            width: 100%;
                             text-align: center;
                             display: block;
-                            padding-top: 30px;
                             color: rgb(255, 255, 255)
                         }
 
@@ -91,18 +80,22 @@
                     }
                 }
 
-                >.lang-box {
-                    padding: 50px 0 0 50px;
+                .lang-box {
 
                     .lang {
                         @include flex();
-
+                        align-items: center;
+                        color: #fff;
+                        padding: 45px;
                         &::before {
                             content: "";
-                            background-image: url("../img/lang.png");
+                            background-image: url("../img/lang.png") ;
+                            background-repeat :no-repeat;
+                            background-position: center;
                             background-size: 16px;
-                            width: 16px;
-                            height: 16px;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
                             display: block;
                             margin-right: 10px;
                         }
@@ -209,6 +202,33 @@
             }
         }
 
+        &:hover {
+            background: none;
+            background-color: white;
+
+            a {
+                color: #58585A !important;
+            }
+
+            .logo {
+                >a {
+                    display: block;
+                    &::after{
+                        display: block;
+                        content: url('../img/logo-color.png');
+                    }
+                }
+            }
+
+            .lang {
+                &::before {
+                    content: "";
+                    background-image: url("../img/lang-black.png");
+                    background-color: #447531;
+                }
+            }
+        }
+
     }
 
     #header.active {
@@ -224,7 +244,7 @@
         top: 30%;
         right: 40px;
         transform: translateY(-30%);
-        z-index: 30;
+        z-index: 99;
 
         .quick-nav {
             >ul {

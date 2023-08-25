@@ -31,8 +31,10 @@ footer, header, hgroup, menu, nav, section {
     box-sizing: border-box;
 }
 body {
+	min-width: 380px;
 	line-height: 1;
 }
+
 ol, ul {
 
 }

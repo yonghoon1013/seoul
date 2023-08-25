@@ -57,11 +57,12 @@
 
     .experience-detail{
         @include main-width(){
-            margin-bottom: 100px
+            margin-bottom: 120px
         };
         >p{
+            font-size: 20px;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 95px;
         }
         .experience-box{
             .experience-info-box{
@@ -69,7 +70,7 @@
                 margin-bottom: 100px;
                 >.left{
                     width: 620px;
-
+                    margin-right: 50px;
                     >img{
                         border-radius: 10px;
                         width: 100%;
@@ -78,9 +79,9 @@
                 }
 
                 >.right{
-                    width: 600px;
+                    max-width: 600px;
                     >.title{
-                        font-size: 24px;
+                        font-size: 22px;
                         color: #4E813B;
                         margin-bottom: 25px;
                     }
@@ -101,23 +102,24 @@
                             width: 50%;
                             >dl{
                                 @include flex();
+                                align-items: center;
                                 line-height: 3;
                                 >dt{
+                                    font-size: 18px;
                                     color: #4E813B;
                                     &::after{
                                         content: ':';
                                         padding: 0px 10px;
                                     }
                                 }
-                                >dd{
-        
-                                }
+                               
                             }
                         }
                     }
                 }
             }
             .reservation-btn-box{
+                transform: translateY(50px);
                 @include flex(flex-end,center);
                 >a{
                     display: block;
@@ -147,12 +149,13 @@
             .experience-tab{
                 @include flex();
                 >li{
+                    font-size: 18px;
                     cursor: pointer;
                     text-align: center;
                     width: 50%;
                     padding-bottom: 10px;
                     border-bottom: 2px solid #EDEDED;
-                    margin-bottom: 50px;
+                    margin-bottom: 100px;
                 }
                 >li.on{
                     border-bottom: 2px solid #4E813B;
@@ -178,8 +181,7 @@
                                 >.title{
                                     position: relative;
                                     padding: 30px 0px;
-                                    border-top:  2px solid #90BC43;
-                                    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+                                    border-bottom:  2px solid #90BC43;
                                     padding-left: 150px;
                                     cursor: pointer;
                                     &::before{
@@ -208,6 +210,7 @@
                                     line-height: 2;
                                 }
                             }
+                           
                             >li.on{
                                 >.title{
                                     &::after{
@@ -229,18 +232,24 @@
                 }
                 .map-con{
                     >p{
+                        font-size: 32px;
                         text-align: center;
                         margin-bottom: 40px;
                     }
-                    .traffic-tab{
+                    .traffic-nav{
+                        width: 552px;
                         @include flex(space-between,center);
-                        margin: 60px 0;
+                        margin-top: 75px;
                         >li{
+                            font-size: 20px;
                             cursor: pointer;
                         }
                         >li.on{
                             color: #4E813B;
                             font-size: 24px;
+                        }
+                        span{
+                            color: #CBCBCB;
                         }
                     }
 
