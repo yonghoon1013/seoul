@@ -117,14 +117,6 @@
         align-items: center;
         margin: 65px auto;
 
-        #selectCategory {
-            margin-right: 10px;
-            width: 80px;
-            height: 35px;
-            border-radius: 5px;
-            border: 1px solid #8e8e8f;
-        }
-
         input {
             border-radius: 5px;
         }
@@ -214,6 +206,22 @@
         display: flex;
         justify-content: center;
 
+        .numbox{
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+                >span{
+                    text-align: center;
+                    display:inline-block;
+                    width: 30px;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -224,10 +232,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -355,13 +364,6 @@
         align-items: center;
         margin: 65px auto;
         padding: 0 20px;
-        #selectCategory {
-            margin-right: 10px;
-            width: 80px;
-            height: 35px;
-            border-radius: 5px;
-            border: 1px solid #8e8e8f;
-        }
 
         input {
             border-radius: 5px;
@@ -452,6 +454,22 @@
         display: flex;
         justify-content: center;
 
+        .numbox{
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+                >span{
+                    text-align: center;
+                    display:inline-block;
+                    width: 30px;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -462,10 +480,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -593,13 +612,6 @@
         align-items: center;
         margin: 65px auto;
         padding: 0 20px;
-        #selectCategory {
-            margin-right: 10px;
-            width: 80px;
-            height: 35px;
-            border-radius: 5px;
-            border: 1px solid #8e8e8f;
-        }
 
         input {
             border-radius: 5px;
@@ -688,6 +700,22 @@
         display: flex;
         justify-content: center;
 
+        .numbox{
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+                >span{
+                    text-align: center;
+                    display:inline-block;
+                    width: 30px;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -698,10 +726,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 

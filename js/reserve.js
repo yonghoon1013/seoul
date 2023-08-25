@@ -106,7 +106,7 @@ function experience() {
 							localStorage.setItem("result", JSON.stringify(pp))
 							window.location.href = './reserve-complete.html';
 						} else {
-							alert("약관동의 누르세여")
+							alert("약관동의를 눌러주세요.")
 						}
 					}
 				}else{

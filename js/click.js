@@ -4,7 +4,8 @@ function programClick() {
     fetch('./json/program.json')
         .then(res => { return res.json() })
         .then(data => {
-            const experDetail = document.querySelector('.experience-box');
+            const experDetail = document.querySelector('.experience-box'),
+                  elprogram = document.querySelector('.experience-con >.ll');
 
             experDetail.innerHTML = `
         <div class="experience-info-box">
@@ -13,7 +14,7 @@ function programClick() {
         </div>
         <div class="right">
             <p class="title">
-                <${data.items[programStoageNum].name}>
+                ${data.items[programStoageNum].name}
             </p>
             <ul>
                 <li class="a">
@@ -102,9 +103,11 @@ function programClick() {
             </a>
             </div>
         </div>
-    </div>
-        `
+    </div>`
+        elprogram.innerHTML =`
+        <img src="${data.items[programStoageNum].programD}" alt="">`
         })
+
 }
 
 programClick();

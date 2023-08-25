@@ -101,6 +101,7 @@ fetch('./json/seed-data.json')
                             <img src="${obj.mainImg}">
                             <div class="ab">
                                 <p>${obj.name}</p>
+
                                 <div class="center">
                                 <span class = "${obj.level == "상" ? "on" : ""}">상</span>
                                 <span class = "${obj.level == "중" ? "on" : ""}">중</span>

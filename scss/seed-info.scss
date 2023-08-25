@@ -117,14 +117,6 @@
         align-items: center;
         margin: 65px auto;
 
-        #selectCategory {
-            margin-right: 10px;
-            width: 80px;
-            height: 35px;
-            border-radius: 5px;
-            border: 1px solid #8e8e8f;
-        }
-
         input {
             border-radius: 5px;
         }
@@ -228,16 +220,10 @@
                     span {
                         margin: 10px 2px;
                         display: inline-block;
-<<<<<<< HEAD
                         line-height: 1.7;
                         font-size: 12px;
                         width: 22px;
                         height: 22px;
-=======
-                        font-size: 8px;
-                        width: 16px;
-                        height: 16px;
->>>>>>> 88cb881c87e8247a87024bc2aa246381940672c3
                         background-color: #B9B9B9;
                         color: #fff;
                         border-radius: 50%;
@@ -401,13 +387,6 @@
         align-items: center;
         margin: 65px auto;
         padding: 0 20px;
-        #selectCategory {
-            margin-right: 10px;
-            width: 80px;
-            height: 35px;
-            border-radius: 5px;
-            border: 1px solid #8e8e8f;
-        }
 
         input {
             border-radius: 5px;
@@ -561,12 +540,8 @@
     //갤러리
 }
 
-<<<<<<< HEAD
 @media
 (max-width:480px) {
-=======
-@media(max-width:480px) {
->>>>>>> 88cb881c87e8247a87024bc2aa246381940672c3
 
         
         .bg {
@@ -684,13 +659,6 @@
             align-items: center;
             margin: 65px auto;
             padding: 0 20px;
-            #selectCategory {
-                margin-right: 10px;
-                width: 80px;
-                height: 35px;
-                border-radius: 5px;
-                border: 1px solid #8e8e8f;
-            }
     
             input {
                 border-radius: 5px;
@@ -792,16 +760,10 @@
                         span {
                             margin: 10px 2px;
                             display: inline-block;
-<<<<<<< HEAD
                             line-height: 1.7;
                             font-size: 12px;
                             width: 22px;
                             height: 22px;
-=======
-                            font-size: 8px;
-                            width: 16px;
-                            height: 16px;
->>>>>>> 88cb881c87e8247a87024bc2aa246381940672c3
                             background-color: #B9B9B9;
                             color: #fff;
                             border-radius: 50%;

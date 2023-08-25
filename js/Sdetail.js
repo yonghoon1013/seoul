@@ -71,10 +71,11 @@ fetch('./json/seed-data.json')
           </div>
         </div>
       </div>
-    </div>
-    <div class="btn_list">
+      <div class="btn_list">
       <a href="./seed-info.html">목록</a>
     </div>
+    </div>
+
     `
 
 
