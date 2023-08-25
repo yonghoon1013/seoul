@@ -89,7 +89,7 @@ setTimeout(function(){
     var swiper3 = new Swiper(".experSwiper", {
         slidesPerView: '2',
         centeredSlides: true,
-        spaceBetween: 20,
+        spaceBetween: 10,
         loop: true,
         breakpoints: {
             1024: {

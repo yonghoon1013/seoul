@@ -139,17 +139,18 @@
     .dada_qna{
         display: flex;
         justify-content: center;
+        max-width: 1280px;
+        margin: 0 auto;
         .qna_back{
+            width: 100%;
                  p{
                 font-size: 22px;
                 margin-bottom: 20px;
                 padding-bottom: 20px;
-                
                 }
             .qna_list{
                 display: flex;
                 justify-content: center;
-                width: 1280px;
                 ul{
                     width: 100%;
                     list-style-type: none;

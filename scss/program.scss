@@ -312,14 +312,32 @@
                         }
                     }
 
-                    // &::after{
-                    //     content:'';
-                    //     position:absolute;
-                    //     bottom: 0; left: 0;
-                    //     width: 100%; height: 100%;
-                    //     border-radius: 20px;
-                    //     background: rgba(0, 0, 0, 0.5);
-                    // }
+                     
+                }
+                .sspace.on {
+                    .ab {
+                        display: block;
+                        z-index: 2;
+                        position: absolute;
+                        bottom: 45%;
+                        width: 100%;
+                        text-align: center;
+                        line-height: 1.5;
+
+                        p {
+                            color: white;
+                        }
+                    }
+
+                        &::after{
+                        display: block;
+                         content:'';
+                         position:absolute;
+                         bottom: 0; left: 0;
+                         width: 100%; height: 100%;
+                         border-radius: 20px;
+                         background: rgba(0, 0, 0, 0.5);
+                     }
                 }
 
             }
@@ -756,7 +774,6 @@
                         width: 100%;
                         height: 100%;
                     }
-
                     .ab {
                         display: none;
                         z-index: 2;
@@ -770,15 +787,31 @@
                             color: white;
                         }
                     }
+                }
+                .sspace.on {
+                    .ab {
+                        display: block;
+                        z-index: 2;
+                        position: absolute;
+                        bottom: 45%;
+                        width: 100%;
+                        text-align: center;
+                        line-height: 1.5;
 
-                    // &::after{
-                    //     content:'';
-                    //     position:absolute;
-                    //     bottom: 0; left: 0;
-                    //     width: 100%; height: 100%;
-                    //     border-radius: 20px;
-                    //     background: rgba(0, 0, 0, 0.5);
-                    // }
+                        p {
+                            color: white;
+                        }
+                    }
+
+                        &::after{
+                        display: block;
+                         content:'';
+                         position:absolute;
+                         bottom: 0; left: 0;
+                         width: 100%; height: 100%;
+                         border-radius: 20px;
+                         background: rgba(0, 0, 0, 0.5);
+                     }
                 }
 
             }
@@ -1216,7 +1249,6 @@
                         width: 100%;
                         height: 100%;
                     }
-
                     .ab {
                         display: none;
                         z-index: 2;
@@ -1230,15 +1262,31 @@
                             color: white;
                         }
                     }
+                }
+                .sspace.on {
+                    .ab {
+                        display: block;
+                        z-index: 2;
+                        position: absolute;
+                        bottom: 45%;
+                        width: 100%;
+                        text-align: center;
+                        line-height: 1.5;
 
-                    // &::after{
-                    //     content:'';
-                    //     position:absolute;
-                    //     bottom: 0; left: 0;
-                    //     width: 100%; height: 100%;
-                    //     border-radius: 20px;
-                    //     background: rgba(0, 0, 0, 0.5);
-                    // }
+                        p {
+                            color: white;
+                        }
+                    }
+
+                        &::after{
+                        display: block;
+                         content:'';
+                         position:absolute;
+                         bottom: 0; left: 0;
+                         width: 100%; height: 100%;
+                         border-radius: 20px;
+                         background: rgba(0, 0, 0, 0.5);
+                     }
                 }
 
             }

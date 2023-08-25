@@ -124,27 +124,28 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 76px auto;
+        margin: 65px auto;
 
         input {
-            margin-left: 10px;
-            border-radius: 10px;
+            border-radius: 5px;
         }
 
         input:nth-of-type(1) {
             border: 1px solid #8e8e8f;
-            width: 310px;
-            height: 39px;
+            margin-right: 10px;
+            width: 400px;
+            height: 35px;
             text-align: center;
+
         }
 
         input:nth-of-type(2) {
+            cursor: pointer;
             background-color: #90BC43;
             color: white;
-            width: 70px;
-            height: 40px;
+            width: 60px;
+            height: 35px;
             border: none;
-            cursor: pointer;
         }
     }
 
@@ -354,26 +355,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 76px auto;
+        margin: 65px auto;
+        padding: 0 20px;
 
         input {
-            margin-left: 20px;
-            border-radius: 10px;
+            border-radius: 5px;
         }
 
         input:nth-of-type(1) {
-            width: 310px;
-            height: 39px;
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
+            width: 300px;
+            height: 35px;
             text-align: center;
+
         }
 
         input:nth-of-type(2) {
+            cursor: pointer;
             background-color: #90BC43;
             color: white;
-            width: 70px;
-            height: 40px;
+            width: 60px;
+            height: 35px;
             border: none;
-            cursor: pointer;
         }
     }
 
@@ -588,26 +592,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 76px auto;
-        padding-right: 20px;
+        margin: 65px auto;
+        padding: 0 20px;
+
         input {
-            margin-left: 20px;
-            border-radius: 10px;
+            border-radius: 5px;
         }
 
         input:nth-of-type(1) {
-            width: 310px;
-            height: 39px;
+            border: 1px solid #8e8e8f;
+            margin-right: 10px;
+            width: 200px;
+            height: 35px;
             text-align: center;
+
         }
 
         input:nth-of-type(2) {
+            cursor: pointer;
             background-color: #90BC43;
             color: white;
-            width: 70px;
-            height: 40px;
+            width: 60px;
+            height: 35px;
             border: none;
-            cursor: pointer;
         }
     }
 

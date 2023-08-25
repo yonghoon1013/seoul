@@ -31,10 +31,9 @@ footer, header, hgroup, menu, nav, section {
     box-sizing: border-box;
 }
 body {
-	min-width: 380px;
 	line-height: 1;
+	min-width: 380px;
 }
-
 ol, ul {
 
 }
@@ -59,22 +58,22 @@ table {
 
 @font-face {
 	font-family: NotoSansKR-Black;
-	src: url('/font/Noto_Sans_KR/NotoSansKR-Black.otf');	
+	src: url('/font/Noto_Sans_KR/NotoSansKR-Black.ttf');	
 }
 
 @font-face {
 	font-family: NotoSansKR-Medium;
-	src: url('/font/Noto_Sans_KR/NotoSansKR-Regular.otf');
+	src: url('/font/Noto_Sans_KR/NotoSansKR-Regular.ttf');
 }
 
 @font-face {
 	font-family: NotoSansKR-Medium;
-	src: url('/font/Noto_Sans_KR/NotoSansKR-Medium.otf');
+	src: url('/font/Noto_Sans_KR/NotoSansKR-Medium.ttf');
 }
 
 @font-face {
 	font-family: NotoSansKR-Bold;
-	src: url('/font/Noto_Sans_KR/NotoSansKR-Bold.otf');
+	src: url('/font/Noto_Sans_KR/NotoSansKR-Bold.ttf');
 }
 
 
