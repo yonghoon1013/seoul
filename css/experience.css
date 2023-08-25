@@ -1129,7 +1129,7 @@ table {
   font-family: NotoSans-Bold;
   src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
 }
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 760px) {
   .main .bg {
     position: relative;
     background-image: url("../img/bg111.png");
