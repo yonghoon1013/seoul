@@ -1230,7 +1230,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide:hover {
   transform: translateY(-30px);
