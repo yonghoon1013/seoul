@@ -88,13 +88,14 @@ setTimeout(function(){
         slidesPerView: '2',
         centeredSlides: true,
         spaceBetween: 10,
-        loop: true,
+
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
         breakpoints: {
             1024: {
+                centeredSlides: false,
                 slidesPerView: '3',
                 spaceBetween: 50,
             },
