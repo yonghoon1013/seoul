@@ -8,7 +8,7 @@ function mainSlide(){
             if(v.plantOfMonth == "Y"){
                 mainImgBox.innerHTML += `
                 <li class="swiper-slide">
-                <a href="./Pdetail.html">
+                <a href="./Pdetail.html" data-id ="${v.id}">
                     <img src="${v.img}">
                     <div class="fg">
                     <div class="plant-month">
@@ -32,20 +32,13 @@ function mainSlide(){
         })
 
         const ff = document.querySelectorAll('.mainSwiper > .swiper-wrapper > .swiper-slide > a');
-        ff.forEach(function(v,k){
-            v.onclick = function(e){
-                const txt = v.querySelector('.name').innerText;
-                for(let k2 in data.items){
-                    if(txt == data.items[k2].name){
-                        sessionStorage.setItem("click", k2);
-
-                    }else{
-
-                    }
-
-                }
+        ff.forEach(function(v2,k2){
+            v2.onclick = function(e){
+                
+                e.preventDefault();
+                sessionStorage.setItem("click", v2.dataset.id);
+                location.href = './Pdetail.html';
             }
-            
         })
 
     })
@@ -286,7 +279,7 @@ fetch('./json/program.json')
 
             mainPgSlide.innerHTML += `
         <li class="swiper-slide">
-        <a href="./experience.html">
+        <a href="./experience.html" data-id="${obj.id}">
             <img src="${obj.img}">
             <div class="experience-info">
                 <p class="title">
@@ -315,9 +308,16 @@ fetch('./json/program.json')
 
         const itemClick = document.querySelectorAll('.experSwiper  li > a');
 
-        itemClick.forEach(function (v, k) {
-            v.onclick = function () {
-                sessionStorage.setItem("click", k)
+        itemClick.forEach(function (v3, k3) {
+            console.log(v3.dataset.id);
+            console.log(v3);
+            v3.onclick = function (e) {
+                e.preventDefault();
+
+
+                sessionStorage.setItem("click", v3.dataset.id);
+                location.href = 'experience.html';
+
             }
         })
 
