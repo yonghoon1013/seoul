@@ -781,6 +781,7 @@ table {
   .flexDiv {
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid #58585A;
   }
   .flexDiv > div {
     padding: 20px 0;
@@ -798,9 +799,6 @@ table {
     display: flex;
     border-top: none;
     border-bottom: 1px solid #58585A;
-  }
-  .flex li:nth-of-type(1) p {
-    color: #4E813B;
   }
   .flex li:nth-of-type(1) div {
     width: 214px;
@@ -1008,6 +1006,7 @@ table {
   .flexDiv {
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid #58585A;
   }
   .flexDiv > div {
     padding: 20px 0;
@@ -1025,10 +1024,6 @@ table {
     display: flex;
     border-top: none;
     border-bottom: 1px solid #58585A;
-  }
-  .flex li:nth-of-type(1) p {
-    font-size: 14px;
-    color: #4E813B;
   }
   .flex li:nth-of-type(1) div {
     width: 214px;

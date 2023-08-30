@@ -474,6 +474,7 @@
     .flexDiv {
         display: flex;
         justify-content: space-around;
+        border-bottom: 1px solid #58585A;
         >div{
             padding: 20px 0;
             &:last-of-type{
@@ -492,9 +493,6 @@
             border-top: none;
             border-bottom: 1px solid #58585A;
 
-            p {
-                color: #4E813B;
-            }
 
             div {
                 width: 214px;
@@ -759,6 +757,7 @@
     .flexDiv {
         display: flex;
         justify-content: space-around;
+        border-bottom: 1px solid #58585A;
         >div{
             padding: 20px 0;
             &:last-of-type{
@@ -777,10 +776,6 @@
             border-top: none;
             border-bottom: 1px solid #58585A;
 
-            p {
-                font-size: 14px;
-                color: #4E813B;
-            }
 
             div {
                 width: 214px;
