@@ -28,8 +28,34 @@
                             @include bg();
                         }
         
+                        .fg {
+                            width: 330px;
+                            position: absolute;
+                            top: 65%;
+                            left: 80%;
+                            transform: translate(-80%, -65%);
+
+                            &::before {
+                                display: none;
+                                content: url("../img/quote-start.png");
+                                position: absolute;
+                                top: -20%;
+                                left: 0;
+                                transform: translate(0%, 20%);
+                            }
+    
+                            &::after {
+                                display: none;
+                                content: url("../img/quote-end.png");
+                                position: absolute;
+                                bottom: -40%;
+                                right: -10%;
+                                transform: translate(10%, 40%);
+                            }
+                        
+                                    
                         .plant-month {
-                            width: 300px;
+                            width: 100%;
                             position: absolute;
                             top: 70%;
                             left: 80%;
@@ -39,43 +65,23 @@
                                 position: relative;
                                 line-height: 1.5;
         
-                                &::before {
-                                    display: none;
-                                    content: url('../img/quote-start.png');
-                                    position: absolute;
-                                    top: -20%;
-                                    left: -20%;
-                                    transform: translate(20%, 20%);
-                                }
-        
-                                &::after {
-                                    display: none;
-                                    content: url('../img/quote-end.png');
-                                    position: absolute;
-                                    bottom: -20%;
-                                    right: -15%;
-                                    transform: translate(15%, 20%);
-                                }
         
                                 >span {
                                     color: white;
                                     display: block;
                                     text-align: end;
                                     transform: translateY(330%);
-                                    animation: text-up forwards 1s;
                                 }
         
                                 >.title {
                                     font-size: 20px;
                                     font-weight: bold;
-                                    animation-delay: 0.5s;
                                 }
         
                                 >.name {
                                     margin: 0;
                                     font-size: 16px;
                                     font-weight: bold;
-                                    animation-delay: 1s;
                                 }
         
                                 .area {
@@ -97,13 +103,58 @@
                                     }
                                 }
         
+                            }
+                        }
+
+                        }
+                    }
+                }
+
+                .swiper-slide-active {
+                    .fg {
+                        width: 330px;
+                        position: absolute;
+                        top: 50%;
+                        left: 20%;
+                        transform: translate(-20%, -50%);
+        
+                        .plant-month {
+                            width: 100%;
+                            overflow: hidden;
+        
+                            .text-box {
+                                width: 100%;
+                                position: relative;
+                                text-align: end;
+                                >span {
+                                    color: white;
+                                    display: block;
+                                    text-align: end;
+                                    transform: translateY(330%);
+                                    animation: text-up forwards 1s;
+                                }
+        
+                                >.title {
+                                    animation-delay: 0.5s;
+                                }
+        
+                                >.name {
+                                    animation-delay: 1s;
+                                }
+        
+                                .area {
+                                    animation-delay: 1.5s;
+                                }
+        
                                 @keyframes text-up {
-                                    100%{
+                                    100% {
                                         transform: translateY(0%);
                                     }
                                 }
+        
                             }
                         }
+        
                     }
                 }
             }
@@ -113,11 +164,12 @@
                 position: absolute;
                 bottom: 5%;
                 left: 15%;
-                transform: translate(-15%, -5%);
+                transform: translate(-15%, -50%);
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 z-index: 10;
+                padding: 0 20px;
     
                 //날씨
                 .weather-box {
@@ -129,7 +181,7 @@
                         align-items: center;
     
                         >.left {
-                            width: 40px;
+                            width: 20px;
                             >img {
                                 width: 100%;
                                 display: block;
@@ -139,16 +191,6 @@
                                 margin-right: 10px;
                                 animation: up-down 1.5s infinite ease-in-out alternate;
                             }
-    
-                            // @keyframes up-down {
-                            //     0%{
-                            //         transform: translateY(5px);
-                            //     }
-    
-                            //     100%{
-                            //         transform: translateY(0px);
-                            //     }
-                            // }
                         }
     
                         >.right {
@@ -209,28 +251,73 @@
             .use{
                 display: block;
                 padding: 20px;
-                .use-info-tab{
-                    @include flex(space-between,center);
+                .custom-checkbox {
+                    display:block;
                     width: 100%;
-                    height: 45px;
-                    background-color: white;
-                    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.05);
-                    border-radius: 50px;
-                    >li{
-                        text-align: center;
-                        width: 50%;
-                        height: 40px;
-                        border-radius: 50px;
-                        margin: 0 5px;
-                        >span{
-                            line-height: 40px;
-                            display: block;
-                            cursor: pointer;
-                            color: #4E813B;
+                    height: 50px;
+        
+                    input#status {
+                        display: none;
+        
+                        // Unchecked State
+                        +label {
+                            height: 100%;
+                            width: 100%;
+        
+                            >.status-switch {
+                                cursor: pointer;
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                color: #4E813B;
+                                transition: all 0.5s ease;
+                                padding: 3px;
+                                background-color: white;
+                                box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.05);
+                                border-radius: 50px;
+        
+                                &:before,
+                                &:after {
+                                    border-radius: 2px;
+                                    height: calc(100% - 6px);
+                                    width: calc(50% - 3px);
+                                    display: flex;
+                                    align-items: center;
+                                    position: absolute;
+                                    justify-content: center;
+                                    transition: all 0.5s ease;
+                                }
+        
+                                &:before {
+                                    background-color: #DAE145;
+                                    border-radius: 50px;
+                                    color: #4E813B;
+                                    left: 3px;
+                                    z-index: 10;
+                                    content: attr(data-unchecked);
+                                }
+        
+                                &:after {
+                                    right: 0;
+                                    content: attr(data-checked);
+                                }
+                            }
                         }
-                    }
-                    >li.on{
-                        background-color: #DAE145;
+        
+                        // Checked stae
+                        &:checked+label>.status-switch {
+        
+        
+                            &:after {
+                                left: 0;
+                                content: attr(data-unchecked);
+                            }
+        
+                            &:before {
+                                left: 50%;
+                                content: attr(data-checked);
+                            }
+                        }
                     }
                 }
             }
@@ -399,7 +486,8 @@
             display: block;
             margin: 50px 0;
             >ul{
-                width: 100%;
+                width: 80%;
+                margin: 0 auto;
                 @include flex(space-around);
                 >li{
                     width: 70px;
@@ -454,6 +542,7 @@
                 margin-bottom: 50px;
     
                 .exhibition-news {
+                    transform: translateY(0%);
                     width: 100%;
                     background: rgba(204, 204, 204, 0.20);
                     padding: 20px;
@@ -466,11 +555,12 @@
                         margin-bottom: 15px;
                     }
                     >.mobile{
+                        margin-bottom: 30px;
                         display: block;
-                        font-size: 12px;
+                        font-size: 16px;
                         color: #000;
                         >span{
-                            font-size: 12px;
+                            font-size: 16px;
                             color: #4E813B
                         }
                     }
@@ -485,7 +575,7 @@
                                 width: 100%;
                                 height: 100%;
                                 >.txt-box{
-                                    height: 150px;
+                                    height: 200px;
                                     padding-left: 20px;
                                     line-height: 2;
                                     >.title{
@@ -556,6 +646,7 @@
                 }
     
                 .garden-news {
+                    transform: translateY(0%);
                     width: 100%;
                     >p {
                         display: none;
@@ -563,14 +654,16 @@
                         font-weight: bold;
                         color: #4E813B;
                         margin-bottom: 15px;
+                        
                     }
                     >.mobile{
                         padding-left: 20px;
+                        margin-bottom: 30px;
                         display: block;
-                        font-size: 12px;
+                        font-size: 16px;
                         color: #000;
                         >span{
-                            font-size: 12px;
+                            font-size: 16px;
                             color: #4E813B
                         }
                     }
@@ -727,134 +820,122 @@
                 @include h3();
             }
             >.mobile{
+                font-weight: bold;
+                margin-bottom: 10px;
                 display: block;
-                font-size: 12px;
+                font-size: 16px;
                 color: #000;
                 >span{
-                    font-size: 12px;
+                    font-size: 16px;
                     color: #4E813B
                 }
             }
     
-            .course-nav {
-                >.course-tab {
-                    @include flex(space-around, center);
-                    padding: 30px 0;
-    
-                    >li {
-                        width: 150px;
-                        height: 35px;
-                        position: relative;
-                        background: rgba(204, 204, 204, 0.80);
-                        border-radius: 20px;
-                        text-align: center;
-                        >a {
-                            line-height: 35px;
-                            color: rgba(161, 161, 161, 0.80);
-                            cursor: pointer;
-                            font-size: 14px;
-                        }
-                    }
-    
-                    >li.on {
-                        background-color: #DAE145;
-                        padding-bottom: 0;
-                        >a{
-                            color: #58585A;
-                            font-weight: bold;
-                        }
-                        &::after{
-                            display: none;
-                            content: "";
-                            position: absolute;
-                            width: 100%;
-                            height: 2px;
-                            background: #4E813B;
-                            bottom: 0;
-                            left: 0;
-    
-                        }
-                    }
+        .course-con{
+            display: block;
+
+            >.left{
+                width: 100%;
+                display: none;
+                padding: 10px 0;
+                margin-bottom: 20px;
+                >img{
+                    width: 90%;
+                    margin: auto;
                 }
             }
-    
-            >.course-con-tab {
-                >li {
-                    display: none;
-    
-                    .course-con {
-                        @include flex(center);
-    
-                        .course-map {
-                            >picture {
-                                >img{
-                                    width: 100%;
-                                    height: 350px;
-                                }
-                            }
+            >.left.on{
+                display: block;
+                
+            }
+
+            >.right{
+                width: 100%;
+                .course-nav{
+                    >ul{
+                        width: 80%;
+                        margin: 0 auto;
+                        @include flex(space-between);
+                        >li{
+                            font-size: 18px;
+                            cursor: pointer;
+                            color: rgba(204, 204, 204, 0.80);
+                            padding-bottom: 10px;
                         }
-    
-                        .look-around {
-                            display: none;
-                            >p {
-                                margin-bottom: 10px
-                            }
-    
-                            .look-box {
-                                @include flex();
-    
-                                .look-con {
-                                    margin-right: 30px;
-                                    position: relative;
-    
-                                    >img {
-                                        border-radius: 20px;
-                                    }
-    
-                                    &::after {
-                                        content: '';
-                                        background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0.00) 100%);
-                                        width: 100%;
-                                        height: 80px;
-                                        position: absolute;
-                                        left: 0;
-                                        bottom: 0;
-                                        border-radius: 0px 0px 20px 20px;
-                                    }
-    
-                                    >div {
-                                        width: 80px;
-                                        height: 20px;
-                                        border-radius: 50px;
-                                        background-color: #C2D42E;
-                                        position: absolute;
-                                        left: 50%;
-                                        bottom: -5%;
-                                        transform: translate(-50%, 5%);
-                                        text-align: center;
-                                        z-index: 5;
-    
-                                        >span {
-                                            font-size: 12px;
-                                        }
-                                    }
-                                }
-                            }
+                        >li.on{
+                            font-weight: bold;
+                            color: #58585A;
+                            border-bottom: 2px  solid #F5B515;
                         }
-                    }
-    
-                    .course-info {
-                        text-align: center;
-                        margin-top: 20px;
-                        line-height: 1.5;
-                        font-size: 14px;
                     }
                 }
-    
-                >li.on {
+
+                .course-list-con{
+                    display: none;
+                    >p{
+                        width: 80%;
+                        margin: auto;
+                        text-align: center;
+                        padding-top: 5%;
+                        line-height: 1.5;
+                    }
+
+                    .course-list-nav{
+                        >ul{
+                            width: 80%;
+                            margin: auto;
+                            @include flex(){
+                                flex-wrap: wrap;
+                            };
+                                padding: 10% 0;
+                            >li{
+                                cursor: pointer;
+                                margin-right: 13%;
+                                position: relative;
+                                line-height: 2;
+                                &::before{
+                                    content: url('../img/icon-course-before.png');
+                                    margin-right: 10px;
+                                }
+
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    width: 30px;
+                                    border-top: 2px dashed #D4D4D4;
+                                    border-radius: 3%;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    margin-left: 10px;
+                                }
+                            }
+                            >li.on{
+                                color: #55A37C;
+                            }
+                        }
+                    }
+
+                    .course-img-list{
+                        >ul{
+                            >li{
+                                width: 100%;
+                                >img{
+                                    border-radius: 20px;
+                                    width: 80%;
+                                    height: 80%;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .course-list-con.on{
                     display: block;
                 }
+
             }
+        }
     
     
         }
@@ -870,13 +951,14 @@
                 @include h3();
             }
             >.mobile{
-                display: block;
-                font-size: 12px;
-                color: #000;
+                font-weight: bold;
                 padding-left: 20px;
-                margin-bottom: 15px;
+                margin-bottom: 30px;
+                display: block;
+                font-size: 16px;
+                color: #000;
                 >span{
-                    font-size: 12px;
+                    font-size: 16px;
                     color: #4E813B
                 }
             }

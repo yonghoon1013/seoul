@@ -10,18 +10,20 @@ function mainSlide(){
                 <li class="swiper-slide">
                 <a href="./Pdetail.html">
                     <img src="${v.img}">
+                    <div class="fg">
                     <div class="plant-month">
-                        <div class="text-box">
-                            <span class="title">
-                                이달의 식물
-                            </span>
-                            <span class="name">
-                            ${v.name}
-                            </span>
-                            <span class="area">
-                                주제정원 숲정원, 열린숲에 위치
-                            </span>
-                        </div>
+                    <div class="text-box">
+                        <span class="title">
+                            이달의 식물
+                        </span>
+                        <span class="name">
+                        ${v.name}
+                        </span>
+                        <span class="area">
+                            주제정원 숲정원, 열린숲에 위치
+                        </span>
+                    </div>
+                </div>
                     </div>
                 </a>
             </li>
@@ -36,9 +38,9 @@ function mainSlide(){
                 for(let k2 in data.items){
                     if(txt == data.items[k2].name){
                         sessionStorage.setItem("click", k2);
-                        break;
+
                     }else{
-                        e.preventDefault();
+
                     }
 
                 }
@@ -94,9 +96,12 @@ setTimeout(function(){
         centeredSlides: true,
         spaceBetween: 10,
         loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         breakpoints: {
             1024: {
-            
                 slidesPerView: '3',
                 spaceBetween: 50,
             },
@@ -130,24 +135,91 @@ function notice() {
 
 
 function course() {
-    const couresTab = document.querySelectorAll('.course-tab > li'),
-        couresConTab = document.querySelectorAll('.course-con-tab > li');
+    const couresTab = document.querySelectorAll('.course-nav > ul > li'),
+        couresConTab = document.querySelectorAll('.course-list-con'),
+        couresLeft = document.querySelectorAll('.course-con > .left'),
+        couresSubTab = document.querySelectorAll('.course-list-nav > ul'),
+        couresSubConTab = document.querySelectorAll('.course-img-list > ul > li');
 
-    let num = 0;
 
-    couresTab[num].classList.add('on');
-    couresConTab[num].classList.add('on');
 
-    couresTab.forEach(function (list, k) {
-        list.onclick = function () {
+        let num = 0;
+        let num2 = 0;
+
+        couresLeft[num].classList.add('on')
+        couresTab[num].classList.add('on')
+        couresConTab[num].classList.add('on')
+        // couresSubTab[num].classList.add('on')
+        // couresSubConTab[num].classList.add('on')
+        
+
+
+
+        
+
+    couresTab.forEach(function(v,k){
+        v.onclick = function(){
+
+
+            switch (k) {
+                case 0 : v.style.cssText = 'border-bottom: 2px solid #F5B515;'
+                break;
+
+                case 1 : v.style.cssText = 'border-bottom: 2px solid #FF74BA;'
+                break;
+
+                case 2 : v.style.cssText = 'border-bottom: 2px solid #B374FF;'
+                break;
+
+            }
+
+
+
+            couresTab[num].style.cssText = ''
+
             couresTab[num].classList.remove('on');
             this.classList.add('on');
 
+
+            couresLeft[num].classList.remove('on')
+            couresLeft[k].classList.add('on')
             couresConTab[num].classList.remove('on');
             couresConTab[k].classList.add('on');
+
+
             num = k;
+
         }
     })
+
+
+    const qwe1 = document.querySelectorAll('.course-list-nav > ul > li');
+    const qwe11 = document.querySelectorAll('.course-list-nav > ul > li:nth-of-type(1)');
+    const qwe2 = document.querySelectorAll('.qwe2 > img');
+
+
+
+    // console.log(qwe11.dataset.img);
+
+
+    qwe1.forEach(function(v,k){
+    
+
+        v.addEventListener('mouseenter', () =>{
+            v.classList.add('on')
+            qwe2[num].src = v.dataset.img;
+        })
+
+        v.addEventListener('mouseleave', () =>{
+            v.classList.remove('on')
+            qwe2[num].src = qwe11[num].dataset.img; 
+
+        })
+
+    })
+
+
+
 }
 
 
@@ -157,19 +229,34 @@ function useInfo() {
 
     let num = 0;
 
-    useInfoTab[num].classList.add('on');
-    useConTab[num].classList.add('on');
+    const checkbox = document.getElementById('status');
+    const statusSwitch = document.querySelector('.status-switch');
 
-    useInfoTab.forEach(function (list, k) {
-        list.onclick = function () {
-            useInfoTab[num].classList.remove('on');
-            this.classList.add('on');
 
-            useConTab[num].classList.remove('on');
-            useConTab[k].classList.add('on');
-            num = k;
+    useConTab[0].classList.add('on')
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            useConTab[1].classList.add('on')
+            useConTab[0].classList.remove('on');
+        } else {
+            useConTab[0].classList.add('on');
+            useConTab[1].classList.remove('on')
         }
-    })
+    });
+
+    // useInfoTab[num].classList.add('on');
+    // useConTab[num].classList.add('on');
+
+    // useInfoTab.forEach(function (list, k) {
+    //     list.onclick = function () {
+    //         useInfoTab[num].classList.remove('on');
+    //         this.classList.add('on');
+
+    //         useConTab[num].classList.remove('on');
+    //         useConTab[k].classList.add('on');
+    //         num = k;
+    //     }
+    // })
 }
 
 if (matchMedia("screen and (max-width: 1023px)").matches) {
@@ -235,8 +322,4 @@ fetch('./json/program.json')
         })
 
     })
-
-
-
-
 

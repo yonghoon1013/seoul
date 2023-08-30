@@ -11,7 +11,7 @@
     <script defer src="./js/weather.js"></script>
     <script defer src="./js/inc.js"></script>
     <script defer src="./js/index.js"></script>
-    <title>Document</title>
+    <title>서울식물원</title>
 </head>
 
 
@@ -22,26 +22,6 @@
 
         <div class="swiper mainSwiper">
             <ul class="swiper-wrapper">
-
-                <!-- <li class="swiper-slide">
-                    <a href="#">
-                        <img src="./img/main-img.png">
-                        <div class="plant-month">
-                            <div class="text-box">
-                                <span class="title">
-                                    이달의 식물
-                                </span>
-                                <span class="name">
-                                    구절초
-                                </span>
-                                <span class="area">
-                                    주제정원 숲정원, 열린숲에 위치
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </li> -->
-
 
 
             </ul>
@@ -67,8 +47,8 @@
                 </div>
 
                 <div class="guide-box">
-                    <a href="#">안내도</a>
-                    <a href="#">English Guide</a>
+                    <a target="_blank" href="./guide.pdf">안내도</a>
+                    <a target="_blank" href="./eng-guide.pdf">English Guide</a>
                 </div>
             </div>
         </div>
@@ -76,12 +56,13 @@
         <section class="use-info-box">
             <div class="use">
                 <ul class="use-info-tab">
-                    <li>
-                        <span>주제원 용요금</span>
-                    </li>
-                    <li>
-                        <span>주제원 용요금</span>
-                    </li>
+                    <div class="custom-checkbox">
+                        <input id="status" type="checkbox" name="status">
+                        <label for="status">
+                            <div class="status-switch" data-unchecked="주제원이용요금" data-checked="관람시간안내">
+                            </div>
+                        </label>
+                    </div>
                 </ul>
             </div>
             <div class="use-info">
@@ -146,7 +127,7 @@
                         </div>
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="#">
                         <div class="mobile-con">
@@ -355,126 +336,109 @@
 
         <section class="course-box">
             <h3>서울식물원 <span>추천코스</span>로<br>
-                어디서부터갈지 고민은 끝! 더욱 즐겁게 관람해보세요!</h3>
-                <p class="mobile">
-                    <span>서울식물원</span> 추천코스
-                </p>
-            <div class="course-nav">
-                <ul class="course-tab">
-                    <li>
-                        <a>
-                            가족 추천코스
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            연인 추천코스
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            친구 추천코스
-                        </a>
-                    </li>
-                </ul>
+                어디서부터갈지 고민은 끝! 더욱 즐겁게 관람해보세요!
+            </h3>
+
+            <p class="mobile">
+                <span>서울식물원</span> 추천코스
+            </p>
+
+            <div class="course-con">
+                <div class="left">
+                    <img src="./img/lin_children.png" alt="">
+                </div>
+                <div class="left">
+                    <img src="./img/lin_cup.png" alt="">
+                </div>
+                <div class="left">
+                    <img src="./img/lin_hill.png" alt="">
+                </div>
+
+                <div class="right">
+
+                    <div class="course-nav">
+                        <ul>
+                            <li>가족 추천코스</li>
+                            <li>연인 추천코스</li>
+                            <li>힐링 추천코스</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-list-con">
+                        <p>
+                            이 코스는 숲문화원과 주제원을 지나 어린이정원으로가는
+                            가볍게 산책하기 좋은 코스입니다.
+                        </p>
+
+                        <div class="course-list-nav">
+                            <ul>
+                                <li class="family-before" data-img="./img/start.png">출발</li>
+                                <li class="family-before" data-img="./img/family1.jpg">초지원</li>
+                                <li class="family-before" data-img="./img/family2.jpg">숲문화원</li>
+                                <li class="family-before" data-img="./img/family3.jpg">주제정원</li>
+                                <li class="family-before" data-img="./img/family4.jpg">온실</li>
+                            </ul>
+                        </div>
+
+                        <div class="course-img-list">
+                            <ul>
+                                <li class="qwe2"><img src="./img/start.png" alt=""></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div class="course-list-con">
+                        <p>
+                            눈은 즐겁게 몸은 가볍고 편안하게! 주로 꽃들을 즐기고 사진을 남기기 좋은 코스입니다.
+                            이 코스는 숲문화원과 아이리스원을지나 온실로 이어집입니다.
+                        </p>
+
+                        <div class="course-list-nav">
+                            <ul>
+                                <li class="couple-before" data-img="./img/start.png">출발</li>
+                                <li class="couple-before" data-img="./img/couple1.jpg">아이리스원</li>
+                                <li class="couple-before" data-img="./img/couple2.jpg">물가가로수길</li>
+                                <li class="couple-before" data-img="./img/couple3.jpg">마곡문화원</li>
+                                <li class="couple-before" data-img="./img/couple4.jpg">온실</li>
+                            </ul>
+                        </div>
+
+                        <div class="course-img-list">
+                            <ul>
+                                <li class="qwe2"><img src="./img/start.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="course-list-con">
+                        <p>
+                            물가를 거닐며 자연에 피어난 꽃과 나무를 즐길수 있는 코스 입니다
+                            이 코스는 수변가로를 거닐며 분수를지나 한강전망타워까지 이어집입니다.
+                        </p>
+
+                        <div class="course-list-nav">
+                            <ul>
+                                <li class="hill-before" data-img="./img/start.png">출발</li>
+                                <li class="hill-before" data-img="./img/hill1.jpg">수변가로</li>
+                                <li class="hill-before" data-img="./img/hill2.jpg">분수</li>
+                                <li class="hill-before" data-img="./img/hill3.jpg">저류지</li>
+                                <li class="hill-before" data-img="./img/hill4.jpg">한강전망타워</li>
+                            </ul>
+                        </div>
+
+                        <div class="course-img-list">
+                            <ul>
+                                <li class="qwe2"><img src="./img/start.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <ul class="course-con-tab">
-                <li>
-                    <div class="course-con">
-                        <div class="course-map">
-                            <picture>
-                                <source srcset="./img/lin_m_children.png" media="(max-width:1023px)">
-                                <img src="./img/lin_children.png">
-                            </picture>
-                        </div>
-                        <div class="look-around">
-                            <p>둘러보세요</p>
-                            <div class="look-box">
-                                <div class="look-con">
-                                    <img src="./img/look01.png">
-                                    <div>
-                                        <span>숲속문화원</span>
-                                    </div>
-                                </div>
-                                <div class="look-con">
-                                    <img src="./img/look02.png">
-                                    <div>
-                                        <span>숲속문화원</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="course-info">
-                        눈은 즐겁게 몸은 가볍고 편안하게! 가족들과 가볍게 산책하며 즐기기 좋은 코스입니다.<br>
-                        이 코스는 숲문화원과 주제원을 지나 어린이정원으로가는 코스입니다.
-                    </p>
-                </li>
 
-                <li>
-                    <div class="course-con">
-                        <div class="course-map">
-                            <picture>
-                                <source srcset="./img/lin_m_cup.png" media="(max-width:1023px)">
-                                <img src="./img/lin_cup.png">
-                            </picture>
-                        </div>
-                        <div class="look-around">
-                            <p>둘러보세요</p>
-                            <div class="look-box">
-                                <div class="look-con">
-                                    <img src="./img/look01.png">
-                                    <div>
-                                        <span>숲속문화원</span>
-                                    </div>
-                                </div>
-                                <div class="look-con">
-                                    <img src="./img/look02.png">
-                                    <div>
-                                        <span>숲속문화원</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="course-info">
-                        눈은 즐겁게 몸은 가볍고 편안하게! 가족들과 가볍게 산책하며 즐기기 좋은 코스입니다.<br>
-                        이 코스는 숲문화원과 주제원을 지나 어린이정원으로가는 코스입니다.
-                    </p>
-                </li>
 
-                <li>
-                    <div class="course-con">
-                        <div class="course-map">
-                            <picture>
-                                <source srcset="./img/lin_m_hill.png" media="(max-width:1023px)">
-                                <img src="./img/lin_hill.png">
-                            </picture>
-                        </div>
-                        <div class="look-around">
-                            <p>둘러보세요</p>
-                            <div class="look-box">
-                                <div class="look-con">
-                                    <img src="./img/look01.png">
-                                    <div>
-                                        <span>숲속문화원</span>
-                                    </div>
-                                </div>
-                                <div class="look-con">
-                                    <img src="./img/look02.png">
-                                    <div>
-                                        <span>숲속문화원</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="course-info">
-                        눈은 즐겁게 몸은 가볍고 편안하게! 가족들과 가볍게 산책하며 즐기기 좋은 코스입니다.<br>
-                        이 코스는 숲문화원과 주제원을 지나 어린이정원으로가는 코스입니다.
-                    </p>
-                </li>
-            </ul>
 
         </section>
 
@@ -489,33 +453,6 @@
             <div class="experience-list">
                 <div class="swiper experSwiper">
                     <ul class="swiper-wrapper">
-                        <!-- <li class="swiper-slide">
-                            <a href="#">
-                                <img src="./img/exhibition.png">
-                                <div class="experience-info">
-                                    <p class="title">
-                                        [여름방학 봉사활동 프로그램]<br>
-                                        청소년 생태 모니터링
-                                    </p>
-                                    <P class="time">
-                                        <span>2023-07-20 ~2023-08-22</span>
-                                        <span>더보기</span>
-                                    </P>
-                                    <div class="situation">
-                                        <div>
-                                            <span>숲문화학교</span>
-                                        </div>
-                                        <div>
-                                            <span>청소년</span>
-                                        </div>
-                                        <div>
-                                            <span>접수중</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li> -->
-
                     </ul>
                 </div>
 

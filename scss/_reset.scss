@@ -28,6 +28,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 * {
+	word-break: keep-all;
     box-sizing: border-box;
 }
 body {

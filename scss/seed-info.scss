@@ -2,78 +2,79 @@
 @import "_mixin";
 @import "_inc";
 
-@media(min-width:1024px) {
-    .bg {
-        position: relative;
-        background-image: url("../img/bg111.png");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: 100% 100%;
+.bg {
+    position: relative;
+    background-image: url("../img/bg111.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-        width: 100%;
-        height: 400px;
 
-        >h2 {
-            @include h2();
-            z-index: 99;
-        }
+    width: 100%;
+    height: 400px;
 
-        &::after {
-            position: absolute;
-            content: '';
-            background-image: url("../img/bottom.png");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: bottom;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            bottom: 0%;
-            z-index: 88;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
+    >h2 {
+        @include h2();
+        z-index: 99;
     }
 
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/bottom.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0%;
+        z-index: 88;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
 
 
-    //////////////////
-    .indicator {
-        max-width: 1280px;
-        margin: 0 auto;
-        margin-bottom: 100px;
+//////////////////
+.indicator {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 
-        >ul {
-            @include flex(flex-start, center);
+    >ul {
+        @include flex(flex-start, center);
 
-            >li {
-                font-size: 14px;
-                padding-right: 20px;
-                margin-right: 10px;
-                position: relative;
+        >li {
+            font-size: 14px;
+            padding-right: 20px;
+            margin-right: 10px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/icon.png");
+                background-size: 100% 100%;
+                width: 8px;
+                height: 12px;
+                margin-left: 10px;
+            }
+
+            &:nth-last-of-type(1) {
+                color: #90BC43;
 
                 &::after {
                     content: "";
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background-image: url("../img/icon.png");
-                    background-size: 100% 100%;
-                    width: 8px;
-                    height: 12px;
-                    margin-left: 10px;
-                }
-
-                &:nth-last-of-type(1) {
-                    color: #90BC43;
-
-                    &::after {
-                        content: "";
-                        background: none;
-                    }
+                    background: none;
                 }
             }
         }
     }
+}
+@media(min-width:1024px) {
+  
 
     ///////////////////
     .text {
@@ -239,9 +240,34 @@
     }
 
     .next {
+        margin: 120px auto;
         display: flex;
         justify-content: center;
-        margin: 120px auto;
+
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
 
         button {
             cursor: pointer;
@@ -253,10 +279,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -272,77 +299,8 @@
 
 
 @media(min-width:481px) and (max-width:1023px) {
-    .bg {
-        position: relative;
-        background-image: url("../img/bg111.png");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: 100% 100%;
-
-        width: 100%;
-        height: 400px;
-
-        >h2 {
-            @include h2();
-            z-index: 99;
-        }
-
-        &::after {
-            position: absolute;
-            content: '';
-            background-image: url("../img/bottom.png");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: bottom;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            bottom: 0%;
-            z-index: 88;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-    }
-
-
-
-    //////////////////
-    .indicator {
-        max-width: 1280px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-
-        >ul {
-            @include flex(flex-start, center);
-
-            >li {
-                font-size: 14px;
-                padding-right: 20px;
-                margin-right: 10px;
-                position: relative;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background-image: url("../img/icon.png");
-                    background-size: 100% 100%;
-                    width: 8px;
-                    height: 12px;
-                    margin-left: 10px;
-                }
-
-                &:nth-last-of-type(1) {
-                    color: #90BC43;
-
-                    &::after {
-                        content: "";
-                        background: none;
-                    }
-                }
-            }
-        }
-    }
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
 
     ///////////////////
     .text {
@@ -509,9 +467,34 @@
     }
 
     .next {
+        margin: 120px auto;
         display: flex;
         justify-content: center;
-        margin: 120px auto;
+
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
 
         button {
             cursor: pointer;
@@ -523,10 +506,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -543,80 +527,8 @@
 @media
 (max-width:480px) {
 
-        
-        .bg {
-            position: relative;
-            background-image: url("../img/bg111.png");
-            background-repeat: no-repeat;
-            background-position: top;
-            background-size: 100% 100%;
-    
-            width: 100%;
-            height: 400px;
-    
-            >h2 {
-                @include h2();
-                z-index: 99;
-            }
-    
-            &::after {
-                position: absolute;
-                content: '';
-                background-image: url("../img/bottom.png");
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: bottom;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                bottom: 0%;
-                z-index: 88;
-                background-color: rgba(0, 0, 0, 0.3);
-            }
-        }
-    
-    
-    
-        //////////////////
-        .indicator {
-            max-width: 1280px;
-            margin: 0 auto;
-            margin-bottom: 100px;
-    
-            >ul {
-                @include flex(flex-start, center);
-    
-                >li {
-                    font-size: 14px;
-                    padding-right: 20px;
-                    margin-right: 10px;
-                    position: relative;
-    
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        background-image: url("../img/icon.png");
-                        background-size: 100% 100%;
-                        width: 8px;
-                        height: 12px;
-                        margin-left: 10px;
-                    }
-    
-                    &:nth-last-of-type(1) {
-                        color: #90BC43;
-    
-                        &::after {
-                            content: "";
-                            background: none;
-                        }
-                    }
-                }
-            }
-        }
-    
-        ///////////////////
+    .bg{height: 200px;}
+    .indicator{padding: 0 20px;}
         .text {
             display: flex;
             flex-wrap: wrap;
@@ -779,9 +691,34 @@
         }
     
         .next {
+            margin: 120px auto;
             display: flex;
             justify-content: center;
-            margin: 120px auto;
+    
+            .numbox {
+                max-width: 150px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+    
+                .number {
+                    flex-shrink: 0;
+                    transition: 0.5s;
+    
+                    >span {
+                        text-align: center;
+                        display: inline-block;
+                        width: 30px;
+                        padding: 8px 0px;
+                    }
+    
+                    >.on {
+                        border-radius: 10px;
+                        background-color: #90BC43;
+                        color: white;
+                    }
+                }
+            }
     
             button {
                 cursor: pointer;
@@ -793,10 +730,11 @@
                 height: 30px;
                 border: none;
                 margin: 0 5px;
+    
             }
     
             button:first-of-type,
-            :last-of-type {
+            button:last-of-type {
                 width: 45px;
             }
     

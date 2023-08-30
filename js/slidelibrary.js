@@ -1,19 +1,18 @@
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  loop:true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+},
   breakpoints: {
-    0: {
-      slidesPerView: 2
-    },
-    480: {
-      slidesPerView: 2
-    },
     481: {
         slidesPerView: 3
       }

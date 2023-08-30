@@ -3,15 +3,15 @@ let seedStoageNum = sessionStorage.getItem("click");
 fetch('./json/seed-data.json')
 .then(res => { return res.json() })
 .then(data => {
-
+  let item = data.items.filter(obj => obj.id == seedStoageNum)[0];
     const seedDetailCon = document.querySelector('.content');
     
     seedDetailCon.innerHTML = `
     <h4>씨앗 정보</h4>
-    <div class="seedname">${data.items[seedStoageNum].name}</div>
+    <div class="seedname">${item.name}</div>
     <hr />
     <figure>
-      <img id=seed src="${data.items[seedStoageNum].mainImg}" />
+      <img id=seed src="${item.mainImg}" />
     </figure>
     <div class="content_box">
       <ul class="top_detail">
@@ -21,8 +21,8 @@ fetch('./json/seed-data.json')
           </div>
           <div class="text_content">
             <ul class="txt">
-              <li><span>과명</span>${data.items[seedStoageNum].familyName}</li>
-              <li><span>학명</span>${data.items[seedStoageNum].sciName}</li>
+              <li><span>과명</span>${item.familyName}</li>
+              <li><span>학명</span>${item.sciName}</li>
             </ul>
           </div>
         </li>
@@ -32,9 +32,9 @@ fetch('./json/seed-data.json')
           </div>
           <div class="text_content2">
             <ul class="txt2">
-            <li><span>파종기</span>${data.items[seedStoageNum].sowingSeason}</li>
-              <li><span>개화기</span>${data.items[seedStoageNum].bloomingSeason}</li>
-              <li><span>결실기</span>${data.items[seedStoageNum].bearingSeason}</li>
+            <li><span>파종기</span>${item.sowingSeason}</li>
+              <li><span>개화기</span>${item.bloomingSeason}</li>
+              <li><span>결실기</span>${item.bearingSeason}</li>
             </ul>
           </div>
         </li>
@@ -48,23 +48,23 @@ fetch('./json/seed-data.json')
           <div class="text_content3">
             <ul class="txt3">
               <li>
-                <figure><img src="${data.items[seedStoageNum].ground[0]}">
-                  <figcaption>${data.items[seedStoageNum].ground[1]}</figcaption>
+                <figure><img src="${item.ground[0]}">
+                  <figcaption>${item.ground[1]}</figcaption>
                 </figure>
               </li>
               <li>
-                <figure><img src="${data.items[seedStoageNum].tmp[0]}">
-                  <figcaption>${data.items[seedStoageNum].tmp[1]}</figcaption>
+                <figure><img src="${item.tmp[0]}">
+                  <figcaption>${item.tmp[1]}</figcaption>
                 </figure>
               </li>
               <li>
-                <figure><img src="${data.items[seedStoageNum].deep[0]}">
-                  <figcaption>${data.items[seedStoageNum].deep[1]}</figcaption>
+                <figure><img src="${item.deep[0]}">
+                  <figcaption>${item.deep[1]}</figcaption>
                 </figure>
               </li>
               <li>
-                <figure><img src="${data.items[seedStoageNum].topsoil[0]}">
-                  <figcaption>${data.items[seedStoageNum].topsoil[1]}</figcaption>
+                <figure><img src="${item.topsoil[0]}">
+                  <figcaption>${item.topsoil[1]}</figcaption>
                 </figure>
               </li>
             </ul>

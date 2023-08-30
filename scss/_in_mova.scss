@@ -1,79 +1,87 @@
 @import "_reset";
 @import "_mixin";
 @import "_inc";
+.bg {
+    position: relative;
+    background-image: url("../img/architecture-1367903_1920.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: 100%;
+    height: 400px;
+
+    >h2 {
+        @include h2();
+        z-index: 99;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url("../img/bottom.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0%;
+        z-index: 88;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.indicator {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+    >ul {
+        @include flex(flex-start, center);
+
+        >li {
+            font-size: 14px;
+            padding-right: 20px;
+            margin-right: 10px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url("../img/icon.png");
+                background-size: 100% 100%;
+                width: 8px;
+                height: 12px;
+                margin-left: 10px;
+            }
+
+            &:nth-last-of-type(1) {
+                color: #90BC43;
+
+                &::after {
+                    content: "";
+                    background: none;
+                }
+            }
+        }
+    }
+}
 
 @media (max-width:480px) {
 
     main {
         @include tab();
         margin-bottom: 200px;
+        .bg{height: 200px;}
+        .indicator{padding: 0 20px;}
 
-        .bg {
-            position: relative;
-            background-image: url("../img/bg111.png");
-            background-repeat: no-repeat;
-            background-position: top;
-            background-size: 100% 100%;
-
-            width: 100%;
-            height: 400px;
-
-            >h2 {
-                @include h2();
-                z-index: 99;
-            }
-
-            &::after {
-                position: absolute;
-                content: '';
-                background-image: url("../img/bottom.png");
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: bottom;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                bottom: 0%;
-                z-index: 88;
-                background-color: rgba(0, 0, 0, 0.3);
-            }
-        }
-
-        .indicator {
-            max-width: 1280px;
-            margin: 0 auto;
-            margin-bottom: 80px;
-
-            >ul {
-                @include flex(flex-start, center);
-
-                >li {
-                    font-size: 14px;
-                    padding-right: 20px;
-                    margin-right: 10px;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        background-image: url("../img/icon.png");
-                        background-size: 100% 100%;
-                        width: 8px;
-                        height: 12px;
-                        margin-left: 10px;
-                    }
-
-                    &:nth-last-of-type(1) {
-                        color: #90BC43;
-
-                        &::after {
-                            content: "";
-                            background: none;
-                        }
-                    }
-                }
+        figcaption{
+            padding: 20px 0;
+            p{
+                font-size: 14px;
             }
         }
 
@@ -83,30 +91,29 @@
 
             hr {
                 padding: 0;
-                margin: 0;
+                margin: 10px auto;
             }
 
             .intad {
                 text-align: center;
-                margin-bottom: 20%;
+                margin-bottom: 65px;
 
                 a {
-                    padding: 0 2%;
-
+                    font-size: 16px;
+                    padding: 0 50px;
                     &.active {
                         position: relative;
-                        color: #90BE45;
-                        font-weight: 600;
+                        color: #4E813B;
 
                         &::after {
                             content: "";
                             display: block;
                             position: absolute;
                             bottom: -10px;
-                            left: 0;
-                            width: 100%;
-                            height: 2px;
-                            background-color: #90BE45;
+                            left: 25%;
+                            width: 50%;
+                            height: 3px;
+                            background-color:#4E813B;
                         }
 
                     }
@@ -179,17 +186,18 @@
 
         .incon {
             .tower {
-                border-top: 1px solid rgb(121, 121, 121);
+                border-top: 2px solid rgb(225, 227, 226);
                 display: flex;
                 padding: 3% 0;
                 justify-content: center;
 
                 >li {
-                    padding: 1% 2%;
-
+                    padding: 5% 13%;
+                    font-size: 14px;
                     &.active {
                         position: relative;
-                        color: #90BE45;
+                        color: #4E813B;
+                        font-size: 16px;
                         font-weight: 600;
 
                     }
@@ -213,6 +221,7 @@
                     text-align: center;
 
                     p {
+                        
                         width: 100%;
                         padding: 5% 0%;
                     }
@@ -287,7 +296,7 @@
                 margin-right: 3%;
 
                 p {
-
+                    font-size: 14px;
                     &:nth-of-type(1) {
                         width: 50px;
                         margin-right: 5px;

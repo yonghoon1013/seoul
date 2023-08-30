@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
+  word-break: keep-all;
   box-sizing: border-box;
 }
 
@@ -110,12 +111,13 @@ table {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 950px;
+    width: 100%;
   }
   #header .head .header-nav > ul > li {
     display: flex;
@@ -279,6 +281,7 @@ table {
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
+    cursor: pointer;
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
@@ -287,8 +290,7 @@ table {
     display: block;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
+    box-shadow: 3px 5px 15px -4.5px #777;
   }
   .quick-box .quick-nav > ul > li > a .quick-con {
     position: absolute;
@@ -325,19 +327,21 @@ table {
   }
   .quick-box .quick-nav > ul > li > a:hover .quick-con {
     opacity: 0;
+    transition: 0.2s;
   }
   .quick-box .quick-nav > ul > li > a:hover > .title {
     opacity: 1;
+    transition: 0.2s;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 60px 0;
   }
   #footer .footer-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
   }
   #footer .footer-con > .left {
     margin-right: 100px;
@@ -388,6 +392,75 @@ table {
     margin-right: 30px;
   }
 }
+.bg {
+  position: relative;
+  background-image: url("../img/architecture-1367903_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+.bg > h2 {
+  color: white;
+  position: absolute;
+  font-size: 32px;
+  font-weight: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.bg::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/bottom.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0%;
+  z-index: 88;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.indicator {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.indicator > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.indicator > ul > li {
+  font-size: 14px;
+  padding-right: 20px;
+  margin-right: 10px;
+  position: relative;
+}
+.indicator > ul > li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../img/icon.png");
+  background-size: 100% 100%;
+  width: 8px;
+  height: 12px;
+  margin-left: 10px;
+}
+.indicator > ul > li:nth-last-of-type(1) {
+  color: #90BC43;
+}
+.indicator > ul > li:nth-last-of-type(1)::after {
+  content: "";
+  background: none;
+}
+
 @media (min-width: 481px) {
   main {
     margin-bottom: 200px;
@@ -398,72 +471,11 @@ table {
   main .tab .tabct > *.on {
     display: block;
   }
-  main .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
+  main figcaption {
+    padding: 20px 0;
   }
-  main .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  main .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  main .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 80px;
-  }
-  main .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  main .indicator > ul > li {
-    font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  main .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  main .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  main .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
+  main figcaption p {
+    font-size: 16px;
   }
   main .conten {
     margin: 0 auto;
@@ -472,30 +484,30 @@ table {
   }
   main .conten hr {
     padding: 0;
-    margin: 0;
+    margin: 20px auto;
   }
   main .conten .intad {
     text-align: center;
-    margin-bottom: 8%;
+    margin-bottom: 65px;
   }
   main .conten .intad a {
-    padding: 0 2%;
+    font-size: 20px;
+    padding: 0 50px;
     cursor: pointer;
   }
   main .conten .intad a.active {
     position: relative;
-    color: #90BE45;
-    font-weight: 600;
+    color: #4E813B;
   }
   main .conten .intad a.active::after {
     content: "";
     display: block;
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #90BE45;
+    left: 19%;
+    width: 60%;
+    height: 3px;
+    background-color: #4E813B;
   }
   main .conten .swiper {
     display: none;
@@ -546,12 +558,13 @@ table {
     border-bottom: 1px solid black;
   }
   main .incon .tower > li {
-    padding: 1% 2%;
+    padding: 2% 2%;
     cursor: pointer;
   }
   main .incon .tower > li.active {
     position: relative;
-    color: #90BE45;
+    color: #4E813B;
+    font-size: 18px;
     font-weight: 600;
   }
   main .incon .map.on {
@@ -856,12 +869,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 40px 0;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -1147,12 +1160,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
+    padding: 30px 0;
     background-color: #447531;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -1240,6 +1253,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
+  word-break: keep-all;
   box-sizing: border-box;
 }
 
@@ -1321,12 +1335,13 @@ table {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 950px;
+    width: 100%;
   }
   #header .head .header-nav > ul > li {
     display: flex;
@@ -1490,6 +1505,7 @@ table {
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
+    cursor: pointer;
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
@@ -1498,8 +1514,7 @@ table {
     display: block;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
+    box-shadow: 3px 5px 15px -4.5px #777;
   }
   .quick-box .quick-nav > ul > li > a .quick-con {
     position: absolute;
@@ -1536,19 +1551,21 @@ table {
   }
   .quick-box .quick-nav > ul > li > a:hover .quick-con {
     opacity: 0;
+    transition: 0.2s;
   }
   .quick-box .quick-nav > ul > li > a:hover > .title {
     opacity: 1;
+    transition: 0.2s;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 60px 0;
   }
   #footer .footer-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
   }
   #footer .footer-con > .left {
     margin-right: 100px;
@@ -1599,6 +1616,75 @@ table {
     margin-right: 30px;
   }
 }
+.bg {
+  position: relative;
+  background-image: url("../img/architecture-1367903_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+.bg > h2 {
+  color: white;
+  position: absolute;
+  font-size: 32px;
+  font-weight: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.bg::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/bottom.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0%;
+  z-index: 88;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.indicator {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.indicator > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.indicator > ul > li {
+  font-size: 14px;
+  padding-right: 20px;
+  margin-right: 10px;
+  position: relative;
+}
+.indicator > ul > li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../img/icon.png");
+  background-size: 100% 100%;
+  width: 8px;
+  height: 12px;
+  margin-left: 10px;
+}
+.indicator > ul > li:nth-last-of-type(1) {
+  color: #90BC43;
+}
+.indicator > ul > li:nth-last-of-type(1)::after {
+  content: "";
+  background: none;
+}
+
 @media (max-width: 480px) {
   main {
     margin-bottom: 200px;
@@ -1610,71 +1696,16 @@ table {
     display: block;
   }
   main .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-  }
-  main .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  main .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
+    height: 200px;
   }
   main .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+    padding: 0 20px;
   }
-  main .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  main figcaption {
+    padding: 20px 0;
   }
-  main .indicator > ul > li {
+  main figcaption p {
     font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  main .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  main .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  main .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
   }
   main .conten {
     margin: 0 auto;
@@ -1683,29 +1714,29 @@ table {
   }
   main .conten hr {
     padding: 0;
-    margin: 0;
+    margin: 10px auto;
   }
   main .conten .intad {
     text-align: center;
-    margin-bottom: 20%;
+    margin-bottom: 65px;
   }
   main .conten .intad a {
-    padding: 0 2%;
+    font-size: 16px;
+    padding: 0 50px;
   }
   main .conten .intad a.active {
     position: relative;
-    color: #90BE45;
-    font-weight: 600;
+    color: #4E813B;
   }
   main .conten .intad a.active::after {
     content: "";
     display: block;
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #90BE45;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background-color: #4E813B;
   }
   main .conten .swiper {
     display: none;
@@ -1756,17 +1787,19 @@ table {
     color: #90BE45;
   }
   main .incon .tower {
-    border-top: 1px solid rgb(121, 121, 121);
+    border-top: 2px solid rgb(225, 227, 226);
     display: flex;
     padding: 3% 0;
     justify-content: center;
   }
   main .incon .tower > li {
-    padding: 1% 2%;
+    padding: 5% 13%;
+    font-size: 14px;
   }
   main .incon .tower > li.active {
     position: relative;
-    color: #90BE45;
+    color: #4E813B;
+    font-size: 16px;
     font-weight: 600;
   }
   main .incon .map.on {
@@ -1837,6 +1870,9 @@ table {
     justify-content: start;
     align-items: center;
     margin-right: 3%;
+  }
+  main .icon li p {
+    font-size: 14px;
   }
   main .icon li p:nth-of-type(1) {
     width: 50px;
@@ -2073,12 +2109,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 40px 0;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -2364,12 +2400,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
+    padding: 30px 0;
     background-color: #447531;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;

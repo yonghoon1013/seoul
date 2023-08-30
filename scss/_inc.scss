@@ -34,10 +34,10 @@
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-
+                width: 100%;
                 >ul {
                     @include flex(space-around, stretch);
-                    width: 950px;
+                    width: 100%;
                     >li {
                         display: flex;
                         flex-direction: column;
@@ -247,11 +247,12 @@
         z-index: 99;
 
         .quick-nav {
+
             >ul {
 
                 >li {
                     margin-bottom: 30%;
-
+                    cursor: pointer;
                     >a {
                         position: relative;
                         width: 80px;
@@ -259,8 +260,7 @@
                         display: block;
                         background-color: white;
                         border-radius: 50%;
-                        box-shadow: 0 5px 10px -5px #777;
-                        border: 1px solid #90BC43;
+                        box-shadow: 3px 5px 15px -4.5px #777;
 
                         .quick-con {
                             position: absolute;
@@ -311,14 +311,15 @@
 
                         &:hover {
 
-
                             // 1번
                             .quick-con {
                                 opacity: 0;
+                                transition: 0.2s;
                             }
 
                             >.title {
                                 opacity: 1;
+                                transition: 0.2s;
                             }
 
 
@@ -334,13 +335,11 @@
 
     //푸터
     #footer {
-        height: 220px;
+        height: 100%;
         background-color: #447531;
-
+        padding: 60px 0;
         .footer-con {
             @include flex(center, center);
-            padding-top: 60px;
-
             >.left {
                 margin-right: 100px;
 

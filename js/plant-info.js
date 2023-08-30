@@ -1,35 +1,36 @@
 const elS2 = document.querySelectorAll('.text p');
-const elS2Content = document.querySelectorAll('.nnn');
-
-
-let num = 0;
-elS2[num].classList.add('on');
-elS2Content[num].classList.add('on');
-
-
-
+const elS2Content = document.querySelector('.nnn');
 const elallbutn = document.querySelector('.number');
-const elplant = document.querySelector('.all-plant');
 
+
+let imgle = 8;
+let list = [];
+let now = 1;
+let num = 0;
 let fullpg = 0;
+
+
+elS2[num].classList.add('on');
+elS2Content.classList.add('on');
+
+
+
+
 
 fetch('./json/flower.json')
     .then(res => { return res.json() })
     .then(data => {
+
+        //탭조건맞춰 뿌리기
         elS2.forEach(function (ele, key) {
             ele.onclick = function () {
-                elS2Content[key].innerHTML = ""
-                now = 1;
+                elS2Content.innerHTML = ""
+                let list = [];
                 elS2[num].classList.remove('on');
                 this.classList.add('on');
 
-                elS2Content[num].classList.remove('on');
-                elS2Content[key].classList.add('on');
-
 
                 if (key == 1) {
-
-                    let monthdata = []
 
                     data.items.forEach((v7, k7) => {
                         let month = new Date().getMonth() + 1;
@@ -37,39 +38,19 @@ fetch('./json/flower.json')
                         if (month >= (data.items[k7].bloomingSeason.substr(0, 1)) &&
                             month <= (data.items[k7].bloomingSeason.substr((data.items[k7].bloomingSeason.indexOf("월") - 1), 1))) {
 
-                            monthdata.push(data.items[k7])
-                        } else { }
+                            list.push(data.items[k7])
+                        }
 
 
                     });
-                    monthdata.forEach((v8, k8) => {
-                        if ((now - 1) * imgle <= k8 && now * imgle > k8) {
-                            console.log(k8);
-                            elS2Content[key].innerHTML += `
-                                    <li class="sspace">
-                                    <a href="./Pdetail.html">
-                                        <img src="${v8.img}">
-                                        <div class="ab">
-                                            <p>${v8.name}</p>
-                                            <p>${v8.engName}</p>
-                                        </div>
-                                    </a>
-                                    </li>
-                                    `
-                        } else {
-                        }
-
-                    })
-
-                    max_full = monthdata.length;
-                    pgen(max_full)
-                    sspace();
-                } else {
-                    max_full = data.items.length;
-                    pgen(max_full);
-                    imgFn(key);
-                    sspace();
+                }else{
+                    list = data.items
                 }
+
+                max_full = list.length;
+                imgFn(list, 1)
+                pgen(max_full)
+                sspace();
 
                 num = key;
 
@@ -77,26 +58,20 @@ fetch('./json/flower.json')
         });
 
 
-        let now = 1;
-        let imgle = 8;
-
-
         let max_full = data.items.length;
         let max = Math.ceil(max_full / imgle)
 
+        // 뿌리기
+        const imgFn = function (list, now) {
+            elS2Content.innerHTML = '';
 
-        // 이미지 뿌리기
-        const imgFn = function (key) {
-            elS2Content[key].innerHTML = '';
 
-
-            data.items.forEach((v, k) => {
+            list.forEach((v, k) => {
 
                 if ((now - 1) * imgle <= k && now * imgle > k) {
-                    console.log(key);
 
-                    elS2Content[key].innerHTML += `
-                <li class="sspace">
+                    elS2Content.innerHTML += `
+                <li class="sspace" data-id="${v.id}">
                 <a href="./Pdetail.html">
                     <img src="${v.img}">
                     <div class="ab">
@@ -106,10 +81,11 @@ fetch('./json/flower.json')
                 </a>
                 </li>
                 `
-                } else { }
+                }
 
             });
         }
+
 
         //클릭시 유도
         const sspace = function () {
@@ -120,23 +96,13 @@ fetch('./json/flower.json')
             elsspace.forEach((v4, k4) => {
 
                 v4.onclick = function (e) {
+                    e.preventDefault();
 
-                    v4.querySelectorAll('.ad >p')
-                    console.log(v4.querySelector('.ab >p').innerText);
-                    const text = v4.querySelector('.ab >p').innerText;
 
-                    for (let k5 in data.items) {
+                    sessionStorage.setItem("click", v4.dataset.id);
+                    location.href = 'Pdetail.html';
 
-                        if (text == data.items[k5].name) {
-                            sessionStorage.setItem("click", k5);
-                            location.href = 'Pdetail.html';
-                            break;
-                        }
-                        else {
-                            e.preventDefault()
-                        }
 
-                    }
                 }
             })
         }
@@ -145,7 +111,7 @@ fetch('./json/flower.json')
 
 
         // 페이지네이션
-        const pgen = function (max_full) {
+        const pgen = function (max_full,list) {
 
             max = Math.ceil(max_full / imgle)
             elallbutn.innerHTML = "";
@@ -154,26 +120,23 @@ fetch('./json/flower.json')
             }
 
             const elbutn = document.querySelectorAll('.number >span')
-            
-            let rmvv2 = 0;
-            elbutn[rmvv2].classList.add("on")
-            
+            now = 1
+            elbutn[now-1].classList.add("on")
+
             elbutn.forEach((v2, k2) => {
                 v2.onclick = function () {
-                    elbutn[rmvv2].classList.remove("on")
+                    elbutn[now - 1].classList.remove("on")
                     v2.classList.add("on")
-                    console.log(v2);
                     now = v2.innerText
-                    
-                    imgFn(num)
+
+
+                    imgFn(list, now)
                     sspace()
-                    rmvv2=k2;
                 }
             })
 
             fullpg = Math.ceil(elbutn.length / 5 - 1);
-            console.log(fullpg);
-            
+
         }
 
 
@@ -199,112 +162,61 @@ fetch('./json/flower.json')
                 }
 
                 elallbutn.style.transform = `translateX(${nextnum * -150}px)`;
-                console.log(elallbutn);
-
 
             }
         })
+
 
 
         //검색
         const elsearchbt = document.querySelector('.inout > #search_but')
         const elsearch = document.querySelector('.inout > #search')
 
-        elsearch.addEventListener("keydown", (event) => {
-            if (event.keyCode === 13) {
-                elS2[num].classList.remove('on');
-                elS2Content[num].classList.remove('on');
-                num = 0;
-                elS2[num].classList.add('on');
-                elS2Content[num].classList.add('on');
-
-                console.log(elsearch.value);
-                elS2Content[num].innerHTML = ""
-                let searchdata = [];
-
-                data.items.forEach((v7, k7) => {
-
-                    if (data.items[k7].name.includes(elsearch.value)) {
-
-                        searchdata.push(data.items[k7])
-                    } else { }
-
-                })
-                searchdata.forEach((v9, k9) => {
-                    if ((now - 1) * imgle <= k9 && now * imgle > k9) {
-                        elS2Content[num].innerHTML += `
-                                <li class="sspace">
-                                <a href="./Pdetail.html">
-                                    <img src="${v9.img}">
-                                    <div class="ab">
-                                        <p>${v9.name}</p>
-                                        <p>${v9.engName}</p>
-                                    </div>
-                                </a>
-                                </li>
-                                `
-                    }
-
-                })
-                elsearch.value = ""
-                const elsspace = elS2Content[num].querySelectorAll('.sspace');
-                elsspace.length == 0 ? elS2Content[num].innerHTML += `<li>검색 결과가 없습니다.</li>` : ""
-
-                max_full = searchdata.length;
-                pgen(max_full)
-                sspace();
-
-            }
-        })
-
-        elsearchbt.onclick = (v, k) => {
-
+        const searchevent = () => {
             elS2[num].classList.remove('on');
-            elS2Content[num].classList.remove('on');
             num = 0;
             elS2[num].classList.add('on');
-            elS2Content[num].classList.add('on');
-            console.log(elsearch.value);
-            elS2Content[num].innerHTML = ""
-            let searchdata = [];
+
+            elS2Content.innerHTML = ""
+            list = [];
 
             data.items.forEach((v7, k7) => {
 
                 if (data.items[k7].name.includes(elsearch.value)) {
 
-                    searchdata.push(data.items[k7])
+                    list.push(v7)
                 } else { }
 
             })
-            searchdata.forEach((v9, k9) => {
-                if ((now - 1) * imgle <= k9 && now * imgle > k9) {
-                    elS2Content[num].innerHTML += `
-                            <li class="sspace">
-                            <a href="./Pdetail.html">
-                                <img src="${v9.img}">
-                                <div class="ab">
-                                    <p>${v9.name}</p>
-                                    <p>${v9.engName}</p>
-                                </div>
-                            </a>
-                            </li>
-                            `
-                } else {
-                }
-            })
-            elsearch.value = ""
-            const elsspace = elS2Content[num].querySelectorAll('.sspace');
-            elsspace.length == 0 ? elS2Content[num].innerHTML += `<li>검색 결과가 없습니다.</li>` : ""
+            imgFn(list, 1)
 
-            max_full = searchdata.length;
+
+            elsearch.value = ""
+            const elsspace = elS2Content.querySelectorAll('li');
+            elsspace.length == 0 ? elS2Content.innerHTML += `<li>검색 결과가 없습니다.</li>` : ""
+
+            max_full = list.length;
             pgen(max_full)
             sspace();
-
         }
 
+        elsearch.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                searchevent();
 
-        pgen(max_full);
-        imgFn(0);
+            }
+        })
+
+        elsearchbt.addEventListener("click", () => {
+
+            searchevent();
+
+        })
+
+
+        list = data.items;
+        pgen(max_full,list);
+        imgFn(list, 1);
         sspace();
 
     })

@@ -48,8 +48,8 @@
                     <option value="content">내용</option>
                 </select>
 
-                <input type="text" placeholder="입력하세요">
-                <input type="submit" value="검색">
+                <input id="search" type="text" placeholder="입력하세요">
+                <input id ="search_but" type="button" value="검색">
             </div>
 
             <div class="michin">
@@ -96,17 +96,6 @@
                         </a>
                     </li> -->
                 </ul>
-                <ul class="nnn teen-program">
-
-
-                </ul>
-                <ul class="nnn family-program">
-
-                </ul>
-                <ul class="nnn adult-program">
-
-                </ul>
-            </div>
 
             <div class="michin">
                 <div class="linee">
@@ -225,13 +214,13 @@
             
             
             <div class="next">
-                <button>이전</button>
-                <button  class="on">1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button>다음</button>
+                <button data-name = prev>이전</button>
+                <div class="numbox">
+                    <ul class="number">
+                </ul>
+                </div>
+                
+                <button data-name = next>다음</button>
             </div>
 
         </div>

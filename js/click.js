@@ -4,93 +4,94 @@ function programClick() {
     fetch('./json/program.json')
         .then(res => { return res.json() })
         .then(data => {
+            let item = data.items.filter(obj => obj.id == programStoageNum)[0];
             const experDetail = document.querySelector('.experience-box'),
-                  elprogram = document.querySelector('.experience-con >.ll');
+                elprogram = document.querySelector('.experience-con >.ll');
 
             experDetail.innerHTML = `
         <div class="experience-info-box">
         <div class="left">
-            <img src="${data.items[programStoageNum].img}">
+            <img src="${item.img}">
         </div>
         <div class="right">
             <p class="title">
-                ${data.items[programStoageNum].name}
+                ${item.name}
             </p>
             <ul>
                 <li class="a">
                     <dl>
                         <dt>체험기간</dt>
-                        <dd>${data.items[programStoageNum].period}</dd>
+                        <dd>${item.period}</dd>
                     </dl>
                 </li>
 
                 <li class="b">
                     <dl>
                         <dt>장소</dt>
-                        <dd>${data.items[programStoageNum].area}</dd>
+                        <dd>${item.area}</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>대상</dt>
-                        <dd>${data.items[programStoageNum].target}</dd>
+                        <dd>${item.target}</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>모집정원</dt>
-                        <dd>${data.items[programStoageNum].recruit}명</dd>
+                        <dd>${item.recruit}명</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>이용시간</dt>
-                        <dd>${data.items[programStoageNum].time}</dd>
+                        <dd>${item.time}</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>이용요금</dt>
-                        <dd>${data.items[programStoageNum].price}</dd>
+                        <dd>${item.price}</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>신청제한</dt>
-                        <dd>1팀 당 최대 ${data.items[programStoageNum].maxPeople}인</dd>
+                        <dd>1팀 당 최대 ${item.maxPeople}인</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>예약방법</dt>
-                        <dd>${data.items[programStoageNum].reserveMethod}</dd>
+                        <dd>${item.reserveMethod}</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>접수기간</dt>
-                        <dd>${data.items[programStoageNum].deadline}</dd>
+                        <dd>${item.deadline}</dd>
                     </dl>
                 </li>
 
                 <li>
                     <dl>
                         <dt>취소기간</dt>
-                        <dd>${data.items[programStoageNum].periodCancel}</dd>
+                        <dd>${item.periodCancel}</dd>
                     </dl>
                 </li>
 
                 <li class="c">
                     <dl>
                         <dt>단체예약 및 문의전화</dt>
-                        <dd>${data.items[programStoageNum].tel}</dd>
+                        <dd>${item.tel}</dd>
                     </dl>
                 </li>
             </ul>
@@ -105,7 +106,7 @@ function programClick() {
         </div>
     </div>`
         elprogram.innerHTML =`
-        <img src="${data.items[programStoageNum].programD}" alt="">`
+        <img src="${item.programD}" alt="">`
         })
 
 }
