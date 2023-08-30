@@ -1,70 +1,74 @@
 @import "_reset";
 @import "_mixin";
 @import "_inc";
+.bg {
+  position: relative;
+  background-image: url("../img/pots-716579_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-main {
-  .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
+  width: 100%;
+  height: 400px;
+  > h2 {
+    @include h2();
+    z-index: 99;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/bottom.png");
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-
+    background-size: 100%;
+    background-position: bottom;
     width: 100%;
-    height: 400px;
-    > h2 {
-      @include h2();
-      z-index: 99;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url("../img/bottom.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: bottom;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      bottom: 0%;
-      z-index: 88;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
+    height: 100%;
+    left: 0;
+    bottom: 0%;
+    z-index: 88;
+    background-color: rgba(0, 0, 0, 0.3);
   }
+}
+//////////////////
+.indicator {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 
-  //////////////////
-  .indicator {
-    @include main-width(){
-      margin-bottom: 100px
-  };
-    > ul {
+  >ul {
       @include flex(flex-start, center);
-      > li {
-        font-size: 14px;
-        padding-right: 20px;
-        margin-right: 10px;
-        position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background-image: url("../img/icon.png");
-          background-size: 100% 100%;
-          width: 8px;
-          height: 12px;
-          margin-left: 10px;
-        }
-        &:nth-last-of-type(1) {
-          color: #90bc43;
+
+      >li {
+          font-size: 14px;
+          padding-right: 20px;
+          margin-right: 10px;
+          position: relative;
+
           &::after {
-            content: "";
-            background: none;
+              content: "";
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              background-image: url("../img/icon.png");
+              background-size: 100% 100%;
+              width: 8px;
+              height: 12px;
+              margin-left: 10px;
           }
-        }
+
+          &:nth-last-of-type(1) {
+              color: #90BC43;
+
+              &::after {
+                  content: "";
+                  background: none;
+              }
+          }
       }
-    }
   }
+}
+main {
+
 
   .content {
     @include main-width($w: 850px);
@@ -73,7 +77,7 @@ main {
     margin-bottom: 100px;
     h2 {
       color: #447531;
-      font-size: 32px;
+      font-size: 24px;
       margin-bottom: 60px;
     }
     figure {

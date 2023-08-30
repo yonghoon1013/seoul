@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
+  word-break: keep-all;
   box-sizing: border-box;
 }
 
@@ -110,12 +111,13 @@ table {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 950px;
+    width: 100%;
   }
   #header .head .header-nav > ul > li {
     display: flex;
@@ -279,6 +281,7 @@ table {
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
+    cursor: pointer;
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
@@ -287,8 +290,7 @@ table {
     display: block;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
+    box-shadow: 3px 5px 15px -4.5px #777;
   }
   .quick-box .quick-nav > ul > li > a .quick-con {
     position: absolute;
@@ -325,19 +327,21 @@ table {
   }
   .quick-box .quick-nav > ul > li > a:hover .quick-con {
     opacity: 0;
+    transition: 0.2s;
   }
   .quick-box .quick-nav > ul > li > a:hover > .title {
     opacity: 1;
+    transition: 0.2s;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 60px 0;
   }
   #footer .footer-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
   }
   #footer .footer-con > .left {
     margin-right: 100px;
@@ -388,73 +392,81 @@ table {
     margin-right: 30px;
   }
 }
+.bg {
+  position: relative;
+  background-image: url("../img/architecture-1367903_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+.bg > h2 {
+  color: white;
+  position: absolute;
+  font-size: 32px;
+  font-weight: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.bg::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/bottom.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0%;
+  z-index: 88;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.indicator {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.indicator > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.indicator > ul > li {
+  font-size: 14px;
+  padding-right: 20px;
+  margin-right: 10px;
+  position: relative;
+}
+.indicator > ul > li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../img/icon.png");
+  background-size: 100% 100%;
+  width: 8px;
+  height: 12px;
+  margin-left: 10px;
+}
+.indicator > ul > li:nth-last-of-type(1) {
+  color: #90BC43;
+}
+.indicator > ul > li:nth-last-of-type(1)::after {
+  content: "";
+  background: none;
+}
+
 @media (max-width: 480px) {
   .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-  }
-  .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
+    height: 200px;
   }
   .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-  .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .indicator > ul > li {
-    font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
+    padding: 0 20px;
   }
   .space {
     width: 100%;
@@ -466,7 +478,7 @@ table {
     align-items: center;
   }
   .space .sub-f p {
-    font-size: 32px;
+    font-size: 20px;
     margin-bottom: 50px;
   }
   .space .haha {
@@ -494,7 +506,7 @@ table {
     margin-left: 30px;
   }
   .space .haha .name p {
-    font-size: 24px;
+    font-size: 20px;
   }
   .space .ttt {
     position: relative;
@@ -545,76 +557,14 @@ table {
     font-size: 16px;
     color: white;
     text-align: center;
-    font-weight: bold;
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   .bg {
-    position: relative;
-    background-image: url("./img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-  }
-  .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("./img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
+    height: 200px;
   }
   .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-  .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .indicator > ul > li {
-    font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("./img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
+    padding: 0 20px;
   }
   .space {
     width: 100%;
@@ -626,7 +576,7 @@ table {
     align-items: center;
   }
   .space .sub-f p {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 50px;
   }
   .space .haha {
@@ -704,77 +654,9 @@ table {
     font-size: 16px;
     color: white;
     text-align: center;
-    font-weight: bold;
   }
 }
 @media (min-width: 1024px) {
-  .bg {
-    position: relative;
-    background-image: url("../img/bg111.png");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 400px;
-  }
-  .bg > h2 {
-    color: white;
-    position: absolute;
-    font-size: 32px;
-    font-weight: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
-  .bg::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/bottom.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0%;
-    z-index: 88;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-  }
-  .indicator > ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .indicator > ul > li {
-    font-size: 14px;
-    padding-right: 20px;
-    margin-right: 10px;
-    position: relative;
-  }
-  .indicator > ul > li::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../img/icon.png");
-    background-size: 100% 100%;
-    width: 8px;
-    height: 12px;
-    margin-left: 10px;
-  }
-  .indicator > ul > li:nth-last-of-type(1) {
-    color: #90BC43;
-  }
-  .indicator > ul > li:nth-last-of-type(1)::after {
-    content: "";
-    background: none;
-  }
   .space {
     max-width: 1280px;
     margin: 0 auto;
@@ -785,7 +667,7 @@ table {
     align-items: center;
   }
   .space .sub-f p {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 37px;
   }
   .space .haha {
@@ -863,7 +745,6 @@ table {
     font-size: 16px;
     color: white;
     text-align: center;
-    font-weight: bold;
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
@@ -1096,12 +977,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 40px 0;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -1387,12 +1268,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
+    padding: 30px 0;
     background-color: #447531;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;

@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
+  word-break: keep-all;
   box-sizing: border-box;
 }
 
@@ -111,12 +112,13 @@ table {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 950px;
+    width: 100%;
   }
   #header .head .header-nav > ul > li {
     display: flex;
@@ -280,6 +282,7 @@ table {
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
+    cursor: pointer;
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
@@ -288,8 +291,7 @@ table {
     display: block;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
+    box-shadow: 3px 5px 15px -4.5px #777;
   }
   .quick-box .quick-nav > ul > li > a .quick-con {
     position: absolute;
@@ -326,19 +328,21 @@ table {
   }
   .quick-box .quick-nav > ul > li > a:hover .quick-con {
     opacity: 0;
+    transition: 0.2s;
   }
   .quick-box .quick-nav > ul > li > a:hover > .title {
     opacity: 1;
+    transition: 0.2s;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 60px 0;
   }
   #footer .footer-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
   }
   #footer .footer-con > .left {
     margin-right: 100px;
@@ -391,7 +395,7 @@ table {
 }
 .bg {
   position: relative;
-  background-image: url("../StoryImg/castle-4336616_1920.jpg");
+  background-image: url("../img/grass-1784140_1920_2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1128,12 +1132,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 40px 0;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -1419,12 +1423,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
+    padding: 30px 0;
     background-color: #447531;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;

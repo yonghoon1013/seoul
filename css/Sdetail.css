@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
+  word-break: keep-all;
   box-sizing: border-box;
 }
 
@@ -110,12 +111,13 @@ table {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 950px;
+    width: 100%;
   }
   #header .head .header-nav > ul > li {
     display: flex;
@@ -279,6 +281,7 @@ table {
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
+    cursor: pointer;
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
@@ -287,8 +290,7 @@ table {
     display: block;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
+    box-shadow: 3px 5px 15px -4.5px #777;
   }
   .quick-box .quick-nav > ul > li > a .quick-con {
     position: absolute;
@@ -325,19 +327,21 @@ table {
   }
   .quick-box .quick-nav > ul > li > a:hover .quick-con {
     opacity: 0;
+    transition: 0.2s;
   }
   .quick-box .quick-nav > ul > li > a:hover > .title {
     opacity: 1;
+    transition: 0.2s;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 60px 0;
   }
   #footer .footer-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
   }
   #footer .footer-con > .left {
     margin-right: 100px;
@@ -671,7 +675,7 @@ table {
     justify-content: center;
     float: right;
   }
-  main .content .btn_list p {
+  main .content .btn_list a {
     display: block;
     color: #fff;
     text-align: center;
@@ -966,7 +970,7 @@ table {
     justify-content: center;
     float: right;
   }
-  main .content .content_box .btn_list p {
+  main .content .content_box .btn_list a {
     display: block;
     color: #fff;
     text-align: center;
@@ -1054,13 +1058,13 @@ table {
   }
   main .content h4 {
     color: #58585a;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 40px;
   }
   main .content .seedname {
     text-align: start;
     color: #58585a;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
   }
@@ -1127,6 +1131,7 @@ table {
   }
   main .content .content_box .top_detail .conbox .text_content .txt li {
     text-align: start;
+    font-size: 14px;
   }
   main .content .content_box .top_detail .conbox .text_content .txt li span {
     padding-right: 35px;
@@ -1183,6 +1188,7 @@ table {
     flex-direction: column;
   }
   main .content .content_box .top_detail .conbox2 .text_content2 .txt2 li {
+    font-size: 14px;
     padding-bottom: 20px;
     text-align: start;
   }
@@ -1250,6 +1256,7 @@ table {
     margin: 0 auto;
   }
   main .content .content_box .bottom_detail .conbox3 .text_content3 .txt3 li figure figcaption {
+    font-size: 14px;
     margin-top: 20px;
   }
   main .content .btn_list {
@@ -1263,7 +1270,7 @@ table {
     justify-content: center;
     float: right;
   }
-  main .content .btn_list p {
+  main .content .btn_list a {
     display: block;
     color: #fff;
     text-align: center;
@@ -1501,12 +1508,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 40px 0;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -1792,12 +1799,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
+    padding: 30px 0;
     background-color: #447531;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;

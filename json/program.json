@@ -182,7 +182,7 @@
             "programD" : "./img/programD_img10.jpg"
         }
         ,{
-            "id" : "10",
+            "id" : "11",
             "img" : "./img/programT_img3.png",
             "name" : "[나뭇잎 스케치텔링]",
             "area" : "식물문화센터",
@@ -201,7 +201,7 @@
             "programD" : "./img/programD_img11.png"
         }
         ,{
-            "id" : "11",
+            "id" : "12",
             "img" : "./img/programT_img4.jpg",
             "name" : "[해설사와 함께하는 온실 로보타닉 투어]",
             "area" : " 온실",
@@ -220,7 +220,7 @@
             "programD" : "./img/programD_img12.png"
         }
         ,{
-            "id" : "12",
+            "id" : "13",
             "img" : "./img/programT_img5.png",
             "name" : "[서울식물원의 새]",
             "area" : " 식물문화센터",

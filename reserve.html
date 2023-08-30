@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script defer src="./js/reserve.js"></script>
     <script defer src="./js/inc.js"></script>
-    <title>Document</title>
+    <title>체험신청</title>
 </head>
 
 <body>
@@ -26,13 +26,13 @@
         <div class="indicator">
             <ul>
                 <li>
+                    참여하기
+                </li>
+                <li>
                     교육프로그램
                 </li>
                 <li>
-                    교육신청
-                </li>
-                <li>
-                    예약하기
+                    체험신청
                 </li>
             </ul>
         </div>
@@ -71,8 +71,8 @@
                 <div class="reserve-info">
                     <form class="gg" action="">
                         <input id="name" type="text" placeholder="이름">
-                        <input id="birthday" type="text" placeholder="생년월일">
-                        <input id="tel" type="tel" placeholder="전화번호">
+                        <input id="birthday" type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="생년월일">
+                        <input id="tel" type="tel" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="전화번호">
                     </form>
                 </div>
             </div>

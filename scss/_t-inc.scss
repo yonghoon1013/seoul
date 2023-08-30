@@ -321,12 +321,11 @@
 
     //푸터
     #footer {
-        height: 220px;
+        height: 100%;
         background-color: #447531;
-
+        padding: 40px 0;
         .footer-con {
             display: block;
-            padding-top: 20px;
             
             >.left {
                 width: 100px;

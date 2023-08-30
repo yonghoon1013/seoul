@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 * {
+  word-break: keep-all;
   box-sizing: border-box;
 }
 
@@ -111,12 +112,13 @@ table {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   #header .head .header-nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    width: 950px;
+    width: 100%;
   }
   #header .head .header-nav > ul > li {
     display: flex;
@@ -280,6 +282,7 @@ table {
   }
   .quick-box .quick-nav > ul > li {
     margin-bottom: 30%;
+    cursor: pointer;
   }
   .quick-box .quick-nav > ul > li > a {
     position: relative;
@@ -288,8 +291,7 @@ table {
     display: block;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #90BC43;
+    box-shadow: 3px 5px 15px -4.5px #777;
   }
   .quick-box .quick-nav > ul > li > a .quick-con {
     position: absolute;
@@ -326,19 +328,21 @@ table {
   }
   .quick-box .quick-nav > ul > li > a:hover .quick-con {
     opacity: 0;
+    transition: 0.2s;
   }
   .quick-box .quick-nav > ul > li > a:hover > .title {
     opacity: 1;
+    transition: 0.2s;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 60px 0;
   }
   #footer .footer-con {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
   }
   #footer .footer-con > .left {
     margin-right: 100px;
@@ -491,7 +495,7 @@ table {
     list-style: none;
     color: #58585A;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
@@ -503,7 +507,7 @@ table {
     display: block;
     margin-top: 6px;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #4E813B;
   }
   main .story_con .intro .intro_content {
@@ -1435,7 +1439,7 @@ table {
     list-style: none;
     color: #58585A;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     font-family: "Noto Sans KR", sans-serif;
   }
@@ -1447,7 +1451,7 @@ table {
     display: block;
     margin-top: 6px;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #4E813B;
   }
   main .story_con .intro .intro_content {
@@ -2385,7 +2389,7 @@ table {
     display: block;
     margin-top: 6px;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #4E813B;
   }
   main .story_con .intro_top .sub_nav ul li.active {
@@ -3456,12 +3460,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
     background-color: #447531;
+    padding: 40px 0;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
@@ -3747,12 +3751,12 @@ table {
     opacity: 1;
   }
   #footer {
-    height: 220px;
+    height: 100%;
+    padding: 30px 0;
     background-color: #447531;
   }
   #footer .footer-con {
     display: block;
-    padding-top: 20px;
   }
   #footer .footer-con > .left {
     width: 100px;
