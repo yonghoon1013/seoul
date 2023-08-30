@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -430,6 +431,7 @@ table {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 100px;
+  padding: 0 20px;
 }
 .indicator > ul {
   display: flex;
@@ -462,15 +464,18 @@ table {
 }
 
 @media (min-width: 1024px) {
-  .sub-f {
+  .rrr {
+    padding: 0 20px;
+  }
+  .rrr .sub-f {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .sub-f p {
+  .rrr .sub-f p {
     font-size: 20px;
   }
-  .box {
+  .rrr .box {
     margin: 0 auto;
     margin-top: 65px;
     text-align: center;
@@ -478,11 +483,11 @@ table {
     border: 3px solid #90BC43;
     border-radius: 20px;
   }
-  .box .inner {
+  .rrr .box .inner {
     margin: 36px auto;
     line-height: 25px;
   }
-  .box .inner a {
+  .rrr .box .inner a {
     display: block;
     margin: 0 auto;
     width: 200px;
@@ -491,7 +496,7 @@ table {
     border: none;
     background-color: #90BC43;
   }
-  .box .inner a p {
+  .rrr .box .inner a p {
     color: white;
     padding-top: 13px;
   }
@@ -520,6 +525,7 @@ table {
     border: none;
   }
   .nnn {
+    padding: 0 20px;
     max-width: 1280px;
     margin: 0 auto;
     gap: 4%;
@@ -564,6 +570,27 @@ table {
     display: flex;
     justify-content: center;
   }
+  .next .numbox {
+    max-width: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .next .numbox .number {
+    flex-shrink: 0;
+    transition: 0.5s;
+  }
+  .next .numbox .number > span {
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    padding: 8px 0px;
+  }
+  .next .numbox .number > .on {
+    border-radius: 10px;
+    background-color: #90BC43;
+    color: white;
+  }
   .next button {
     cursor: pointer;
     background-color: transparent;
@@ -576,7 +603,7 @@ table {
     margin: 0 5px;
   }
   .next button:first-of-type,
-  .next :last-of-type {
+  .next button:last-of-type {
     width: 45px;
   }
   .next button.on {
@@ -697,6 +724,27 @@ table {
     display: flex;
     justify-content: center;
   }
+  .next .numbox {
+    max-width: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .next .numbox .number {
+    flex-shrink: 0;
+    transition: 0.5s;
+  }
+  .next .numbox .number > span {
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    padding: 8px 0px;
+  }
+  .next .numbox .number > .on {
+    border-radius: 10px;
+    background-color: #90BC43;
+    color: white;
+  }
   .next button {
     cursor: pointer;
     background-color: transparent;
@@ -709,7 +757,7 @@ table {
     margin: 0 5px;
   }
   .next button:first-of-type,
-  .next :last-of-type {
+  .next button:last-of-type {
     width: 45px;
   }
   .next button.on {
@@ -831,6 +879,27 @@ table {
     display: flex;
     justify-content: center;
   }
+  .next .numbox {
+    max-width: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .next .numbox .number {
+    flex-shrink: 0;
+    transition: 0.5s;
+  }
+  .next .numbox .number > span {
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    padding: 8px 0px;
+  }
+  .next .numbox .number > .on {
+    border-radius: 10px;
+    background-color: #90BC43;
+    color: white;
+  }
   .next button {
     cursor: pointer;
     background-color: transparent;
@@ -843,7 +912,7 @@ table {
     margin: 0 5px;
   }
   .next button:first-of-type,
-  .next :last-of-type {
+  .next button:last-of-type {
     width: 45px;
   }
   .next button.on {
@@ -854,7 +923,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -1146,7 +1216,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1401,7 +1472,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1420,10 +1491,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

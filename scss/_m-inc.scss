@@ -3,7 +3,8 @@
     //헤더
     #header {
         // background-color: #447531;
-        position: fixed;
+        position: sticky;
+        top: 0;
         width: 100%;
         z-index: 100;
         background: none;
@@ -352,7 +353,7 @@
                             color: white;
                             padding-left: 10px;
                             position: relative;
-                            font-size: 14px;
+                            font-size: 12px;
 
                             &:nth-of-type(1) {
                                 padding: 0px;
@@ -379,10 +380,11 @@
                     }
 
                     .footer-info {
+                        padding: 5px 0;
                         >p {
                             text-align: center;
                             color: white;
-                            font-size: 14px;
+                            font-size: 12px;
                         }
                     }
                 }

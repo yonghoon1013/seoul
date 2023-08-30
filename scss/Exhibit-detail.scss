@@ -7,7 +7,7 @@
 
 .bg {
     position: relative;
-    background-image: url("../img/grass-1784140_1920_2.png");
+    background-image: url("../StoryImg/grass-1784140_1920_2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -208,6 +208,11 @@
                             justify-content: center;
                             align-items: center;
                             display: none;
+                            z-index: 1000;
+                            >img{
+                                max-width: 300px;
+                                max-height: 750px;
+                            }
                         }
                         .backList{
                             width: 100%;
@@ -376,6 +381,11 @@
                             justify-content: center;
                             align-items: center;
                             display: none;
+                            z-index: 1000;
+                            >img{
+                                max-width: 400px;
+                                max-height: 750px;
+                            }
                         }
                         .backList{
                             width: 100%;
@@ -535,10 +545,10 @@
                             justify-content: center;
                             align-items: center;
                             display: none;
-
+                            z-index: 1000;
                             >img{
-                                width: 400px;
-                                object-fit: cover;
+                                max-width: 600px;
+                                max-height: 750px;
                             }
                         }
                         .backList{

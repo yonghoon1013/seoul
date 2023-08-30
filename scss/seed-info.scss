@@ -40,7 +40,7 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 100px;
-
+    padding-left: 20px;
     >ul {
         @include flex(flex-start, center);
 
@@ -110,7 +110,9 @@
         }
     }
 
-    //부제목
+    .yy{
+        padding: 0 20px;
+            //부제목
 
     .inout {
         display: flex;
@@ -237,6 +239,7 @@
 
             }
         }
+    }
     }
 
     .next {

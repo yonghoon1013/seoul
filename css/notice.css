@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -430,6 +431,7 @@ table {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 100px;
+  padding-left: 20px;
 }
 .indicator > ul {
   display: flex;
@@ -541,6 +543,7 @@ table {
     border: none;
   }
   .line {
+    padding: 0 20px;
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
@@ -569,58 +572,61 @@ table {
     height: 2px;
     background: #4E813B;
   }
-  .flexDiv {
+  .pp {
+    padding: 0 20px;
+  }
+  .pp .flexDiv {
     margin: 0 auto;
     max-width: 1280px;
     display: flex;
     border-top: none;
     border-bottom: 1px solid #58585A;
   }
-  .flexDiv p {
+  .pp .flexDiv p {
     color: #4E813B;
   }
-  .flexDiv div {
+  .pp .flexDiv div {
     width: 214px;
     text-align: center;
     margin: 20px auto;
   }
-  .flexDiv .nth1 {
+  .pp .flexDiv .nth1 {
     width: 640px;
   }
-  .flex {
+  .pp .flex {
     display: none;
     max-width: 1280px;
     margin: 0 auto;
     color: #58585A;
   }
-  .flex li {
+  .pp .flex li {
     border-top: 1px solid #EDEDED;
     border-bottom: 1px solid #EDEDED;
   }
-  .flex li a {
+  .pp .flex li a {
     display: flex;
     align-items: center;
   }
-  .flex li a div {
+  .pp .flex li a div {
     width: 214px;
     text-align: center;
     margin: 20px auto;
   }
-  .flex li a div:nth-of-type(2) {
-    width: 50%;
+  .pp .flex li a div:nth-of-type(2) {
+    max-width: 50%;
     white-space: nowrap;
   }
-  .flex li a div:nth-of-type(2) p {
+  .pp .flex li a div:nth-of-type(2) p {
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .flex li a .nth2 {
+  .pp .flex li a .nth2 {
     width: 640px;
     display: flex;
     align-items: center;
   }
-  .flex li a .nth2 .state {
+  .pp .flex li a .nth2 .state {
     flex-shrink: 0;
     background-color: #90BC43;
     width: 70px;
@@ -631,29 +637,29 @@ table {
     align-items: center;
     margin-right: 25px;
   }
-  .flex li a .nth2 .state p {
+  .pp .flex li a .nth2 .state p {
     margin: 0;
     font-size: 16px;
     color: white;
   }
-  .flex li a .nth2 .state.a {
+  .pp .flex li a .nth2 .state.a {
     background-color: #F0A12A;
   }
-  .flex li a .nth2 .state.b {
+  .pp .flex li a .nth2 .state.b {
     background-color: #55A57D;
   }
-  .flex li a .nth2 .state.c {
+  .pp .flex li a .nth2 .state.c {
     background-color: #5581a5;
   }
-  .flex li a .nth2 .state.d {
+  .pp .flex li a .nth2 .state.d {
     background-color: #d0d321;
   }
-  .flex li a .nth1 {
+  .pp .flex li a .nth1 {
     width: 640px;
     display: flex;
     justify-content: center;
   }
-  .flex.on {
+  .pp .flex.on {
     display: block;
   }
 }
@@ -773,6 +779,16 @@ table {
     height: 2px;
     background: #4E813B;
   }
+  .flexDiv {
+    display: flex;
+    justify-content: space-around;
+  }
+  .flexDiv > div {
+    padding: 20px 0;
+  }
+  .flexDiv > div:last-of-type {
+    display: none;
+  }
   .flex {
     display: none;
     max-width: 1280px;
@@ -810,12 +826,13 @@ table {
     width: 100%;
   }
   .flex li a {
+    width: 100%;
     display: flex;
     align-items: center;
   }
   .flex li a div {
     text-align: center;
-    margin: 20px 5px;
+    margin: 20px 0;
   }
   .flex li a div:nth-of-type(1) {
     display: none;
@@ -989,6 +1006,16 @@ table {
     height: 2px;
     background: #4E813B;
   }
+  .flexDiv {
+    display: flex;
+    justify-content: space-around;
+  }
+  .flexDiv > div {
+    padding: 20px 0;
+  }
+  .flexDiv > div:last-of-type {
+    display: none;
+  }
   .flex {
     display: none;
     max-width: 1280px;
@@ -1027,12 +1054,13 @@ table {
     width: 100%;
   }
   .flex li a {
+    width: 100%;
     display: flex;
     align-items: center;
   }
   .flex li a div {
     text-align: center;
-    margin: 20px 5px;
+    margin: 20px 0;
   }
   .flex li a div:nth-of-type(1) {
     display: none;
@@ -1099,7 +1127,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -1391,7 +1420,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1646,7 +1676,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1665,10 +1695,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

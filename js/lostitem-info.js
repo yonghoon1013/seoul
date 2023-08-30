@@ -34,8 +34,8 @@ fetch('./json/lostItem.json')
                 <a href="./Pdetail.html">
                     <img src="${v.img}">
                     <div class="ab">
-                        <p>${v.name}</p>
-                        <p>${v.engName}</p>
+                        <p>${v.name}</p><br>
+                        <p>${v.place}</p>
                     </div>
                 </a>
                 </li>

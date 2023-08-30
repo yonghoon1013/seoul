@@ -34,6 +34,7 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 100px;
+    padding: 0 20px;
   
     >ul {
         @include flex(flex-start, center);
@@ -70,6 +71,8 @@
 @media(min-width:1024px) {
 
 
+.rrr{
+    padding: 0 20px;
     .sub-f {
         display: flex;
         justify-content: center;
@@ -89,7 +92,6 @@
         max-width: 1280px;
         border: 3px solid #90BC43;
         border-radius: 20px;
-
         .inner {
             margin: 36px auto;
             line-height: 25px;
@@ -111,6 +113,7 @@
             }
         }
     }
+}
 
     //설명 박스
     .inout {
@@ -144,6 +147,7 @@
 
     //검색
     .nnn {
+        padding: 0 20px;
         max-width: 1280px;
         margin: 0 auto;
         gap:4%;
@@ -199,6 +203,31 @@
         display: flex;
         justify-content: center;
 
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -209,10 +238,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -362,6 +392,31 @@
         display: flex;
         justify-content: center;
 
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -372,10 +427,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
@@ -526,6 +582,31 @@
         display: flex;
         justify-content: center;
 
+        .numbox {
+            max-width: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            .number {
+                flex-shrink: 0;
+                transition: 0.5s;
+
+                >span {
+                    text-align: center;
+                    display: inline-block;
+                    width: 30px;
+                    padding: 8px 0px;
+                }
+
+                >.on {
+                    border-radius: 10px;
+                    background-color: #90BC43;
+                    color: white;
+                }
+            }
+        }
+
         button {
             cursor: pointer;
             background-color: transparent;
@@ -536,10 +617,11 @@
             height: 30px;
             border: none;
             margin: 0 5px;
+
         }
 
         button:first-of-type,
-        :last-of-type {
+        button:last-of-type {
             width: 45px;
         }
 
