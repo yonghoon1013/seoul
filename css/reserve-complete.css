@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,7 +34,6 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -58,26 +60,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: NotoSansKR-Black;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Regular;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Medium;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Medium.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Bold;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Bold.ttf");
-}
-@font-face {
-  font-family: NotoSans-Bold;
-  src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
-}
 @media (min-width: 1024px) {
   #header {
     position: fixed;
@@ -558,7 +540,6 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -585,26 +566,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: NotoSansKR-Black;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Regular;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Medium;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Medium.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Bold;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Bold.ttf");
-}
-@font-face {
-  font-family: NotoSans-Bold;
-  src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
-}
 .bg {
   position: relative;
   background-image: url("../img/grass-1784140_1920_2.png");
@@ -1072,7 +1033,6 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -1099,26 +1059,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: NotoSansKR-Black;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Black.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Regular;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Regular.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Medium;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Medium.ttf");
-}
-@font-face {
-  font-family: NotoSansKR-Bold;
-  src: url("/font/Noto_Sans_KR/NotoSansKR-Bold.ttf");
-}
-@font-face {
-  font-family: NotoSans-Bold;
-  src: url("/font/Noto_Sans/NotoSans-Bold.ttf");
-}
 .bg {
   position: relative;
   background-image: url("../img/grass-1784140_1920_2.png");
