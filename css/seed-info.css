@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -430,6 +431,7 @@ table {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 100px;
+  padding-left: 20px;
 }
 .indicator > ul {
   display: flex;
@@ -488,23 +490,26 @@ table {
     bottom: -15px;
     left: 30.5%;
   }
-  .inout {
+  .yy {
+    padding: 0 20px;
+  }
+  .yy .inout {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 65px auto;
   }
-  .inout input {
+  .yy .inout input {
     border-radius: 5px;
   }
-  .inout input:nth-of-type(1) {
+  .yy .inout input:nth-of-type(1) {
     border: 1px solid #8e8e8f;
     margin-right: 10px;
     width: 400px;
     height: 35px;
     text-align: center;
   }
-  .inout input:nth-of-type(2) {
+  .yy .inout input:nth-of-type(2) {
     cursor: pointer;
     background-color: #90BC43;
     color: white;
@@ -512,10 +517,10 @@ table {
     height: 35px;
     border: none;
   }
-  .nnn.on {
+  .yy .nnn.on {
     display: flex;
   }
-  .nnn {
+  .yy .nnn {
     max-width: 1280px;
     gap: 4%;
     margin: 0 auto;
@@ -524,7 +529,7 @@ table {
     flex-wrap: wrap;
     list-style-type: none;
   }
-  .nnn .sspace {
+  .yy .nnn .sspace {
     width: 22%;
     aspect-ratio: 1;
     margin-bottom: 50px;
@@ -533,7 +538,7 @@ table {
     border-radius: 20px;
     box-shadow: 3px 3px 10px -5px #777;
   }
-  .nnn .sspace .haha {
+  .yy .nnn .sspace .haha {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -545,21 +550,21 @@ table {
     width: 75px;
     height: 25px;
   }
-  .nnn .sspace .haha p {
+  .yy .nnn .sspace .haha p {
     color: white !important;
     font-size: 12px;
   }
-  .nnn .sspace .haha.on {
+  .yy .nnn .sspace .haha.on {
     background-color: #F0A12A;
   }
-  .nnn .sspace img {
+  .yy .nnn .sspace img {
     margin: 0 auto;
     object-fit: cover;
     border-radius: 20px;
     width: 75%;
     height: 75%;
   }
-  .nnn .sspace .ab {
+  .yy .nnn .sspace .ab {
     z-index: 2;
     position: absolute;
     bottom: 5px;
@@ -567,20 +572,20 @@ table {
     text-align: center;
     line-height: 1.5;
   }
-  .nnn .sspace .ab p:first-of-type {
+  .yy .nnn .sspace .ab p:first-of-type {
     color: black;
     font-weight: bold;
   }
-  .nnn .sspace .ab p:nth-of-type(2) {
+  .yy .nnn .sspace .ab p:nth-of-type(2) {
     color: #58585a;
     opacity: 50%;
   }
-  .nnn .sspace .ab .center {
+  .yy .nnn .sspace .ab .center {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .nnn .sspace .ab .center span {
+  .yy .nnn .sspace .ab .center span {
     margin: 10px 2px;
     display: inline-block;
     line-height: 1.7;
@@ -591,7 +596,7 @@ table {
     color: #fff;
     border-radius: 50%;
   }
-  .nnn .sspace .ab .center span.on {
+  .yy .nnn .sspace .ab .center span.on {
     background-color: #90BC43;
   }
   .next {
@@ -1017,7 +1022,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -1309,7 +1315,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1564,7 +1571,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1583,10 +1590,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

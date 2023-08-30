@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -430,6 +431,7 @@ table {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 100px;
+  padding-left: 20px;
 }
 .indicator > ul {
   display: flex;
@@ -488,23 +490,26 @@ table {
     bottom: -15px;
     left: 25%;
   }
-  .inout {
+  .hh {
+    padding: 0 20px;
+  }
+  .hh .inout {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 65px auto;
   }
-  .inout input {
+  .hh .inout input {
     border-radius: 5px;
   }
-  .inout input:nth-of-type(1) {
+  .hh .inout input:nth-of-type(1) {
     border: 1px solid #8e8e8f;
     margin-right: 10px;
     width: 400px;
     height: 35px;
     text-align: center;
   }
-  .inout input:nth-of-type(2) {
+  .hh .inout input:nth-of-type(2) {
     cursor: pointer;
     background-color: #90BC43;
     color: white;
@@ -512,7 +517,7 @@ table {
     height: 35px;
     border: none;
   }
-  .nnn {
+  .hh .nnn {
     max-width: 1280px;
     margin: 0 auto;
     display: none;
@@ -521,7 +526,7 @@ table {
     flex-wrap: wrap;
     list-style-type: none;
   }
-  .nnn .sspace {
+  .hh .nnn .sspace {
     width: 22%;
     aspect-ratio: 1;
     margin-bottom: 50px;
@@ -529,13 +534,13 @@ table {
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.01%, rgba(14, 13, 13, 0.5) 100%);
   }
-  .nnn .sspace a img {
+  .hh .nnn .sspace a img {
     border-radius: 20px;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .nnn .sspace a .ab {
+  .hh .nnn .sspace a .ab {
     z-index: 2;
     position: absolute;
     bottom: 10px;
@@ -543,10 +548,10 @@ table {
     text-align: center;
     line-height: 1.5;
   }
-  .nnn .sspace a .ab p {
+  .hh .nnn .sspace a .ab p {
     color: white;
   }
-  .nnn .sspace a::after {
+  .hh .nnn .sspace a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -556,7 +561,7 @@ table {
     border-radius: 20px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   }
-  .nnn.on {
+  .hh .nnn.on {
     display: flex;
   }
   .next {
@@ -910,7 +915,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -1202,7 +1208,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1457,7 +1464,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1476,10 +1483,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

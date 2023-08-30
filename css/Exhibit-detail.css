@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -395,7 +396,7 @@ table {
 }
 .bg {
   position: relative;
-  background-image: url("../img/grass-1784140_1920_2.png");
+  background-image: url("../StoryImg/grass-1784140_1920_2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -599,6 +600,11 @@ table {
     justify-content: center;
     align-items: center;
     display: none;
+    z-index: 1000;
+  }
+  main .intro .intro_content .whole .popup > img {
+    max-width: 300px;
+    max-height: 750px;
   }
   main .intro .intro_content .whole .backList {
     width: 100%;
@@ -757,6 +763,11 @@ table {
     justify-content: center;
     align-items: center;
     display: none;
+    z-index: 1000;
+  }
+  main .intro .intro_content .whole .popup > img {
+    max-width: 400px;
+    max-height: 750px;
   }
   main .intro .intro_content .whole .backList {
     width: 100%;
@@ -899,10 +910,11 @@ table {
     justify-content: center;
     align-items: center;
     display: none;
+    z-index: 1000;
   }
   main .intro .intro_content .whole .popup > img {
-    width: 400px;
-    object-fit: cover;
+    max-width: 600px;
+    max-height: 750px;
   }
   main .intro .intro_content .whole .backList {
     width: 100%;
@@ -929,7 +941,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -1221,7 +1234,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1476,7 +1490,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1495,10 +1509,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

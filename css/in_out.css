@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -430,6 +431,7 @@ table {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 80px;
+  padding: 0 20px;
 }
 .indicator > ul {
   display: flex;
@@ -641,7 +643,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -933,7 +936,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1188,7 +1192,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1207,10 +1211,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;
@@ -1255,6 +1262,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -1881,7 +1889,8 @@ table {
 }
 @media (max-width: 480px) and (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -2173,7 +2182,8 @@ table {
 }
 @media (max-width: 480px) and (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -2428,7 +2438,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -2447,10 +2457,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

@@ -35,7 +35,7 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 100px;
-
+    padding-left: 20px;
     >ul {
         @include flex(flex-start, center);
 
@@ -136,7 +136,7 @@
     //검색
     .michin {
         display: none;
-
+        padding: 0 20px;
         .line {
             display: flex;
             justify-content: flex-start;

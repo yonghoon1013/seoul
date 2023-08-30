@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 * {
   word-break: keep-all;
   box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 }
 
 body {
@@ -395,7 +396,7 @@ table {
 }
 .bg {
   position: relative;
-  background-image: url("../img/grass-1784140_1920_2.png");
+  background-image: url("../StoryImg/grass-1784140_1920_2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -557,7 +558,7 @@ table {
     border: 0;
   }
   main .intro .intro_content .whole .ex_bottom {
-    display: none;
+    display: block;
     padding: 10px 0;
   }
   main .intro .intro_content .whole .ex_bottom .event_con img {
@@ -566,7 +567,7 @@ table {
     margin: 0 auto;
   }
   main .intro .intro_content .whole .exDeImg > hr {
-    display: none;
+    display: block;
     margin: 60px 0;
     background: #EDEDED;
     height: 1px;
@@ -594,6 +595,23 @@ table {
     max-width: auto;
     width: 100%;
     cursor: pointer;
+  }
+  main .intro .intro_content .whole .popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1000;
+  }
+  main .intro .intro_content .whole .popup > img {
+    max-width: 300px;
+    max-height: 750px;
   }
   main .intro .intro_content .whole .backList {
     width: 100%;
@@ -710,7 +728,7 @@ table {
     border: 0;
   }
   main .intro .intro_content .whole .ex_bottom {
-    display: none;
+    display: block;
     padding: 10px 0;
   }
   main .intro .intro_content .whole .ex_bottom .event_con img {
@@ -719,7 +737,7 @@ table {
     margin: 0 auto;
   }
   main .intro .intro_content .whole .exDeImg > hr {
-    display: none;
+    display: block;
     margin: 60px 0;
     background: #EDEDED;
     height: 1px;
@@ -747,6 +765,23 @@ table {
     max-width: auto;
     width: 100%;
     cursor: pointer;
+  }
+  main .intro .intro_content .whole .popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1000;
+  }
+  main .intro .intro_content .whole .popup > img {
+    max-width: 400px;
+    max-height: 750px;
   }
   main .intro .intro_content .whole .backList {
     width: 100%;
@@ -857,7 +892,7 @@ table {
     border: 0;
   }
   main .intro .intro_content .whole .ex_bottom {
-    display: none;
+    display: block;
     padding: 10px 0;
   }
   main .intro .intro_content .whole .ex_bottom .event_con img {
@@ -865,7 +900,7 @@ table {
     margin: 0 auto;
   }
   main .intro .intro_content .whole .exDeImg > hr {
-    display: none;
+    display: block;
     margin: 60px 0;
     background: #EDEDED;
     height: 1px;
@@ -892,6 +927,23 @@ table {
     cursor: pointer;
     margin-right: 20px;
   }
+  main .intro .intro_content .whole .popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1000;
+  }
+  main .intro .intro_content .whole .popup > img {
+    max-width: 600px;
+    max-height: 750px;
+  }
   main .intro .intro_content .whole .backList {
     width: 100%;
     display: flex;
@@ -917,7 +969,8 @@ table {
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 99;
     background: none;
@@ -1209,7 +1262,8 @@ table {
 }
 @media (max-width: 480px) {
   #header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
     background: none;
@@ -1464,7 +1518,7 @@ table {
     color: white;
     padding-left: 10px;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .footer-nav > ul > li:nth-of-type(1) {
     padding: 0px;
@@ -1483,10 +1537,13 @@ table {
     display: none;
     padding: 0px;
   }
+  #footer .footer-con > .right .footer-nav .footer-info {
+    padding: 5px 0;
+  }
   #footer .footer-con > .right .footer-nav .footer-info > p {
     text-align: center;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   #footer .footer-con > .right .sns > ul {
     display: flex;

@@ -83,7 +83,7 @@ fetch('./json/notice.json')
                     <li class="sspace" data-id="${v.id}">
                         <a href="./notice-detail.html">
                             <div>
-                                <p>${k + 1}</p>
+                                <p>${list.length - k}</p>
                             </div>
                             <div class="nth2">
                                 <span class="state 

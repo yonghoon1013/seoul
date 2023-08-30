@@ -35,7 +35,7 @@
         max-width: 1280px;
         margin: 0 auto;
         margin-bottom: 100px;
-      
+       padding-left: 20px;
         >ul {
             @include flex(flex-start, center);
       
@@ -93,6 +93,7 @@
             border-bottom: 3px solid #ededed;
             padding-left: 10px;
             padding-bottom: 27px;
+            
             .state{
                 display: flex;
                 justify-content: center;
@@ -305,6 +306,7 @@
             align-items: center;
             border-bottom: 3px solid #ededed;
             padding-bottom: 27px;
+            padding: 0 20px;
             .state{
                 display: flex;
                 justify-content: center;
