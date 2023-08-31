@@ -2,15 +2,9 @@
 const today = new Date(),
     to = new Date(today);
 
-to.setFullYear(today.getFullYear());
-to.setMonth(today.getMonth()+1);
-to.setDate(today.getDate());
-
-
-
 
 const year = to.getFullYear();
-    month = to.getMonth(),
+    month = to.getMonth()+1,
     date = to.getDate(),
     week = ['일', '월', '화', '수', '목', '금', '토'][today.getDay()];
 
