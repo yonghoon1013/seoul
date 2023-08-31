@@ -480,6 +480,9 @@
             &:last-of-type{
                 display: none;
             }
+            p{
+                color: #4E813B;
+            }
         }
     }
     .flex {
@@ -491,7 +494,7 @@
         li:nth-of-type(1) {
             display: flex;
             border-top: none;
-            border-bottom: 1px solid #58585A;
+
 
 
             div {
@@ -763,6 +766,9 @@
             &:last-of-type{
                 display: none;
             }
+            p{
+                color: #4E813B;
+            }
         }
     }
     .flex {
@@ -774,8 +780,6 @@
         li:nth-of-type(1) {
             display: flex;
             border-top: none;
-            border-bottom: 1px solid #58585A;
-
 
             div {
                 width: 214px;

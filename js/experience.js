@@ -14,7 +14,7 @@ var map ;
 function experience(){
     const experienceTab = document.querySelectorAll('.experience-tab > li'),
     experienceConTab = document.querySelectorAll('.experience-con-tab > li');
-    const trafficTab = document.querySelectorAll('.traffic-tab > li'),
+    const trafficTab = document.querySelectorAll('.traffic-nav > li'),
     trafficConTab = document.querySelectorAll('.traffic-con-tab > li');
 
 

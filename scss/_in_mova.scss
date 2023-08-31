@@ -130,10 +130,11 @@
                     >img {
                         position: absolute;
                         width: 50%;
-                        bottom: 50%;
-                        transform: translateY(-50%);
+                        height: 35%;
+                        top: 50%;
                         left: 50%;
-                        transform: translateX(-50%);
+                        transform: translate(-50%,-50%);
+
                     }
                 }
 

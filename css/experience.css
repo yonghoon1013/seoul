@@ -393,16 +393,16 @@ table {
     margin-right: 30px;
   }
 }
-.bg {
+.main .bg {
   position: relative;
-  background-image: url("../img/grass-1784140_1920_2.png");
+  background-image: url("../img/bg111.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: 100% 100%;
   width: 100%;
   height: 400px;
 }
-.bg > h2 {
+.main .bg > h2 {
   color: white;
   position: absolute;
   font-size: 32px;
@@ -412,7 +412,7 @@ table {
   transform: translate(-50%, -50%);
   z-index: 99;
 }
-.bg::after {
+.main .bg::after {
   position: absolute;
   content: "";
   background-image: url("../img/bottom.png");
@@ -422,29 +422,26 @@ table {
   width: 100%;
   height: 100%;
   left: 0;
-  bottom: 0%;
-  z-index: 88;
-  background-color: rgba(0, 0, 0, 0.3);
+  bottom: -0.2%;
 }
-
-.indicator {
-  max-width: 1280px;
+.main .indicator {
   margin: 0 auto;
+  max-width: 1320px;
+  padding: 0 20px;
   margin-bottom: 100px;
-  padding-left: 20px;
 }
-.indicator > ul {
+.main .indicator > ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.indicator > ul > li {
+.main .indicator > ul > li {
   font-size: 14px;
   padding-right: 20px;
   margin-right: 10px;
   position: relative;
 }
-.indicator > ul > li::after {
+.main .indicator > ul > li::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -455,14 +452,13 @@ table {
   height: 12px;
   margin-left: 10px;
 }
-.indicator > ul > li:nth-last-of-type(1) {
+.main .indicator > ul > li:nth-last-of-type(1) {
   color: #90BC43;
 }
-.indicator > ul > li:nth-last-of-type(1)::after {
+.main .indicator > ul > li:nth-last-of-type(1)::after {
   content: "";
   background: none;
 }
-
 .main .experience-detail {
   margin: 0 auto;
   max-width: 1320px;
@@ -477,7 +473,7 @@ table {
 .main .experience-detail .experience-box .experience-info-box {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 100px;
 }
 .main .experience-detail .experience-box .experience-info-box > .left {
@@ -580,10 +576,6 @@ table {
 .main .experience-detail .experience-con-box .experience-con-tab > li.on {
   display: block;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .experience-con .ll > img {
-  width: 100%;
-  margin: 0 auto;
-}
 .main .experience-detail .experience-con-box .experience-con-tab .experience-con > img {
   width: 100%;
   margin: auto;
@@ -636,22 +628,22 @@ table {
   text-align: center;
   margin-bottom: 40px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav {
   width: 552px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 75px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li {
   font-size: 20px;
   cursor: pointer;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li.on {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li.on {
   color: #4E813B;
   font-size: 24px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab span {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav span {
   color: #CBCBCB;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li {
@@ -666,9 +658,10 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > h2 {
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   line-height: normal;
   margin-bottom: 18px;
 }
@@ -676,6 +669,7 @@ table {
   display: flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 350;
@@ -730,6 +724,7 @@ table {
   display: flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: normal;
@@ -750,7 +745,7 @@ table {
   margin-right: 10px;
   font-size: 14px;
   font-weight: 500;
-  line-height: normal;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
   color: #8B50A4;
@@ -780,6 +775,7 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic3 .traffic_content .traffic_pos .navgation span {
   color: #000;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -787,6 +783,7 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic3 .traffic_content .traffic_pos .navgation h2 {
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: normal;
@@ -800,6 +797,7 @@ table {
   display: flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: 1.7;
@@ -826,6 +824,7 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .traffic_pos > div h3 {
   display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
   color: #000;
   font-size: 16px;
   font-weight: 500;
@@ -836,6 +835,7 @@ table {
   display: inline-flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 350;
@@ -861,6 +861,7 @@ table {
   margin-right: -1px;
   background-color: #d9d9d9;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: normal;
@@ -893,6 +894,7 @@ table {
   display: flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: 1.7;
@@ -907,11 +909,12 @@ table {
   border-radius: 50%;
   margin-right: 10px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di {
   margin-bottom: 5px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div h3 {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di h3 {
   display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
   color: #000;
   font-size: 16px;
   font-weight: 500;
@@ -919,19 +922,21 @@ table {
   margin-right: 15px;
   margin-bottom: 5px;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div p {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di p {
   margin-top: 10px;
   display: flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 350;
   line-height: normal;
 }
-.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div a {
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di a {
   color: #4E813B;
   display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   margin-top: 5px;
   margin-right: 10px;
@@ -957,6 +962,7 @@ table {
   margin-right: -1px;
   background-color: white;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: normal;
@@ -997,6 +1003,7 @@ table {
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos > div h3 {
   display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
   color: #000;
   font-size: 16px;
   font-weight: 500;
@@ -1007,6 +1014,7 @@ table {
   display: inline-flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 350;
@@ -1032,6 +1040,7 @@ table {
   margin-right: -1px;
   background-color: #fff;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: normal;
@@ -1063,6 +1072,7 @@ table {
   display: flex;
   align-items: center;
   color: #58585A;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 350;
   line-height: 1.7;
@@ -1075,6 +1085,14 @@ table {
   height: 5px;
   background-color: #58585A;
   border-radius: 50%;
+  margin-right: 10px;
+}
+.main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content > div a {
+  color: #4E813B;
+  display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  margin-top: 5px;
   margin-right: 10px;
 }
 .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li.on {
@@ -1349,6 +1367,10 @@ table {
   }
   .main .experience-detail .experience-con-box .experience-con-tab > li.on {
     display: block;
+  }
+  .main .experience-detail .experience-con-box .experience-con-tab .experience-con .ll > img {
+    width: 100%;
+    margin: 0 auto;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .experience-con > img {
     width: 100%;
@@ -2220,81 +2242,72 @@ table {
   border-spacing: 0;
 }
 
-.bg {
-  position: relative;
-  background-image: url("../img/grass-1784140_1920_2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 400px;
-}
-.bg > h2 {
-  color: white;
-  position: absolute;
-  font-size: 32px;
-  font-weight: normal;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99;
-}
-.bg::after {
-  position: absolute;
-  content: "";
-  background-image: url("../img/bottom.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0%;
-  z-index: 88;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.indicator {
-  max-width: 1320px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-.indicator > ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.indicator > ul > li {
-  font-size: 14px;
-  padding-right: 20px;
-  margin-right: 10px;
-  position: relative;
-}
-.indicator > ul > li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-image: url("../img/icon.png");
-  background-size: 100% 100%;
-  width: 8px;
-  height: 12px;
-  margin-left: 10px;
-}
-.indicator > ul > li:nth-last-of-type(1) {
-  color: #90BC43;
-}
-.indicator > ul > li:nth-last-of-type(1)::after {
-  content: "";
-  background: none;
-}
-
 @media (max-width: 480px) {
   .main .bg {
-    height: 200px;
+    position: relative;
+    background-image: url("../img/bg111.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400px;
+  }
+  .main .bg > h2 {
+    color: white;
+    position: absolute;
+    font-size: 32px;
+    font-weight: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+  .main .bg::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/bottom.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -0.2%;
   }
   .main .indicator {
+    margin: 0 auto;
+    max-width: 1320px;
     padding: 0 20px;
+    margin-bottom: 100px;
+  }
+  .main .indicator > ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .main .indicator > ul > li {
+    font-size: 14px;
+    padding-right: 20px;
+    margin-right: 10px;
+    position: relative;
+  }
+  .main .indicator > ul > li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/icon.png");
+    background-size: 100% 100%;
+    width: 8px;
+    height: 12px;
+    margin-left: 10px;
+  }
+  .main .indicator > ul > li:nth-last-of-type(1) {
+    color: #90BC43;
+  }
+  .main .indicator > ul > li:nth-last-of-type(1)::after {
+    content: "";
+    background: none;
   }
   .main .experience-detail {
     margin: 0 auto;
@@ -2411,6 +2424,10 @@ table {
   .main .experience-detail .experience-con-box .experience-con-tab > li.on {
     display: block;
   }
+  .main .experience-detail .experience-con-box .experience-con-tab .experience-con .ll > img {
+    width: 100%;
+    margin: 0 auto;
+  }
   .main .experience-detail .experience-con-box .experience-con-tab .experience-con > img {
     width: 100%;
     margin: auto;
@@ -2463,18 +2480,18 @@ table {
     text-align: center;
     margin-bottom: 40px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav {
     width: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 75px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li {
     font-size: 18px;
     cursor: pointer;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-tab > li.on {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-nav > li.on {
     color: #4E813B;
     font-size: 20px;
   }
@@ -2490,9 +2507,10 @@ table {
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic1 .traffic_content .traffic_pos > h2 {
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     line-height: normal;
     margin-bottom: 18px;
   }
@@ -2500,7 +2518,8 @@ table {
     display: flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 350;
     line-height: normal;
@@ -2554,7 +2573,8 @@ table {
     display: flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-weight: 350;
     line-height: normal;
     margin: 0 10px 0 0;
@@ -2572,9 +2592,9 @@ table {
     color: white;
     border-radius: 50%;
     margin-right: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic2 .traffic_content .traffic_pos:nth-of-type(3) p:nth-of-type(1) {
     color: #8B50A4;
@@ -2604,14 +2624,16 @@ table {
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic3 .traffic_content .traffic_pos .navgation span {
     color: #000;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-weight: 400;
     line-height: normal;
     margin-right: 14px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic3 .traffic_content .traffic_pos .navgation h2 {
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-weight: 350;
     line-height: normal;
     margin: 0;
@@ -2624,7 +2646,8 @@ table {
     display: flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-weight: 350;
     line-height: 1.7;
     letter-spacing: -0.8px;
@@ -2650,8 +2673,9 @@ table {
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: normal;
     margin-right: 15px;
@@ -2660,7 +2684,8 @@ table {
     display: inline-flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 350;
     line-height: normal;
@@ -2685,9 +2710,11 @@ table {
     margin-right: -1px;
     background-color: #d9d9d9;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
     font-weight: 350;
     line-height: normal;
+    padding: 0 10px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .box > ul > li:nth-of-type(1) {
     width: 8%;
@@ -2717,7 +2744,8 @@ table {
     display: flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-weight: 350;
     line-height: 1.7;
     letter-spacing: -0.8px;
@@ -2731,37 +2759,40 @@ table {
     border-radius: 50%;
     margin-right: 10px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di {
     margin-bottom: 5px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div h3 {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di h3 {
     display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: normal;
     margin-right: 15px;
     margin-bottom: 5px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div p {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di p {
     margin-top: 10px;
     display: flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 350;
     line-height: normal;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content > div a {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .di a {
     color: #4E813B;
     display: inline-block;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     margin-top: 5px;
     margin-right: 10px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .box2 {
-    height: 664px;
+    height: 835px;
     margin-bottom: 5px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .box2 > ul {
@@ -2774,16 +2805,18 @@ table {
     align-items: center;
     justify-content: center;
     border: solid 1px #878787;
-    height: 70px;
+    height: 90px;
     text-align: center;
     float: left;
     margin-bottom: -1px;
     margin-right: -1px;
     background-color: white;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
     font-weight: 350;
     line-height: normal;
+    padding: 0 10px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .box2 > ul > li:nth-of-type(1) {
     width: 16%;
@@ -2796,7 +2829,6 @@ table {
     width: 59.2%;
     text-align: left;
     justify-content: left;
-    padding: 0 20px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic4 .traffic_content .box2 > ul:nth-of-type(1) li {
     height: 40px;
@@ -2821,8 +2853,9 @@ table {
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: normal;
     margin-right: 15px;
@@ -2831,13 +2864,14 @@ table {
     display: inline-flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 350;
     line-height: normal;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box {
-    height: 228px;
+    height: 245px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul {
     width: 100%;
@@ -2845,18 +2879,20 @@ table {
     margin: 0;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li {
+    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: solid 1px #878787;
-    height: 60px;
+    height: 70px;
     text-align: center;
     float: left;
     margin-bottom: -1px;
     margin-right: -1px;
     background-color: #fff;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
     font-weight: 350;
     line-height: normal;
   }
@@ -2887,7 +2923,8 @@ table {
     display: flex;
     align-items: center;
     color: #58585A;
-    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
     font-weight: 350;
     line-height: 1.7;
     letter-spacing: -0.8px;
@@ -2899,6 +2936,14 @@ table {
     height: 5px;
     background-color: #58585A;
     border-radius: 50%;
+    margin-right: 10px;
+  }
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content > div a {
+    color: #4E813B;
+    display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
     margin-right: 10px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li.on {

@@ -519,9 +519,10 @@ table {
   main .conten .swiper .swiper-slide > img {
     position: absolute;
     width: 50%;
-    bottom: 25%;
+    height: 35%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
   main .conten .swiper .closs {
     font-size: 50px;
@@ -552,7 +553,7 @@ table {
     color: white;
   }
   main .conten .mapclick .name > span.active {
-    color: #90BE45;
+    color: #ace155;
   }
   main .incon .tower {
     display: flex;
@@ -1754,10 +1755,10 @@ table {
   main .conten .swiper .swiper-slide > img {
     position: absolute;
     width: 50%;
-    bottom: 50%;
-    transform: translateY(-50%);
+    height: 35%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
   main .conten .swiper .closs {
     font-size: 50px;
