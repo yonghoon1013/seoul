@@ -66,7 +66,7 @@ var swiper2 = new Swiper(".garden-slide", {
     spaceBetween: 10,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 3000000,
         disableOnInteraction: false,
     },
     breakpoints: {
