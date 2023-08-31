@@ -2120,7 +2120,7 @@ table {
     content: "";
     position: absolute;
     width: 30px;
-    border-top: 2px dashed #D4D4D4;
+    border-top: 2px dotted #D4D4D4;
     border-radius: 3%;
     top: 50%;
     transform: translateY(-50%);
@@ -3470,8 +3470,8 @@ table {
   .main .course-box .course-con > .right .course-list-con .course-list-nav > ul > li::after {
     content: "";
     position: absolute;
-    width: 30px;
-    border-top: 2px dashed #D4D4D4;
+    width: 18px;
+    border-top: 2px dotted #D4D4D4;
     border-radius: 3%;
     top: 50%;
     transform: translateY(-50%);
