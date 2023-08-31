@@ -85,14 +85,14 @@ var swiper2 = new Swiper(".garden-slide", {
 setTimeout(function(){
 
     var swiper3 = new Swiper(".experSwiper", {
-        slidesPerView: '2',
-        centeredSlides: true,
+        slidesPerView: '3',
+        // centeredSlides: true,
         spaceBetween: 10,
 
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
         breakpoints: {
             1024: {
                 centeredSlides: false,
@@ -194,20 +194,19 @@ function course() {
 
 
     // console.log(qwe11.dataset.img);
-
-
     qwe1.forEach(function(v,k){
     
-
         v.addEventListener('mouseenter', () =>{
+            let liColor =  v.dataset.color;
             v.classList.add('on')
             qwe2[num].src = v.dataset.img;
+            v.style.color = liColor;
         })
 
         v.addEventListener('mouseleave', () =>{
             v.classList.remove('on')
             qwe2[num].src = qwe11[num].dataset.img; 
-
+            v.style.color = '';
         })
 
     })
@@ -280,6 +279,9 @@ fetch('./json/program.json')
 
             mainPgSlide.innerHTML += `
         <li class="swiper-slide">
+        <div  class="oo">
+        <span>접수중</span>
+    </div>
         <a href="./experience.html" data-id="${obj.id}">
             <img src="${obj.img}">
             <div class="experience-info">
@@ -288,18 +290,18 @@ fetch('./json/program.json')
                 </p>
                 <P class="time">
                     <span>${obj.period}</span>
-                    <span>더보기</span>
                 </P>
                 <div class="situation">
+                <div  class="pp">
+                <span>접수중</span>
+            </div>
                     <div class="area">
                         <span>${obj.area}</span>
                     </div>
                     <div class="target">
                         <span>${obj.target}</span>
                     </div>
-                    <div>
-                        <span>접수중</span>
-                    </div>
+
                 </div>
             </div>
         </a>
@@ -310,8 +312,7 @@ fetch('./json/program.json')
         const itemClick = document.querySelectorAll('.experSwiper  li > a');
 
         itemClick.forEach(function (v3, k3) {
-            console.log(v3.dataset.id);
-            console.log(v3);
+
             v3.onclick = function (e) {
                 e.preventDefault();
 

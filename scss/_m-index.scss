@@ -733,6 +733,7 @@
                             }
 
                             >.swiper-slide-active {
+                                
                                 transform: scale(1);
                             }
                         }
@@ -1022,6 +1023,27 @@
                             height: 150px;
                             border-radius: 50px;
                             position: relative;
+                            >.oo{ 
+                                display: block;
+                                width: 60px;
+                                height: 25px;
+                                border-radius: 50px;
+                                background-color: #79bf17;
+                                position: absolute;
+                                top: 8%;
+                                right: 4%;
+                                transform: translate(-5%,-10%);
+                                text-align: center;
+                                >span{
+                                    width: 100%;
+                                    height: 100%;
+                                    font-size: 14px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: white;
+                                }
+                            }
 
                             >a {
                                 display: block;
@@ -1039,7 +1061,7 @@
                                     content: '';
                                     background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0.00) 100%);
                                     width: 100%;
-                                    height: 150px;
+                                    height: 120px;
                                     position: absolute;
                                     left: 0;
                                     bottom: 0;
@@ -1052,7 +1074,7 @@
                                     text-align: left;
                                     position: absolute;
                                     left: 50%;
-                                    bottom: 5%;
+                                    bottom: 0%;
                                     transform: translate(-50%, -5%);
                                     z-index: 1;
                                     padding: 0 10px;
@@ -1069,13 +1091,13 @@
                                         >span {
                                             font-size: 10px;
                                             color: white;
-                                            line-height: 1.5;
+                                            line-height: 1;
                                         }
 
                                         >span {
                                             font-size: 10px;
                                             color: white;
-                                            line-height: 1.5;
+                                            line-height: 1;
                                         }
                                     }
 
@@ -1098,6 +1120,10 @@
                                                 @include flex(center, center);
                                                 font-size: 12px;
                                             }
+                                        }
+
+                                        .pp{
+                                            display: none;
                                         }
 
                                         >.area {

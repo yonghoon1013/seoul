@@ -1157,6 +1157,9 @@ body {
   position: relative;
   transition: 0.5s ease-in-out;
 }
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo {
+  display: none;
+}
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a {
   display: block;
   height: 100%;
@@ -2194,6 +2197,27 @@ table {
     border-radius: 50px;
     position: relative;
   }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo {
+    display: block;
+    width: 60px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #79bf17;
+    position: absolute;
+    top: 8%;
+    right: 4%;
+    transform: translate(-5%, -10%);
+    text-align: center;
+  }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo > span {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a {
     display: block;
     height: 100%;
@@ -2267,6 +2291,9 @@ table {
     justify-content: center;
     align-items: center;
     font-size: 14px;
+  }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .pp {
+    display: none;
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .area {
     display: none;
@@ -3521,6 +3548,27 @@ table {
     border-radius: 50px;
     position: relative;
   }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo {
+    display: block;
+    width: 60px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #79bf17;
+    position: absolute;
+    top: 8%;
+    right: 4%;
+    transform: translate(-5%, -10%);
+    text-align: center;
+  }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo > span {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a {
     display: block;
     height: 100%;
@@ -3536,7 +3584,7 @@ table {
     content: "";
     background: linear-gradient(0deg, #000 0%, rgba(38, 38, 38, 0) 100%);
     width: 100%;
-    height: 150px;
+    height: 120px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -3547,7 +3595,7 @@ table {
     text-align: left;
     position: absolute;
     left: 50%;
-    bottom: 5%;
+    bottom: 0%;
     transform: translate(-50%, -5%);
     z-index: 1;
     padding: 0 10px;
@@ -3565,12 +3613,12 @@ table {
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time > span {
     font-size: 10px;
     color: white;
-    line-height: 1.5;
+    line-height: 1;
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info > .time > span {
     font-size: 10px;
     color: white;
-    line-height: 1.5;
+    line-height: 1;
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation {
     width: 100%;
@@ -3594,6 +3642,9 @@ table {
     justify-content: center;
     align-items: center;
     font-size: 12px;
+  }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation .pp {
+    display: none;
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .area {
     display: none;
