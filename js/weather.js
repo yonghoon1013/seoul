@@ -73,6 +73,7 @@ async function dataParse(str){
         parse =  JSON.parse(dataString)
     }    
     return parse;
+    
 }
 
 //돔제어

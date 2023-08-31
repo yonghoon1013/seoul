@@ -38,7 +38,7 @@ fetch('./json/flower.json')
                         if (month >= (data.items[k7].bloomingSeason.substr(0, 1)) &&
                             month <= (data.items[k7].bloomingSeason.substr((data.items[k7].bloomingSeason.indexOf("월") - 1), 1))) {
 
-                            list.push(data.items[k7])
+                            list.push(v7)
                         }
 
 
@@ -46,10 +46,10 @@ fetch('./json/flower.json')
                 }else{
                     list = data.items
                 }
-
+                console.log(list);
                 max_full = list.length;
                 imgFn(list, 1)
-                pgen(max_full)
+                pgen(max_full,list)
                 sspace();
 
                 num = key;

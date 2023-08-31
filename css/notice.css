@@ -789,6 +789,9 @@ table {
   .flexDiv > div:last-of-type {
     display: none;
   }
+  .flexDiv > div p {
+    color: #4E813B;
+  }
   .flex {
     display: none;
     max-width: 1280px;
@@ -798,7 +801,6 @@ table {
   .flex li:nth-of-type(1) {
     display: flex;
     border-top: none;
-    border-bottom: 1px solid #58585A;
   }
   .flex li:nth-of-type(1) div {
     width: 214px;
@@ -1014,6 +1016,9 @@ table {
   .flexDiv > div:last-of-type {
     display: none;
   }
+  .flexDiv > div p {
+    color: #4E813B;
+  }
   .flex {
     display: none;
     max-width: 1280px;
@@ -1023,7 +1028,6 @@ table {
   .flex li:nth-of-type(1) {
     display: flex;
     border-top: none;
-    border-bottom: 1px solid #58585A;
   }
   .flex li:nth-of-type(1) div {
     width: 214px;

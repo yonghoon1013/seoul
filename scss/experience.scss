@@ -2,73 +2,58 @@
 @import "_mixin";
 @import "_inc";
 
-.bg {
-    position: relative;
-    background-image: url("../img/grass-1784140_1920_2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.main{
 
-    width: 100%;
-    height: 400px;
-    > h2 {
-      @include h2();
-      z-index: 99;
+    .bg{
+        position: relative;
+        background-image: url("../img/bg111.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 400px;
+        >h2{
+            @include h2();
+            z-index: 99;
+        }
+        &::after{
+            @include bg();
+        }
     }
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url("../img/bottom.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: bottom;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      bottom: 0%;
-      z-index: 88;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-//////////////////
-.indicator {
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    padding-left: 20px;
-    >ul {
-        @include flex(flex-start, center);
-
-        >li {
-            font-size: 14px;
-            padding-right: 20px;
-            margin-right: 10px;
-            position: relative;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-image: url("../img/icon.png");
-                background-size: 100% 100%;
-                width: 8px;
-                height: 12px;
-                margin-left: 10px;
-            }
-
-            &:nth-last-of-type(1) {
-                color: #90BC43;
-
-                &::after {
+    
+    
+    .indicator{
+        @include main-width(){
+            margin-bottom: 100px
+        };
+        >ul{
+            @include flex(flex-start,center);
+            >li{
+                font-size: 14px;
+                padding-right: 20px;
+                margin-right: 10px;
+                position: relative;
+                &::after{
                     content: "";
-                    background: none;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-image: url("../img/icon.png");
+                    background-size: 100% 100%;
+                    width: 8px;
+                    height: 12px;
+                    margin-left: 10px;
+                }
+                &:nth-last-of-type(1){
+                    color: #90BC43;
+                    &::after{
+                        content: "";
+                        background: none;
+                    }
                 }
             }
         }
     }
-}
-.main{
 
     .experience-detail{
         @include main-width(){
@@ -81,7 +66,7 @@
         }
         .experience-box{
             .experience-info-box{
-                @include flex(space-between,flex-start);
+                @include flex(space-between,center);
                 margin-bottom: 100px;
                 >.left{
                     width: 620px;
@@ -185,12 +170,6 @@
                     display: block;
                 }
                 .experience-con{
-                    .ll{
-                        >img{
-                            width: 100%;
-                            margin: 0 auto;
-                        }
-                    }
                     >img{
                         width: 100%;
                         margin: auto;
@@ -257,7 +236,7 @@
                         text-align: center;
                         margin-bottom: 40px;
                     }
-                    .traffic-tab{
+                    .traffic-nav{
                         width: 552px;
                         @include flex(space-between,center);
                         margin-top: 75px;
@@ -287,9 +266,10 @@
                                         margin-bottom: 55px;
                                         >h2{
                                             color: #58585A;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             font-style: normal;
-                                            font-weight: bold;
+                                            font-weight: 500;
                                             line-height: normal;
                                             margin-bottom: 18px;
                                         }
@@ -297,6 +277,7 @@
                                             display: flex;
                                             align-items: center;
                                             color: #58585A;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             font-style: normal;
                                             font-weight: 350;
@@ -355,6 +336,7 @@
                                             display: flex;
                                             align-items: center;
                                             color: #58585A;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             font-weight: 350;
                                             line-height: normal;
@@ -374,7 +356,7 @@
                                             margin-right: 10px;
                                             font-size: 14px;
                                             font-weight: 500;
-                                            line-height: normal;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                         }
                                     }
                                     .traffic_pos:nth-of-type(3) p:nth-of-type(1){
@@ -407,7 +389,7 @@
                                             align-items: center;
                                             span{
                                                 color: #000;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-weight: 400;
                                                 line-height: normal;
@@ -415,7 +397,7 @@
                                             }
                                             h2{
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-weight: 350;
                                                 line-height: normal;
@@ -429,7 +411,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-weight: 350;
                                                 line-height: 1.7;
@@ -460,7 +442,7 @@
                                             margin-bottom: 5px;
                                             h3{
                                                 display: inline-block;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 color: #000;
                                                 font-size: 16px;
                                                 font-weight: 500;
@@ -471,7 +453,7 @@
                                                 display: inline-flex;
                                                 align-items: center;
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-style: normal;
                                                 font-weight: 350;
@@ -497,7 +479,7 @@
                                                 margin-right: -1px;
                                                 background-color: #d9d9d9;
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-weight: 350;
                                                 line-height: normal;
@@ -532,6 +514,7 @@
                                             display: flex;
                                             align-items: center;
                                             color: #58585A;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             font-weight: 350;
                                             line-height: 1.7;
@@ -546,10 +529,11 @@
                                             margin-right:10px;
                                         }
                                     }
-                                    >div{
+                                    .di{
                                         margin-bottom: 5px;
                                         h3{
                                             display: inline-block;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             color: #000;
                                             font-size: 16px;
                                             font-weight: 500;
@@ -562,6 +546,7 @@
                                             display: flex;
                                             align-items: center;
                                             color: #58585A;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             font-style: normal;
                                             font-weight: 350;
@@ -570,6 +555,7 @@
                                         a{
                                             color: #4E813B;
                                             display: inline-block;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             margin-top: 5px;
                                             margin-right: 10px;
@@ -594,7 +580,7 @@
                                                 margin-right: -1px;
                                                 background-color: white;
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-weight: 350;
                                                 line-height: normal;
@@ -641,7 +627,7 @@
                                             margin-bottom: 5px;
                                             h3{
                                                 display: inline-block;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 color: #000;
                                                 font-size: 16px;
                                                 font-weight: 500;
@@ -652,7 +638,7 @@
                                                 display: inline-flex;
                                                 align-items: center;
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-style: normal;
                                                 font-weight: 350;
@@ -678,7 +664,7 @@
                                                 margin-right: -1px;
                                                 background-color: #fff;
                                                 color: #58585A;
-
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 16px;
                                                 font-weight: 350;
                                                 line-height: normal;
@@ -712,6 +698,7 @@
                                             display: flex;
                                             align-items: center;
                                             color: #58585A;
+                                            font-family: 'Noto Sans KR', sans-serif;
                                             font-size: 16px;
                                             font-weight: 350;
                                             line-height: 1.7;
@@ -724,6 +711,16 @@
                                             background-color: #58585A;
                                             border-radius: 50%;
                                             margin-right:10px;
+                                        }
+                                    }
+                                    >div{
+                                        a{
+                                            color: #4E813B;
+                                            display: inline-block;
+                                            font-family: 'Noto Sans KR', sans-serif;
+                                            font-size: 16px;
+                                            margin-top: 5px;
+                                            margin-right: 10px;
                                         }
                                     }
                                 }
