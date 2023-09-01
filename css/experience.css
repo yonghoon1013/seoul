@@ -82,7 +82,7 @@ table {
   #header {
     position: fixed;
     width: 100%;
-    z-index: 101;
+    z-index: 100;
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0.01%, rgba(55, 55, 55, 0.5) 100%);
     transition: 0.5s;
   }
@@ -216,6 +216,7 @@ table {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 99;
   }
   #header .head .ham-drop-box .logo {
     background-color: white;
@@ -395,7 +396,7 @@ table {
 }
 .main .bg {
   position: relative;
-  background-image: url("../img/bg111.png");
+  background-image: url("../img/grass-1784140_1920_2.png");
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100% 100%;
@@ -552,6 +553,12 @@ table {
 }
 .main .experience-detail .experience-box .reservation-btn-box .reserve-check > span {
   color: #CCCCCC;
+}
+.main .experience-detail .experience-box .reservation-btn-box .end {
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  color: #ff8e2a;
 }
 .main .experience-detail .experience-con-box .experience-tab {
   display: flex;
@@ -1189,7 +1196,7 @@ table {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 400px;
+  height: 200px;
 }
 .bg > h2 {
   color: white;
@@ -1199,7 +1206,7 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 99;
+  z-index: 90;
 }
 .bg::after {
   position: absolute;
@@ -1879,7 +1886,7 @@ table {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 100;
     background: none;
     background-color: white;
     padding: 20px 20px;
@@ -2249,12 +2256,12 @@ table {
 @media (max-width: 480px) {
   .main .bg {
     position: relative;
-    background-image: url("../img/bg111.png");
+    background-image: url("../img/grass-1784140_1920_2.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 100%;
     width: 100%;
-    height: 400px;
+    height: 200px;
   }
   .main .bg > h2 {
     color: white;
@@ -2264,7 +2271,6 @@ table {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
   }
   .main .bg::after {
     position: absolute;
