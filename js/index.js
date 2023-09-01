@@ -268,6 +268,7 @@ fetch('./json/program.json')
     .then(res => { return res.json() })
     .then(data => {
 
+
         let num = 0;
         const mainPg = []
 
@@ -277,10 +278,16 @@ fetch('./json/program.json')
         mainPg.forEach(function (obj, k) {
             const mainPgSlide = document.querySelector('.experSwiper > .swiper-wrapper');
 
+
+            let date = obj.period;
+            let start = new Date(date.split('~')[0]);
+            let end = new Date(date.split('~')[1]);
+
+
             mainPgSlide.innerHTML += `
         <li class="swiper-slide">
-        <div  class="oo">
-        <span>접수중</span>
+        <div class="oo ${(start < new Date() && end > new Date()) ? "" : "on"}">
+        <span>${(start < new Date() && end > new Date()) ? "접수중" : "예약마감"}</span>
     </div>
         <a href="./experience.html" data-id="${obj.id}">
             <img src="${obj.img}">
@@ -292,8 +299,8 @@ fetch('./json/program.json')
                     <span>${obj.period}</span>
                 </P>
                 <div class="situation">
-                <div  class="pp">
-                <span>접수중</span>
+                <div class="pp ${(start < new Date() && end > new Date()) ? "" : "on"}">
+                <span>${(start < new Date() && end > new Date()) ? "접수중" : "예약마감"}</span>
             </div>
                     <div class="area">
                         <span>${obj.area}</span>

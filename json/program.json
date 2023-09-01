@@ -1,6 +1,63 @@
 {
     "items": [
         {
+            "id" : "9",
+            "img" : "./img/programT_img.jpg",
+            "name" : "[가족과 함께 가꾸는 행복정원(토)]",
+            "area" : "어린이정원학교",
+            "target" : ["유아"],
+            "recruit" : 6,
+            "time" : "2시간",
+            "turn" : ["09:00","11:00","12:00","15:00","17:00","18:00"],
+            "price" : "1인당 1,000원",
+            "maxPeople" : 2,
+            "reserveMethod" : "인터넷",
+            "period" : "2023.08.21~2023.09.14",
+            "end" : "2023.09.14",
+            "deadline" : "이용 예정 2일 전 17시 까지",
+            "periodCancel" : "이용일 1일 전까지",
+            "tel" : "서울식물원 / 02-2104-9797",
+            "programD" : "./img/programD_img9.jpg"
+        },
+        {
+            "id" : "13",
+            "img" : "./img/programT_img5.png",
+            "name" : "[서울식물원의 새]",
+            "area" : " 식물문화센터",
+            "target" : ["청소년","유아"],
+            "recruit" : 15,
+            "time" : "2시간",
+            "turn" : ["09:00","11:00","12:00","15:00","17:00","18:00"],
+            "price" : "1인당 1,000원",
+            "maxPeople" : 4,
+            "reserveMethod" : "인터넷",
+            "period" : "2023.08.20~2023.09.22",
+            "end" : "2023.09.22",
+            "deadline" : "이용 예정 2일 전 17시 까지",
+            "periodCancel" : "이용일 1일 전까지",
+            "tel" : "서울식물원 / 02-2104-9797",
+            "programD" : "./img/programD_img13.png"
+        },
+        {
+            "id" : "12",
+            "img" : "./img/programT_img4.jpg",
+            "name" : "[해설사와 함께하는 온실 로보타닉 투어]",
+            "area" : " 온실",
+            "target" : ["청소년","유아"],
+            "recruit" : 12,
+            "time" : "2시간",
+            "turn" : ["09:00","11:00","12:00","15:00","17:00","18:00"],
+            "price" : "1인당 1,000원",
+            "maxPeople" : 8,
+            "reserveMethod" : "인터넷",
+            "period" : "2023.08.21~2023.09.19",
+            "end" : "2023.09.19",
+            "deadline" : "이용 예정 2일 전 17시 까지",
+            "periodCancel" : "이용일 1일 전까지",
+            "tel" : "서울식물원 / 02-2104-9797",
+            "programD" : "./img/programD_img12.png"
+        },
+        {
             "id" : "1",
             "img" : "./img/experience01.png",
             "name" : "[정원·식물관리 전문가 양성과정(2기)] ",
@@ -145,24 +202,6 @@
             "tel" : "서울식물원 / 02-2104-9797",
             "programD" : "./img/programD_img8.png"
         },{
-            "id" : "9",
-            "img" : "./img/programT_img.jpg",
-            "name" : "[가족과 함께 가꾸는 행복정원(토)]",
-            "area" : "어린이정원학교",
-            "target" : ["유아"],
-            "recruit" : 6,
-            "time" : "2시간",
-            "turn" : ["09:00","11:00","12:00","15:00","17:00","18:00"],
-            "price" : "1인당 1,000원",
-            "maxPeople" : 2,
-            "reserveMethod" : "인터넷",
-            "period" : "2023.08.21~2023.09.14",
-            "end" : "2023.09.14",
-            "deadline" : "이용 예정 2일 전 17시 까지",
-            "periodCancel" : "이용일 1일 전까지",
-            "tel" : "서울식물원 / 02-2104-9797",
-            "programD" : "./img/programD_img9.jpg"
-        },{
             "id" : "10",
             "img" : "./img/experience10.png",
             "name" : "[가족과 함께 찾는 보물]",
@@ -200,43 +239,6 @@
             "tel" : "서울식물원 / 02-2104-9797",
             "programD" : "./img/programD_img11.png"
         }
-        ,{
-            "id" : "12",
-            "img" : "./img/programT_img4.jpg",
-            "name" : "[해설사와 함께하는 온실 로보타닉 투어]",
-            "area" : " 온실",
-            "target" : ["청소년","유아"],
-            "recruit" : 12,
-            "time" : "2시간",
-            "turn" : ["09:00","11:00","12:00","15:00","17:00","18:00"],
-            "price" : "1인당 1,000원",
-            "maxPeople" : 8,
-            "reserveMethod" : "인터넷",
-            "period" : "2023.08.21~2023.09.19",
-            "end" : "2023.09.19",
-            "deadline" : "이용 예정 2일 전 17시 까지",
-            "periodCancel" : "이용일 1일 전까지",
-            "tel" : "서울식물원 / 02-2104-9797",
-            "programD" : "./img/programD_img12.png"
-        }
-        ,{
-            "id" : "13",
-            "img" : "./img/programT_img5.png",
-            "name" : "[서울식물원의 새]",
-            "area" : " 식물문화센터",
-            "target" : ["청소년","유아"],
-            "recruit" : 15,
-            "time" : "2시간",
-            "turn" : ["09:00","11:00","12:00","15:00","17:00","18:00"],
-            "price" : "1인당 1,000원",
-            "maxPeople" : 4,
-            "reserveMethod" : "인터넷",
-            "period" : "2023.08.20~2023.09.22",
-            "end" : "2023.09.22",
-            "deadline" : "이용 예정 2일 전 17시 까지",
-            "periodCancel" : "이용일 1일 전까지",
-            "tel" : "서울식물원 / 02-2104-9797",
-            "programD" : "./img/programD_img13.png"
-        }
+
     ]
 }
