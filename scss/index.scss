@@ -984,6 +984,18 @@ body {
                                             font-weight: bold;
                                         }
                                     }
+                                    >.pp{
+                                        background-color: #80b726;
+                                        >span{
+                                            color: white;
+                                        }
+                                    }
+                                    >.pp.on{
+                                        background-color: #bbbbbb;
+                                        >span{
+                                            color: white;
+                                        }
+                                    }
                                 }
                             }
                         }

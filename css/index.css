@@ -1237,6 +1237,18 @@ body {
   font-size: 13px;
   font-weight: bold;
 }
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .pp {
+  background-color: #80b726;
+}
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .pp > span {
+  color: white;
+}
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .pp.on {
+  background-color: #bbbbbb;
+}
+.main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a .experience-info .situation > .pp.on > span {
+  color: white;
+}
 .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide:hover {
   transform: translateY(-30px);
   box-shadow: 4px 2.5px 10px 3px rgba(0, 0, 0, 0.3803921569);
@@ -2198,8 +2210,8 @@ table {
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo {
     display: block;
-    width: 60px;
-    height: 25px;
+    width: 80px;
+    height: 30px;
     border-radius: 50px;
     background-color: #79bf17;
     position: absolute;
@@ -2216,6 +2228,9 @@ table {
     justify-content: center;
     align-items: center;
     color: white;
+  }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo.on {
+    background-color: #bbbbbb;
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a {
     display: block;
@@ -3567,6 +3582,9 @@ table {
     justify-content: center;
     align-items: center;
     color: white;
+  }
+  .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > .oo.on {
+    background-color: #bbbbbb;
   }
   .main .experience-box .experience-list .experSwiper > .swiper-wrapper > .swiper-slide > a {
     display: block;
