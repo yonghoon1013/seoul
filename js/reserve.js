@@ -7,21 +7,23 @@ function experience() {
 		.then(res => { return res.json() })
 		.then(data => {
 
+			let item = data.items.filter(obj => obj.id == programStoageNum)[0];
+
 			const reserveCon01 = document.querySelector('.reserve-con01 > .left');
 			const reserveCon02 = document.querySelector('.reserve-con02 > .time-box');
 
 			reserveCon01.innerHTML = `
 			<p>체험프로그램</p>
 			<figure>
-				<img src="${data.items[programStoageNum].img}">
+				<img src="${item.img}">
 				<figcaption>
-					${data.items[programStoageNum].name}
+					${item.name}
 				</figcaption>
 			</figure>
 			`
 
 
-			data.items[programStoageNum].turn.forEach(function (v, k) {
+			item.turn.forEach(function (v, k) {
 				reserveCon02.innerHTML += `
 				<input id="t${k}" type="radio" name="turn" value='${v}'>
 				<label for="t${k}"><span>${v}</span></label>
@@ -32,13 +34,13 @@ function experience() {
 			qwe = document.querySelectorAll('.reserve-person-box .right');
 			const max = document.querySelector('.reserve-con04 > .title');
 			max.innerText = `
-			예약인원 최대(${data.items[programStoageNum].maxPeople}명)
+			예약인원 최대(${item.maxPeople}명)
 			`
 			qwe.forEach(function (v, k) {
 				let inputNum = 0;
 				const inputId = ["a", "b", "c"]
 
-				for (inputNum = 0; inputNum <= data.items[programStoageNum].maxPeople; inputNum++) {
+				for (inputNum = 0; inputNum <= item.maxPeople; inputNum++) {
 
 					v.innerHTML += `
 					<input id="${inputId[k]}${inputNum}" type="radio" name="${inputId[k]}" value='${inputNum}'>
@@ -60,8 +62,8 @@ function experience() {
 					teenValue = document.querySelector('input[name="b"]:checked'),
 					childValue = document.querySelector('input[name="c"]:checked'),
 					selDate = document.getElementById('birth').value;
-				const id = data.items[programStoageNum].id,
-					pgName = data.items[programStoageNum].name;
+				const id = item.id,
+					pgName = item.name;
 				const terms = document.getElementById('terms-check');
 
 
@@ -82,8 +84,8 @@ function experience() {
 						alert("인원을 선택해주세요");
 					} else if (childValue == null) {
 						alert("인원을 선택해주세요");
-					} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
-						alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
+					} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > item.maxPeople) {
+						alert(`총 인원은 ${item.maxPeople}명을 초과할 수 없습니다`);
 					}else {
 						const pp = localStorage.result ? JSON.parse(localStorage.result) : [];
 					
@@ -137,8 +139,8 @@ function experience() {
 						alert("인원을 선택해주세요");
 					} else if (childValue == null) {
 						alert("인원을 선택해주세요");
-					} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > data.items[programStoageNum].maxPeople) {
-						alert(`총 인원은 ${data.items[programStoageNum].maxPeople}명을 초과할 수 없습니다`);
+					} else if (parseInt(adultValue.value)+parseInt(teenValue.value)+parseInt(childValue.value) > item.maxPeople) {
+						alert(`총 인원은 ${item.maxPeople}명을 초과할 수 없습니다`);
 					}else {
 						const pp = localStorage.result ? JSON.parse(localStorage.result) : [];
 					
@@ -171,7 +173,7 @@ function experience() {
 			}
 
 
-			let date = data.items[programStoageNum].period;
+			let date = item.period;
 			let start = new Date(date.split('~')[0]);
 			let end = new Date(date.split('~')[1]);
 

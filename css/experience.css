@@ -1786,9 +1786,6 @@ table {
     border: 1px solid #CBCBCB;
     margin: 30px 0;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content div a {
-    font-size: 14px;
-  }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos {
     margin-bottom: 30px;
   }
@@ -1797,6 +1794,7 @@ table {
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos > div h3 {
     display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
     color: #000;
     font-size: 14px;
     font-weight: 500;
@@ -1807,74 +1805,86 @@ table {
     display: inline-flex;
     align-items: center;
     color: #58585A;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 350;
     line-height: normal;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box {
-    height: 228px;
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box {
+    height: 245px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul li {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li {
+    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: solid 1px #878787;
-    height: 60px;
+    height: 70px;
     text-align: center;
     float: left;
     margin-bottom: -1px;
     margin-right: -1px;
     background-color: #fff;
     color: #58585A;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 10px;
     font-weight: 350;
     line-height: normal;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul li:nth-of-type(1) {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li:nth-of-type(1) {
     width: 8%;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul li:nth-of-type(2) {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li:nth-of-type(2) {
     width: 21.3%;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul li:nth-of-type(3) {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li:nth-of-type(3) {
     width: 14%;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul li:nth-of-type(4) {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li:nth-of-type(4) {
     width: 35%;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul li:nth-of-type(5) {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul li:nth-of-type(5) {
     width: 22%;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos .box ul:nth-of-type(1) li {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .box ul:nth-of-type(1) li {
     height: 40px;
     background-color: #d9d9d9;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos > ul {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content > ul {
     padding: 0;
     margin-top: 19px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos > ul li {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content > ul li {
     display: flex;
     align-items: center;
     color: #58585A;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 14px;
     font-weight: 350;
     line-height: 1.7;
     letter-spacing: -0.8px;
   }
-  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content .traffic_pos > ul li::before {
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content > ul li::before {
     content: "";
     display: inline-block;
     width: 5px;
     height: 5px;
     background-color: #58585A;
     border-radius: 50%;
+    margin-right: 10px;
+  }
+  .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li .traffic5 .traffic_content > div a {
+    color: #4E813B;
+    display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
     margin-right: 10px;
   }
   .main .experience-detail .experience-con-box .experience-con-tab .map-con .traffic-con-tab > li > li.on {
