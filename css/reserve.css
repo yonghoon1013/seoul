@@ -604,7 +604,7 @@ table {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgba(168, 168, 168, 0.5);
+  background-color: rgba(204, 204, 204, 0.3882352941);
   display: block;
   cursor: pointer;
 }
@@ -619,7 +619,7 @@ table {
   background-color: #90BC43;
 }
 .main .reserve-box .reserve-con05 > .title {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .main .reserve-box .reserve-con05 .terms-box {
   border-top: 1px solid #90BC43;
@@ -661,7 +661,7 @@ table {
 }
 .main .reserve-box .reserve-con05 .terms-box .terms-text-box .terms-text-con {
   margin-left: 40px;
-  max-width: 500px;
+  max-width: 1020px;
   max-height: 100px;
   overflow: auto;
 }
@@ -683,7 +683,7 @@ table {
   background-color: #90BC43;
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 

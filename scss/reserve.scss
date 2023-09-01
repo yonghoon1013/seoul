@@ -243,7 +243,7 @@
                                 width: 30px;
                                 height: 30px;
                                 border-radius: 50%;
-                                background-color: rgba(168, 168, 168, 0.5);
+                                background-color:#cccccc63;
                                 ;
                                 display: block;
                                 cursor: pointer;
@@ -267,7 +267,7 @@
 
         .reserve-con05 {
             >.title {
-                margin-bottom: 50px;
+                margin-bottom: 25px;
             }
 
             .terms-box {
@@ -319,7 +319,7 @@
 
                     .terms-text-con {
                         margin-left: 40px;
-                        max-width: 500px;
+                        max-width: 1020px;
                         max-height: 100px;
                         overflow: auto;
 
@@ -346,7 +346,7 @@
                 background-color: #90BC43;
                 border: none;
                 color: white;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: bold;
             }
         }

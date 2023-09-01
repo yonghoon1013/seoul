@@ -637,21 +637,13 @@
                                         margin: 30px 0;
                                     }
                                     .traffic_content{
-                                        div{
-                                            a{
-                                                font-size: 14px;
-                                            }
-                                        }
-
-                                       
                                         .traffic_pos{
                                             margin-bottom: 30px;
-
                                             >div{
                                                 margin-bottom: 5px;
                                                 h3{
                                                     display: inline-block;
-    
+                                                    font-family: 'Noto Sans KR', sans-serif;
                                                     color: #000;
                                                     font-size: 14px;
                                                     font-weight: 500;
@@ -662,34 +654,34 @@
                                                     display: inline-flex;
                                                     align-items: center;
                                                     color: #58585A;
-    
+                                                    font-family: 'Noto Sans KR', sans-serif;
                                                     font-size: 14px;
                                                     font-style: normal;
                                                     font-weight: 350;
                                                     line-height: normal;
                                                 }
-                                                                                           
+                                            }
                                         }
-                                        
                                         .box{
-                                            height: 228px;
+                                            height: 245px;
                                             ul{
                                                 width: 100%;
                                                 padding: 0;
                                                 margin: 0;
                                                 li{
+                                                    padding: 0 10px;
                                                     display: flex;
                                                     align-items: center;
                                                     justify-content: center;
                                                     border:solid 1px #878787;
-                                                    height: 60px;
+                                                    height: 70px;
                                                     text-align: center;
                                                     float: left;
                                                     margin-bottom: -1px;
                                                     margin-right: -1px;
                                                     background-color: #fff;
                                                     color: #58585A;
-    
+                                                    font-family: 'Noto Sans KR', sans-serif;
                                                     font-size: 10px;
                                                     font-weight: 350;
                                                     line-height: normal;
@@ -723,6 +715,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 color: #58585A;
+                                                font-family: 'Noto Sans KR', sans-serif;
                                                 font-size: 14px;
                                                 font-weight: 350;
                                                 line-height: 1.7;
@@ -737,8 +730,17 @@
                                                 margin-right:10px;
                                             }
                                         }
+                                        >div{
+                                            a{
+                                                color: #4E813B;
+                                                display: inline-block;
+                                                font-family: 'Noto Sans KR', sans-serif;
+                                                font-size: 14px;
+                                                margin-top: 5px;
+                                                margin-right: 10px;
+                                            }
+                                        }
                                     }
-                                }
     
                             }
                             >li.on{
