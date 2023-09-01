@@ -101,11 +101,29 @@ function programClick() {
                 </a>
                 <a href="./reserve-check.html" class="reserve-check">
                 <span>예약확인</span>
-            </a>
+                </a>
+                <div class='end'>예약마감</div>
             </div>
         </div>
     </div>`
-        elprogram.innerHTML =`
+
+            let end = new Date(item.period.split('~')[1]);
+            let toDay = new Date()
+
+            const reserveBtn = document.querySelector('.reserve')
+            const reserveCheckBtn = document.querySelector('.reserve-check')
+            const endBtn = document.querySelector('.end')
+
+
+            if(toDay > end){
+                reserveBtn.style.cssText = 'display:none';
+                reserveCheckBtn.style.cssText = 'display:none';
+                endBtn.style.cssText = 'display:block';
+            }
+
+
+
+            elprogram.innerHTML = `
         <img src="${item.programD}" alt="">`
         })
 

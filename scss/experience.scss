@@ -6,7 +6,7 @@
 
     .bg{
         position: relative;
-        background-image: url("../img/bg111.png");
+        background-image: url("../img/grass-1784140_1920_2.png");
         background-repeat: no-repeat;
         background-position: top;
         background-size: 100% 100%;
@@ -142,6 +142,13 @@
                     >span{
                         color: #CCCCCC;
                     }
+                }
+                .end{
+
+                    font-weight: bold;
+                    text-align: center;
+                    display: none;
+                    color: #ff8e2a
                 }
             }
         }

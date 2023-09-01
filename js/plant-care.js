@@ -33,7 +33,7 @@ fetch('./json/plant-care.json')
                         <div class="dada2n">
                             <button>
                                 <span>A</span> 
-                                <h2>${v.detail}</h2>
+                                <h2 class='uu'>${v.detail}</h2>
                             </button>
                         </div>
                     </li>

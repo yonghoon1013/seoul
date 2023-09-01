@@ -15,7 +15,7 @@ function experience() {
 			<figure>
 				<img src="${data.items[programStoageNum].img}">
 				<figcaption>
-					<${data.items[programStoageNum].name}>
+					${data.items[programStoageNum].name}
 				</figcaption>
 			</figure>
 			`
@@ -183,6 +183,18 @@ function experience() {
 			eDate = end.getDate();
 			var startDate = `${sYear}-${sMonth.toString().padStart(2,"0")}-${sDate.toString().padStart(2,"0")}`
 			var endDate = `${eYear}-${eMonth.toString().padStart(2,"0")}-${eDate.toString().padStart(2,"0")}`
+			var endDate2 = `${eYear}${eMonth.toString().padStart(2,"0")}${eDate.toString().padStart(2,"0")}`
+
+			let toDay = new Date()
+			let toDate =`${toDay.getFullYear()}${(toDay.getMonth()+1).toString().padStart(2,"0")}${(toDay.getDate()).toString().padStart(2,"0")}`
+			console.log(parseInt(endDate2));
+			console.log(parseInt(toDate));
+			if(parseInt(endDate2) > parseInt(toDate)){
+				console.log('sadsad');
+			}
+
+			
+
 
 
 			var fp = flatpickr(document.getElementById("birth"),{
@@ -193,7 +205,7 @@ function experience() {
 			
 					//기간
 					{
-						from: startDate,
+						from: startDate,	
 						to: endDate
 					},
 				],
