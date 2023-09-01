@@ -542,28 +542,30 @@ table {
     height: 35px;
     border: none;
   }
-  .line {
+  .line-box {
     padding: 0 20px;
+  }
+  .line-box > .line {
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
     border-bottom: 2px solid #ededed;
     max-width: 1280px;
   }
-  .line div {
+  .line-box > .line div {
     cursor: pointer;
     padding: 25px 30px;
   }
-  .line div p {
+  .line-box > .line div p {
     font-size: 18px;
   }
-  .line div.on {
+  .line-box > .line div.on {
     position: relative;
   }
-  .line div.on p {
+  .line-box > .line div.on p {
     color: #4E813B;
   }
-  .line div.on p::after {
+  .line-box > .line div.on p::after {
     content: "";
     position: absolute;
     bottom: -2px;

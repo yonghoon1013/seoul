@@ -114,7 +114,7 @@ function experience() {
 				}else{
 					let a = false;
 					info.forEach(function(v,k){
-						if(parseInt(programStoageNum)+1 == v.id && repTel == v.repTel){
+						if(parseInt(programStoageNum) == v.id && repTel == v.repTel){
 							alert("이미 존재하는 예약 내역이 있습니다.")
 							a = true;
 						}

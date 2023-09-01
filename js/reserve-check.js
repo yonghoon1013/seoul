@@ -11,10 +11,10 @@ btn.onclick = function(){
     let a =false;
 
     info.forEach(function(v,k){
-        if(programStoageNum+1 == v.id && checkName == v.repName && checkTel == v.repTel){
+        if(programStoageNum == v.id && checkName == v.repName && checkTel == v.repTel){
             window.location.href = './reserve-check-page.html';
             sessionStorage.setItem("check",JSON.stringify(v))
-            a = ture;
+            a = true;
         }
     })
 
