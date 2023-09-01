@@ -475,7 +475,7 @@ main .indicator > ul > li:nth-last-of-type(1)::after {
 }
 main .content {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1320px;
   padding: 0 20px;
   text-align: start;
   margin-bottom: 100px;
@@ -635,7 +635,7 @@ main::after {
   }
   main .content {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1320px;
     padding: 0 20px;
     text-align: start;
     margin-bottom: 100px;

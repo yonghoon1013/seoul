@@ -79,7 +79,7 @@ main {
 }
 
 .content {
-  @include main-width($w: 1280px);
+  @include main-width($w: 1320px);
   text-align: start;
   margin-bottom: 100px;
 
@@ -272,7 +272,7 @@ main::after {
     position: relative;
 
   .content {
-    @include main-width($w: 1280px);
+    @include main-width($w: 1320px);
     text-align: start;
     margin-bottom: 100px;
 

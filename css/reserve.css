@@ -684,7 +684,6 @@ table {
   border: none;
   color: white;
   font-size: 16px;
-  font-weight: bold;
 }
 
 @font-face {
@@ -1067,8 +1066,7 @@ table {
     background-color: #90BC43;
     border: none;
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
   }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
@@ -1744,8 +1742,7 @@ table {
     background-color: #90BC43;
     border: none;
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
   }
 }
 @media (max-width: 480px) {
