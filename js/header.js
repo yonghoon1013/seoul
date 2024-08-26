@@ -101,5 +101,5 @@ const langIcon = document.querySelector('.lang');
 
 langIcon.onclick = function(e){
     e.preventDefault();
-    alert("번역 기능 준비중입니다...")
+    alert("번역 기능 준비중입니다..")
 }
